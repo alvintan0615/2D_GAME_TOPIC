@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - EventFood
+  - RealGround
+  - OneWayPlatForm
+  - Trap
+  - Pushable
+  - Tori
+  - EnemyAttackTrigger
+  - AttackTrigger
+  - PlayerCamera
+  - ToriBigWind
+  - circleSkillFilledImage
+  - allScreenSkillFilledImage
+  - groundSkillFilledImage
+  - beamSkillFilledImage
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Ground
+  - Enemy
+  - Player
+  - PlayerNoMove
+  - EnemyNoMove
+  - PullPush
+  - Tori
+  - DestoryWood
+  - DestoryWoodFloor
+  - Platform
+  - PlayerCamera
+  - HPFlower
+  - Wall
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: background
+    uniqueID: 1496500593
+    locked: 0
+  - name: background1
+    uniqueID: 3043369217
+    locked: 0
+  - name: background2
+    uniqueID: 1870187225
+    locked: 0
+  - name: background3
+    uniqueID: 2927064565
+    locked: 0
+  - name: background4
+    uniqueID: 3725871709
+    locked: 0
+  - name: water
+    uniqueID: 3211632929
+    locked: 0
+  - name: wood
+    uniqueID: 3747629707
+    locked: 0
+  - name: REACTION
+    uniqueID: 867018921
+    locked: 0
+  - name: Monster
+    uniqueID: 3693319269
+    locked: 0
+  - name: player
+    uniqueID: 390198055
+    locked: 0
+  - name: trap
+    uniqueID: 3312651987
+    locked: 0
+  - name: Effect
+    uniqueID: 3035792637
+    locked: 0
+  - name: frontgress1
+    uniqueID: 4075510017
+    locked: 0
+  - name: frontgress2
+    uniqueID: 3254530081
+    locked: 0
+  - name: frontgress3
+    uniqueID: 1263313197
+    locked: 0
+  - name: Diolog
+    uniqueID: 1373295627
+    locked: 0
+  - name: UI
+    uniqueID: 3468444735
+    locked: 0

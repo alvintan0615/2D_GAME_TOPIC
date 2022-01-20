@@ -1,0 +1,9 @@
+fireVillege_Dad
+爸!!村子發生了什麼!?
+FATHER
+快跑!!趕緊逃離這裡!!有隻巨大的怪物襲擊村子!!!
+MainCharacter
+什麼?!
+FATHER
+快點跑..再晚就來不及了...
+fireVillege_DadCanMove
