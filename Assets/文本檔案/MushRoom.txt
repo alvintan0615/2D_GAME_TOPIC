@@ -1,0 +1,9 @@
+MainCharacter
+食物也採集的差不多了
+MainCharacter
+(嗅...)
+MainCharacter
+這...這是燒焦的味道?
+MainCharacter
+不好了!是村子的方向!
+FOOD

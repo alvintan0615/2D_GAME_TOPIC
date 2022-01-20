@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FOG_FOREST1
+  m_Shader: {fileID: -6465566751694194690, guid: 421360dcb4d8c8d48b79b685b14ec2c3,
+    type: 3}
+  m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 265d4eccc23feb84799d006502e2e058, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_916280D: 13.2
+    - _Size: 2.2
+    - _WindIntensity: 0.5
+    - _WindSpeed: 1
+    m_Colors:
+    - Color_30FEAD15: {r: 0.78, g: 0.78, b: 0.78, a: 0}
+    - Color_32B21B2B: {r: 0.1882353, g: 0.1882353, b: 0.1882353, a: 1}
+    - Color_4B7A8FED: {r: 0.5849056, g: 0.56007475, b: 0.56007475, a: 0}
+    - Color_6358DDD: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 0}
+    - Color_8143B68F: {r: 0.254717, g: 0.254717, b: 0.254717, a: 0}
+    - Color_9225C197: {r: 0.5471698, g: 0.5471698, b: 0.5471698, a: 0}
+    - Color_D38A2C02: {r: 0.6792453, g: 0.6792453, b: 0.6792453, a: 0}
+    - Color_FC78CBA: {r: 0.6981132, g: 0.6981132, b: 0.6981132, a: 0}
+    - _FogSize2: {r: 0.6, g: 0, b: 0, a: 0}
+    - _FogSpeed: {r: -0.2, g: -0.04, b: 0, a: 0}
+    - _FogSpeed2: {r: -2.53, g: 0, b: 0, a: 0}

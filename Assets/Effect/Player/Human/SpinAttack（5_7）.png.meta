@@ -1,0 +1,790 @@
+fileFormatVersion: 2
+guid: 08ae86afd4e780547b2cea7f7437c814
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4125407922953554443
+    second: "SpinAttack\uFF085_7\uFF09_0"
+  - first:
+      213: -8398917926852221096
+    second: "SpinAttack\uFF085_7\uFF09_1"
+  - first:
+      213: -8099062232055694751
+    second: "SpinAttack\uFF085_7\uFF09_2"
+  - first:
+      213: 626647462985384428
+    second: "SpinAttack\uFF085_7\uFF09_3"
+  - first:
+      213: -3041834212400724132
+    second: "SpinAttack\uFF085_7\uFF09_4"
+  - first:
+      213: -1535637557862548679
+    second: "SpinAttack\uFF085_7\uFF09_5"
+  - first:
+      213: -5759704887844725299
+    second: "SpinAttack\uFF085_7\uFF09_6"
+  - first:
+      213: -7189283608831786318
+    second: "SpinAttack\uFF085_7\uFF09_7"
+  - first:
+      213: -937325443090877215
+    second: "SpinAttack\uFF085_7\uFF09_8"
+  - first:
+      213: -4459118468119522632
+    second: "SpinAttack\uFF085_7\uFF09_9"
+  - first:
+      213: 6786447479377047229
+    second: "SpinAttack\uFF085_7\uFF09_10"
+  - first:
+      213: 1115718538661824266
+    second: "SpinAttack\uFF085_7\uFF09_11"
+  - first:
+      213: 3528285939547471555
+    second: "SpinAttack\uFF085_7\uFF09_12"
+  - first:
+      213: 5835537849034023121
+    second: "SpinAttack\uFF085_7\uFF09_13"
+  - first:
+      213: -4859783465017790945
+    second: "SpinAttack\uFF085_7\uFF09_14"
+  - first:
+      213: 7592497364905991504
+    second: "SpinAttack\uFF085_7\uFF09_15"
+  - first:
+      213: 8946751868289150171
+    second: "SpinAttack\uFF085_7\uFF09_16"
+  - first:
+      213: -7099853673034494428
+    second: "SpinAttack\uFF085_7\uFF09_17"
+  - first:
+      213: 1442836157293499139
+    second: "SpinAttack\uFF085_7\uFF09_18"
+  - first:
+      213: -7404838531856483328
+    second: "SpinAttack\uFF085_7\uFF09_19"
+  - first:
+      213: 7116898415259999344
+    second: "SpinAttack\uFF085_7\uFF09_20"
+  - first:
+      213: 793624570787082439
+    second: "SpinAttack\uFF085_7\uFF09_21"
+  - first:
+      213: -8682563143119180072
+    second: "SpinAttack\uFF085_7\uFF09_22"
+  - first:
+      213: -5653057683112279951
+    second: "SpinAttack\uFF085_7\uFF09_23"
+  - first:
+      213: 8532313128433785938
+    second: "SpinAttack\uFF085_7\uFF09_24"
+  - first:
+      213: 7081498613480093396
+    second: "SpinAttack\uFF085_7\uFF09_0"
+  - first:
+      213: 2233014972724463108
+    second: "SpinAttack\uFF085_7\uFF09_1"
+  - first:
+      213: -712742607446956496
+    second: "SpinAttack\uFF085_7\uFF09_2"
+  - first:
+      213: -7804900586335526285
+    second: "SpinAttack\uFF085_7\uFF09_3"
+  - first:
+      213: 5681862029020739634
+    second: "SpinAttack\uFF085_7\uFF09_4"
+  - first:
+      213: -6550611936168024302
+    second: "SpinAttack\uFF085_7\uFF09_5"
+  - first:
+      213: -3190336586049282271
+    second: "SpinAttack\uFF085_7\uFF09_6"
+  - first:
+      213: -3708246066020175105
+    second: "SpinAttack\uFF085_7\uFF09_7"
+  - first:
+      213: 3988246047313483185
+    second: "SpinAttack\uFF085_7\uFF09_8"
+  - first:
+      213: -6371354119657742782
+    second: "SpinAttack\uFF085_7\uFF09_9"
+  - first:
+      213: 2518375036928945599
+    second: "SpinAttack\uFF085_7\uFF09_10"
+  - first:
+      213: -2158577444841704581
+    second: "SpinAttack\uFF085_7\uFF09_11"
+  - first:
+      213: -2256209652221533933
+    second: "SpinAttack\uFF085_7\uFF09_12"
+  - first:
+      213: -7444530594589515631
+    second: "SpinAttack\uFF085_7\uFF09_13"
+  - first:
+      213: 5558534124645244467
+    second: "SpinAttack\uFF085_7\uFF09_14"
+  - first:
+      213: 5227187970349416744
+    second: "SpinAttack\uFF085_7\uFF09_15"
+  - first:
+      213: 7034027414968140781
+    second: "SpinAttack\uFF085_7\uFF09_16"
+  - first:
+      213: 6183359076696361295
+    second: "SpinAttack\uFF085_7\uFF09_17"
+  - first:
+      213: -2511856219838004306
+    second: "SpinAttack\uFF085_7\uFF09_18"
+  - first:
+      213: -116212506084538805
+    second: "SpinAttack\uFF085_7\uFF09_19"
+  - first:
+      213: -2695226368607961083
+    second: "SpinAttack\uFF085_7\uFF09_20"
+  - first:
+      213: -5272826269540672796
+    second: "SpinAttack\uFF085_7\uFF09_21"
+  - first:
+      213: -2088548255310170326
+    second: "SpinAttack\uFF085_7\uFF09_22"
+  - first:
+      213: -4250190336256712877
+    second: "SpinAttack\uFF085_7\uFF09_23"
+  - first:
+      213: 753337641309548534
+    second: "SpinAttack\uFF085_7\uFF09_24"
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_0"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5390.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6f6e53879864260800000000000000
+      internalID: 7081498613480093396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_1"
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 5390.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406ce5369434dfe10800000000000000
+      internalID: 2233014972724463108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_2"
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 5390.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 036a6d2ff54db16f0800000000000000
+      internalID: -712742607446956496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_3"
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 5390.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 372ab34d44c6fa390800000000000000
+      internalID: -7804900586335526285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_4"
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 5390.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 238bf8e59670ade40800000000000000
+      internalID: 5681862029020739634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_5"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4313.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2176543962d8715a0800000000000000
+      internalID: -6550611936168024302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_6"
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 4313.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12f999237c5a9b3d0800000000000000
+      internalID: -3190336586049282271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_7"
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 4313.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff2b02f99d9a98cc0800000000000000
+      internalID: -3708246066020175105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_8"
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 4313.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b5d9fe36a8195730800000000000000
+      internalID: 3988246047313483185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_9"
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 4313.1426
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24e149f5f276497a0800000000000000
+      internalID: -6371354119657742782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_10"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3236.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbd6c5fc0c013f220800000000000000
+      internalID: 2518375036928945599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_11"
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 3236.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b733a0420413b02e0800000000000000
+      internalID: -2158577444841704581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_12"
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 3236.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3112784764550b0e0800000000000000
+      internalID: -2256209652221533933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_13"
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 3236.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 190e6f5fdd6bfa890800000000000000
+      internalID: -7444530594589515631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_14"
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 3236.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33edd530651e32d40800000000000000
+      internalID: 5558534124645244467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_15"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2159.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8214fd2a3c3ba8840800000000000000
+      internalID: 5227187970349416744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_16"
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 2159.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de309818aa2ed9160800000000000000
+      internalID: 7034027414968140781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_17"
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 2159.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f498c25c154bfc550800000000000000
+      internalID: 6183359076696361295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_18"
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 2159.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea343b19318142dd0800000000000000
+      internalID: -2511856219838004306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_19"
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 2159.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b468f586751236ef0800000000000000
+      internalID: -116212506084538805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_20"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1082.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5004bddc5e1a89ad0800000000000000
+      internalID: -2695226368607961083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_21"
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 1082.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea1ea9c17823d6b0800000000000000
+      internalID: -5272826269540672796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_22"
+      rect:
+        serializedVersion: 2
+        x: 3840
+        y: 1082.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a27b9f96d6cf303e0800000000000000
+      internalID: -2088548255310170326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_23"
+      rect:
+        serializedVersion: 2
+        x: 5760
+        y: 1082.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35fde9b586a4405c0800000000000000
+      internalID: -4250190336256712877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: "SpinAttack\uFF085_7\uFF09_24"
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 1082.1428
+        width: 1920
+        height: 1077.8572
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ffaf2ae794647a00800000000000000
+      internalID: 753337641309548534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

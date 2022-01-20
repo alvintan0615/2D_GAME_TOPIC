@@ -1,0 +1,7 @@
+fireVillege_Dialog
+這...這是怎麼一回事...
+MainCharacter
+怎麼村子會毀壞成這個樣子!
+MainCharacter
+村子裡的大家呢!!
+CANMOVE
