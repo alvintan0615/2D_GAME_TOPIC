@@ -10961,6 +10961,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1923671628, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
+      propertyPath: distance
+      value: 0.95
+      objectReference: {fileID: 0}
     - target: {fileID: 1379581308895150638, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_WasSpriteAssigned
@@ -10991,15 +10995,30 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6301142380842007510, guid: 268ced2ad455ffb4c91cc105251dec8c,
+        type: 3}
+      propertyPath: frontCheckRadius
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301142380842007510, guid: 268ced2ad455ffb4c91cc105251dec8c,
+        type: 3}
+      propertyPath: frontWallDis.x
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6301142380842007510, guid: 268ced2ad455ffb4c91cc105251dec8c,
+        type: 3}
+      propertyPath: frontWallDis.y
+      value: 1.28
+      objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -30.05
+      value: -41.06
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.14
+      value: 24.9
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
@@ -11054,7 +11073,7 @@ PrefabInstance:
     - target: {fileID: 6301142380842007514, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8997343346141949669, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
@@ -18397,7 +18416,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -30.050001, y: 12.640001, z: -10}
+  m_LocalPosition: {x: -41.06, y: 27.400002, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children:
   - {fileID: 1836594678}
@@ -32286,7 +32305,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.3333334, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -32304,7 +32323,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914151525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 51.641087, y: -16.457207, z: 1042.0094}
+  m_LocalPosition: {x: 40.631084, y: -1.6972084, z: 1042.0094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862835423}
@@ -41860,6 +41879,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DeerDog
+      objectReference: {fileID: 0}
+    - target: {fileID: 5372945929047274449, guid: ee71c7b06ae327045ab4128a858ee611,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ee71c7b06ae327045ab4128a858ee611, type: 3}
@@ -73817,9 +73841,9 @@ Transform:
   - {fileID: 144931466}
   - {fileID: 220030640}
   - {fileID: 1059055875}
-  - {fileID: 1996208003}
   - {fileID: 1981116035}
   - {fileID: 854869343}
+  - {fileID: 1996208003}
   - {fileID: 1642084562}
   - {fileID: 1905048963}
   - {fileID: 50162718}

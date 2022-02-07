@@ -12,6 +12,7 @@ public class NewPlayerController : MonoBehaviour
     public Animator[] animator = { null, null };
     public string currentHumanState;
     private string currentDemonState;
+
     [SerializeField]private Demon_Skill demonSkill;
 
     public static CharacterStats characterStats;
@@ -37,7 +38,7 @@ public class NewPlayerController : MonoBehaviour
     [Header("蹬牆設定")]
     private bool frontTouchWall = false;
     public Transform frontPoint;
-    bool wallSliding;
+    public bool wallSliding;
     public float wallSidingSpeed;
     bool wallJumping;
     public float xWallForce;
@@ -375,6 +376,7 @@ public class NewPlayerController : MonoBehaviour
         #endregion
         frontTouchWall = Physics2D.OverlapCircle(frontPoint.position, frontCheckRadius, LayerMask.GetMask("Ground"));
         touchPlatform = Physics2D.OverlapCircle(footPoint.position, groundCheckRadius, LayerMask.GetMask("Platform"));
+       
     }
 
     IEnumerator canJump_dead()
@@ -535,6 +537,5 @@ public class NewPlayerController : MonoBehaviour
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(footPoint.position, groundCheckRadius);
         Gizmos.DrawWireSphere(frontPoint.position, frontCheckRadius);
-        
     }
 }

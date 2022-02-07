@@ -74,7 +74,7 @@ public class Human_Skill : MonoBehaviour
 
         Physics2D.queriesStartInColliders = false;
         RaycastHit2D hit = Physics2D.Raycast(myTrans.position, Vector2.right * myTrans.localScale.x, distance, boxMask);
-        if (hit.collider != null && hit.collider.gameObject.tag == "Pushable" && Input.GetKey(KeyCode.A))
+        if (hit.collider != null && hit.collider.gameObject.tag == "Pushable" && Input.GetKey(KeyCode.A) && NewPlayerController.instance.touchGround == true)
         {
             PlayerStatus.isDragging = true;
             NewPlayerController.instance.HumanState("Human_PullPush");

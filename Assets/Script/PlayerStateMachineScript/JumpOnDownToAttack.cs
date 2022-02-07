@@ -6,7 +6,7 @@ public class JumpOnDownToAttack : StateMachineBehaviour
 {
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        PlayerStatus.isDashing = false;
+        //PlayerStatus.isDashing = false;
     }
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
