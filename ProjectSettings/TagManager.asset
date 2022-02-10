@@ -19,6 +19,7 @@ TagManager:
   - allScreenSkillFilledImage
   - groundSkillFilledImage
   - beamSkillFilledImage
+  - FairyPosition
   layers:
   - Default
   - TransparentFX

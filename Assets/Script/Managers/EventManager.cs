@@ -4,6 +4,7 @@ using UnityEngine;
 public class EventManager : Singleton<EventManager>
 {
     public bool canChange = false;
+    public bool canUsePotion = false;
     public bool canUseAllSceenSkill = false;
     public bool takeFood = false;
     public bool fireAlarm = false;
