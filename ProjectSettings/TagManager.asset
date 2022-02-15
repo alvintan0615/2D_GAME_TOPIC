@@ -110,3 +110,6 @@ TagManager:
   - name: UI
     uniqueID: 3468444735
     locked: 0
+  - name: FairyEffect
+    uniqueID: 2392248233
+    locked: 0
