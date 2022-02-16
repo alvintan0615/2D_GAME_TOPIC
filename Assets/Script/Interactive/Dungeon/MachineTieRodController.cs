@@ -6,9 +6,11 @@ public class MachineTieRodController : MonoBehaviour
 {
     public Animator animator;
     public bool IsDefault = true;
-    public bool PullUp = false;
+    static public bool PullUp = false;
     public bool DoAction = false;
     public bool OneRound = false;
+
+    
 
     // Start is called before the first frame update
     void Start()

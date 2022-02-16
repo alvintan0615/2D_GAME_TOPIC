@@ -6,10 +6,12 @@ public class MachineController : MonoBehaviour
 {
     public Animator animator;
     public bool IsDefault = true;
-    public bool UpToDown = false;
-    public bool OneRound = false;
+    static public bool UpToDown = false;
+    static public bool OneRound = false;
     public bool DoAction = false;
 
+
+    static public bool IsFloor = true;
     public void Start()
     {
         DoAction = true;
@@ -25,20 +27,23 @@ public class MachineController : MonoBehaviour
                 animator.SetTrigger("DefaultToUp");
                 StartCoroutine(DelayDefaultToUp());
                 DoAction = false;
+                IsFloor = false;
             }
 
-            if(IsDefault == false && UpToDown == true && DoAction == true)
-            {
+            if(IsDefault == false && (UpToDown == true || IsFloor == false) && DoAction == true && OneRound == false)
+            { 
                 animator.SetTrigger("UpToDown");
                 StartCoroutine(DelayOneRound());
                 DoAction = false;
+                IsFloor = true;
             }
 
-            if(OneRound == true && UpToDown == false && DoAction == true)
+            if(OneRound == true && UpToDown == false && DoAction == true && IsFloor == true && IsDefault == false)
             {
                 animator.SetTrigger("DownToUp");
                 StartCoroutine(DelayDownToUp());
                 DoAction = false;
+                IsFloor = false;
             }
 
             else
@@ -54,6 +59,7 @@ public class MachineController : MonoBehaviour
         yield return new WaitForSeconds(3);
         UpToDown = true;
         DoAction = true;
+        
     }
 
     public IEnumerator DelayOneRound()
@@ -62,6 +68,7 @@ public class MachineController : MonoBehaviour
         UpToDown = false;
         OneRound = true;
         DoAction = true;
+        
     }
 
     public IEnumerator DelayDownToUp()
@@ -70,5 +77,6 @@ public class MachineController : MonoBehaviour
         UpToDown = true;
         OneRound = false;
         DoAction = true;
+        
     }
 }

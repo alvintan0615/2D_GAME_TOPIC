@@ -20,8 +20,6 @@ TagManager:
   - groundSkillFilledImage
   - beamSkillFilledImage
   - FairyPosition
-  - MachineStart
-  - MachineEnd
   layers:
   - Default
   - TransparentFX
