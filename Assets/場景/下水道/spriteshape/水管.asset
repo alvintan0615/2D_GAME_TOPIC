@@ -25,6 +25,7 @@ MonoBehaviour:
     - {fileID: 4752904629007966230, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
     - {fileID: -3394468806499921938, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
     - {fileID: -5252062593717518037, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
+    - {fileID: 0}
   - m_Start: -135
     m_End: -45
     m_Order: 1
