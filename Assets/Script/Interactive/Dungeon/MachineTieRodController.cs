@@ -34,7 +34,6 @@ public class MachineTieRodController : MonoBehaviour
                 StartCoroutine(DelayDoAction());
                 DoAction = false;
                 IsDefault = false;
-                Debug.Log("1111");
             }
 
             if(IsDefault == false && PullUp == true && DoAction == true && OneRound == false)
