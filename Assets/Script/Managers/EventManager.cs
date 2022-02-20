@@ -18,6 +18,7 @@ public class EventManager : Singleton<EventManager>
     public bool fireVillege_TimelineFinish = false;
     public bool timeLineBossStop = false;
     public bool isFirstTimeToPass = false;
+    public bool electricDoor = false;
     protected override void Awake()
     {
         base.Awake();

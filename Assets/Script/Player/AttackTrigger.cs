@@ -12,6 +12,7 @@ public class AttackTrigger : MonoBehaviour
     [SerializeField] private ContactFilter2D HPFlowerFilter;
     [SerializeField] private int FlowerCount;
     [SerializeField] private Collider2D[] FlowerColList;
+
     void Start()
     {
         newAttackTrigger = transform.GetChild(0).GetComponent<BoxCollider2D>();
@@ -56,5 +57,12 @@ public class AttackTrigger : MonoBehaviour
                 flowerDestory.isSlowDestory = true;
             }
         }
+    }
+
+    IEnumerator electricTrick()
+    {
+        EventManager.Instance.electricDoor = true;
+        yield return new WaitForSeconds(1f);
+        EventManager.Instance.electricDoor = false;
     }
 }
