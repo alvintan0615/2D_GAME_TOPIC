@@ -8,7 +8,7 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
     public MushRoomTreeEnemyStates mushRoomTreeEnemyStates;
     private CharacterStats characterStats;
     public Rigidbody2D rb;
-    private Animator anim;
+    [SerializeField]private Animator anim;
     public bool isAttack = false;
     bool playerDead;
     [Header("environmental Check")]
@@ -85,6 +85,15 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
 
     void Update()
     {
+        if (characterStats.CurrentHealth == 0)
+            isDead = true;
+        if (!playerDead)
+        {
+            SwitchStates();
+            //SwitchAnimation();
+            lastAttackTime -= Time.deltaTime;
+        }
+
         if (isDead)
             mushRoomTreeEnemyStates = MushRoomTreeEnemyStates.DEAD;
 
@@ -101,8 +110,10 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
             if (x  <= 0f)
                 delayTrans = true;
         }
-            
+    }
 
+    void SwitchStates()
+    {
         switch (mushRoomTreeEnemyStates)
         {
             case MushRoomTreeEnemyStates.IDLE:
@@ -127,7 +138,7 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                     if (remainLookAtTime > 0)
                         remainLookAtTime -= Time.deltaTime;
                     else
-                        GetNewWayPoint();        
+                        GetNewWayPoint();
                 }
                 else
                 {
@@ -177,7 +188,6 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                         }
                     }
                 }
-
                 if (TargetInAttackRange())
                 {
                     isChasing = false;

@@ -73926,7 +73926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7248447109007011835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -73.31, y: 8.8, z: 0}
+  m_LocalPosition: {x: -74.97, y: 8.8, z: 0}
   m_LocalScale: {x: 0.26714, y: 0.26714, z: 0.26714}
   m_Children:
   - {fileID: 3316656927629966331}
@@ -74155,9 +74155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5fac21ca5dcac488667f552ffd5ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  templateData: {fileID: 11400000, guid: e73d9d5878e5d1a45a9da8701d5091c2, type: 2}
-  characterData: {fileID: 0}
-  attackData: {fileID: 11400000, guid: 93cf96e3849712f44801342d739c5358, type: 2}
+  templateData: {fileID: 0}
+  characterData: {fileID: 11400000, guid: ffbf49397bf26644382b735f5a36af89, type: 2}
+  attackData: {fileID: 11400000, guid: 00c0067b6913a77419f6f4f11d80d4a6, type: 2}
   isCritical: 0
 --- !u!4 &1204895048621028774
 Transform:
@@ -75224,6 +75224,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mushRoomTreeEnemyStates: 2
   rb: {fileID: 3316656927217762373}
+  anim: {fileID: 0}
   isAttack: 0
   footOffset: 1.34
   groundDistance: 0.55
