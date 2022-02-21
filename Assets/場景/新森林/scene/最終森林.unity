@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -10964,12 +10964,12 @@ PrefabInstance:
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -76.2
+      value: -65.47
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 9.9
+      value: 7.52
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
@@ -18333,7 +18333,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -76.2, y: 12.400001, z: -10}
+  m_LocalPosition: {x: -65.47, y: 10.02, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children:
   - {fileID: 1836594678}
@@ -32240,7 +32240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914151525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.491089, y: -16.697208, z: 1042.0094}
+  m_LocalPosition: {x: 16.221085, y: -19.077208, z: 1042.0094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862835423}
@@ -41781,7 +41781,7 @@ PrefabInstance:
     - target: {fileID: 5372945929047274449, guid: ee71c7b06ae327045ab4128a858ee611,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 372329646, guid: ee71c7b06ae327045ab4128a858ee611, type: 3}
@@ -73926,7 +73926,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7248447109007011835}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -81.59, y: 8.8, z: 0}
+  m_LocalPosition: {x: -73.31, y: 8.8, z: 0}
   m_LocalScale: {x: 0.26714, y: 0.26714, z: 0.26714}
   m_Children:
   - {fileID: 3316656927629966331}
@@ -74376,7 +74376,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.4, y: -2.1}
+  m_Offset: {x: -0.4000001, y: -1.0999146}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -74387,7 +74387,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 10.5, y: 4}
+  m_Size: {x: 12.011022, y: 17.693607}
   m_EdgeRadius: 0
 --- !u!50 &3316656927217762373
 Rigidbody2D:
@@ -74689,39 +74689,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 156625396599135460}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &5554433829840216482
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7248447109007011835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: abbd9788bf401e0459273ca49501cb30, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  HP: {fileID: 0}
-  rb: {fileID: 0}
-  enemyStates: 2
-  isAttack: 0
-  footOffset: 1.8
-  groundDistance: 0.3
-  footToGround: -1.67
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 256
-  speed: 6
-  patrolSpeed: 5
-  sightRadius: 13.9
-  isIDLE: 0
-  attackTarget: {fileID: 0}
-  lookAtTime: 2
-  FoundPlayer: 0
-  knockbackForce: 100
-  isHurt: 0
-  stoppingDistance: 1
-  patrolRange: 12.88
 --- !u!1 &5667659871306597466
 GameObject:
   m_ObjectHideFlags: 0
@@ -75230,11 +75197,11 @@ GameObject:
   m_Component:
   - component: {fileID: 689354138125470410}
   - component: {fileID: 6075960752874971057}
-  - component: {fileID: 5554433829840216482}
   - component: {fileID: 776446526541415967}
   - component: {fileID: 3316656927217762373}
   - component: {fileID: 3316656927217762368}
   - component: {fileID: 3316656927422035270}
+  - component: {fileID: 7248447109007011836}
   - component: {fileID: 3316656927636961086}
   m_Layer: 9
   m_Name: MushRoomTree
@@ -75243,6 +75210,40 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &7248447109007011836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248447109007011835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a087a0db505773a4795d268bb47bba7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mushRoomTreeEnemyStates: 2
+  rb: {fileID: 3316656927217762373}
+  isAttack: 0
+  footOffset: 1.34
+  groundDistance: 0.55
+  footToGround: -2.58
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  speed: 1.62
+  patrolSpeed: 1.5
+  sightRadius: 11.26
+  isIDLE: 0
+  attackTarget: {fileID: 0}
+  lookAtTime: 3
+  FoundPlayer: 0
+  knockbackForce: 0
+  isHurt: 0
+  stoppingDistance: 1.02
+  patrolRange: 6.06
+  delayTrans: 1
+  x: 1
 --- !u!1 &7571539450634291498
 GameObject:
   m_ObjectHideFlags: 0
