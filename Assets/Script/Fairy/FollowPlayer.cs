@@ -15,11 +15,15 @@ public class FollowPlayer : MonoBehaviour
 
     void Update()
     {
-        if (NewPlayerController.instance.facingRight == true)
-            spriteRenderer.flipX = false;
-        else
-            spriteRenderer.flipX = true;
+        if(target != null)
+        {
+            if (NewPlayerController.instance.facingRight == true)
+                spriteRenderer.flipX = false;
+            else
+                spriteRenderer.flipX = true;
 
-        transform.position = Vector2.Lerp(transform.position, target.position, speed * Time.deltaTime);
+            transform.position = Vector2.Lerp(transform.position, target.position, speed * Time.deltaTime);
+        } 
+        
     }
 }

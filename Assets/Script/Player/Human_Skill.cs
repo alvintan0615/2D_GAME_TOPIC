@@ -77,7 +77,16 @@ public class Human_Skill : MonoBehaviour
         if (hit.collider != null && hit.collider.gameObject.tag == "Pushable" && Input.GetKey(KeyCode.A) && NewPlayerController.instance.touchGround == true)
         {
             PlayerStatus.isDragging = true;
-            NewPlayerController.instance.HumanState("Human_PullPush");
+            if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
+                NewPlayerController.instance.HumanState("Human_Pull");
+            else if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
+                NewPlayerController.instance.HumanState("Human_Push");
+
+            if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
+                NewPlayerController.instance.HumanState("Human_Push");
+            else if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
+                NewPlayerController.instance.HumanState("Human_Pull");
+
             box = hit.collider.gameObject;
 
             box.GetComponent<FixedJoint2D>().enabled = true;
