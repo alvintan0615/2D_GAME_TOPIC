@@ -205,7 +205,7 @@ public class CharacterStats : MonoBehaviour
 
     public void TrapDamage(int minDamage, int maxDamage)
     {
-        Human_Skill.instance.Hurt();
+        
         int trapDamage = UnityEngine.Random.Range(minDamage, maxDamage);
         CurrentHealth = Mathf.Max(CurrentHealth - trapDamage, 0);
     }
