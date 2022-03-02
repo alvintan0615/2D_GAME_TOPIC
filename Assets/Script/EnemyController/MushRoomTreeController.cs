@@ -35,8 +35,8 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
     public bool isHurt;
 
     [Header("Animation Settings")]
-    private bool isIdle;
-    private bool isChasing;
+    [SerializeField]private bool isIdle;
+    [SerializeField]private bool isChasing;
 
     private bool isDead;
     [Header("PATROL States")]
@@ -90,14 +90,13 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
         if (!playerDead)
         {
             SwitchStates();
-            //SwitchAnimation();
+            SwitchAnimation();
             lastAttackTime -= Time.deltaTime;
         }
 
         if (isDead)
             mushRoomTreeEnemyStates = MushRoomTreeEnemyStates.DEAD;
-
-        if (foundPlayer() && leftFootCheck == true && rightFootCheck == true && delayTrans == true)
+        else if (foundPlayer() && leftFootCheck == true && rightFootCheck == true && delayTrans == true)
         {
             mushRoomTreeEnemyStates = MushRoomTreeEnemyStates.CHASE;
             x = 1f;
@@ -110,6 +109,15 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
             if (x  <= 0f)
                 delayTrans = true;
         }
+
+        
+    }
+
+    void SwitchAnimation()
+    {
+        anim.SetBool("Idle", isIdle);
+        anim.SetBool("Chasing", isChasing);
+        anim.SetBool("Dead", isDead);
     }
 
     void SwitchStates()
@@ -153,6 +161,8 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                 }
                 break;
             case MushRoomTreeEnemyStates.CHASE:
+                isChasing = true;
+                isIdle = false;
                 if (playerTransform && isHurt == false && isAttack == false)
                 {
                     if (myTransform.position.x >= playerTransform.position.x)

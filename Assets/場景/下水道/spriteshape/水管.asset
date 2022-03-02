@@ -38,6 +38,7 @@ MonoBehaviour:
     - {fileID: 4752904629007966230, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
     - {fileID: -3394468806499921938, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
     - {fileID: -5252062593717518037, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
+    - {fileID: 0}
   - m_Start: 135
     m_End: 225
     m_Order: 1
@@ -50,6 +51,7 @@ MonoBehaviour:
     - {fileID: 4752904629007966230, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
     - {fileID: -3394468806499921938, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
     - {fileID: -5252062593717518037, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
+    - {fileID: 0}
   - m_Start: 45
     m_End: 135
     m_Order: 1
@@ -62,6 +64,7 @@ MonoBehaviour:
     - {fileID: 4752904629007966230, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
     - {fileID: -3394468806499921938, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
     - {fileID: -5252062593717518037, guid: fc3ef610667551742b8f5f777edb5a0b, type: 3}
+    - {fileID: 0}
   m_FillTexture: {fileID: 2800000, guid: e888afb9f7bb8e342ab481d25e8e953c, type: 3}
   m_CornerSprites:
   - m_CornerType: 0
