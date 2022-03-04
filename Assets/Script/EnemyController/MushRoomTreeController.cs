@@ -11,6 +11,8 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
     [SerializeField]private Animator anim;
     public bool isAttack = false;
     bool playerDead;
+
+    public bool isDarkTree;
     [Header("environmental Check")]
     private RaycastHit2D leftFootCheck;
     private RaycastHit2D rightFootCheck;
@@ -30,9 +32,14 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
     public float lookAtTime;
     private float remainLookAtTime;
     private float lastAttackTime;
-    public bool FoundPlayer = false;
     public float knockbackForce;
     public bool isHurt;
+
+    [Header("FarAttack Settings")]
+    bool isfarAttack = false;
+    private GameObject farAttackTarget;
+    public GameObject thorn;
+    public float farAttackRadius;
 
     [Header("Animation Settings")]
     [SerializeField]private bool isIdle;
@@ -129,36 +136,48 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                 break;
             case MushRoomTreeEnemyStates.PATROL:
 
-                //patrolSpeed = speed * 0.5f;
-                if (myTransform.position.x >= wayPoint.x)
+                if(isDarkTree == true && foundPlayer() == false && farAttackFoundPlayer() == true)
                 {
-                    myTransform.localRotation = Quaternion.Euler(0, 180, 0);
-                }
-                else
-                {
-                    myTransform.localRotation = Quaternion.Euler(0, 0, 0);
-                }
-
-                if (Vector3.Distance(wayPoint, transform.position) <= stoppingDistance)
-                {
-                    isChasing = false;
-                    isIdle = true;
-                    if (remainLookAtTime > 0)
-                        remainLookAtTime -= Time.deltaTime;
-                    else
-                        GetNewWayPoint();
-                }
-                else
-                {
-                    isChasing = true;
-                    isIdle = false;
-                    transform.position = Vector3.MoveTowards(transform.position, wayPoint, patrolSpeed * Time.deltaTime);
-                    /*if (leftFootCheck == false || rightFootCheck == false)
+                    if(lastAttackTime < 0)
                     {
-                        GetNewWayPoint();
-                    }*/
+                        lastAttackTime = characterStats.attackData.coolDown01;
+                        anim.SetTrigger("FarAttack");
+                    }
+                } 
+                if(isAttack == false)
+                {
+                    //patrolSpeed = speed * 0.5f;
+                    if (myTransform.position.x >= wayPoint.x)
+                    {
+                        myTransform.localRotation = Quaternion.Euler(0, 180, 0);
+                    }
+                    else
+                    {
+                        myTransform.localRotation = Quaternion.Euler(0, 0, 0);
+                    }
 
+                    if (Vector3.Distance(wayPoint, transform.position) <= stoppingDistance)
+                    {
+                        isChasing = false;
+                        isIdle = true;
+                        if (remainLookAtTime > 0)
+                            remainLookAtTime -= Time.deltaTime;
+                        else
+                            GetNewWayPoint();
+                    }
+                    else
+                    {
+                        isChasing = true;
+                        isIdle = false;
+                        transform.position = Vector3.MoveTowards(transform.position, wayPoint, patrolSpeed * Time.deltaTime);
+                        /*if (leftFootCheck == false || rightFootCheck == false)
+                        {
+                            GetNewWayPoint();
+                        }*/
+
+                    }
                 }
+                
                 break;
             case MushRoomTreeEnemyStates.CHASE:
                 isChasing = true;
@@ -275,6 +294,27 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
         return false;
     }
 
+    bool farAttackFoundPlayer()
+    {
+        var colliders = Physics2D.OverlapCircleAll(transform.position, farAttackRadius);
+
+        foreach (var target in colliders)
+        {
+            if (target.CompareTag("Player"))
+            {
+                farAttackTarget = target.gameObject;
+                return true;
+            }
+        }
+        farAttackTarget = null;
+        return false;
+    }
+
+    void farAttack()
+    {
+        Instantiate(thorn, farAttackTarget.transform.position, transform.rotation);
+    }
+
     void GetNewWayPoint()
     {
         remainLookAtTime = lookAtTime;
@@ -316,6 +356,8 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
         Gizmos.DrawWireSphere(transform.position, sightRadius);
         Gizmos.color = Color.blue;
         Gizmos.DrawWireSphere(transform.position, patrolRange);
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, farAttackRadius);
     }
 
     public void EndNotify()

@@ -8,6 +8,7 @@ public class AttackData_SO : ScriptableObject
     [Header("Ｎormal Monster")]
     //Ｎormal　Monster
     public float coolDown;
+    public float coolDown01;
     public int minDamage;
     public int maxDamage;
     public float attackRange;
