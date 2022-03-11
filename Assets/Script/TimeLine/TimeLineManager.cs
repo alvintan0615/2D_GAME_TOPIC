@@ -12,6 +12,8 @@ public class TimeLineManager : MonoBehaviour
 
     public Image characterCG;
 
+    public Image _Pannel;
+
     [SerializeField] PlayableDirector activeDirector;
     private void Awake()
     {
@@ -31,19 +33,20 @@ public class TimeLineManager : MonoBehaviour
         }
     }
 
-    public void SetDialogue(string lineOfDialogue, Sprite CharacterPhoto)
+    public void SetDialogue(string lineOfDialogue, Sprite CharacterPhoto, Image Pannel)
     {
         dialogueLineText.text = lineOfDialogue;
+        _Pannel = Pannel;
         if (CharacterPhoto != null)
         {
-            characterCG.sprite = CharacterPhoto;
             characterCG.gameObject.SetActive(true);
+            characterCG.sprite = CharacterPhoto;
+            
         }
-        else
-            characterCG = null;
+        
 
         dialogueLineText.gameObject.SetActive(true);
-        
+        _Pannel.gameObject.SetActive(true);
     }
 
     //暂停TimeLine
@@ -51,7 +54,7 @@ public class TimeLineManager : MonoBehaviour
     {
         activeDirector = whichOne;
 
-        activeDirector.Pause();
+        activeDirector.playableGraph.GetRootPlayable(0).SetSpeed(0);
     }
 
     //恢复播放TimeLine
@@ -60,6 +63,8 @@ public class TimeLineManager : MonoBehaviour
         dialogueLineText.gameObject.SetActive(false);
         if(characterCG != null)
             characterCG.gameObject.SetActive(false);
-        activeDirector.Resume();
+
+        _Pannel.gameObject.SetActive(false);
+        activeDirector.playableGraph.GetRootPlayable(0).SetSpeed(1);
     }
 }

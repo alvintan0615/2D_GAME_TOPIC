@@ -11,6 +11,7 @@ public class DialogueClip :  PlayableAsset, ITimelineClipAsset
 
     public Sprite picture_Asset;
     public string str_Asset;
+    public ExposedReference<Image> pannel;
     public bool hasToPause_Asset;
 
     public ClipCaps clipCaps
@@ -25,7 +26,7 @@ public override Playable CreatePlayable(PlayableGraph graph, GameObject owner)
         playable.GetBehaviour().dialogueCG = picture_Asset;
         playable.GetBehaviour().dialogueLine = str_Asset;
         playable.GetBehaviour().hasToPause = hasToPause_Asset;
-
+        playable.GetBehaviour()._pannel = pannel.Resolve(graph.GetResolver());
         return playable;
 }
 }

@@ -7,6 +7,7 @@ public class DialogueBehaviour : PlayableBehaviour
 {
     public string dialogueLine;
     public Sprite dialogueCG;
+    public Image _pannel;
     public bool hasToPause = false;
     bool clipPlayed = false;
     bool pauseScheduled = false;
@@ -24,8 +25,9 @@ public class DialogueBehaviour : PlayableBehaviour
         if (!clipPlayed && info.weight > 0f)
         {
             Debug.Log("ProcessFrame true");
-            TimeLineManager.ins.SetDialogue(dialogueLine, dialogueCG);
-
+            dialogueLine = dialogueLine.Replace("\\n", "\n");
+            TimeLineManager.ins.SetDialogue(dialogueLine, dialogueCG, _pannel);
+            
             if (Application.isPlaying && hasToPause)
             {
                 pauseScheduled = true;
