@@ -18,7 +18,12 @@ public class TimeLineDungeon : MonoBehaviour
     {
         var timelineAsset = mDirector.playableAsset as TimelineAsset;
         var track = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Player");
-        var track1 = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Human");
+        var track1 = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Player1");
+        var track2 = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Human");
+        var track3 = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Human1");
+        var track4 = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Demon");
+        var track5 = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Demon1");
+
         normalizedTime = (float)(mDirector.time / mDirector.duration);
 
         if (EventManager.Instance.Dungeon_Opening == true)
