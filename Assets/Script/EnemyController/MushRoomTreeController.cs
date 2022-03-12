@@ -92,7 +92,7 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
 
     void Update()
     {
-        if (characterStats.CurrentHealth == 0)
+        if (characterStats.CurrentHealth <= 0)
             isDead = true;
         if (!playerDead)
         {
@@ -103,12 +103,12 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
 
         if (isDead)
             mushRoomTreeEnemyStates = MushRoomTreeEnemyStates.DEAD;
-        else if (foundPlayer() && leftFootCheck == true && rightFootCheck == true && delayTrans == true)
+        else if (foundPlayer() && leftFootCheck == true && rightFootCheck == true )
         {
             mushRoomTreeEnemyStates = MushRoomTreeEnemyStates.CHASE;
             x = 1f;
         }
-        else
+        else if(isHurt == false)
         {
             delayTrans = false;
             mushRoomTreeEnemyStates = MushRoomTreeEnemyStates.PATROL;
@@ -124,7 +124,7 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
     {
         anim.SetBool("Idle", isIdle);
         anim.SetBool("Chasing", isChasing);
-        anim.SetBool("Dead", isDead);
+        
     }
 
     void SwitchStates()
@@ -182,6 +182,19 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
             case MushRoomTreeEnemyStates.CHASE:
                 isChasing = true;
                 isIdle = false;
+                if (!foundPlayer())
+                {
+                    isChasing = false;
+                    isIdle = true;
+                    if (remainLookAtTime > 0)
+                        remainLookAtTime -= Time.deltaTime;
+                    else if (isIDLE)
+                        mushRoomTreeEnemyStates = MushRoomTreeEnemyStates.IDLE;
+                    else
+                        mushRoomTreeEnemyStates = MushRoomTreeEnemyStates.PATROL;
+                }
+                else
+                {
                 if (playerTransform && isHurt == false && isAttack == false)
                 {
                     if (myTransform.position.x >= playerTransform.position.x)
@@ -217,6 +230,7 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                         }
                     }
                 }
+                }
                 if (TargetInAttackRange())
                 {
                     isChasing = false;
@@ -224,6 +238,7 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                     rb.velocity = new Vector2(0, rb.velocity.y);
                     if (lastAttackTime < 0)
                     {
+                        anim.SetBool("Idle", false);
                         lastAttackTime = characterStats.attackData.coolDown;
 
                         //爆擊判斷
@@ -231,10 +246,14 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                         //執行攻擊
                         Attack();
                     }
+                    else
+                        anim.SetBool("Idle", true);
                 }
                 break;
 
             case MushRoomTreeEnemyStates.DEAD:
+                anim.SetBool("Dead", true);
+                isChasing = false;
                 rb.velocity = new Vector2(0, rb.velocity.y);
 
                 Destroy(gameObject, 2f);
