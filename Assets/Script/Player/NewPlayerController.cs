@@ -447,13 +447,6 @@ public class NewPlayerController : MonoBehaviour
         }
     }
 
-    void KnockBack()
-    {
-        if(facingRight == true)
-            StartCoroutine(GameManager.Instance.KnockBack(0.02f, -50, 40, this.transform.position, rb));
-        else
-            StartCoroutine(GameManager.Instance.KnockBack(0.02f, 50, 40, this.transform.position, rb));
-    }
     void Changing()
     {
         if (PlayerStatus.isChanging == true)

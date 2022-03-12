@@ -30,7 +30,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 261490935865141504}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -74.97, y: 8.8, z: 0}
   m_LocalScale: {x: 0.26714, y: 0.26714, z: 0.26714}
   m_Children:
@@ -191,6 +191,7 @@ MonoBehaviour:
   rb: {fileID: 5274147564534318782}
   anim: {fileID: 0}
   isAttack: 0
+  isDarkTree: 1
   footOffset: 1.34
   groundDistance: 0.55
   footToGround: -2.58
@@ -199,13 +200,16 @@ MonoBehaviour:
     m_Bits: 256
   speed: 1.62
   patrolSpeed: 1.5
-  sightRadius: 11.26
+  sightRadius: 10.02
   isIDLE: 0
   attackTarget: {fileID: 0}
   lookAtTime: 3
-  FoundPlayer: 0
   knockbackForce: 0
   isHurt: 0
+  thorn: {fileID: 8229860168191361411, guid: d3449eb3c96957a44ae781d0e792f96c, type: 3}
+  farAttackRadius: 16
+  isIdle: 0
+  isChasing: 0
   stoppingDistance: 1.02
   patrolRange: 6.06
   delayTrans: 1

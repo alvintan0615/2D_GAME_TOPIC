@@ -314,13 +314,6 @@ public class DeerDogController : MonoBehaviour, IEndGameObserver
         wayPoint = randomPoint;
     }
 
-    void KnockBack()
-    {
-        if (attackTarget.transform.position.x > this.transform.position.x)
-            StartCoroutine(GameManager.Instance.KnockBack(0.02f, -50, 40 , this.transform.position, rb));
-        else
-            StartCoroutine(GameManager.Instance.KnockBack(0.02f, 50, 40, this.transform.position, rb));
-    }
 
 
     #region 懸崖判斷
