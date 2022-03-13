@@ -1,15 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using PathCreation.Examples;
 public class ElectricGroundTrick : MonoBehaviour
 {
     public Animator electricDoor;
-    [SerializeField] private GameObject light2d;
+    public GameObject light2d;
     bool isOpen = false;
+    public PathFollower[] pathFollowers; 
     void Start()
     {
-        light2d = transform.GetChild(1).gameObject;
+        
     }
 
     void Update()
@@ -26,6 +27,10 @@ public class ElectricGroundTrick : MonoBehaviour
         {
             isOpen = true;
             electricDoor.SetTrigger("true");
+            foreach(var pathFollower in pathFollowers)
+            {
+                pathFollower.enabled = true;
+            }
         }
             
     }

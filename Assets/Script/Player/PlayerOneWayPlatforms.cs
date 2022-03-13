@@ -4,27 +4,31 @@ using UnityEngine;
 
 public class PlayerOneWayPlatforms : MonoBehaviour
 {
-    private GameObject currentOneWayPlatform;
+    public static PlayerOneWayPlatforms instance;
+
+    public GameObject currentOneWayPlatform;
 
     [SerializeField] private BoxCollider2D playerCollider;
 
+    public bool isOnLadder;
 
+    private float YInput;
     private void Awake()
     {
+        instance = this;
         playerCollider = this.gameObject.GetComponent<BoxCollider2D>();
     }
     void Update()
     {
-        
-        
-            if(currentOneWayPlatform != null)
+        YInput = Input.GetAxisRaw("Vertical");
+        if (currentOneWayPlatform != null)
             {
-                if (Input.GetKey(KeyCode.DownArrow) && Input.GetButtonDown("Jump"))
+                if (YInput < 0f && Input.GetButtonDown("Jump") && isOnLadder == false)
                 {
                     PlayerStatus.isJumping = false;
                     StartCoroutine(DisableCollision());
                 }
-                    
+                
             }
         
         
@@ -45,6 +49,32 @@ public class PlayerOneWayPlatforms : MonoBehaviour
             currentOneWayPlatform = null;
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ladder")
+        {
+            isOnLadder = true;
+            if (currentOneWayPlatform != null && YInput < 0f)
+            {
+                PlayerStatus.isClimbing = true;
+                StartCoroutine(DisableCollision());
+            }
+            if(currentOneWayPlatform != null && YInput > 0f)
+            {
+                PlayerStatus.isClimbing = false;
+            }
+
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Ladder")
+        {
+            isOnLadder = false;
+        }
+    }
+
 
     private IEnumerator DisableCollision()
     {

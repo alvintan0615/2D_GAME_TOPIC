@@ -30,13 +30,14 @@ public class NewPlayerController : MonoBehaviour
     public float doubleJumpForce;
     [SerializeField] private int jumpCount = 2;
     public Transform footPoint;
+    public Vector2 footBoxSize;
     public bool touchGround = false;
     public bool touchPlatform = false;
     private Coroutine cor_canJump_dead;
     public bool cantJumpMove = false;
 
     [Header("蹬牆設定")]
-    private bool frontTouchWall = false;
+    [SerializeField]private bool frontTouchWall = false;
     public Transform frontPoint;
     public bool wallSliding;
     public float wallSidingSpeed;
@@ -44,7 +45,7 @@ public class NewPlayerController : MonoBehaviour
     public float xWallForce;
     public float yWallForce;
     public float wallJumpTime;
-
+    public Vector2 boxSize;
 
     [Header("衝刺參數")]
     public float dashTime;
@@ -322,7 +323,7 @@ public class NewPlayerController : MonoBehaviour
             rb.gravityScale = naturalGravity;
             return;
         }
-        if (YInput >= 0.1f)
+        if (YInput >= 0.1f )
         {
             rb.velocity = new Vector2(0f, YInput * climbSpeed);
             HumanState(HUMAN_CLIMB);
@@ -337,7 +338,6 @@ public class NewPlayerController : MonoBehaviour
             rb.velocity = new Vector2(0f, 0f);
             HumanState(HUMAN_STOPCLIMB);
         }
-
         
     }
 
@@ -362,7 +362,7 @@ public class NewPlayerController : MonoBehaviour
     void GroundCheck()
     {
         #region touchGround 0.3 0.8
-        touchGround = Physics2D.OverlapCircle(footPoint.position, groundCheckRadius, LayerMask.GetMask("Ground") | LayerMask.GetMask("Platform"));
+        touchGround = Physics2D.OverlapBox(footPoint.position, footBoxSize, transform.eulerAngles.z, LayerMask.GetMask("Ground") | LayerMask.GetMask("Platform"));
         if (touchGround == true)
         {
             //PlayerStatus.canJump = true;
@@ -374,9 +374,11 @@ public class NewPlayerController : MonoBehaviour
                 cor_canJump_dead = StartCoroutine(canJump_dead());
         }
         #endregion
-        frontTouchWall = Physics2D.OverlapCircle(frontPoint.position, frontCheckRadius, LayerMask.GetMask("Ground"));
-        touchPlatform = Physics2D.OverlapCircle(footPoint.position, groundCheckRadius, LayerMask.GetMask("Platform"));
-       
+        frontTouchWall = Physics2D.OverlapBox(frontPoint.position, boxSize, transform.eulerAngles.z, LayerMask.GetMask("Ground"));
+
+        //frontTouchWall = Physics2D.OverlapCircle(frontPoint.position, frontCheckRadius, LayerMask.GetMask("Ground"));
+        touchPlatform = Physics2D.OverlapBox(footPoint.position, footBoxSize, transform.eulerAngles.z,LayerMask.GetMask("Platform"));
+
     }
 
     IEnumerator canJump_dead()
@@ -528,7 +530,8 @@ public class NewPlayerController : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(footPoint.position, groundCheckRadius);
-        Gizmos.DrawWireSphere(frontPoint.position, frontCheckRadius);
+        Gizmos.DrawWireCube(footPoint.position, footBoxSize * 2f);
+        Gizmos.DrawWireCube(frontPoint.position, boxSize * 2f);
+        //Gizmos.DrawWireSphere(frontPoint.position, frontCheckRadius);
     }
 }

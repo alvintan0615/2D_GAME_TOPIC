@@ -755,7 +755,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.199999, y: 10.801339}
+  m_Size: {x: 19.205559, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -1153,7 +1153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6301142379716692538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: -10.94, z: 0}
+  m_LocalPosition: {x: 0.06, y: -12.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6301142380842007511}
@@ -1356,7 +1356,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6301142380211782159}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.24, y: -0.2, z: 0}
+  m_LocalPosition: {x: 3.24, y: -1.12, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6301142380842007511}
@@ -1605,6 +1605,7 @@ GameObject:
   - component: {fileID: 305203472}
   - component: {fileID: 1709032177}
   - component: {fileID: 6824631821059527647}
+  - component: {fileID: 455490810}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -1710,15 +1711,18 @@ MonoBehaviour:
   doubleJumpForce: 20
   jumpCount: 1
   footPoint: {fileID: 6301142379716692537}
+  footBoxSize: {x: 0.45, y: 0.1}
   touchGround: 1
   touchPlatform: 0
   cantJumpMove: 0
+  frontTouchWall: 0
   frontPoint: {fileID: 6301142380211782158}
   wallSliding: 0
   wallSidingSpeed: 3
   xWallForce: 40
   yWallForce: 15
   wallJumpTime: 0.05
+  boxSize: {x: 0.11, y: 1.77}
   dashTime: 0.05
   dashTimeLeft: 0
   lastDash: -10
@@ -1783,7 +1787,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2257b942ba5fdfd45b8122f600ba40f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentOneWayPlatform: {fileID: 0}
   playerCollider: {fileID: 0}
+  isOnLadder: 0
 --- !u!114 &6301142380842007507
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1894,6 +1900,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSetting: {fileID: 0}
+--- !u!114 &455490810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6301142380842007514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe4a736dc2a5bbe46a92a277e403fde6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6415022734506177455
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,7 +1989,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 19.205559, y: 10.8}
+  m_Size: {x: 19.2, y: 10.800263}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
