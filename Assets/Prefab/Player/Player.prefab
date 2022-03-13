@@ -1153,7 +1153,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6301142379716692538}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.06, y: -10.94, z: 0}
+  m_LocalPosition: {x: 0.06, y: -12.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6301142380842007511}
@@ -1711,6 +1711,7 @@ MonoBehaviour:
   doubleJumpForce: 20
   jumpCount: 1
   footPoint: {fileID: 6301142379716692537}
+  footBoxSize: {x: 0.45, y: 0.1}
   touchGround: 1
   touchPlatform: 0
   cantJumpMove: 0
@@ -1786,7 +1787,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2257b942ba5fdfd45b8122f600ba40f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentOneWayPlatform: {fileID: 0}
   playerCollider: {fileID: 0}
+  isOnLadder: 0
 --- !u!114 &6301142380842007507
 MonoBehaviour:
   m_ObjectHideFlags: 0

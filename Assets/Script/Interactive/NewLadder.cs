@@ -10,10 +10,6 @@ public class NewLadder : MonoBehaviour
     {
         float YInput = Input.GetAxisRaw("Vertical");
         Rigidbody2D rb = collision.GetComponent<Rigidbody2D>();
-        if (collision.gameObject.tag == "Player" && YInput > 0f && GameManager.Instance.Ken_Human == true && PlayerOneWayPlatforms.instance.currentOneWayPlatform !=null)
-        {
-            PlayerStatus.isClimbing = false;
-        }
         if (collision.gameObject.tag == "Player" && YInput != 0f && GameManager.Instance.Ken_Human == true)
         {
             PlayerStatus.isClimbing = true;

@@ -30,6 +30,7 @@ public class NewPlayerController : MonoBehaviour
     public float doubleJumpForce;
     [SerializeField] private int jumpCount = 2;
     public Transform footPoint;
+    public Vector2 footBoxSize;
     public bool touchGround = false;
     public bool touchPlatform = false;
     private Coroutine cor_canJump_dead;
@@ -322,7 +323,7 @@ public class NewPlayerController : MonoBehaviour
             rb.gravityScale = naturalGravity;
             return;
         }
-        if (YInput >= 0.1f && PlayerOneWayPlatforms.instance.currentOneWayPlatform == null)
+        if (YInput >= 0.1f )
         {
             rb.velocity = new Vector2(0f, YInput * climbSpeed);
             HumanState(HUMAN_CLIMB);
@@ -361,7 +362,7 @@ public class NewPlayerController : MonoBehaviour
     void GroundCheck()
     {
         #region touchGround 0.3 0.8
-        touchGround = Physics2D.OverlapCircle(footPoint.position, groundCheckRadius, LayerMask.GetMask("Ground") | LayerMask.GetMask("Platform"));
+        touchGround = Physics2D.OverlapBox(footPoint.position, footBoxSize, transform.eulerAngles.z, LayerMask.GetMask("Ground") | LayerMask.GetMask("Platform"));
         if (touchGround == true)
         {
             //PlayerStatus.canJump = true;
@@ -376,8 +377,8 @@ public class NewPlayerController : MonoBehaviour
         frontTouchWall = Physics2D.OverlapBox(frontPoint.position, boxSize, transform.eulerAngles.z, LayerMask.GetMask("Ground"));
 
         //frontTouchWall = Physics2D.OverlapCircle(frontPoint.position, frontCheckRadius, LayerMask.GetMask("Ground"));
-        touchPlatform = Physics2D.OverlapCircle(footPoint.position, groundCheckRadius, LayerMask.GetMask("Platform"));
-       
+        touchPlatform = Physics2D.OverlapBox(footPoint.position, footBoxSize, transform.eulerAngles.z,LayerMask.GetMask("Platform"));
+
     }
 
     IEnumerator canJump_dead()
@@ -529,7 +530,7 @@ public class NewPlayerController : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.green;
-        Gizmos.DrawWireSphere(footPoint.position, groundCheckRadius);
+        Gizmos.DrawWireCube(footPoint.position, footBoxSize * 2f);
         Gizmos.DrawWireCube(frontPoint.position, boxSize * 2f);
         //Gizmos.DrawWireSphere(frontPoint.position, frontCheckRadius);
     }
