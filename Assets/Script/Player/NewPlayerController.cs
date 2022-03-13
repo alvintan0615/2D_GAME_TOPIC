@@ -36,7 +36,7 @@ public class NewPlayerController : MonoBehaviour
     public bool cantJumpMove = false;
 
     [Header("蹬牆設定")]
-    private bool frontTouchWall = false;
+    [SerializeField]private bool frontTouchWall = false;
     public Transform frontPoint;
     public bool wallSliding;
     public float wallSidingSpeed;
@@ -44,7 +44,7 @@ public class NewPlayerController : MonoBehaviour
     public float xWallForce;
     public float yWallForce;
     public float wallJumpTime;
-
+    public Vector2 boxSize;
 
     [Header("衝刺參數")]
     public float dashTime;
@@ -374,7 +374,9 @@ public class NewPlayerController : MonoBehaviour
                 cor_canJump_dead = StartCoroutine(canJump_dead());
         }
         #endregion
-        frontTouchWall = Physics2D.OverlapCircle(frontPoint.position, frontCheckRadius, LayerMask.GetMask("Ground"));
+        frontTouchWall = Physics2D.OverlapBox(frontPoint.position, boxSize, transform.eulerAngles.z, LayerMask.GetMask("Ground"));
+
+        //frontTouchWall = Physics2D.OverlapCircle(frontPoint.position, frontCheckRadius, LayerMask.GetMask("Ground"));
         touchPlatform = Physics2D.OverlapCircle(footPoint.position, groundCheckRadius, LayerMask.GetMask("Platform"));
        
     }
@@ -529,6 +531,7 @@ public class NewPlayerController : MonoBehaviour
     {
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(footPoint.position, groundCheckRadius);
-        Gizmos.DrawWireSphere(frontPoint.position, frontCheckRadius);
+        Gizmos.DrawWireCube(frontPoint.position, boxSize * 2f);
+        //Gizmos.DrawWireSphere(frontPoint.position, frontCheckRadius);
     }
 }
