@@ -1714,6 +1714,7 @@ MonoBehaviour:
   touchGround: 1
   touchPlatform: 0
   cantJumpMove: 0
+  frontTouchWall: 0
   frontPoint: {fileID: 6301142380211782158}
   wallSliding: 0
   wallSidingSpeed: 3
