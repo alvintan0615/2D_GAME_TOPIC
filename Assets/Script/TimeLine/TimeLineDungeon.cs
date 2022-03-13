@@ -29,7 +29,7 @@ public class TimeLineDungeon : MonoBehaviour
         if (EventManager.Instance.Dungeon_Opening == true)
             mDirector.Stop();
 
-        if (Application.isPlaying && EventManager.Instance.Dungeon_Opening == false)
+        if (Application.isPlaying && EventManager.Instance.Dungeon_Opening == false && normalizedTime >= 0.01f && normalizedTime < 0.99f)
         {
             PlayerStatus.isDialouging = true;
         }

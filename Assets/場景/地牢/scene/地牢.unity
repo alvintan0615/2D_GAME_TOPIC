@@ -12493,12 +12493,12 @@ PrefabInstance:
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -351.74
+      value: -336.53
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -39.16
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
@@ -14952,7 +14952,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -347.97147, y: -35.935623, z: -10}
+  m_LocalPosition: {x: -336.47244, y: 2.0745716, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children:
   - {fileID: 1403914674}
@@ -25171,6 +25171,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6653309888569682308, guid: 0c436c175048aa44d89d1331c6369b31,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6653309889334756986, guid: 0c436c175048aa44d89d1331c6369b31,
         type: 3}
       propertyPath: m_ApplyToSortingLayers.Array.size
@@ -25205,6 +25210,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u71C8_\u78B0\u5230\u9580\u95DC\u9589"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6653309889334756988, guid: 0c436c175048aa44d89d1331c6369b31,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6653309889334756989, guid: 0c436c175048aa44d89d1331c6369b31,
         type: 3}
@@ -28429,7 +28439,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914151525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -351.74, y: -36.37, z: -10}
+  m_LocalPosition: {x: -336.53, y: 3.490001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862835423}
@@ -53524,7 +53534,7 @@ PlayableDirector:
   m_Enabled: 1
   serializedVersion: 3
   m_PlayableAsset: {fileID: 11400000, guid: d29feb1beecb0be4ab149c789f1f0687, type: 2}
-  m_InitialState: 1
+  m_InitialState: 0
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
