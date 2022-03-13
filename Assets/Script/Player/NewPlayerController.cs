@@ -322,7 +322,7 @@ public class NewPlayerController : MonoBehaviour
             rb.gravityScale = naturalGravity;
             return;
         }
-        if (YInput >= 0.1f)
+        if (YInput >= 0.1f && PlayerOneWayPlatforms.instance.currentOneWayPlatform == null)
         {
             rb.velocity = new Vector2(0f, YInput * climbSpeed);
             HumanState(HUMAN_CLIMB);
@@ -337,7 +337,6 @@ public class NewPlayerController : MonoBehaviour
             rb.velocity = new Vector2(0f, 0f);
             HumanState(HUMAN_STOPCLIMB);
         }
-
         
     }
 
