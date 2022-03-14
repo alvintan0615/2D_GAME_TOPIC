@@ -12354,12 +12354,12 @@ PrefabInstance:
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -328
+      value: -327.3
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -37.9
+      value: 1.9
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
@@ -14780,7 +14780,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -328, y: -35.110004, z: -10}
+  m_LocalPosition: {x: -333.41983, y: 2.1138315, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children:
   - {fileID: 1403914674}
@@ -27920,7 +27920,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914151525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -328, y: -35.11, z: -10}
+  m_LocalPosition: {x: -327.3, y: 4.690001, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862835423}
@@ -45092,6 +45092,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   electricDoor: {fileID: 1517210090}
+  openDoorTime: 1
   light2d: {fileID: 1830699401}
   pathFollowers:
   - {fileID: 6653309888847325064}
@@ -68961,7 +68962,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 6653309887430131113}
   endOfPathInstruction: 2
-  speed: 100
+  speed: 75
 --- !u!4 &6653309888847325065
 Transform:
   m_ObjectHideFlags: 0
@@ -69076,7 +69077,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pathCreator: {fileID: 6653309887430131113}
   endOfPathInstruction: 2
-  speed: 100
+  speed: 75
 --- !u!1 &7571539450634291498
 GameObject:
   m_ObjectHideFlags: 0

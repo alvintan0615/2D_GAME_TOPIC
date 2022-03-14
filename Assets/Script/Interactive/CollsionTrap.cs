@@ -28,9 +28,7 @@ public class CollsionTrap : MonoBehaviour
 
     IEnumerator TrapHurt(Collision2D collision)
     {
-        PlayerStatus.isHurting = true;
         Human_Skill.instance.Hurt();
-        Debug.Log(123);
         collision.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
         collision.gameObject.GetComponent<CharacterStats>().TrapDamage(5, 10);
         yield return null;
