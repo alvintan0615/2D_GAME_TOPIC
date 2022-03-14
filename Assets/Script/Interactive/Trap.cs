@@ -38,4 +38,6 @@ public class Trap : MonoBehaviour
         if (collision.gameObject.tag == "Player")
             time = 2f;
     }
+
+    
 }
