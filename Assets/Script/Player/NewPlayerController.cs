@@ -258,7 +258,7 @@ public class NewPlayerController : MonoBehaviour
             HumanState(HUMAN_JUMPON);
             DemonState(DEMON_JUMP);
         } 
-        else if(rb.velocity.y <= -1f && touchGround == false && wallSliding == false && PlayerStatus.isClimbing == false && !PlayerStatus.isSkilling && !isDead && !PlayerStatus.isHurting)
+        else if(rb.velocity.y <= -1f && touchGround == false && wallSliding == false && PlayerStatus.isClimbing == false && !PlayerStatus.isSkilling && !isDead)
             HumanState(HUMAN_JUMPDOWN);
         #region 蹬牆設定
         if (Input.GetButtonDown("Jump") && wallSliding == true && GameManager.Instance.Ken_Human == true)
