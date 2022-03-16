@@ -12,9 +12,11 @@ public class ButtonTransition : MonoBehaviour
     public GameObject Option;
     public GameObject QuitPanel;
     public GameObject Logo;
+   
 
     static public bool OptionIsOpen = false;
     static public bool ContinueIsOpen = false;
+    static public bool OnMainUI = true;
 
     [SerializeField] MenuButtonController menuButtonController;
     [SerializeField] MenuButtonController QuitPanelMenuButtonController;
@@ -47,6 +49,7 @@ public class ButtonTransition : MonoBehaviour
 
     public void ToNewGame()
     {
+        OnMainUI = false;
         //PlayerPrefs.DeleteAll();
         PlayerPrefs.DeleteKey("sceneName");
         PlayerPrefs.DeleteKey("playerStats");
