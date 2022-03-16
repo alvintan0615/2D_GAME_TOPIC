@@ -8,10 +8,11 @@ public class PausePanelController : MonoBehaviour
     public GameObject PausePanel;
     public GameObject QuitPanel;
     public GameObject SettingsPanel;
+    public GameObject PauseCanvas;
 
     [SerializeField] MenuButtonController menuButtonController;
 
-     public bool PausePanelisOpen = false;
+    public bool PausePanelisOpen = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,22 +22,26 @@ public class PausePanelController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PausePanelisOpen == false)
+        if(PausePanelisOpen == false )
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                PauseCanvas.SetActive(true);
                 ToStopPanel();
+                
             }
         }
 
-        if (PausePanelisOpen == true)
+        if(PausePanelisOpen == true )
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
                 menuButtonController.index = 0;
-                PausePanel.SetActive(true);
+                PausePanel.SetActive(false);
                 SettingsPanel.SetActive(false);
                 QuitPanel.SetActive(false);
+                PauseCanvas.SetActive(false);
+                Debug.Log("111");
             }
         }
     }
