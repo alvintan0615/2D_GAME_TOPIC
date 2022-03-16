@@ -24,6 +24,16 @@ public class TimeLineDungeon : MonoBehaviour
         var track4 = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Demon");
         var track5 = timelineAsset.GetOutputTracks().FirstOrDefault(t => t.name == "Demon1");
 
+        if (GameManager.Instance.playerStats != null)
+        {
+            mDirector.SetGenericBinding(track, GameManager.Instance.playerStats.gameObject);
+            mDirector.SetGenericBinding(track1, GameManager.Instance.playerStats.gameObject);
+            mDirector.SetGenericBinding(track2, GameManager.Instance.playerStats.transform.GetChild(0).gameObject);
+            mDirector.SetGenericBinding(track3, GameManager.Instance.playerStats.transform.GetChild(0).gameObject);
+            mDirector.SetGenericBinding(track4, GameManager.Instance.playerStats.transform.GetChild(1).gameObject);
+            mDirector.SetGenericBinding(track5, GameManager.Instance.playerStats.transform.GetChild(1).gameObject);
+        }
+
         normalizedTime = (float)(mDirector.time / mDirector.duration);
 
         if (EventManager.Instance.Dungeon_Opening == true)

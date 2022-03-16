@@ -8,6 +8,8 @@ public class Boss_Tori : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] float angle;
     [SerializeField] CharacterStats characterStats;
+    public bool isSewer;
+    public bool isTimeLineOK;
     [Header("Idle")]
     [SerializeField] float groundToFlyingMoveSpeed;
     [SerializeField] Vector2 groundToFlyingMoveDirection;
@@ -78,8 +80,8 @@ public class Boss_Tori : MonoBehaviour
     {
         physicsCheck();
 
-        if (Input.GetKeyDown(KeyCode.P))
-            SpawnBigWind();
+        /*if (Input.GetKeyDown(KeyCode.P))
+            SpawnBigWind();*/
 
         angle = Vector3.Angle(transform.position, player.position);
 
@@ -87,12 +89,14 @@ public class Boss_Tori : MonoBehaviour
 
         if (EventManager.Instance.fireVillege_TimelineChangeDemon == true)
             characterStats.CurrentDefence = 5;
+
+        anim.SetBool("isTimeLineOK", isTimeLineOK);
     }
 
     void RandomStatePicker()
     {
         int randomState = Random.Range(0, 3);
-        if(PlayerStatus.isDialouging == false)
+        if(PlayerStatus.isDialouging == false && isSewer == false)
         {
             if (randomState == 0)
                 anim.SetTrigger("DiveAttack");

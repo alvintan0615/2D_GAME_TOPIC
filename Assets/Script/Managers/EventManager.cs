@@ -17,6 +17,7 @@ public class EventManager : Singleton<EventManager>
     public bool fireVillege_TimelineChangeDemon = false;
     public bool fireVillege_TimelineFinish = false;
     public bool Dungeon_Opening = false;
+    public bool Sewer_TimeLineBossTori = false;
     public bool timeLineBossStop = false;
     public bool isFirstTimeToPass = false;
     public bool electricDoor = false;
