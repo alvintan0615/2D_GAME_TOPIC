@@ -6823,6 +6823,15 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1347629251}
+    - target: {fileID: 198420103, guid: 1efcc5ef3bc127b40b1be9a2d7db0551, type: 3}
+      propertyPath: PausePanel
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 198420103, guid: 1efcc5ef3bc127b40b1be9a2d7db0551, type: 3}
+      propertyPath: PauseCanvas
+      value: 
+      objectReference: {fileID: 4984355924692733692, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+        type: 3}
     - target: {fileID: 602931904, guid: 1efcc5ef3bc127b40b1be9a2d7db0551, type: 3}
       propertyPath: Logo
       value: 
@@ -6882,6 +6891,18 @@ PrefabInstance:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1347629251}
+    - target: {fileID: 1089867982903262583, guid: 1efcc5ef3bc127b40b1be9a2d7db0551,
+        type: 3}
+      propertyPath: PausePanel
+      value: 
+      objectReference: {fileID: 810177206519586536, guid: b268efc93b215b94da76621dfcd71d48,
+        type: 3}
+    - target: {fileID: 1089867982903262583, guid: 1efcc5ef3bc127b40b1be9a2d7db0551,
+        type: 3}
+      propertyPath: PauseCanvas
+      value: 
+      objectReference: {fileID: 4984355924692733692, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+        type: 3}
     - target: {fileID: 1435031974289830878, guid: 1efcc5ef3bc127b40b1be9a2d7db0551,
         type: 3}
       propertyPath: ClickSound

@@ -12,6 +12,8 @@ public class ButtonTransition : MonoBehaviour
     public GameObject Option;
     public GameObject QuitPanel;
     public GameObject Logo;
+    public GameObject PauseCanvas;
+    
    
 
     static public bool OptionIsOpen = false;
@@ -66,6 +68,7 @@ public class ButtonTransition : MonoBehaviour
     public void CloseQuitPanel()
     {
         QuitPanel.gameObject.SetActive(false);
+        PauseCanvas.gameObject.SetActive(false);
         menuButtonController.enabled = true;
         menuButtonController.index = 0;
         QuitPanelMenuButtonController.index = 0;
@@ -73,7 +76,8 @@ public class ButtonTransition : MonoBehaviour
         NewGameMenuButton.enabled = true;
         ContimueMenuButton.enabled = true;
         OptionMenuButton.enabled = true;
-        QuitMenuButton.enabled = true; 
+        QuitMenuButton.enabled = true;
+        
     }
     public void OpenQuitPanel()
     {

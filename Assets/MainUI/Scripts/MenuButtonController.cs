@@ -38,12 +38,12 @@ public class MenuButtonController : MonoBehaviour
                     if (index < maxIndex)
                     {
                         index++;
-                        //SelectSound.Play();
+                        SelectSound.Play();
                     }
                     else
                     {
                         index = 0;
-                        //SelectSound.Play();
+                        SelectSound.Play();
                     }
                 }
                 else if (Input.GetAxis("Vertical") > 0)
@@ -51,12 +51,12 @@ public class MenuButtonController : MonoBehaviour
                     if (index > 0)
                     {
                         index--;
-                        //SelectSound.Play();
+                        SelectSound.Play();
                     }
                     else
                     {
                         index = maxIndex;
-                        //SelectSound.Play();
+                        SelectSound.Play();
                     }
                 }
                 keyDown = true;
