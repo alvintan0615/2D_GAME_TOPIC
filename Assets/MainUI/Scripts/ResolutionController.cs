@@ -5,6 +5,10 @@ using UnityEngine.UI;
 
 public class ResolutionController : MonoBehaviour
 {
+    private static readonly string ResolutionPref = "ResolutionStringPref";
+    private static readonly string HorizontalPref = "HorizontalPref";
+    private static readonly string VerticalPref = "VorizontalPref";
+
     [SerializeField] MenuButtonController menuButtonController;
     [SerializeField] Animator animator;
     [SerializeField] public int thisIndex;
@@ -13,9 +17,13 @@ public class ResolutionController : MonoBehaviour
     public int selectResolution;
 
     public Text resolutionText;
+    
 
     void Start()
     {
+        //getResolutionPref();
+        setResolutionPref();
+
         UpdateResText();
 
         bool foundRes = false;
@@ -45,6 +53,10 @@ public class ResolutionController : MonoBehaviour
     }
     void Update()
     {
+         getResolutionPref();
+        //setResolutionPref();
+        
+
         if (menuButtonController.index == thisIndex)
         {
             animator.SetBool("Selected", true);
@@ -64,6 +76,20 @@ public class ResolutionController : MonoBehaviour
         {
             animator.SetBool("Selected", false);
         }
+    }
+
+    public void getResolutionPref()
+    {
+        resolutionText.text = PlayerPrefs.GetString("ResolutionStringPref");
+        PlayerPrefs.GetInt("HorizontalPref");
+        PlayerPrefs.GetInt("VorizontalPref");
+    }
+
+    public void setResolutionPref()
+    {
+        PlayerPrefs.SetString("ResolutionStringPref", resolutionText.text);
+        PlayerPrefs.SetInt("HorizontalPref", resolutions[selectResolution].horizontal);
+        PlayerPrefs.SetInt("VorizontalPref", resolutions[selectResolution].vertical);
     }
 
     public void ResLeft()
@@ -90,6 +116,7 @@ public class ResolutionController : MonoBehaviour
 
     public void ApplyResolution()
     {
+        //Screen.SetResolution(resolutions[selectResolution].horizontal, resolutions[selectResolution].vertical, Screen.fullScreen) ;
         Screen.SetResolution(resolutions[selectResolution].horizontal, resolutions[selectResolution].vertical, Screen.fullScreen);
     }
 
@@ -101,6 +128,6 @@ public class ResolutionController : MonoBehaviour
     [System.Serializable]
     public class ResItem
     {
-        public int horizontal, vertical;
+       public int horizontal, vertical;
     }
 }
