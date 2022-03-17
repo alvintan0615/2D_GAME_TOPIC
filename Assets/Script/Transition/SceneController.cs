@@ -18,12 +18,12 @@ public class SceneController : Singleton<SceneController>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "UITestScene")
-        {
-            GameManager.Instance.playerStats.attackData.minDamage = 4;
-            GameManager.Instance.playerStats.attackData.maxDamage = 6;
-            TransitionToMain();
-        }
+        //if (Input.GetKeyDown(KeyCode.Escape) && SceneManager.GetActiveScene().name != "UITestScene")
+        //{
+        //    GameManager.Instance.playerStats.attackData.minDamage = 4;
+        //    GameManager.Instance.playerStats.attackData.maxDamage = 6;
+        //    TransitionToMain();
+        //}
     }
 
     public void TransitionToDestination(TransitionPoint transitionPoint)

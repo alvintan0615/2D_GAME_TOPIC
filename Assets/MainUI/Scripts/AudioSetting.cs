@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class AudioSetting : MonoBehaviour
 {
@@ -10,9 +12,23 @@ public class AudioSetting : MonoBehaviour
     public AudioSource backgroundAudio;
     public AudioSource[] soundEffectAudio;
 
+    public Slider BGEffectsSlider;
+    public Slider SoundEffectsSlider;
     void Awake()
     {
         ContinueSettings();
+        BGEffectsSlider.value = PlayerPrefs.GetFloat(BackgroundPref);
+        SoundEffectsSlider.value = PlayerPrefs.GetFloat(SoundsEffectPref);
+    }
+
+    private void Update()
+    {
+        backgroundAudio.volume  = BGEffectsSlider.value ;
+
+        for (int i = 0; i < soundEffectAudio.Length; i++)
+        {
+            soundEffectAudio[i].volume = SoundEffectsSlider.value;
+        }
     }
 
     void ContinueSettings()
@@ -27,4 +43,10 @@ public class AudioSetting : MonoBehaviour
             soundEffectAudio[i].volume = soundEffectFloat;
         }
     }
+    public void setSoundVolume()
+    {
+        PlayerPrefs.SetFloat("BGvolume", BGEffectsSlider.value);
+        PlayerPrefs.SetFloat("SoundVolume", SoundEffectsSlider.value);
+    }
+
 }

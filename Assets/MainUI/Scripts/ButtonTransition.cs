@@ -42,7 +42,7 @@ public class ButtonTransition : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-                ToUIMain();
+                //ToUIMain();
                 ClickSound.Play();
                 audioManager.SaveSoundSesttings();
             }

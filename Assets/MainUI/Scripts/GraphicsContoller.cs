@@ -9,7 +9,7 @@ public class GraphicsContoller : MonoBehaviour
     [SerializeField] Animator animator;
     [SerializeField] public int thisIndex;
 
-    public int qualityLevel = 3;
+    static public int qualityLevel = 3;
 
     public Text text1;
     public Text text2;
