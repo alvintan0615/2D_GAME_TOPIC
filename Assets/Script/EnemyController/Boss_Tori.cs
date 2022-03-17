@@ -90,6 +90,11 @@ public class Boss_Tori : MonoBehaviour
         if (EventManager.Instance.fireVillege_TimelineChangeDemon == true)
             characterStats.CurrentDefence = 5;
 
+        if(EventManager.Instance.Sewer_TimeLineBossTori == true && PlayerStatus.isDialouging == false)
+        {
+            isTimeLineOK = true;
+        }
+
         anim.SetBool("isTimeLineOK", isTimeLineOK);
     }
 
@@ -115,7 +120,7 @@ public class Boss_Tori : MonoBehaviour
         {
             if (randomState == 0)
                 anim.SetTrigger("GroundSprayFire");
-            else if (randomState <= 1)
+            else if (randomState >= 1)
                 anim.SetTrigger("GroundToFly");
         }
     }
@@ -138,7 +143,7 @@ public class Boss_Tori : MonoBehaviour
 
     public void Fly()
     {
-        if (isTouchingWall || randomFlip >= 45)
+        if (isTouchingWall)// || randomFlip >= 45
         {
             if (facingLeft)
                 flip();
@@ -146,7 +151,7 @@ public class Boss_Tori : MonoBehaviour
                 flip();
             
         }
-        randomFlip = 0;
+        //randomFlip = 0;
         rb.velocity = flyMoveSpeed * flyMoveDirection;
     }
 

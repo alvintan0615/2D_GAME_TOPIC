@@ -51,7 +51,7 @@ public class BigWind : MonoBehaviour
         playerColList = new Collider2D[1];
         playerCount = attackTrigger.OverlapCollider(playerFilter, playerColList);
 
-        if (playerCount > 0 && PlayerStatus.canBeHurt == true)
+        if (playerCount > 0 && PlayerStatus.canBeHurt == true && PlayerStatus.isHurting == false)
         {
             for (int i = 0; i < playerCount; i++)
             {
