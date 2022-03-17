@@ -96,7 +96,7 @@ public class Boss_Tori : MonoBehaviour
     void RandomStatePicker()
     {
         int randomState = Random.Range(0, 3);
-        if(PlayerStatus.isDialouging == false && isSewer == false)
+        if(PlayerStatus.isDialouging == false )
         {
             if (randomState == 0)
                 anim.SetTrigger("DiveAttack");
@@ -106,6 +106,18 @@ public class Boss_Tori : MonoBehaviour
                 anim.SetTrigger("SprayFire");
         }
         
+    }
+
+    void GroundRandomStatePicker()
+    {
+        int randomState = Random.Range(0, 3);
+        if(PlayerStatus.isDialouging == false && isSewer == true)
+        {
+            if (randomState == 0)
+                anim.SetTrigger("GroundSprayFire");
+            else if (randomState <= 1)
+                anim.SetTrigger("GroundToFly");
+        }
     }
 
     public void GroundIdle()
