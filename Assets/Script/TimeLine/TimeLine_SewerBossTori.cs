@@ -39,7 +39,6 @@ public class TimeLine_SewerBossTori : MonoBehaviour
         {
             EventManager.Instance.Sewer_TimeLineBossTori = true;
             PlayerStatus.isDialouging = false;
-
         }
     }
 }
