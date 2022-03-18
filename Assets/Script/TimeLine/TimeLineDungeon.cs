@@ -42,6 +42,7 @@ public class TimeLineDungeon : MonoBehaviour
         if (Application.isPlaying && EventManager.Instance.Dungeon_Opening == false && normalizedTime >= 0.01f && normalizedTime < 0.99f)
         {
             PlayerStatus.isDialouging = true;
+            GameManager.Instance.playerStats.characterData.currentHealth = 100;
         }
 
         if(normalizedTime >= 0.99f)
