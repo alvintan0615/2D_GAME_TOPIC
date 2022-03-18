@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MushRoomTreeData
   m_EditorClassIdentifier: 
   maxHealth: 30
-  currentHealth: 0
+  currentHealth: 30
   baseDefence: 2
   currentDefence: 2
   maxMana: 0

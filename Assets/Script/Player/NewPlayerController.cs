@@ -70,7 +70,7 @@ public class NewPlayerController : MonoBehaviour
     float demonTimer;
 
     [Header("死亡相關")]
-    private bool isDead = false;
+    public bool isDead = false;
     private bool isdeaded = false;
 
     #region HUMAN_Animation State

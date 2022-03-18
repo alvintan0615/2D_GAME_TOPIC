@@ -42,6 +42,8 @@ public class TimeLineFinishFireVillege : MonoBehaviour
             && EventManager.Instance.fireVillege_BossStoryLine == true)
         {
             PlayerStatus.isDialouging = true;
+            GameManager.Instance.playerStats.characterData.currentHealth = 1;
+            NewPlayerController.instance.isDead = false;
             mDirector.Play();
         }
 
