@@ -12,8 +12,8 @@ public class FullscreenController : MonoBehaviour
     public Text YesText;
     public Text NoText;
 
-    bool FullScreenOpen = true;
-    bool OpenIsFullScreen = false;
+    static public bool FullScreenOpen = true;
+    static public bool OpenIsFullScreen = false;
     // Start is called before the first frame update
     void Start()
     {

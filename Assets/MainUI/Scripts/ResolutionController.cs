@@ -5,9 +5,9 @@ using UnityEngine.UI;
 
 public class ResolutionController : MonoBehaviour
 {
-    private static readonly string ResolutionPref = "ResolutionStringPref";
-    private static readonly string HorizontalPref = "HorizontalPref";
-    private static readonly string VerticalPref = "VorizontalPref";
+    //private static readonly string ResolutionPref = "ResolutionStringPref";
+    //private static readonly string HorizontalPref = "HorizontalPref";
+    //private static readonly string VerticalPref = "VorizontalPref";
 
     [SerializeField] MenuButtonController menuButtonController;
     [SerializeField] Animator animator;
@@ -22,7 +22,7 @@ public class ResolutionController : MonoBehaviour
     void Start()
     {
         //getResolutionPref();
-        setResolutionPref();
+        //setResolutionPref();
 
         UpdateResText();
 
@@ -53,7 +53,7 @@ public class ResolutionController : MonoBehaviour
     }
     void Update()
     {
-         getResolutionPref();
+         //getResolutionPref();
         //setResolutionPref();
         
 
@@ -78,19 +78,19 @@ public class ResolutionController : MonoBehaviour
         }
     }
 
-    public void getResolutionPref()
-    {
-        resolutionText.text = PlayerPrefs.GetString("ResolutionStringPref");
-        PlayerPrefs.GetInt("HorizontalPref");
-        PlayerPrefs.GetInt("VorizontalPref");
-    }
+    //public void getResolutionPref()
+    //{
+    //    resolutionText.text = PlayerPrefs.GetString("ResolutionStringPref");
+    //    PlayerPrefs.GetInt("HorizontalPref");
+    //    PlayerPrefs.GetInt("VorizontalPref");
+    //}
 
-    public void setResolutionPref()
-    {
-        PlayerPrefs.SetString("ResolutionStringPref", resolutionText.text);
-        PlayerPrefs.SetInt("HorizontalPref", resolutions[selectResolution].horizontal);
-        PlayerPrefs.SetInt("VorizontalPref", resolutions[selectResolution].vertical);
-    }
+    //public void setResolutionPref()
+    //{
+    //    PlayerPrefs.SetString("ResolutionStringPref", resolutionText.text);
+    //    PlayerPrefs.SetInt("HorizontalPref", resolutions[selectResolution].horizontal);
+    //    PlayerPrefs.SetInt("VorizontalPref", resolutions[selectResolution].vertical);
+    //}
 
     public void ResLeft()
     {
