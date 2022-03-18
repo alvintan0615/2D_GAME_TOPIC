@@ -359,11 +359,11 @@ MonoBehaviour:
   angle: 0
   characterStats: {fileID: 0}
   isSewer: 1
-  isTimeLineOK: 1
+  isTimeLineOK: 0
   groundToFlyingMoveSpeed: 8
   groundToFlyingMoveDirection: {x: 0, y: 20}
   flyMoveSpeed: 8
-  flyMoveDirection: {x: -25, y: 0}
+  flyMoveDirection: {x: 25, y: 0}
   SprayFireMoveSpeed: 0
   sprayFirePrefab: {fileID: 988218432132126327}
   windAttackMoveSpeed: 0

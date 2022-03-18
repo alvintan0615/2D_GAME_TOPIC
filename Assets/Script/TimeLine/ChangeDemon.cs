@@ -36,7 +36,7 @@ public class ChangeDemon : MonoBehaviour
             mDirector.SetGenericBinding(track6, GameManager.Instance.playerStats.transform.GetChild(1).gameObject);
         }
 
-        if (GameManager.Instance.playerStats.characterData.currentHealth <= 15 
+        if (GameManager.Instance.playerStats.characterData.currentHealth <= 80 
             && EventManager.Instance.fireVillege_TimelineChangeDemon == false 
             && EventManager.Instance.fireVillege_BossStoryLine == true)
         {

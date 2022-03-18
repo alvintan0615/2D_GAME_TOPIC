@@ -1711,7 +1711,7 @@ MonoBehaviour:
   doubleJumpForce: 20
   jumpCount: 1
   footPoint: {fileID: 6301142379716692537}
-  footBoxSize: {x: 0.45, y: 0.1}
+  footBoxSize: {x: 0.45, y: 0.2}
   touchGround: 1
   touchPlatform: 0
   cantJumpMove: 0
