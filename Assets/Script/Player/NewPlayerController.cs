@@ -461,26 +461,30 @@ public class NewPlayerController : MonoBehaviour
 
     void NormalHealInjury()
     {
-        if(GameManager.Instance.Ken_Human == true)
+        if(PlayerStatus.isDialouging == false)
         {
-            humanTimer += Time.deltaTime;
-            if (humanTimer >= humanNormalHealTime)
+            if (GameManager.Instance.Ken_Human == true)
             {
-                GameManager.Instance.playerStats.characterData.currentHealth += 2;
-                humanTimer = 0f;
+                humanTimer += Time.deltaTime;
+                if (humanTimer >= humanNormalHealTime)
+                {
+                    GameManager.Instance.playerStats.characterData.currentHealth += 2;
+                    humanTimer = 0f;
+                }
+
             }
-                
-        }
-        else if(GameManager.Instance.Ken_Human == false)
-        {
-            demonTimer += Time.deltaTime;
-            if (demonTimer >= demonNormalInjuryTime)
+            else if (GameManager.Instance.Ken_Human == false)
             {
-                GameManager.Instance.playerStats.characterData.currentHealth -= 4;
-                demonTimer = 0f;
+                demonTimer += Time.deltaTime;
+                if (demonTimer >= demonNormalInjuryTime)
+                {
+                    GameManager.Instance.playerStats.characterData.currentHealth -= 4;
+                    demonTimer = 0f;
+                }
+
             }
-                
         }
+        
     }
 
     void Animation()

@@ -30,7 +30,7 @@ public class TimeLine_SewerBossTori : MonoBehaviour
         if (EventManager.Instance.Sewer_TimeLineBossTori == true)
             mDirector.Stop();
 
-        if (Application.isPlaying && EventManager.Instance.Dungeon_Opening == false && normalizedTime >= 0.01f && normalizedTime < 0.99f)
+        if (Application.isPlaying && normalizedTime >= 0.01f && normalizedTime < 0.99f)
         {
             PlayerStatus.isDialouging = true;
         }
