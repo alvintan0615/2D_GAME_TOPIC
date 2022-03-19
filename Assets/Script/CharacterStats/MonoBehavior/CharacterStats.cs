@@ -84,89 +84,34 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public int MaxMana
+    public int MaxHealingTime
     {
         get
         {
             if (characterData != null)
-                return characterData.maxMana;
+                return characterData.maxHealingTime;
             else return 0;
         }
         set
         {
-            characterData.maxMana = value;
+            characterData.maxHealingTime = value;
         }
     }
 
-    public int CurrentMana
+    public int CurrentHealingTime
     {
         get
         {
             if (characterData != null)
-                return characterData.currentMana;
+                return characterData.currentHealingTime;
             else return 0;
         }
         set
         {
-            characterData.currentMana = value;
+            characterData.currentHealingTime = value;
         }
     }
 
-    public int MaxStamina
-    {
-        get
-        {
-            if (characterData != null)
-                return characterData.maxStamina;
-            else return 0;
-        }
-        set
-        {
-            characterData.maxStamina = value;
-        }
-    }
-
-    public int CurrentStamina
-    {
-        get
-        {
-            if (characterData != null)
-                return characterData.currentStamina;
-            else return 0;
-        }
-        set
-        {
-            characterData.currentStamina = value;
-        }
-    }
-
-    public int MaxErosion
-    {
-        get
-        {
-            if (characterData != null)
-                return characterData.maxErosion;
-            else return 0;
-        }
-        set
-        {
-            characterData.maxErosion = value;
-        }
-    }
-
-    public int CurrentErosion
-    {
-        get
-        {
-            if (characterData != null)
-                return characterData.currentErosion;
-            else return 0;
-        }
-        set
-        {
-            characterData.currentErosion = value;
-        }
-    }
     #endregion
 
     #region Character Combat

@@ -18,7 +18,7 @@ public class PlayerStatus : MonoBehaviour
     public static bool isDashing = false;
     public static bool isDragging = false;
     public static bool isDialouging = false;
-
+    public static bool isHealing = false;
     //=====CanDoWhat=====
     public static bool canMove = true;
     public static bool canRunAnimation = true;
@@ -31,6 +31,7 @@ public class PlayerStatus : MonoBehaviour
     public static bool canDash = true;
     public static bool canDrag = true;
     public static bool canStickWall = true;
+    public static bool canHealing = true;
     private void Update()
     {
         canMove = canJump = true;
@@ -43,6 +44,7 @@ public class PlayerStatus : MonoBehaviour
         canDash = true;
         canDrag = true;
         canStickWall = true;
+        canHealing = true;
         if (!isCanMoveInput)
         {
             canMove = false;
@@ -60,6 +62,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = true;
             canDrag = false;
             canStickWall = true;
+            canHealing = false;
         }
         
         if (isAttacking)
@@ -75,6 +78,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = false;
             canDrag = false;
             canStickWall = false;
+            canHealing = false;
         }
 
         if (isAttackingTransition)
@@ -90,6 +94,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = false;
             canDrag = false;
             canStickWall = false;
+            canHealing = true;
         }
         
         if (isSkilling)
@@ -104,6 +109,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = false;
             canDrag = false;
             canStickWall = false;
+            canHealing = false;
         }
         if (isChanging)
         {
@@ -117,6 +123,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = false;
             canDrag = false;
             canStickWall = false;
+            canHealing = false;
         }
         if (isHurting == true)
         {
@@ -131,6 +138,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = false;
             canDrag = false;
             canStickWall = true;
+            canHealing = false;
         }
         if (isClimbing)
         {
@@ -145,6 +153,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = false;
             canDrag = false;
             canStickWall = false;
+            canHealing = false;
         }
         
         if (isDashing)
@@ -159,6 +168,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = true;
             canDrag = false;
             canStickWall = true;
+            canHealing = false;
         }
         
         if (isDragging)
@@ -173,6 +183,7 @@ public class PlayerStatus : MonoBehaviour
             canDash = false;
             canDrag = true;
             canStickWall = false;
+            canHealing = false;
         }
         if (isDialouging == true)
         {
@@ -187,6 +198,23 @@ public class PlayerStatus : MonoBehaviour
             canDash = false;
             canDrag = false;
             canStickWall = false;
+            canHealing = false;
+        }
+
+        if(isHealing == true)
+        {
+            canRunAnimation = false;
+            canMove = false;
+            canJump = false;
+            canFlip = false;
+            canSkill = false;
+            canChange = false;
+            canBeHurt = false;
+            canAttack = false;
+            canDash = false;
+            canDrag = false;
+            canStickWall = false;
+            canHealing = false;
         }
 
         /*Debug.Log("canBeHurt" + canBeHurt);

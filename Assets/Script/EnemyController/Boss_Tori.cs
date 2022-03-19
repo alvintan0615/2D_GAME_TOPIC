@@ -201,9 +201,21 @@ public class Boss_Tori : MonoBehaviour
     {
         float playerDirection = player.position.x - transform.position.x;
         if (playerDirection > 0)
-            Instantiate(windPrefab, new Vector3(player.position.x - 15 , player.position.y + 7), Quaternion.identity);
+            Instantiate(windPrefab, new Vector3(player.position.x - 15 , -26.5f), Quaternion.identity);
         else if(playerDirection < 0)
-            Instantiate(windPrefab, new Vector3(player.position.x + 15, player.position.y + 7), Quaternion.identity);
+            Instantiate(windPrefab, new Vector3(player.position.x + 15, -26.5f), Quaternion.identity);
+
+        /*Instantiate(windPrefab, windPos2.position, Quaternion.identity);
+        Instantiate(windPrefab, windPos3.position, Quaternion.identity);*/
+    }
+
+    void SpawnBigWindinSewer()
+    {
+        float playerDirection = player.position.x - transform.position.x;
+        if (playerDirection > 0)
+            Instantiate(windPrefab, new Vector3(player.position.x - 15, 63.4f), Quaternion.identity);
+        else if (playerDirection < 0)
+            Instantiate(windPrefab, new Vector3(player.position.x + 15, 63.4f), Quaternion.identity);
 
         /*Instantiate(windPrefab, windPos2.position, Quaternion.identity);
         Instantiate(windPrefab, windPos3.position, Quaternion.identity);*/

@@ -118,11 +118,11 @@ public class PlayerController : MonoBehaviour
         
         Attack();
         ErosionTime = Mathf.Max(ErosionTime - Time.deltaTime, 0);
-        if (ErosionTime == 0)
+       /* if (ErosionTime == 0)
         {
             characterStats.CurrentErosion = Mathf.Max(characterStats.CurrentErosion - 2, 0);
             ErosionTime = 5f;
-        }
+        }*/
             
         playerAnim();
         if (!(Input.GetKey(KeyCode.DownArrow) && Input.GetButtonDown("Jump")))
@@ -335,7 +335,7 @@ public class PlayerController : MonoBehaviour
     public void Damage()
     {
         
-        useErosion();
+        //useErosion();
         if (enemyCount > 0)
         {
             for(int i = 0; i < enemyCount; i++)
@@ -347,13 +347,7 @@ public class PlayerController : MonoBehaviour
     }
     #endregion
 
-    void useErosion()
-    {
-        characterStats.CurrentErosion = Mathf.Max(characterStats.CurrentErosion + 3, 0);
-        if (characterStats.CurrentErosion >= characterStats.MaxErosion)
-            characterStats.CurrentErosion = 100;
-        ErosionTime = 5f;
-    }
+
 
     private void Climb()
     {

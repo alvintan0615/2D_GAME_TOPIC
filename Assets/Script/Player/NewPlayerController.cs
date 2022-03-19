@@ -69,6 +69,9 @@ public class NewPlayerController : MonoBehaviour
     public float demonNormalInjuryTime;
     float demonTimer;
 
+    [Header("精靈回血")]
+    public bool hasFairy;
+
     [Header("死亡相關")]
     public bool isDead = false;
     private bool isdeaded = false;
@@ -166,9 +169,11 @@ public class NewPlayerController : MonoBehaviour
 
             if (characterStats.CurrentHealth >= characterStats.MaxHealth)
                 characterStats.CurrentHealth = characterStats.MaxHealth;
-        }
-        
 
+            if (characterStats.CurrentHealingTime >= characterStats.MaxHealingTime)
+                characterStats.CurrentHealingTime = characterStats.MaxHealingTime;
+        
+        }
     }
 
     private void FixedUpdate()
@@ -457,6 +462,14 @@ public class NewPlayerController : MonoBehaviour
             rb.velocity = Vector2.zero;
         }
         
+    }
+
+    void FairyHealing()
+    {
+        if(Input.GetKeyDown(KeyCode.D) && PlayerStatus.canHealing == true && hasFairy == true && characterStats.CurrentHealingTime > 0)
+        {
+            characterStats.CurrentHealingTime -= 1;
+        }
     }
 
     void NormalHealInjury()

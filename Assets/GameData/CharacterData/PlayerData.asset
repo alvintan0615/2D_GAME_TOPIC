@@ -16,9 +16,5 @@ MonoBehaviour:
   currentHealth: 100
   baseDefence: 2
   currentDefence: 2
-  maxMana: 100
-  currentMana: 0
-  maxStamina: 100
-  currentStamina: 0
-  maxErosion: 100
-  currentErosion: 88
+  maxHealingTime: 3
+  currentHealingTime: 0

@@ -11,10 +11,7 @@ public class CharacterData_SO : ScriptableObject
     public int currentHealth;
     public int baseDefence;
     public int currentDefence;
-    public int maxMana;
-    public int currentMana;
-    public int maxStamina;
-    public int currentStamina;
-    public int maxErosion;
-    public int currentErosion;
+    public int maxHealingTime;
+    public int currentHealingTime;
+
 }
