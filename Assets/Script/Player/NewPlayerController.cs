@@ -71,6 +71,8 @@ public class NewPlayerController : MonoBehaviour
 
     [Header("精靈回血")]
     public bool hasFairy;
+    public GameObject healingEffect;
+    public float healingTime;
 
     [Header("死亡相關")]
     public bool isDead = false;
@@ -142,6 +144,7 @@ public class NewPlayerController : MonoBehaviour
             StickWall();
             Changing();
             NormalHealInjury();
+            FairyHealing();
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 if (Time.time >= lastDash + dashCoolDown)
@@ -466,9 +469,12 @@ public class NewPlayerController : MonoBehaviour
 
     void FairyHealing()
     {
-        if(Input.GetKeyDown(KeyCode.D) && PlayerStatus.canHealing == true && hasFairy == true && characterStats.CurrentHealingTime > 0)
+
+        hasFairy = FollowPlayer.isFollowPlayer;
+        if(Input.GetKeyDown(KeyCode.D) && PlayerStatus.canHealing == true && FollowPlayer.isFollowPlayer == true 
+            && characterStats.CurrentHealingTime > 0 && characterStats.CurrentHealth < characterStats.MaxHealth)
         {
-            characterStats.CurrentHealingTime -= 1;
+            StartCoroutine(Healing(healingTime));
         }
     }
 
@@ -533,6 +539,15 @@ public class NewPlayerController : MonoBehaviour
         currentDemonState = newState;
     }
 
+    IEnumerator Healing(float healingReCover)
+    {
+        PlayerStatus.isHealing = true;
+        characterStats.CurrentHealingTime -= 1;
+        characterStats.CurrentHealth += Random.Range(15, 23);
+        Instantiate(healingEffect, footPoint.transform.position, Quaternion.identity);
+        yield return new WaitForSeconds(healingReCover);
+        PlayerStatus.isHealing = false;
+    }
     
 
     IEnumerator Dashing(float direction,float demonSpeed)
