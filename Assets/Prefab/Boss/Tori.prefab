@@ -419,7 +419,7 @@ MonoBehaviour:
   windPos1: {fileID: 0}
   windPos2: {fileID: 0}
   windPos3: {fileID: 0}
-  windPrefab: {fileID: 2616245602596010933, guid: b5315d7caea1ed54d9bcb5c180f043cd,
+  windPrefab: {fileID: 2616245602596010933, guid: 535b59b5f204c30419c50ca1e13b70c3,
     type: 3}
   diveAttackMoveSpeed: 50
   groundCheckDown: {fileID: 15113663793887776}
