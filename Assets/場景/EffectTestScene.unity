@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -187,11 +187,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: HealSheild
-      objectReference: {fileID: 0}
-    - target: {fileID: 6111599823384282431, guid: a1a11ad349faef947a2acaeb870ee228,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1a11ad349faef947a2acaeb870ee228, type: 3}
@@ -5079,7 +5074,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 19.8
+  orthographic size: 5.35
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -14799,7 +14794,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &2066860171
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -19606,6 +19601,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MeteorHit
       objectReference: {fileID: 0}
+    - target: {fileID: 402783757460201594, guid: c29084c5c3ef99b4e97d70921e480d88,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c29084c5c3ef99b4e97d70921e480d88, type: 3}
 --- !u!1001 &3206310709288182664
@@ -19615,10 +19615,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3206310708624307386, guid: e3d4e56568c0bc9408c7c296e61af13c,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206310709498728473, guid: e3d4e56568c0bc9408c7c296e61af13c,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206310710213938464, guid: e3d4e56568c0bc9408c7c296e61af13c,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3206310710279596306, guid: e3d4e56568c0bc9408c7c296e61af13c,
         type: 3}
       propertyPath: m_Name
       value: MagicBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 3206310710279596306, guid: e3d4e56568c0bc9408c7c296e61af13c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3206310710279596307, guid: e3d4e56568c0bc9408c7c296e61af13c,
         type: 3}
@@ -19675,6 +19695,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3206310710554382642, guid: e3d4e56568c0bc9408c7c296e61af13c,
+        type: 3}
+      propertyPath: looping
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3d4e56568c0bc9408c7c296e61af13c, type: 3}
 --- !u!1001 &4138192095902105338
@@ -19688,6 +19713,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BrokenSheild
+      objectReference: {fileID: 0}
+    - target: {fileID: 4138192096702759882, guid: d8f094d9dd4f5ad4eb059b9a5cffd5af,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4138192096702759883, guid: d8f094d9dd4f5ad4eb059b9a5cffd5af,
         type: 3}
@@ -19753,6 +19783,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5905539118926101243, guid: 6b81e0b3a2e330c419f36866cabc1e80,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.575531
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905539119264010527, guid: 6b81e0b3a2e330c419f36866cabc1e80,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905539119767399544, guid: 6b81e0b3a2e330c419f36866cabc1e80,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.5755305
+      objectReference: {fileID: 0}
     - target: {fileID: 5905539120016007242, guid: 6b81e0b3a2e330c419f36866cabc1e80,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -19812,6 +19857,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: FireBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905539120016007243, guid: 6b81e0b3a2e330c419f36866cabc1e80,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5905539120172819160, guid: 6b81e0b3a2e330c419f36866cabc1e80,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.5755305
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b81e0b3a2e330c419f36866cabc1e80, type: 3}
