@@ -1773,61 +1773,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1941052670204247305, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.556
-      objectReference: {fileID: 0}
-    - target: {fileID: 1941052670204247305, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: backgroundAudio
+      value: 
+      objectReference: {fileID: 409517935}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.556
-      objectReference: {fileID: 0}
-    - target: {fileID: 1941052670204247305, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[0]
+      value: 
+      objectReference: {fileID: 738018065}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2532047215880004123, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[1]
+      value: 
+      objectReference: {fileID: 1459702717}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3584338505150893084, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[2]
+      value: 
+      objectReference: {fileID: 559907408}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.556
-      objectReference: {fileID: 0}
-    - target: {fileID: 3584338505150893084, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[3]
+      value: 
+      objectReference: {fileID: 1961196797}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674005552715370770, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[4]
+      value: 
+      objectReference: {fileID: 442282083}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.563
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674005552715370770, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[5]
+      value: 
+      objectReference: {fileID: 896610451}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.563
-      objectReference: {fileID: 0}
-    - target: {fileID: 3674005552715370770, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[6]
+      value: 
+      objectReference: {fileID: 703832432}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223302583012218587, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[7]
+      value: 
+      objectReference: {fileID: 1346028601}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.563
-      objectReference: {fileID: 0}
-    - target: {fileID: 4223302583012218587, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+      propertyPath: soundEffectAudio.Array.data[8]
+      value: 
+      objectReference: {fileID: 813242732}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: soundEffectAudio.Array.data[9]
+      value: 
+      objectReference: {fileID: 476742093}
+    - target: {fileID: 2270045013053568396, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+        type: 3}
+      propertyPath: soundEffectAudio.Array.data[10]
+      value: 
+      objectReference: {fileID: 1849495277}
     - target: {fileID: 4984355924577930140, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
       propertyPath: ClickSound
@@ -1948,11 +1953,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 4984355924692733692, guid: d5fccac8ba5d52249919a5fa41f3d67d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 4984355925813323357, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
       propertyPath: ClickSound
@@ -1963,11 +1963,6 @@ PrefabInstance:
       propertyPath: SelectSound
       value: 
       objectReference: {fileID: 1849495277}
-    - target: {fileID: 4984355926104430677, guid: d5fccac8ba5d52249919a5fa41f3d67d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6315074840489008201, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
       propertyPath: ClickSound
@@ -1982,7 +1977,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1389812155}
+      objectReference: {fileID: 1389812156}
     - target: {fileID: 7920844058123443505, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
       propertyPath: ClickSound
@@ -10055,6 +10050,7 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
+  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -10066,7 +10062,6 @@ MonoBehaviour:
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
-  m_ClearDepth: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -10177,6 +10172,7 @@ MonoBehaviour:
   PausePanel: {fileID: 1556069231}
   QuitPanel: {fileID: 726826651}
   PauseCanvas: {fileID: 613206664}
+  OpenOptionPanel: {fileID: 0}
   ComfirmToMainUICanvas: {fileID: 1083015764}
   menuButtonController: {fileID: 0}
   PausePanelisOpen: 0

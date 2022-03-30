@@ -23,6 +23,8 @@ public class AudioSetting : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(PlayerPrefs.GetFloat(SoundsEffectPref));
+
         backgroundAudio.volume  = BGEffectsSlider.value ;
 
         for (int i = 0; i < soundEffectAudio.Length; i++)
@@ -45,8 +47,8 @@ public class AudioSetting : MonoBehaviour
     }
     public void setSoundVolume()
     {
-        PlayerPrefs.SetFloat("BGvolume", BGEffectsSlider.value);
-        PlayerPrefs.SetFloat("SoundVolume", SoundEffectsSlider.value);
+        PlayerPrefs.SetFloat("BackgroundPref", BGEffectsSlider.value);
+        PlayerPrefs.SetFloat("SoundEffecfPref", SoundEffectsSlider.value);
     }
 
 }

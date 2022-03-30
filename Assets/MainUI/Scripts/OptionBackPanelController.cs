@@ -4,30 +4,29 @@ using UnityEngine;
 
 public class OptionBackPanelController : MonoBehaviour
 {
-    public GameObject BackButton;
-    public GameObject StopBackButton;
+    public GameObject PausePanel;
+    public GameObject OptionPanel;
+    public GameObject PauseCanvas;
+
+    [SerializeField] MenuButtonController menuButtonController;
 
     // Start is called before the first frame update
     void Start()
     {
-        StopBackButton.SetActive(true);
-        BackButton.SetActive(false);
-        ButtonTransition.OnMainUI = false;
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(ButtonTransition.OnMainUI == true)
-        {
-            BackButton.SetActive(true);
-            StopBackButton.SetActive(false);
-        }
+        
+    }
 
-        if(ButtonTransition.OnMainUI == false )
-        {
-            BackButton.SetActive(false);
-            StopBackButton.SetActive(true);
-        }
+    public void BackToPausePanel()
+    {
+        menuButtonController.index = 0;
+        PauseCanvas.SetActive(true);
+        OptionPanel.SetActive(false);
+        PausePanel.SetActive(true);
     }
 }

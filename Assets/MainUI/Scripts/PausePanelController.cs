@@ -9,6 +9,7 @@ public class PausePanelController : MonoBehaviour
     public GameObject PausePanel;
     public GameObject QuitPanel;
     public GameObject PauseCanvas;
+    public GameObject OpenOptionPanel;
     public GameObject ComfirmToMainUICanvas;
 
     [SerializeField] MenuButtonController menuButtonController;
@@ -44,13 +45,24 @@ public class PausePanelController : MonoBehaviour
     //    PausePanel.gameObject.SetActive(false);
     //}
 
+    public void OpenOption()
+    {
+        menuButtonController.index = 0;
+        ComfirmToMainUICanvas.gameObject.SetActive(false);
+        PausePanel.gameObject.SetActive(false);
+        QuitPanel.gameObject.SetActive(false);
+        PauseCanvas.gameObject.SetActive(true);
+        OpenOptionPanel.gameObject.SetActive(true);
+    }
+
     public void OpenConfirmToMainUI()
     {
         menuButtonController.index = 0;
         ComfirmToMainUICanvas.gameObject.SetActive(true);
-        PauseCanvas.gameObject.SetActive(false);
+        PausePanel.gameObject.SetActive(false);
         QuitPanel.gameObject.SetActive(false);
         PauseCanvas.gameObject.SetActive(true);
+        OpenOptionPanel.gameObject.SetActive(false);
     }
 
     public void BackToGame()
@@ -60,6 +72,7 @@ public class PausePanelController : MonoBehaviour
         PausePanel.gameObject.SetActive(false);
         QuitPanel.gameObject.SetActive(false);
         ComfirmToMainUICanvas.gameObject.SetActive(false);
+        OpenOptionPanel.gameObject.SetActive(false);
     }
 
     public void ToStopPanel()
@@ -69,6 +82,7 @@ public class PausePanelController : MonoBehaviour
         QuitPanel.gameObject.SetActive(false);
         ComfirmToMainUICanvas.gameObject.SetActive(false);
         PauseCanvas.gameObject.SetActive(true);
+        OpenOptionPanel.gameObject.SetActive(false);
     }
 
     public void PauseOpenQuitPanel()
@@ -78,6 +92,7 @@ public class PausePanelController : MonoBehaviour
         QuitPanel.gameObject.SetActive(true);
         ComfirmToMainUICanvas.gameObject.SetActive(false);
         PauseCanvas.gameObject.SetActive(true);
+        OpenOptionPanel.gameObject.SetActive(false);
     }
 
     public void PauseToMainUIPanel()
@@ -87,6 +102,7 @@ public class PausePanelController : MonoBehaviour
         QuitPanel.gameObject.SetActive(false);
         PauseCanvas.gameObject.SetActive(false);
         ComfirmToMainUICanvas.gameObject.SetActive(false);
+        OpenOptionPanel.gameObject.SetActive(false);
         SceneManager.LoadScene("UITestScene");
     }
 
