@@ -481,6 +481,7 @@ MonoBehaviour:
   Option: {fileID: 8888648489027230699}
   QuitPanel: {fileID: 936249972}
   Logo: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   menuButtonController: {fileID: 3061368540405706116}
   QuitPanelMenuButtonController: {fileID: 2885489868059680963}
   NewGameMenuButton: {fileID: 5579960273713567616}
@@ -1837,8 +1838,8 @@ RectTransform:
   m_Father: {fileID: 7536663537140090637}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.865, y: 0}
-  m_AnchorMax: {x: 0.865, y: 1}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -2065,6 +2066,7 @@ MonoBehaviour:
   Option: {fileID: 8888648489027230699}
   QuitPanel: {fileID: 936249972}
   Logo: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   menuButtonController: {fileID: 1768456564439687815}
   QuitPanelMenuButtonController: {fileID: 2885489868059680963}
   NewGameMenuButton: {fileID: 5579960273713567616}
@@ -2632,6 +2634,7 @@ MonoBehaviour:
   Option: {fileID: 8888648489027230699}
   QuitPanel: {fileID: 936249972}
   Logo: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   menuButtonController: {fileID: 1435031974289830878}
   QuitPanelMenuButtonController: {fileID: 2885489868059680963}
   NewGameMenuButton: {fileID: 5579960273713567616}
@@ -3694,7 +3697,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   keyDown: 0
-  maxIndex: 3
+  maxIndex: 2
   ClickSound: {fileID: 0}
   SelectSound: {fileID: 0}
 --- !u!1 &3725436983926759499
@@ -3915,7 +3918,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0.865, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -5425,6 +5428,7 @@ MonoBehaviour:
   Option: {fileID: 8888648489027230699}
   QuitPanel: {fileID: 936249972}
   Logo: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   menuButtonController: {fileID: 1435031974289830878}
   QuitPanelMenuButtonController: {fileID: 2885489868059680963}
   NewGameMenuButton: {fileID: 5579960273713567616}
@@ -5473,7 +5477,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -107}
+  m_AnchoredPosition: {x: 0, y: -57}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5579960273735607173
@@ -5588,7 +5592,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 1435031974289830878}
   animator: {fileID: 5579960273735607170}
-  thisIndex: 3
+  thisIndex: 2
 --- !u!114 &5579960273735607174
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5620,6 +5624,7 @@ MonoBehaviour:
   Option: {fileID: 8888648489027230699}
   QuitPanel: {fileID: 936249972}
   Logo: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   menuButtonController: {fileID: 1435031974289830878}
   QuitPanelMenuButtonController: {fileID: 2885489868059680963}
   NewGameMenuButton: {fileID: 5579960273713567616}
@@ -5668,7 +5673,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 83}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5579960273846040774
@@ -5783,7 +5788,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 1435031974289830878}
   animator: {fileID: 5579960273846040771}
-  thisIndex: 2
+  thisIndex: 1
 --- !u!114 &5579960273846040775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5815,6 +5820,7 @@ MonoBehaviour:
   Option: {fileID: 8888648489027230699}
   QuitPanel: {fileID: 936249972}
   Logo: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   menuButtonController: {fileID: 1435031974289830878}
   QuitPanelMenuButtonController: {fileID: 2885489868059680963}
   NewGameMenuButton: {fileID: 5579960273713567616}
@@ -5845,7 +5851,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5579960273992607360
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6010,6 +6016,7 @@ MonoBehaviour:
   Option: {fileID: 8888648489027230699}
   QuitPanel: {fileID: 936249972}
   Logo: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   menuButtonController: {fileID: 1435031974289830878}
   QuitPanelMenuButtonController: {fileID: 2885489868059680963}
   NewGameMenuButton: {fileID: 5579960273713567616}
@@ -7674,6 +7681,7 @@ MonoBehaviour:
   Option: {fileID: 8888648489027230699}
   QuitPanel: {fileID: 936249972}
   Logo: {fileID: 0}
+  PauseCanvas: {fileID: 0}
   menuButtonController: {fileID: 1435031974289830878}
   QuitPanelMenuButtonController: {fileID: 2885489868059680963}
   NewGameMenuButton: {fileID: 5579960273713567616}
@@ -8613,7 +8621,6 @@ MonoBehaviour:
   menuButtonController: {fileID: 3061368540405706116}
   animator: {fileID: 4627716035969233295}
   thisIndex: 2
-  qualityLevel: 3
   text1: {fileID: 5604390877215952996}
   text2: {fileID: 5976207436660437058}
   text3: {fileID: 6900243297521239551}
@@ -8958,7 +8965,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.865
+  m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:

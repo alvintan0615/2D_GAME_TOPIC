@@ -28,9 +28,11 @@ public class PausePanelController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
+                
                 PauseCanvas.SetActive(true);
                 PausePanel.SetActive(true);
                 ToStopPanel();
+                
             }
         }
 
@@ -73,6 +75,7 @@ public class PausePanelController : MonoBehaviour
         QuitPanel.gameObject.SetActive(false);
         ComfirmToMainUICanvas.gameObject.SetActive(false);
         OpenOptionPanel.gameObject.SetActive(false);
+        Time.timeScale = 1;
     }
 
     public void ToStopPanel()
@@ -83,6 +86,7 @@ public class PausePanelController : MonoBehaviour
         ComfirmToMainUICanvas.gameObject.SetActive(false);
         PauseCanvas.gameObject.SetActive(true);
         OpenOptionPanel.gameObject.SetActive(false);
+        Time.timeScale = 0;
     }
 
     public void PauseOpenQuitPanel()
