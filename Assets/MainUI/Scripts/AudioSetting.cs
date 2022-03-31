@@ -24,21 +24,15 @@ public class AudioSetting : MonoBehaviour
 
         //SoundEffectsSlider.value = PlayerPrefs.GetFloat(SoundsEffectPref);
         //BGEffectsSlider.value = PlayerPrefs.GetFloat(BackgroundPref);
-
-        soundEffectFloat = PlayerPrefs.GetFloat(SoundsEffectPref);
-        SoundEffectsSlider.value = soundEffectFloat;
-
         backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
+        soundEffectFloat = PlayerPrefs.GetFloat(SoundsEffectPref);
         BGEffectsSlider.value = backgroundFloat;
-       
-
+        SoundEffectsSlider.value = soundEffectFloat;
         //Debug.Log(PlayerPrefs.GetFloat(SoundsEffectPref));
     }
 
     public void Update()
     {
-        Debug.Log(PlayerPrefs.GetFloat(SoundsEffectPref));
-
 
         backgroundAudio.volume = BGEffectsSlider.value;
 

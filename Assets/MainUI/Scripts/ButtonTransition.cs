@@ -52,9 +52,6 @@ public class ButtonTransition : MonoBehaviour
     public void ToNewGame()
     {
         OnMainUI = false;
-        //PlayerPrefs.DeleteAll();
-        PlayerPrefs.DeleteKey("sceneName");
-        PlayerPrefs.DeleteKey("playerStats");
         EventManager.Instance.AllEventToFalse();
         SceneController.Instance.TransitionToFirstLevel();
     }
