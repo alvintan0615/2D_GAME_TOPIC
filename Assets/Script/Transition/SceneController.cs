@@ -103,6 +103,7 @@ public class SceneController : Singleton<SceneController>
 
             //保存遊戲
             SaveManager.Instance.SavePlayerData();
+            //AudioSetting.instance.GetSoundVolume();
             yield return StartCoroutine(fade.FadeIn(2f));
             yield break;
         }

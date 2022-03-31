@@ -1978,6 +1978,11 @@ PrefabInstance:
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1389812156}
+    - target: {fileID: 6746012069564311172, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+        type: 3}
+      propertyPath: m_Value
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 7920844058123443505, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
       propertyPath: ClickSound
@@ -2019,6 +2024,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &78312627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1252451432878586492, guid: d5fccac8ba5d52249919a5fa41f3d67d,
+    type: 3}
+  m_PrefabInstance: {fileID: 78312624}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &78819504
 GameObject:
   m_ObjectHideFlags: 0
@@ -10172,7 +10183,7 @@ MonoBehaviour:
   PausePanel: {fileID: 1556069231}
   QuitPanel: {fileID: 726826651}
   PauseCanvas: {fileID: 613206664}
-  OpenOptionPanel: {fileID: 0}
+  OpenOptionPanel: {fileID: 78312627}
   ComfirmToMainUICanvas: {fileID: 1083015764}
   menuButtonController: {fileID: 0}
   PausePanelisOpen: 0

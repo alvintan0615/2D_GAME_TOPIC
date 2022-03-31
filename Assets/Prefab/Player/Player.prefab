@@ -2029,6 +2029,9 @@ MonoBehaviour:
   skillEffectPoint: {fileID: 0}
   humanNormalHealTime: 6
   demonNormalInjuryTime: 4
+  hasFairy: 0
+  healingEffect: {fileID: 0}
+  healingTime: 0
   isDead: 0
 --- !u!114 &6301142380842007509
 MonoBehaviour:

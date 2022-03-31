@@ -38,15 +38,15 @@ public class ButtonTransition : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(OptionMenuButton.enabled == true || ContimueMenuButton.enabled == true)
-        {
-            if (Input.GetKeyDown(KeyCode.Escape))
-            {
-                //ToUIMain();
-                ClickSound.Play();
-                audioManager.SaveSoundSesttings();
-            }
-        }
+        //if (OptionMenuButton.enabled == true || ContimueMenuButton.enabled == true)
+        //{
+        //    if (Input.GetKeyDown(KeyCode.Escape))
+        //    {
+        //        //ToUIMain();
+        //        ClickSound.Play();
+        //        audioManager.SaveSoundSesttings();
+        //    }
+        //}
     }
 
     public void ToNewGame()

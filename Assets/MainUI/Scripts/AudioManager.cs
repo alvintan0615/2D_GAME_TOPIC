@@ -64,6 +64,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     public void Update()
     {
-        Debug.Log(PlayerPrefs.GetFloat(SoundsEffectPref));
+        Debug.Log("BackgroundPref" + PlayerPrefs.GetFloat(BackgroundPref));
+        Debug.Log("SoundsEffectPref" + PlayerPrefs.GetFloat(SoundsEffectPref));
     }
 }
