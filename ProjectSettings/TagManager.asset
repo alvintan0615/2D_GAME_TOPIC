@@ -23,6 +23,7 @@ TagManager:
   - MachineStart
   - MachineEnd
   - Ladder
+  - FinalBoss_FirstPart
   layers:
   - Default
   - TransparentFX

@@ -505,9 +505,10 @@ GameObject:
   - component: {fileID: 58724990}
   - component: {fileID: 58724993}
   - component: {fileID: 58724992}
+  - component: {fileID: 58724994}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: FinalBoss_FirstPart
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,6 +623,26 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &58724994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58724989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2ccb5a8c193eb7c48bf7e34b3eb97ebd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lerpPosition:
+  - {fileID: 1782198539}
+  - {fileID: 483236948}
+  - {fileID: 1135942151}
+  - {fileID: 2039505092}
+  - {fileID: 773778739}
+  facingLeft: 1
+  lerpSpeed: 1
 --- !u!1001 &61837100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1624,7 +1645,7 @@ Transform:
   - {fileID: 1135942152}
   - {fileID: 2039505093}
   m_Father: {fileID: 1683491826}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &247099040 stripped
 Transform:
@@ -3892,6 +3913,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 555376304}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &773778739
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 773778740}
+  m_Layer: 0
+  m_Name: MiddleTop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &773778740
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773778739}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -58.5, y: 6.58, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1683491826}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &790853125
 GameObject:
   m_ObjectHideFlags: 0
@@ -5870,7 +5921,7 @@ PrefabInstance:
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -73.71
+      value: -58.47
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
@@ -5994,7 +6045,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftPos: {x: -81.05, y: -6.45, z: 0}
   rightPos: {x: -70.63, y: -6.45, z: 0}
-  lerpSpeed: 0.5
+  lerpSpeed: 0.6
   touchLeft: 0
   touchRight: 0
 --- !u!4 &1141715545 stripped
@@ -7195,7 +7246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1391101912}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -73.71, y: -5.239999, z: -10}
+  m_LocalPosition: {x: -58.47, y: -5.239999, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 119674639}
@@ -7791,7 +7842,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1554064355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8413,7 +8464,7 @@ Transform:
   - {fileID: 1782198540}
   - {fileID: 483236949}
   m_Father: {fileID: 1683491826}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1683491825
 GameObject:
@@ -8442,6 +8493,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 773778740}
   - {fileID: 1675963580}
   - {fileID: 234333200}
   m_Father: {fileID: 0}
@@ -10210,7 +10262,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftPos: {x: -46.76, y: -6.45, z: 0}
   rightPos: {x: -35.93, y: -6.45, z: 0}
-  lerpSpeed: 0.6
+  lerpSpeed: 0.55
   touchLeft: 0
   touchRight: 0
 --- !u!4 &2057457695 stripped
