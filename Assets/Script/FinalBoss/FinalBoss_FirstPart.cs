@@ -13,8 +13,10 @@ public class FinalBoss_FirstPart : MonoBehaviour
     public bool facingLeft = true;
     [Header("LerpMove")]
     public float lerpSpeed;
-    private int positionPoint;
+    [SerializeField]private string positionPoint;
 
+    [Header("MagicBall")]
+    int magicBallCount;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -26,30 +28,40 @@ public class FinalBoss_FirstPart : MonoBehaviour
         
     }
 
+    public void MagicBall()
+    {
+
+    }
+
+
     public void LerpMove(int randomState)
     {
         if (player != null && PlayerStatus.isDialouging == false)
         {
             if(randomState == 0)
             {
+                positionPoint = "TopLeft";
                 transform.position = Vector2.Lerp(transform.position, lerpPosition[0].transform.position, lerpSpeed * Time.deltaTime);
                 float MoveDirection = lerpPosition[0].transform.position.x - transform.position.x;
                 FlipLerpMove(MoveDirection);
             }
             if (randomState == 1)
             {
+                positionPoint = "TopRight";
                 transform.position = Vector2.Lerp(transform.position, lerpPosition[1].transform.position, lerpSpeed * Time.deltaTime);
                 float MoveDirection = lerpPosition[1].transform.position.x - transform.position.x;
                 FlipLerpMove(MoveDirection);
             }
             if (randomState == 2)
             {
+                positionPoint = "BottomLeft";
                 transform.position = Vector2.Lerp(transform.position, lerpPosition[2].transform.position, lerpSpeed * Time.deltaTime);
                 float MoveDirection = lerpPosition[2].transform.position.x - transform.position.x;
                 FlipLerpMove(MoveDirection);
             }
             if (randomState == 3)
             {
+                positionPoint = "BottomRight";
                 transform.position = Vector2.Lerp(transform.position, lerpPosition[3].transform.position, lerpSpeed * Time.deltaTime);
                 float MoveDirection = lerpPosition[3].transform.position.x - transform.position.x;
                 FlipLerpMove(MoveDirection);
