@@ -13,7 +13,7 @@ public class MagicBall : MonoBehaviour
     private bool hasPlayerPosition;
     private Vector3 playerPosition;
     public float ballSpeed;
-    void Start()
+    void OnEnable()
     {
         target = GameObject.FindGameObjectWithTag("FinalBoss_FirstPart");
         player = GameObject.FindGameObjectWithTag("Player");
@@ -62,6 +62,8 @@ public class MagicBall : MonoBehaviour
         yield return new WaitForSeconds(isAttackTime);
         isAttack = true;
         yield return new WaitForSeconds(4f);
+        isAttack = false;
+        hasPlayerPosition = false;
         MagicBallObjectpool.instance.ReturnPool(this.gameObject);
     }
 }

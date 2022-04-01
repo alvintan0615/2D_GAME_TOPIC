@@ -30,7 +30,7 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     public void MagicBall()
     {
-
+        MagicBallObjectpool.instance.GetFromPool();
     }
 
 

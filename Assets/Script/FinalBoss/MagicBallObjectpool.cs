@@ -15,6 +15,8 @@ public class MagicBallObjectpool : MonoBehaviour
     void Awake()
     {
         instance = this;
+
+        Fillpool();
     }
 
     public void Fillpool()
@@ -23,8 +25,6 @@ public class MagicBallObjectpool : MonoBehaviour
         {
             var newMagicBall = Instantiate(magicBallPrefab);
             newMagicBall.transform.SetParent(transform);
-
-            
         }
     }
 
