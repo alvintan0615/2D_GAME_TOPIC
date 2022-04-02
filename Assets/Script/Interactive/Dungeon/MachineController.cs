@@ -13,6 +13,8 @@ public class MachineController : MonoBehaviour
 
     static public bool IsFloor = false;
     static public bool BySelf = false;
+
+    public AudioSource Machine;
     public void Start()
     {
         DoAction = true;
@@ -26,6 +28,7 @@ public class MachineController : MonoBehaviour
             {
                 IsDefault = false;
                 animator.SetTrigger("DefaultToDown");
+                MahcineSound();
                 StartCoroutine(DelayDefaultToDown());
                 DoAction = false;
                 IsFloor = true;
@@ -34,6 +37,7 @@ public class MachineController : MonoBehaviour
             if (IsDefault == false && (UpToDown == false || IsFloor == true ) && DoAction == true && OneRound == false)
             {
                 animator.SetTrigger("DownToUp");
+                MahcineSound();
                 StartCoroutine(DelayOneRound());
                 DoAction = false;
                 IsFloor = false;
@@ -43,6 +47,7 @@ public class MachineController : MonoBehaviour
             if (IsDefault == false && OneRound == true && (UpToDown == true || IsFloor == false) && DoAction == true )
             {
                 animator.SetTrigger("UpToDown");
+                MahcineSound();
                 StartCoroutine(DelayDownToUp());
                 DoAction = false;
                 IsFloor = false;
@@ -78,5 +83,10 @@ public class MachineController : MonoBehaviour
         UpToDown = false;
         OneRound = false;
         DoAction = true;
+    }
+
+    public void MahcineSound()
+    {
+        Machine.Play();
     }
 }

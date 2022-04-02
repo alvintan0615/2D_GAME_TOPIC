@@ -10,6 +10,7 @@ public class MenuButtonController : MonoBehaviour
     [SerializeField] int maxIndex;
     public AudioSource ClickSound;
     public AudioSource SelectSound;
+
     // Start is called before the first frame update
 
     void Awake()
@@ -37,12 +38,12 @@ public class MenuButtonController : MonoBehaviour
                 {
                     if (index < maxIndex)
                     {
-                        index++;
+                        index++  ;
                         SelectSound.Play();
                     }
                     else
                     {
-                        index = 0;
+                        index = 0 ;
                         SelectSound.Play();
                     }
                 }
