@@ -25,6 +25,9 @@ public class MagicBallObjectpool : MonoBehaviour
         {
             var newMagicBall = Instantiate(magicBallPrefab);
             newMagicBall.transform.SetParent(transform);
+            newMagicBall.GetComponent<MagicBall>().number = i;
+            availableObjects.Enqueue(newMagicBall);
+            newMagicBall.SetActive(false);
         }
     }
 

@@ -77,7 +77,7 @@ public class FinalBoss_FirstPart : MonoBehaviour
             flip();
     }
 
-    void FlipTowardsPlayer()
+    public void FlipTowardsPlayer()
     {
         float playerDirection = player.position.x - transform.position.x;
 

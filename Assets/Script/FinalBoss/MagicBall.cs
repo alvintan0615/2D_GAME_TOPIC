@@ -5,6 +5,7 @@ using UnityEngine;
 public class MagicBall : MonoBehaviour
 {
     public GameObject target;
+    Vector3 targetPos;
     public GameObject player;
     public float distance;
     Vector3 dir;
@@ -13,11 +14,16 @@ public class MagicBall : MonoBehaviour
     private bool hasPlayerPosition;
     private Vector3 playerPosition;
     public float ballSpeed;
+    float r;
+    public int number;
+    public bool isSpiralAttack = false;
     void OnEnable()
     {
         target = GameObject.FindGameObjectWithTag("FinalBoss_FirstPart");
         player = GameObject.FindGameObjectWithTag("Player");
+        int randomPick = Random.Range(5, 10);
         dir = transform.position - target.transform.position;
+        targetPos = target.transform.position;
     }
 
     
@@ -25,7 +31,7 @@ public class MagicBall : MonoBehaviour
     {
         StartCoroutine(BoolMagicBallAttack(isAttackTime));
 
-        if (isAttack == false)
+        if (isAttack == false )
         {
             MagicBallAround();
         }
@@ -39,7 +45,7 @@ public class MagicBall : MonoBehaviour
     void MagicBallAround()
     {
             transform.position = target.transform.position + dir.normalized * distance;
-            transform.RotateAround(target.transform.position, Vector3.forward, 50 * Time.deltaTime);
+            transform.RotateAround(target.transform.position, Vector3.forward, 90 * Time.deltaTime);
             dir = transform.position - target.transform.position;
     }
 
@@ -56,6 +62,8 @@ public class MagicBall : MonoBehaviour
             transform.position += playerPosition * ballSpeed;
         }
     }
+
+
 
     IEnumerator BoolMagicBallAttack(float isAttackTime)
     {
