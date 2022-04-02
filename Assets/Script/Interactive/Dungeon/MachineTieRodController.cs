@@ -31,7 +31,7 @@ public class MachineTieRodController : MonoBehaviour
             if(IsDefault == true && DoAction == true)
             {
                 animator.SetTrigger("IsDefault");
-                TieRodSound();
+                //TieRodSound();
                 StartCoroutine(DelayDoAction());
                 DoAction = false;
                 IsDefault = false;
@@ -40,7 +40,7 @@ public class MachineTieRodController : MonoBehaviour
             if(IsDefault == false && PullUp == true && DoAction == true && OneRound == false)
             {
                 animator.SetTrigger("PullDown");
-                TieRodSound();
+                //TieRodSound();
                 StartCoroutine(DelayPullDown());
                 DoAction = false;
             }
@@ -48,7 +48,7 @@ public class MachineTieRodController : MonoBehaviour
             if(PullUp == false && OneRound == true && DoAction == true)
             {
                 animator.SetTrigger("PullUp");
-                TieRodSound();
+                //TieRodSound();
                 StartCoroutine(DelayPullUp());
                 DoAction = false;
             }

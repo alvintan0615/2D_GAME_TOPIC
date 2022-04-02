@@ -561,7 +561,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: cfadb793fb5b22745bfafafc220a2907, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7ba432af2b481a940accb25db50e8e83, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5563,6 +5563,7 @@ MonoBehaviour:
   OneRound: 0
   OneRoundTR: 0
   TieRod: {fileID: 272889402}
+  Machine: {fileID: 29119285}
 --- !u!95 &269319789
 Animator:
   serializedVersion: 3
@@ -5812,7 +5813,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3feb9d532072a774fa5d93527f4861e7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 7441b6be810719a4e9ae0aef4b1c7645, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

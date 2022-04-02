@@ -11,6 +11,7 @@ public class MachineTieRodFloor : MonoBehaviour
     public bool OneRoundTR = false;
 
     public AudioSource TieRod;
+    public AudioSource Machine;
     
     // Start is called before the first frame update
     void Start()
@@ -48,26 +49,27 @@ public class MachineTieRodFloor : MonoBehaviour
                 Debug.Log("aaa");
                 animator.SetTrigger("DefaultToDown");
                 animatorTR.SetTrigger("IsDefault");
-                FloorTieRodSound();
+                //FloorTieRodSound();
+                MachineSoundDefault();
                 StartCoroutine(DelayOneRound());
                 DoAction = false;
                 MachineController.IsFloor = true;
                 if(OneRound == true && MachineController.UpToDown == true)
                 {
                     animator.SetTrigger("UpToDown");
-                    FloorTieRodSound();
+                    //FloorTieRodSound();
                 }
 
                 if(OneRoundTR == true && MachineTieRodController.PullUp == true)
                 {
                     animatorTR.SetTrigger("PullDown");
-                    FloorTieRodSound();
+                    //FloorTieRodSound();
                 }
 
                 if (OneRoundTR == true && MachineTieRodController.PullUp == false)
                 {
                     animatorTR.SetTrigger("PullUp");
-                    FloorTieRodSound();
+                    //FloorTieRodSound();
                 }
 
             }
@@ -94,5 +96,10 @@ public class MachineTieRodFloor : MonoBehaviour
     public void FloorTieRodSound()
     {
         TieRod.Play();
+    }
+
+    public void MachineSoundDefault()
+    {
+        Machine.Play();
     }
 }
