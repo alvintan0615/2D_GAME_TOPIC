@@ -492,7 +492,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   keyDown: 0
-  maxIndex: 5
+  maxIndex: 4
   ClickSound: {fileID: 0}
   SelectSound: {fileID: 0}
 --- !u!114 &5024932707317836139
@@ -634,6 +634,7 @@ GameObject:
   - component: {fileID: 4513016771215595338}
   - component: {fileID: 2545417685222874285}
   - component: {fileID: 3532536385615877005}
+  - component: {fileID: 163469566}
   m_Layer: 5
   m_Name: OpenOptionPanel
   m_TagString: Untagged
@@ -833,6 +834,23 @@ MonoBehaviour:
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
   PausePanelisOpen: 0
+--- !u!114 &163469566
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1711769911630853850}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df734ab45d7cf3649b19ae00ffbc8821, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtonController: {fileID: 4984355925813323357}
+  animator: {fileID: 8054182410288680356}
+  thisIndex: 2
+  pausePanelController: {fileID: 3532536385615877005}
+  click: {fileID: 0}
 --- !u!1 &1879266688321645152
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,6 +2916,7 @@ GameObject:
   - component: {fileID: 4984355924304584041}
   - component: {fileID: 4984355924304584040}
   - component: {fileID: 80082567166125681}
+  - component: {fileID: 4569737196629976752}
   m_Layer: 5
   m_Name: ToMainUIButton
   m_TagString: Untagged
@@ -3097,6 +3116,23 @@ MonoBehaviour:
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
   PausePanelisOpen: 0
+--- !u!114 &4569737196629976752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984355924304584046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ec969bde935e5a4789050329008a24d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtonController: {fileID: 4984355925813323357}
+  animator: {fileID: 4984355924304584043}
+  thisIndex: 1
+  pausePanelController: {fileID: 80082567166125681}
+  click: {fileID: 0}
 --- !u!1 &4984355924559015992
 GameObject:
   m_ObjectHideFlags: 0
@@ -3810,6 +3846,7 @@ GameObject:
   - component: {fileID: 4984355925206794853}
   - component: {fileID: 4984355925206794852}
   - component: {fileID: 1370413304770678952}
+  - component: {fileID: 8399059194056309955}
   m_Layer: 5
   m_Name: No Button
   m_TagString: Untagged
@@ -4009,6 +4046,23 @@ MonoBehaviour:
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355924577930140}
   PausePanelisOpen: 0
+--- !u!114 &8399059194056309955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984355925206794858}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b1b5ba2f2848d41949a3b0f330e755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtonController: {fileID: 4984355924577930140}
+  animator: {fileID: 4984355925206794855}
+  thisIndex: 0
+  pausePanelController: {fileID: 1370413304770678952}
+  click: {fileID: 0}
 --- !u!1 &4984355925238297692
 GameObject:
   m_ObjectHideFlags: 0
@@ -4180,6 +4234,7 @@ GameObject:
   - component: {fileID: 4984355925346272699}
   - component: {fileID: 4984355925346272698}
   - component: {fileID: 2253426273639701349}
+  - component: {fileID: 1273395154}
   m_Layer: 5
   m_Name: BackToGame
   m_TagString: Untagged
@@ -4375,10 +4430,27 @@ MonoBehaviour:
   PausePanel: {fileID: 4984355925813323331}
   QuitPanel: {fileID: 5037043135584647046}
   PauseCanvas: {fileID: 4984355924692733692}
-  OpenOptionPanel: {fileID: 0}
+  OpenOptionPanel: {fileID: 1252451432878586492}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
   PausePanelisOpen: 0
+--- !u!114 &1273395154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984355925346272696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f085d874a41abe4a8b3d797c1025c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtonController: {fileID: 4984355925813323357}
+  animator: {fileID: 4984355925346272693}
+  thisIndex: 0
+  pausePanelController: {fileID: 2253426273639701349}
+  click: {fileID: 0}
 --- !u!1 &4984355925813323331
 GameObject:
   m_ObjectHideFlags: 0
@@ -4505,7 +4577,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PausePanel: {fileID: 4984355925813323331}
   QuitPanel: {fileID: 5037043135584647046}
-  PauseCanvas: {fileID: 4984355926104430677}
+  PauseCanvas: {fileID: 4984355924692733692}
   OpenOptionPanel: {fileID: 1252451432878586492}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
@@ -4604,6 +4676,7 @@ GameObject:
   - component: {fileID: 4984355925952537166}
   - component: {fileID: 4984355925952537165}
   - component: {fileID: 6278772321155144275}
+  - component: {fileID: 2369306054522379974}
   m_Layer: 5
   m_Name: Yes Button
   m_TagString: Untagged
@@ -4803,6 +4876,23 @@ MonoBehaviour:
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355924577930140}
   PausePanelisOpen: 0
+--- !u!114 &2369306054522379974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4984355925952537203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0b1b5ba2f2848d41949a3b0f330e755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButtonController: {fileID: 4984355924577930140}
+  animator: {fileID: 4984355925952537160}
+  thisIndex: 1
+  pausePanelController: {fileID: 6278772321155144275}
+  click: {fileID: 0}
 --- !u!1 &4984355926104430677
 GameObject:
   m_ObjectHideFlags: 0
@@ -5254,7 +5344,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuButtonController: {fileID: 6315074840489008201}
   animator: {fileID: 7055631561056943279}
-  thisIndex: 5
+  thisIndex: 4
 --- !u!114 &2206899725402463460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5311,6 +5401,8 @@ MonoBehaviour:
   OptionPanel: {fileID: 1252451432878586492}
   PauseCanvas: {fileID: 4984355924692733692}
   menuButtonController: {fileID: 6315074840489008201}
+  thisIndex: 4
+  click: {fileID: 0}
 --- !u!114 &2270045013053568396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5591,7 +5683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7123543521251901589
 RectTransform:
   m_ObjectHideFlags: 0

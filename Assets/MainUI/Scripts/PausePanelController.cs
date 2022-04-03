@@ -32,6 +32,7 @@ public class PausePanelController : MonoBehaviour
                 PauseCanvas.SetActive(true);
                 PausePanel.SetActive(true);
                 ToStopPanel();
+                
             }
         }
 
