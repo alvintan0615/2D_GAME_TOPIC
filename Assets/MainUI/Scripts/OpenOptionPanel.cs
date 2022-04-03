@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OtherSettingsSetValue : MonoBehaviour
+public class OpenOptionPanel : MonoBehaviour
 {
-    private static readonly string ResolutionPref = "ResolutionPref";
+    [SerializeField] MenuButtonController menuButtonController;
+    [SerializeField] Animator animator;
+    [SerializeField] int thisIndex;
     // Start is called before the first frame update
     void Start()
     {

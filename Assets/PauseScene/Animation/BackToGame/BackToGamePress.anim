@@ -204,13 +204,6 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: ResumeGame
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 0.016666668
     functionName: PlaySound
     data: 
     objectReferenceParameter: {fileID: 8300000, guid: f44464f7129d2d64e94a8fffc38900ce,

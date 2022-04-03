@@ -28,7 +28,7 @@ public class PausePanelController : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Escape))
             {
-               // Time.timeScale = 0;
+                Time.timeScale = 0;
                 PauseCanvas.SetActive(true);
                 PausePanel.SetActive(true);
                 ToStopPanel();
@@ -68,7 +68,6 @@ public class PausePanelController : MonoBehaviour
 
     public void BackToGame()
     {
-        //Time.timeScale = 1;
         menuButtonController.index = 0;
         PauseCanvas.gameObject.SetActive(false);
         PausePanel.gameObject.SetActive(false);

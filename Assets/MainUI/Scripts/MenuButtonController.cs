@@ -11,6 +11,8 @@ public class MenuButtonController : MonoBehaviour
     public AudioSource ClickSound;
     public AudioSource SelectSound;
 
+
+
     // Start is called before the first frame update
 
     void Awake()
@@ -25,6 +27,36 @@ public class MenuButtonController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(Time.timeScale == 0)
+        {
+            if(Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                if (index < maxIndex)
+                {
+                    index++;
+                    SelectSound.Play();
+                }
+                else
+                {
+                    index = 0;
+                    SelectSound.Play();
+                }
+            }
+
+            if(Input.GetKeyDown(KeyCode.UpArrow))
+            {
+                if (index > 0)
+                {
+                    index--;
+                    SelectSound.Play();
+                }
+                else
+                {
+                    index = maxIndex;
+                    SelectSound.Play();
+                }
+            }
+        }
         MoveSelection();
     }
 
