@@ -24,6 +24,7 @@ TagManager:
   - MachineEnd
   - Ladder
   - FinalBoss_FirstPart
+  - IronChain
   layers:
   - Default
   - TransparentFX
