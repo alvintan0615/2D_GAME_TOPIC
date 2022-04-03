@@ -69,7 +69,7 @@ public class MagicBall : MonoBehaviour
     {
         yield return new WaitForSeconds(isAttackTime);
         isAttack = true;
-        yield return new WaitForSeconds(4f);
+        yield return new WaitForSeconds(3f);
         isAttack = false;
         hasPlayerPosition = false;
         MagicBallObjectpool.instance.ReturnPool(this.gameObject);
