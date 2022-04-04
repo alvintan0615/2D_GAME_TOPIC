@@ -17,6 +17,13 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     [Header("MagicBall")]
     int magicBallCount;
+
+    [Header("FireBallRain")]
+    public float LerpMiddleTopMoveSpeed;
+    public GameObject fireBallMagicCircle;
+    public GameObject fireDust;
+    public static bool isFireBallrain = false;
+    public GameObject fireBallBase;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -34,6 +41,16 @@ public class FinalBoss_FirstPart : MonoBehaviour
     }
 
 
+    public void LerpMiddleTopMove()
+    {
+        if (player != null && PlayerStatus.isDialouging == false)
+        {
+            positionPoint = "MiddleTop";
+            transform.position = Vector2.Lerp(transform.position, lerpPosition[4].transform.position, LerpMiddleTopMoveSpeed * Time.deltaTime);
+            float MoveDirection = lerpPosition[0].transform.position.x - transform.position.x;
+            FlipLerpMove(MoveDirection);
+        }
+    }
     public void LerpMove(int randomState)
     {
         if (player != null && PlayerStatus.isDialouging == false)
@@ -75,6 +92,37 @@ public class FinalBoss_FirstPart : MonoBehaviour
             flip();
         else if (MoveDirection < 0 && !facingLeft)
             flip();
+    }
+
+    public void FireBallBase()
+    {
+        int fireBallNum = Random.Range(1, 3);
+
+        for (int i = 0; i < fireBallNum; i++)
+        {
+            float x = Random.Range(-76f, -40f);
+            Instantiate(fireBallBase, new Vector3(x, -10f, 0), Quaternion.identity);
+        }
+    }
+
+    public void FireBallMagicCircleOn()
+    {
+        fireBallMagicCircle.SetActive(true);
+    }
+
+    public void FireBallMagicCircleOff()
+    {
+        fireBallMagicCircle.SetActive(false);
+    }
+
+    public void FireDustOn()
+    {
+        fireDust.SetActive(true);
+    }
+
+    public void FireDustOff()
+    {
+        fireDust.SetActive(false);
     }
 
     public void FlipTowardsPlayer()
