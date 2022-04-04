@@ -22,6 +22,8 @@ public class FinalBoss_FirstPart : MonoBehaviour
     public float LerpMiddleTopMoveSpeed;
     public GameObject fireBallMagicCircle;
     public GameObject fireDust;
+    public static bool isFireBallrain = false;
+    public GameObject fireBallBase;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -90,6 +92,17 @@ public class FinalBoss_FirstPart : MonoBehaviour
             flip();
         else if (MoveDirection < 0 && !facingLeft)
             flip();
+    }
+
+    public void FireBallBase()
+    {
+        int fireBallNum = Random.Range(1, 3);
+
+        for (int i = 0; i < fireBallNum; i++)
+        {
+            float x = Random.Range(-76f, -40f);
+            Instantiate(fireBallBase, new Vector3(x, -10f, 0), Quaternion.identity);
+        }
     }
 
     public void FireBallMagicCircleOn()
