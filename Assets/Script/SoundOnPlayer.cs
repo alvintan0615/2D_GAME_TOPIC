@@ -44,24 +44,49 @@ public class SoundOnPlayer : MonoBehaviour
         audioSetting.soundEffectAudio[4].Play();
     }
 
-    public void HumanChangeMode()
+    public void HumanJumpSound()
     {
         audioSetting.soundEffectAudio[5].Play();
     }
 
-    public void DemonNormalAtk()
+    public void HumanDashSound()
     {
         audioSetting.soundEffectAudio[6].Play();
     }
 
-    public void DemonMagicAtk()
+    public void HumanHurtSound()
     {
         audioSetting.soundEffectAudio[7].Play();
     }
 
-    public void DemonFullSkill()
+    public void HumanChangeMode()
     {
         audioSetting.soundEffectAudio[8].Play();
+    }
+
+    public void DemonNormalAtk()
+    {
+        audioSetting.soundEffectAudio[9].Play();
+    }
+
+    public void DemonMagicAtk()
+    {
+        audioSetting.soundEffectAudio[10].Play();
+    }
+
+    public void DemonFullSkill()
+    {
+        audioSetting.soundEffectAudio[11].Play();
+    }
+
+    public void DemonWingSound()
+    {
+        audioSetting.soundEffectAudio[12].Play();
+    }
+
+    public void DemonDashSound()
+    {
+        audioSetting.soundEffectAudio[13].Play();
     }
     #endregion
 }
