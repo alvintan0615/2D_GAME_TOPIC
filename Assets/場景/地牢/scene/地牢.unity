@@ -4316,7 +4316,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0897580aacf718944a094b273c516b47, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 9d2c0138d5a1f0e48af170ce686fd88d, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -21855,6 +21855,7 @@ GameObject:
   - component: {fileID: 575244819}
   - component: {fileID: 575244823}
   - component: {fileID: 575244822}
+  - component: {fileID: 575244825}
   m_Layer: 8
   m_Name: "\u9435\u8655\u5973"
   m_TagString: IronChain
@@ -22312,6 +22313,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &575244825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 575244818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 829a34b472863544c93c110c19a1ae83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ironChain: {fileID: 178427365}
 --- !u!1 &582407257
 GameObject:
   m_ObjectHideFlags: 0
