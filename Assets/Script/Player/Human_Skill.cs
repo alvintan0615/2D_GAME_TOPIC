@@ -34,6 +34,9 @@ public class Human_Skill : MonoBehaviour
     [Header("受傷")]
     static public bool isHurt;
 
+    [Header("MoveStoneSound")]
+    public AudioSetting audioSetting;
+
     #region Animation State
     private string currentState;
     const string CIRCLESKILL = "Human_CircleSkill";
@@ -53,6 +56,10 @@ public class Human_Skill : MonoBehaviour
     {
         circleSkillFilledImage = GameObject.FindGameObjectWithTag("circleSkillFilledImage").GetComponent<Image>();
         groundSkillFilledImage = GameObject.FindGameObjectWithTag("groundSkillFilledImage").GetComponent<Image>();
+
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
+        audioSetting.soundEffectAudio[18].Play();
+        audioSetting.soundEffectAudio[18].mute = true;
     }
 
     void Update()
@@ -80,21 +87,24 @@ public class Human_Skill : MonoBehaviour
             if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Pull");
-
+                audioSetting.soundEffectAudio[18].mute = false;
             } 
             else if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Push");
+                audioSetting.soundEffectAudio[18].mute = false;
             }
                 
 
             if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Push");
+                audioSetting.soundEffectAudio[18].mute = false;
             }
             else if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Pull");
+                audioSetting.soundEffectAudio[18].mute = false;
             }
                 
 
@@ -109,6 +119,11 @@ public class Human_Skill : MonoBehaviour
             PlayerStatus.isDragging = false;
             box.GetComponent<FixedJoint2D>().enabled = false;
             box.GetComponent<BoxPull>().beingPushed = false;
+        }
+
+        else
+        {
+            audioSetting.soundEffectAudio[18].mute = true;
         }
     }
 
