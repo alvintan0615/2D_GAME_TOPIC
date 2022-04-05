@@ -17,8 +17,8 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     [Header("MagicBall")]
     public static bool isMagicBallMove = false;
-    private Color color;
-    private SpriteRenderer spriteRenderer;
+    [SerializeField]private Color color;
+    [SerializeField]private SpriteRenderer spriteRenderer;
 
     [Header("FireBallRain")]
     public float LerpMiddleTopMoveSpeed;
@@ -30,11 +30,12 @@ public class FinalBoss_FirstPart : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         player = FindObjectOfType<NewPlayerController>().transform;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
-        
+
     }
 
     public void MagicBall()
@@ -60,6 +61,34 @@ public class FinalBoss_FirstPart : MonoBehaviour
         {
             color = new Color(1, 1, 1, 0);
             spriteRenderer.color = color;
+            if(positionPoint == "TopLeft")
+            {
+                positionPoint = "TopRight";
+                transform.position = Vector2.Lerp(transform.position, lerpPosition[1].transform.position, lerpSpeed * Time.deltaTime);
+                float MoveDirection = lerpPosition[1].transform.position.x - transform.position.x;
+                FlipLerpMove(MoveDirection);
+            }
+            if(positionPoint == "TopRight")
+            {
+                positionPoint = "TopLeft";
+                transform.position = Vector2.Lerp(transform.position, lerpPosition[0].transform.position, lerpSpeed * Time.deltaTime);
+                float MoveDirection = lerpPosition[0].transform.position.x - transform.position.x;
+                FlipLerpMove(MoveDirection);
+            }
+            if(positionPoint == "BottomLeft")
+            {
+                positionPoint = "TopRight";
+                transform.position = Vector2.Lerp(transform.position, lerpPosition[1].transform.position, lerpSpeed * Time.deltaTime);
+                float MoveDirection = lerpPosition[1].transform.position.x - transform.position.x;
+                FlipLerpMove(MoveDirection);
+            }
+            if(positionPoint == "BottomRight")
+            {
+                positionPoint = "TopLeft";
+                transform.position = Vector2.Lerp(transform.position, lerpPosition[0].transform.position, lerpSpeed * Time.deltaTime);
+                float MoveDirection = lerpPosition[0].transform.position.x - transform.position.x;
+                FlipLerpMove(MoveDirection);
+            }
         }
         else
         {
