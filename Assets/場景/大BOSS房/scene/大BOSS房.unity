@@ -7097,7 +7097,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   magicBallPrefab: {fileID: 3206310710279596306, guid: e3d4e56568c0bc9408c7c296e61af13c,
     type: 3}
-  magicBallCount: 5
+  magicBallCount: 7
 --- !u!4 &1333623892
 Transform:
   m_ObjectHideFlags: 0
@@ -11181,6 +11181,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 631553704, guid: e3d4e56568c0bc9408c7c296e61af13c, type: 3}
+      propertyPath: isAroundTime
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3206310710279596306, guid: e3d4e56568c0bc9408c7c296e61af13c,
         type: 3}
       propertyPath: m_Name
@@ -11314,11 +11318,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4845422706604776559, guid: 5a0245fd913e37e42b95420509a3c4a6,
-        type: 3}
-      propertyPath: m_Color.a
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4845422706604776595, guid: 5a0245fd913e37e42b95420509a3c4a6,
         type: 3}

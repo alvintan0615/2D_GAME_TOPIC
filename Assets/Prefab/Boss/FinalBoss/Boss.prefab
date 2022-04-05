@@ -154,6 +154,8 @@ MonoBehaviour:
   facingLeft: 1
   lerpSpeed: 1
   positionPoint: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
   LerpMiddleTopMoveSpeed: 1
   fireBallMagicCircle: {fileID: 0}
   fireDust: {fileID: 0}
