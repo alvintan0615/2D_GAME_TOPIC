@@ -25,6 +25,7 @@ TagManager:
   - Ladder
   - FinalBoss_FirstPart
   - IronChain
+  - FireBall
   layers:
   - Default
   - TransparentFX

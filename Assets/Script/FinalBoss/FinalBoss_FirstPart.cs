@@ -101,7 +101,7 @@ public class FinalBoss_FirstPart : MonoBehaviour
         for (int i = 0; i < fireBallNum; i++)
         {
             float x = Random.Range(-76f, -40f);
-            Instantiate(fireBallBase, new Vector3(x, -10f, 0), Quaternion.identity);
+            FireBallBaseObjectpool.instance.FireBallBaseGetFromPool(new Vector3(x, -10f));
         }
     }
 

@@ -5,24 +5,31 @@ using UnityEngine;
 public class FireBallBase : MonoBehaviour
 {
     public GameObject fireBall;
-    void Start()
+
+    void OnEnable()
     {
-        InvokeRepeating("CreateFireBall", 2.5f, 10);
+        StartCoroutine(CreateFireBall());
     }
 
     void Update()
     {
-        StartCoroutine(destoryBase());
+        StartCoroutine(ReturnBase());
     }
 
-    void CreateFireBall()
+    /*void CreateFireBall()
     {
-        Instantiate(fireBall, new Vector3(this.gameObject.transform.position.x, 11.12f), Quaternion.identity);
+        FireBallObjectpool.instance.FireBallGetFromPool(new Vector3(this.gameObject.transform.position.x, 11.12f));
+    }*/
+
+    IEnumerator CreateFireBall()
+    {
+        yield return new WaitForSeconds(2.5f);
+        FireBallObjectpool.instance.FireBallGetFromPool(new Vector3(this.gameObject.transform.position.x, 11.12f));
     }
 
-    IEnumerator destoryBase()
+    IEnumerator ReturnBase()
     {
         yield return new WaitForSeconds(3.5f);
-        Destroy(this.gameObject);
+        FireBallBaseObjectpool.instance.FireBallBaseReturnPool(this.gameObject);
     }
 }
