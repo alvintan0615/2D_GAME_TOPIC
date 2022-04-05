@@ -16,7 +16,9 @@ public class FinalBoss_FirstPart : MonoBehaviour
     [SerializeField]private string positionPoint;
 
     [Header("MagicBall")]
-    int magicBallCount;
+    public static bool isMagicBallMove = false;
+    private Color color;
+    private SpriteRenderer spriteRenderer;
 
     [Header("FireBallRain")]
     public float LerpMiddleTopMoveSpeed;
@@ -51,6 +53,22 @@ public class FinalBoss_FirstPart : MonoBehaviour
             FlipLerpMove(MoveDirection);
         }
     }
+
+    public void LerpMagicBallMove()
+    {
+        if(isMagicBallMove == true)
+        {
+            color = new Color(1, 1, 1, 0);
+            spriteRenderer.color = color;
+        }
+        else
+        {
+            color = new Color(1, 1, 1, 1);
+            spriteRenderer.color = color;
+        }
+        
+    }
+
     public void LerpMove(int randomState)
     {
         if (player != null && PlayerStatus.isDialouging == false)

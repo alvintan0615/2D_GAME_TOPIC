@@ -51,18 +51,27 @@ public class MagicBall : MonoBehaviour
 
     void MagicBallAttack()
     {
-        if (!hasPlayerPosition)
+        if(FinalBoss_FirstPart.isMagicBallMove == true)
         {
-            playerPosition = player.transform.position - transform.position;
-            playerPosition.Normalize();
-            hasPlayerPosition = true;
+            transform.position = target.transform.position + dir.normalized * distance;
+            transform.RotateAround(target.transform.position, Vector3.forward, 90 * Time.deltaTime);
+            dir = transform.position - target.transform.position;
         }
-        if (hasPlayerPosition)
+        else
         {
-            transform.position += playerPosition * ballSpeed;
+            if (!hasPlayerPosition)
+            {
+                playerPosition = player.transform.position - transform.position;
+                playerPosition.Normalize();
+                hasPlayerPosition = true;
+            }
+            if (hasPlayerPosition)
+            {
+                transform.position += playerPosition * ballSpeed;
+            }
         }
+        
     }
-
 
 
     IEnumerator BoolMagicBallAttack(float isAttackTime)

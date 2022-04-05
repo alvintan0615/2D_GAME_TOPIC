@@ -14313,7 +14313,9 @@ MonoBehaviour:
   player: {fileID: 0}
   distance: 5
   isAttackTime: 5
-  ballSpeed: 0.6
+  ballSpeed: 0.8
+  number: 0
+  isSpiralAttack: 0
 --- !u!1 &3206310710554382655
 GameObject:
   m_ObjectHideFlags: 0

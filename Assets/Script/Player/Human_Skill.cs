@@ -78,14 +78,25 @@ public class Human_Skill : MonoBehaviour
         {
             PlayerStatus.isDragging = true;
             if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
+            {
                 NewPlayerController.instance.HumanState("Human_Pull");
+
+            } 
             else if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
+            {
                 NewPlayerController.instance.HumanState("Human_Push");
+            }
+                
 
             if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
+            {
                 NewPlayerController.instance.HumanState("Human_Push");
+            }
             else if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
+            {
                 NewPlayerController.instance.HumanState("Human_Pull");
+            }
+                
 
             box = hit.collider.gameObject;
 
