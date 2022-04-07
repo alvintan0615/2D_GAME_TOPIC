@@ -10,6 +10,7 @@ public class MachineTieRodFloor2 : MonoBehaviour
     public bool OneRound = false;
     public bool OneRoundTR = false;
 
+    public AudioSource Machine;
     // Start is called before the first frame update
     void Start()
     {
@@ -46,6 +47,7 @@ public class MachineTieRodFloor2 : MonoBehaviour
                 Debug.Log("aaa");
                 animator.SetTrigger("DefaultToDown2");
                 animatorTR.SetTrigger("IsDefault2");
+                MachineSoundDefault();
                 StartCoroutine(DelayOneRound());
                 DoAction = false;
                 MachineController2.IsFloor = true;
@@ -83,5 +85,10 @@ public class MachineTieRodFloor2 : MonoBehaviour
         DoAction = true;
         OneRound = true;
         OneRoundTR = true;
+    }
+
+    public void MachineSoundDefault()
+    {
+        Machine.Play();
     }
 }

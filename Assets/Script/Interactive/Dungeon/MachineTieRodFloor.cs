@@ -10,7 +10,7 @@ public class MachineTieRodFloor : MonoBehaviour
     public bool OneRound = false;
     public bool OneRoundTR = false;
 
-    public AudioSource TieRod;
+    //public AudioSource TieRod;
     public AudioSource Machine;
     
     // Start is called before the first frame update
@@ -93,10 +93,10 @@ public class MachineTieRodFloor : MonoBehaviour
         OneRoundTR = true;
     }
 
-    public void FloorTieRodSound()
-    {
-        TieRod.Play();
-    }
+    //public void FloorTieRodSound()
+    //{
+    //    TieRod.Play();
+    //}
 
     public void MachineSoundDefault()
     {
