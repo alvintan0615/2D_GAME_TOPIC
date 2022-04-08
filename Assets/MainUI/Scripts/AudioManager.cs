@@ -11,8 +11,10 @@ public class AudioManager : MonoBehaviour
     private int firstPlayInt;
     public Slider backgroundSlider, soundEffectSlider;
     private float backgroundFloat, soundEffectFloat;
-    public AudioSource backgroundAudio;
+    public AudioSource[] backgroundAudio;
     public AudioSource[] soundEffectAudio;
+
+    public bool isBoss = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +37,12 @@ public class AudioManager : MonoBehaviour
             backgroundSlider.value = backgroundFloat;
             soundEffectSlider.value = soundEffectFloat;
         }
+
+        isBoss = false;
+
+        backgroundAudio[0].mute = false;
+        backgroundAudio[0].Play();
+        backgroundAudio[1].mute = true;
     }
 
     public void SaveSoundSesttings()
@@ -53,9 +61,14 @@ public class AudioManager : MonoBehaviour
 
     public void UpdateSound()
     {
-        backgroundAudio.volume = backgroundSlider.value;
+        //backgroundAudio.volume = backgroundSlider.value;
+        for (int i = 0; i < backgroundAudio.Length; i++)
+        {
+            backgroundAudio[i].volume = backgroundSlider.value;
+        }
 
-        for(int i = 0;i<soundEffectAudio.Length; i++)
+
+        for (int i = 0;i<soundEffectAudio.Length; i++)
         {
             soundEffectAudio[i].volume = soundEffectSlider.value;
         }

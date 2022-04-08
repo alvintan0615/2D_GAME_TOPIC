@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6030,7 +6030,6 @@ MonoBehaviour:
   DoAction: 1
   OneRound: 0
   OneRoundTR: 0
-  TieRod: {fileID: 272889402}
   Machine: {fileID: 29119285}
 --- !u!95 &269319789
 Animator:
@@ -29094,7 +29093,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988bd938f1d0db3458e0f64a814fe62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundAudio: {fileID: 370308829}
+  backgroundAudio:
+  - {fileID: 370308829}
   soundEffectAudio:
   - {fileID: 1857344158}
   - {fileID: 1728463550}
@@ -29119,6 +29119,7 @@ MonoBehaviour:
   - {fileID: 178427365}
   BGEffectsSlider: {fileID: 156449531}
   SoundEffectsSlider: {fileID: 156449530}
+  Boss: {fileID: 0}
 --- !u!4 &887935248
 Transform:
   m_ObjectHideFlags: 0
@@ -36589,7 +36590,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988bd938f1d0db3458e0f64a814fe62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundAudio: {fileID: 409517935}
+  backgroundAudio:
+  - {fileID: 0}
   soundEffectAudio:
   - {fileID: 738018065}
   - {fileID: 1459702717}
@@ -36602,6 +36604,7 @@ MonoBehaviour:
   - {fileID: 813242732}
   BGEffectsSlider: {fileID: 0}
   SoundEffectsSlider: {fileID: 0}
+  Boss: {fileID: 0}
 --- !u!4 &1389812157
 Transform:
   m_ObjectHideFlags: 0

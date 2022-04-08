@@ -44,6 +44,9 @@ public class IronChainSound : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        ironChain.Play();
+        if(collision.gameObject.tag == "Player")
+        {
+            ironChain.Play();
+        }
     }
 }

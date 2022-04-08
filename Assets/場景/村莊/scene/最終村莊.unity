@@ -25504,7 +25504,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988bd938f1d0db3458e0f64a814fe62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundAudio: {fileID: 409517935}
+  backgroundAudio:
+  - {fileID: 409517935}
   soundEffectAudio:
   - {fileID: 738018065}
   - {fileID: 1459702717}
@@ -25524,6 +25525,7 @@ MonoBehaviour:
   - {fileID: 1849495277}
   BGEffectsSlider: {fileID: 78312625}
   SoundEffectsSlider: {fileID: 78312626}
+  isBoss: 0
 --- !u!4 &1389812157
 Transform:
   m_ObjectHideFlags: 0

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6192,10 +6192,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   backgroundSlider: {fileID: 5579960273325274306}
   soundEffectSlider: {fileID: 5579960273325274305}
-  backgroundAudio: {fileID: 1143070162}
+  backgroundAudio:
+  - {fileID: 1143070162}
   soundEffectAudio:
   - {fileID: 616307149}
   - {fileID: 442406667}
+  isBoss: 0
 --- !u!1 &1440027600
 GameObject:
   m_ObjectHideFlags: 0

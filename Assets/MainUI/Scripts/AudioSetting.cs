@@ -11,14 +11,17 @@ public class AudioSetting : MonoBehaviour
     private static readonly string BackgroundPref = "BackgroundPref";
     private static readonly string SoundsEffectPref = "SoundEffecfPref";
     private float backgroundFloat, soundEffectFloat;
-    public AudioSource backgroundAudio;
+    public AudioSource[] backgroundAudio;
     public AudioSource[] soundEffectAudio;
 
     public Slider BGEffectsSlider;
     public Slider SoundEffectsSlider;
+
+    public GameObject Boss;
     void Awake()
     {
         instance = this;
+
         //ContinueSettings();
         //GetSoundVolume();
 
@@ -31,10 +34,33 @@ public class AudioSetting : MonoBehaviour
         //Debug.Log(PlayerPrefs.GetFloat(SoundsEffectPref));
     }
 
+    public void Start()
+    {
+        backgroundAudio[0].mute = false;
+        backgroundAudio[1].gameObject.SetActive(false);
+    }
+
     public void Update()
     {
+        if (Boss.activeInHierarchy == true)
+        {
+            backgroundAudio[0].mute = true;
+            backgroundAudio[1].gameObject.SetActive(true);
+        }
+        
 
-        backgroundAudio.volume = BGEffectsSlider.value;
+        if(Input.GetKeyDown(KeyCode.P))
+        {
+            backgroundAudio[0].mute = false;
+            backgroundAudio[1].gameObject.SetActive(false);
+        }
+
+
+        //backgroundAudio.volume = BGEffectsSlider.value;
+        for (int i = 0; i < backgroundAudio.Length; i++)
+        {
+            backgroundAudio[i].volume = BGEffectsSlider.value;
+        }
 
         for (int i = 0; i < soundEffectAudio.Length; i++)
         {
@@ -47,7 +73,11 @@ public class AudioSetting : MonoBehaviour
         backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
         soundEffectFloat = PlayerPrefs.GetFloat(SoundsEffectPref);
 
-        backgroundAudio.volume = backgroundFloat;
+        //backgroundAudio.volume = backgroundFloat;
+        for (int i = 0; i < backgroundAudio.Length; i++)
+        {
+            backgroundAudio[i].volume = BGEffectsSlider.value;
+        }
 
         for (int i = 0; i < soundEffectAudio.Length; i++)
         {
@@ -64,5 +94,12 @@ public class AudioSetting : MonoBehaviour
     {
         BGEffectsSlider.value = PlayerPrefs.GetFloat(BackgroundPref);
         SoundEffectsSlider.value = PlayerPrefs.GetFloat(SoundsEffectPref);
+    }
+
+    public void ChangeBossBGMusic()
+    {
+        backgroundAudio[0].mute = true;
+        backgroundAudio[1].Play();
+        backgroundAudio[1].mute = false;
     }
 }
