@@ -6,6 +6,7 @@ public class EventManager : Singleton<EventManager>
     public bool canChange = false;
     public bool canUsePotion = false;
     public bool canUseAllSceenSkill = false;
+    public bool PassTutorial = false;
     public bool takeFood = false;
     public bool fireAlarm = false;
     public bool fireVillege_Timeline = false;

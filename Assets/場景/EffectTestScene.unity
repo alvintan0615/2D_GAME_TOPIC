@@ -391,6 +391,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossWarning
       objectReference: {fileID: 0}
+    - target: {fileID: 2986626917075880137, guid: 3623566b4675f6242b2edbc0fb4bd135,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2986626917075880139, guid: 3623566b4675f6242b2edbc0fb4bd135,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2986626917075880149, guid: 3623566b4675f6242b2edbc0fb4bd135,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -553,6 +563,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PoisonContainer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124938168214607618, guid: 7b14df27d2aef0147a689222f285ff5f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4124938168214607621, guid: 7b14df27d2aef0147a689222f285ff5f,
         type: 3}
@@ -747,6 +762,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Elctr Spark
       objectReference: {fileID: 0}
+    - target: {fileID: 4367080298371594214, guid: 2262257a1d7dc4d439acd8e65b3709d9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2262257a1d7dc4d439acd8e65b3709d9, type: 3}
 --- !u!1001 &4883471506386873193
@@ -760,6 +780,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BossClaw
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883471508109519945, guid: 561016b0f67042540acfa2c994d47892,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4883471508109519947, guid: 561016b0f67042540acfa2c994d47892,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4883471508109519949, guid: 561016b0f67042540acfa2c994d47892,
         type: 3}
@@ -903,6 +933,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: PoisonBall
+      objectReference: {fileID: 0}
+    - target: {fileID: 2876350653714642746, guid: c562a0d4349a2684b9829e6d8904af9b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2876350653714642747, guid: c562a0d4349a2684b9829e6d8904af9b,
         type: 3}
