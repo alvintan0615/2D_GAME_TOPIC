@@ -3712,7 +3712,7 @@ GameObject:
   - component: {fileID: 631847062}
   m_Layer: 0
   m_Name: CM vcam2
-  m_TagString: PlayerCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3754,7 +3754,7 @@ MonoBehaviour:
   m_Follow: {fileID: 0}
   m_Lens:
     FieldOfView: 40
-    OrthographicSize: 14
+    OrthographicSize: 14.5
     NearClipPlane: 0.1
     FarClipPlane: 5000
     Dutch: 0
@@ -3778,7 +3778,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631847061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.19, y: -1, z: -10}
+  m_LocalPosition: {x: -60.5, y: -1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 164323310}
@@ -3915,6 +3915,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Tori_Sewer
+      objectReference: {fileID: 0}
+    - target: {fileID: 1588254680874583219, guid: c7f9e054ba8f06a4a8caba5f5dd4c526,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1588254680874583231, guid: c7f9e054ba8f06a4a8caba5f5dd4c526,
         type: 3}
@@ -5992,6 +5997,11 @@ PrefabInstance:
       propertyPath: m_LocalRotation.w
       value: 0.99795
       objectReference: {fileID: 0}
+    - target: {fileID: 6920775800761900927, guid: 268ced2ad455ffb4c91cc105251dec8c,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8997343346141949669, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_SortingLayer
@@ -7805,7 +7815,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988bd938f1d0db3458e0f64a814fe62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundAudio: {fileID: 431838869}
+  backgroundAudio:
+  - {fileID: 0}
   soundEffectAudio:
   - {fileID: 499537661}
   - {fileID: 1864479180}
@@ -7818,6 +7829,7 @@ MonoBehaviour:
   - {fileID: 1176774213}
   BGEffectsSlider: {fileID: 0}
   SoundEffectsSlider: {fileID: 0}
+  Boss: {fileID: 0}
 --- !u!4 &1524704563
 Transform:
   m_ObjectHideFlags: 0
@@ -8416,7 +8428,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 14
+  orthographic size: 14.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -8513,7 +8525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605642868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -59.10486, y: -0.6109923, z: -10}
+  m_LocalPosition: {x: -60.513515, y: -0.117812276, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11181,10 +11193,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 631553704, guid: e3d4e56568c0bc9408c7c296e61af13c, type: 3}
-      propertyPath: isAroundTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3206310710279596306, guid: e3d4e56568c0bc9408c7c296e61af13c,
         type: 3}
       propertyPath: m_Name

@@ -121,10 +121,10 @@ public class Human_Skill : MonoBehaviour
             box.GetComponent<BoxPull>().beingPushed = false;
         }
 
-        else
+       /* else
         {
             audioSetting.soundEffectAudio[18].mute = true;
-        }
+        }*/
     }
 
     void NormalAttack()

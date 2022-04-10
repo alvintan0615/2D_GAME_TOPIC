@@ -131,4 +131,15 @@ public class MagicBall : MonoBehaviour
         hasPlayerPosition = false;
         MagicBallObjectpool.instance.ReturnPool(this.gameObject);
     }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            var bossStats = target.GetComponent<CharacterStats>();
+            var playerStats = player.GetComponent<CharacterStats>();
+            playerStats.TakeDamage(bossStats, playerStats, 0);
+        }
+    }
 }

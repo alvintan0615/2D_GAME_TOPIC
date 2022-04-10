@@ -118,24 +118,35 @@ public class CharacterStats : MonoBehaviour
 
     public void TakeDamage(CharacterStats attacker, CharacterStats defener , int attackSkillValue)
     {
-        int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
-        CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
-
         if(defener.tag == "Player" && GameManager.Instance.Ken_Human == true && defener.characterData.currentHealth > 0)
         {
+            int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
+            CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
             Human_Skill.instance.Hurt();
-            
-            defener.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
-            //Rigidbody2D rb = defener.GetComponent<Rigidbody2D>();
-            if (attacker.transform.position.x > defener.transform.position.x)
-                StartCoroutine(GameManager.Instance.KnockBack(0.1f, -1700, 10 , defener.GetComponent<Rigidbody2D>()));
-            else if (attacker.transform.position.x < defener.transform.position.x)
-                StartCoroutine(GameManager.Instance.KnockBack(0.1f, 1700, 10, defener.GetComponent<Rigidbody2D>()));
+            if(PlayerStatus.canBeHurt == true)
+            {
+
+                defener.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
+                //Rigidbody2D rb = defener.GetComponent<Rigidbody2D>();
+                if (attacker.transform.position.x > defener.transform.position.x)
+                    StartCoroutine(GameManager.Instance.KnockBack(0.1f, -1700, 10, defener.GetComponent<Rigidbody2D>()));
+                else if (attacker.transform.position.x < defener.transform.position.x)
+                    StartCoroutine(GameManager.Instance.KnockBack(0.1f, 1700, 10, defener.GetComponent<Rigidbody2D>()));
+
+            }
+        }
+
+        if(defener.tag == "Player" && GameManager.Instance.Ken_Human == false && defener.characterData.currentHealth > 0)
+        {
+            int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
+            CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         }
 
         if(defener.tag == "Enemy" && defener.characterData.currentHealth > 0)
         {
             defener.GetComponent<Animator>().SetTrigger("Hurt");
+            int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
+            CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
             //StartCoroutine(GameManager.Instance.KnockBack02(attacker, defener));
             if (attacker.transform.position.x > defener.transform.position.x)
                 StartCoroutine(GameManager.Instance.KnockBack(0.02f, -1000, 300, defener.GetComponent<Rigidbody2D>()));
@@ -146,6 +157,8 @@ public class CharacterStats : MonoBehaviour
         if(defener.tag == "Tori")
         {
             defener.GetComponent<Boss_Tori>().Injury();
+            int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
+            CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         }
     }
 
