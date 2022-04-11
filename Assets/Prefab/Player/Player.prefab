@@ -1769,6 +1769,7 @@ MonoBehaviour:
   groundSkillCD: 6
   circleSkillFilledImage: {fileID: 0}
   groundSkillFilledImage: {fileID: 0}
+  audioSetting: {fileID: 0}
 --- !u!95 &1923671627
 Animator:
   serializedVersion: 3
@@ -1898,6 +1899,7 @@ GameObject:
   - component: {fileID: 1709032177}
   - component: {fileID: 6824631821059527647}
   - component: {fileID: 455490810}
+  - component: {fileID: 2257889292217508579}
   m_Layer: 10
   m_Name: Player
   m_TagString: Player
@@ -2208,6 +2210,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe4a736dc2a5bbe46a92a277e403fde6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2257889292217508579
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6301142380842007514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8212066923850fd4b90faafe7f71b593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tutorialPanel: {fileID: 0}
+  walk: {fileID: 0}
+  walkCol: {fileID: 0}
+  TutorialPanelOpen: 0
+  walkIsOpen: 0
 --- !u!1 &6415022734506177455
 GameObject:
   m_ObjectHideFlags: 0

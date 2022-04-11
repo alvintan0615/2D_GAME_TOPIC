@@ -26,6 +26,7 @@ TagManager:
   - FinalBoss_FirstPart
   - IronChain
   - FireBall
+  - Tutorial01
   layers:
   - Default
   - TransparentFX
