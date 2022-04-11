@@ -23,6 +23,16 @@ public class EventManager : Singleton<EventManager>
     public bool isFirstTimeToPass = false;
     public bool electricDoor = false;
     public bool finalBossStart = false;
+
+
+    public bool HasFirstTalk = false;
+    public bool firstNormalAtk = false;
+    public bool SecondNormalAtk = false;
+    public bool FireSkill = false;
+    public bool GroundSkill = false;
+    public bool Jump = false;
+    public bool Dash = false;
+
     protected override void Awake()
     {
         base.Awake();

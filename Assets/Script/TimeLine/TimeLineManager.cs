@@ -15,6 +15,7 @@ public class TimeLineManager : MonoBehaviour
     public Image _Pannel;
 
     [SerializeField] PlayableDirector activeDirector;
+    [SerializeField] TimeLineForestTutorial forestTutorial;
     private void Awake()
     {
         if (ins != null)
@@ -27,10 +28,21 @@ public class TimeLineManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.A))
+        if (forestTutorial.NowInTutorial == true)
         {
-            ResumeTimeline();
+            if (EventManager.Instance.HasFirstTalk == true && EventManager.Instance.firstNormalAtk == false)
+            {
+                if (Input.GetKeyDown(KeyCode.Z))
+                {
+                    ResumeTimeline();
+                }
+            }
         }
+
+        if (Input.GetKeyDown(KeyCode.A))
+            {
+                ResumeTimeline();
+            }
     }
 
     public void SetDialogue(string lineOfDialogue, Sprite CharacterPhoto, Image Pannel)
