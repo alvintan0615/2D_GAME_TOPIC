@@ -160,6 +160,13 @@ public class CharacterStats : MonoBehaviour
             int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
             CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         }
+
+        if(defener.tag == "FinalBoss_Firstpart")
+        {
+            defener.GetComponent<FinalBoss_FirstPart>().InjuryHurt();
+            int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
+            CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
+        }
     }
 
     public void ThronDamage(int Damage, CharacterStats defender)

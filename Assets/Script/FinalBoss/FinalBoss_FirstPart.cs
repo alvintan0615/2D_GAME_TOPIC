@@ -175,6 +175,18 @@ public class FinalBoss_FirstPart : MonoBehaviour
         }
     }
 
+    public void InjuryHurt()
+    {
+        StartCoroutine(ChangeColor(new Color(1f, 0.39f, 0.37f), 0.1f));
+    }
+
+    IEnumerator ChangeColor(Color color, float colorChangeTime)
+    {
+        spriteRenderer.color = color;
+        yield return new WaitForSeconds(colorChangeTime);
+        spriteRenderer.color = new Color(1, 1, 1);
+    }
+
     public void FireBallMagicCircleOn()
     {
         fireBallMagicCircle.SetActive(true);
