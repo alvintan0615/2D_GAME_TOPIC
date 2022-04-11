@@ -23,7 +23,7 @@ public class FireBallBase : MonoBehaviour
 
     IEnumerator CreateFireBall()
     {
-        yield return new WaitForSeconds(2.5f);
+        yield return new WaitForSeconds(2f);
         FireBallObjectpool.instance.FireBallGetFromPool(new Vector3(this.gameObject.transform.position.x, 11.12f));
     }
 

@@ -46,6 +46,25 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     }
 
+    void RandomPick()
+    {
+        int randomState = Random.Range(0, 3);
+        if (randomState != 2)
+            anim.SetTrigger("Moving");
+        else if (randomState == 2)
+            anim.SetTrigger("MovingTop");
+
+    }
+
+    void RandomPickMagicBallAttack()
+    {
+        int randomState = Random.Range(0, 2);
+        if (randomState == 0)
+            anim.SetTrigger("MagicBallFire");
+        else if (randomState == 1)
+            anim.SetTrigger("MagicBallLerpMove");
+    }
+
     public void MagicBall()
     {
         MagicBallObjectpool.instance.GetFromPool();
@@ -147,11 +166,11 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     public void FireBallBase()
     {
-        int fireBallNum = Random.Range(1, 3);
+        int fireBallNum = Random.Range(2, 4);
 
         for (int i = 0; i < fireBallNum; i++)
         {
-            float x = Random.Range(-76f, -40f);
+            float x = Random.Range(-83f, -36f);
             FireBallBaseObjectpool.instance.FireBallBaseGetFromPool(new Vector3(x, -10f));
         }
     }
