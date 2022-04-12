@@ -3094,14 +3094,14 @@ RectTransform:
   m_GameObject: {fileID: 90588414}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.475, z: 1}
   m_Children: []
   m_Father: {fileID: 1667438001}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -829.38}
+  m_AnchoredPosition: {x: -232, y: -829.38}
   m_SizeDelta: {x: 584.4, y: 362.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &90588416
@@ -3122,7 +3122,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0e33d9727140437478882ae3c804ab19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: aa0d13c2e927e7743972cb989b5ab4a9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4049,7 +4049,7 @@ GameObject:
   - component: {fileID: 115642747}
   m_Layer: 0
   m_Name: ClimbWall
-  m_TagString: Tutorial01
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10400,14 +10400,14 @@ RectTransform:
   m_GameObject: {fileID: 275216118}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5125, z: 1}
   m_Children: []
   m_Father: {fileID: 1537875170}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -829.38}
+  m_AnchoredPosition: {x: -506, y: -829.38}
   m_SizeDelta: {x: 584.4, y: 362.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &275216120
@@ -10428,7 +10428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0e33d9727140437478882ae3c804ab19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b9d669a057d3628448dc102052871be4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12812,7 +12812,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u8B93\u73A9\u5BB6\u5DE6\u53F3\u79FB\u52D5"
+  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u767C\u52D5\u96F7\u96FB\u653B\u64CA"
 --- !u!222 &333574268
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13509,7 +13509,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u8B93\u73A9\u5BB6\u5DE6\u53F3\u79FB\u52D5"
+  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u8B93\u73A9\u5BB6\u6500\u722C"
 --- !u!222 &359555072
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13738,7 +13738,7 @@ GameObject:
   - component: {fileID: 365471476}
   m_Layer: 0
   m_Name: ClimbRope
-  m_TagString: Tutorial01
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22533,7 +22533,7 @@ GameObject:
   - component: {fileID: 590306840}
   m_Layer: 0
   m_Name: NormalAtkCollider
-  m_TagString: Tutorial01
+  m_TagString: Tutorial02
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23499,7 +23499,7 @@ GameObject:
   - component: {fileID: 612258823}
   m_Layer: 0
   m_Name: JumpFireSkill
-  m_TagString: Tutorial01
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25334,7 +25334,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 650081700}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -27547,14 +27547,14 @@ RectTransform:
   m_GameObject: {fileID: 709016589}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.45, z: 1}
   m_Children: []
   m_Father: {fileID: 1421768526}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -829.38}
+  m_AnchoredPosition: {x: -274, y: -829.38}
   m_SizeDelta: {x: 584.4, y: 362.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709016591
@@ -27575,7 +27575,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0e33d9727140437478882ae3c804ab19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ef641709a1bbc1d44aaa390d7fcf12ef, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27611,7 +27611,7 @@ GameObject:
   - component: {fileID: 715434589}
   m_Layer: 0
   m_Name: MoveRock
-  m_TagString: Tutorial01
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -30277,7 +30277,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u8B93\u73A9\u5BB6\u5DE6\u53F3\u79FB\u52D5"
+  m_Text: "\u6309\u4E0B\t\t\t\t\t\t\t\u80FD\u666E\u901A\u653B\u64CA"
 --- !u!222 &783207039
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41211,7 +41211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u8B93\u73A9\u5BB6\u5DE6\u53F3\u79FB\u52D5"
+  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u4F4D\u79FB\u4E26\u5728\u9019\u671F\u9593\u7121\u8996\u50B7\u5BB3"
 --- !u!222 &1093320026
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41935,7 +41935,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u8B93\u73A9\u5BB6\u5DE6\u53F3\u79FB\u52D5"
+  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u8B93\u73A9\u5BB6\u8DF3\u8E8D"
 --- !u!222 &1114144089
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50017,7 +50017,7 @@ GameObject:
   - component: {fileID: 1353035069}
   - component: {fileID: 1353035068}
   m_Layer: 5
-  m_Name: ImageArrow
+  m_Name: ImageIllustate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50032,14 +50032,14 @@ RectTransform:
   m_GameObject: {fileID: 1353035066}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5125, z: 1}
   m_Children: []
   m_Father: {fileID: 1847886752}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -829.38}
+  m_AnchoredPosition: {x: -160, y: -829.38}
   m_SizeDelta: {x: 584.4, y: 362.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1353035068
@@ -50060,7 +50060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0e33d9727140437478882ae3c804ab19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b1420e86fd19ff349bcd5b3b26a57bd3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -54120,7 +54120,7 @@ GameObject:
   - component: {fileID: 1448754840}
   m_Layer: 0
   m_Name: JumpCollider
-  m_TagString: Tutorial01
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54450,7 +54450,7 @@ RectTransform:
   m_GameObject: {fileID: 1452414312}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.98941, y: 1.7190998, z: 0.98941}
   m_Children: []
   m_Father: {fileID: 857981572}
   m_RootOrder: 1
@@ -54478,7 +54478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0e33d9727140437478882ae3c804ab19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8a7e0c081be1ece4984a531c3e7a5b89, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -55813,7 +55813,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u8B93\u73A9\u5BB6\u5DE6\u53F3\u79FB\u52D5"
+  m_Text: "\u6309\u4E0B\t\t\t \t\t\t\u53EF\u4EE5\u767C\u52D5\u706B\u7130\u653B\u64CA"
 --- !u!222 &1482149479
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -67495,7 +67495,7 @@ GameObject:
   - component: {fileID: 1740576075}
   - component: {fileID: 1740576074}
   m_Layer: 5
-  m_Name: ImageArrow
+  m_Name: ImageIllustrate
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67510,14 +67510,14 @@ RectTransform:
   m_GameObject: {fileID: 1740576072}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.8221236, y: 1.264015, z: 0.8221236}
   m_Children: []
   m_Father: {fileID: 761631604}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -829.38}
+  m_AnchoredPosition: {x: -283, y: -829.38}
   m_SizeDelta: {x: 584.4, y: 362.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1740576074
@@ -67538,7 +67538,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0e33d9727140437478882ae3c804ab19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcc7bc5255320d4459c033403b4a6fb5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -72509,14 +72509,14 @@ RectTransform:
   m_GameObject: {fileID: 1875983578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.4625, z: 1}
   m_Children: []
   m_Father: {fileID: 1627089900}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: -829.38}
+  m_AnchoredPosition: {x: -224, y: -829.38}
   m_SizeDelta: {x: 584.4, y: 362.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1875983580
@@ -72537,7 +72537,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 0e33d9727140437478882ae3c804ab19, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 467b39f8a0b25264f96013120b641423, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -74608,7 +74608,7 @@ GameObject:
   - component: {fileID: 1929006329}
   m_Layer: 0
   m_Name: JumpDash
-  m_TagString: Tutorial01
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
