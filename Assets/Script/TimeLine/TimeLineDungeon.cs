@@ -47,6 +47,8 @@ public class TimeLineDungeon : MonoBehaviour
 
         if(normalizedTime >= 0.99f)
         {
+            EventManager.Instance.canUseAllSceenSkill = true;
+            EventManager.Instance.canUsePotion = true;
             EventManager.Instance.Dungeon_Opening = true;
             PlayerStatus.isDialouging = false;
             

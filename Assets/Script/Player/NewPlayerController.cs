@@ -472,7 +472,8 @@ public class NewPlayerController : MonoBehaviour
 
         hasFairy = FollowPlayer.isFollowPlayer;
         if(Input.GetKeyDown(KeyCode.D) && PlayerStatus.canHealing == true && FollowPlayer.isFollowPlayer == true 
-            && characterStats.CurrentHealingTime > 0 && characterStats.CurrentHealth < characterStats.MaxHealth)
+            && characterStats.CurrentHealingTime > 0 && characterStats.CurrentHealth < characterStats.MaxHealth
+            && EventManager.Instance.canUsePotion == true)
         {
             StartCoroutine(Healing(healingTime));
         }
