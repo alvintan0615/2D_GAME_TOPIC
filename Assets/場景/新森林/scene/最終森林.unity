@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4048,7 +4048,7 @@ GameObject:
   - component: {fileID: 115642746}
   - component: {fileID: 115642747}
   m_Layer: 0
-  m_Name: ClimbWall
+  m_Name: ClimbWallCollider
   m_TagString: Tutorial05
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13739,8 +13739,8 @@ GameObject:
   - component: {fileID: 365471475}
   - component: {fileID: 365471476}
   m_Layer: 0
-  m_Name: ClimbRope
-  m_TagString: Tutorial04
+  m_Name: ClimbRopeCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22535,7 +22535,7 @@ GameObject:
   - component: {fileID: 590306840}
   m_Layer: 0
   m_Name: NormalAtkCollider
-  m_TagString: Tutorial02
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23500,8 +23500,8 @@ GameObject:
   - component: {fileID: 612258822}
   - component: {fileID: 612258823}
   m_Layer: 0
-  m_Name: JumpFireSkill
-  m_TagString: Tutorial08
+  m_Name: JumpFireSkillCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25310,7 +25310,7 @@ GameObject:
   - component: {fileID: 650081702}
   m_Layer: 0
   m_Name: WalkCollider
-  m_TagString: Tutorial01
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27612,8 +27612,8 @@ GameObject:
   - component: {fileID: 715434588}
   - component: {fileID: 715434589}
   m_Layer: 0
-  m_Name: MoveRock
-  m_TagString: Tutorial07
+  m_Name: MoveRockCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -54122,7 +54122,7 @@ GameObject:
   - component: {fileID: 1448754840}
   m_Layer: 0
   m_Name: JumpCollider
-  m_TagString: Tutorial03
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74609,8 +74609,8 @@ GameObject:
   - component: {fileID: 1929006328}
   - component: {fileID: 1929006329}
   m_Layer: 0
-  m_Name: JumpDash
-  m_TagString: Tutorial06
+  m_Name: JumpDashCollider
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

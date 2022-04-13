@@ -8,6 +8,8 @@ public class ChangeDemon : MonoBehaviour
 {
     public PlayableDirector mDirector;
     public float normalizedTime;
+
+    [SerializeField] TutorialPanel tutorialPanel;
     void Start()
     {
         
@@ -49,7 +51,13 @@ public class ChangeDemon : MonoBehaviour
             PlayerStatus.isDialouging = false;
             EventManager.Instance.fireVillege_TimelineChangeDemon = true;
             this.gameObject.SetActive(false);
-
+            StartCoroutine(DelayOpenDemonPanel());
         }
+    }
+
+    IEnumerator DelayOpenDemonPanel()
+    {
+        yield return new WaitForSeconds(1);
+        tutorialPanel.CanOpenDemonPanel = true;
     }
 }

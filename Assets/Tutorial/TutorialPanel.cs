@@ -17,7 +17,12 @@ public class TutorialPanel : MonoBehaviour
     public GameObject JumpDash;
     public GameObject MoveRock;
     public GameObject JumpFireSkill;
-
+    public GameObject DemonDescription;
+    public GameObject ChangeMode;
+    public GameObject DemonNormalAtk;
+    public GameObject DemonBeamSkill;
+    public GameObject DemonDoubleJump;
+    public GameObject DemonDash;
 
     public bool TutorialPanelOpen = false;
 
@@ -32,6 +37,15 @@ public class TutorialPanel : MonoBehaviour
     public bool JumpDashIsOpen = false;
     public bool MoveRockIsOpen = false;
     public bool JumpFireSkillIsOpen = false;
+
+    public bool CanOpenDemonPanel = false;
+
+    public bool DemonDescriptionIsOpen = false;
+    public bool ChangeModeIsOpen = false;
+    public bool DemonNormalAtkIsOpen = false;
+    public bool DemonBeamSkillIsOpen = false;
+    public bool DemonDoubleJumpIsOpen = false;
+    public bool DemonDashIsOpen = false;
     
     // Start is called before the first frame update
     void Start()
@@ -50,13 +64,28 @@ public class TutorialPanel : MonoBehaviour
         MoveRock = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(9).gameObject;
         JumpFireSkill = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(10).gameObject;
 
+        DemonDescription = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(11).gameObject;
+        ChangeMode = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(12).gameObject;
+        DemonNormalAtk = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(13).gameObject;
+        DemonBeamSkill = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(14).gameObject;
+        DemonDoubleJump = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(15).gameObject;
+        DemonDash = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(16).gameObject;
+
         TutorialPanelOpen = false;
         tutorialPanel.SetActive(false);
+
+        CanOpenDemonPanel = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(CanOpenDemonPanel == true)
+        {
+            OpenDemonDescription();
+            Time.timeScale = 0;
+        }
+
         if(Time.timeScale == 0)
         {
             if (TutorialPanelOpen == true && walkIsOpen == true && Input.GetKeyDown(KeyCode.A))
@@ -127,33 +156,39 @@ public class TutorialPanel : MonoBehaviour
                 Time.timeScale = 1;
                 CloseJumpFireSkill();
             }
+
+            if (TutorialPanelOpen == true && DemonDescriptionIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 0;
+                CloseDemonDescription();
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Tutorial01")
+        if(collision.name == "WalkCollider")
         {
             OpenWalk();
             Destroy(collision);
             Time.timeScale = 0;
         }
 
-        if (collision.tag == "Tutorial02")
+        if (collision.name == "NormalAtkCollider")
         {
             OpenNormalAtk();
             Destroy(collision);
             Time.timeScale = 0;
         }
 
-        if (collision.tag == "Tutorial03")
+        if (collision.name == "JumpCollider")
         {
             OpenJump();
             Destroy(collision);
             Time.timeScale = 0;
         }
 
-        if (collision.tag == "Tutorial04")
+        if (collision.name == "ClimbRopeCollider")
         {
             OpenClimbRope();
             Destroy(collision);
@@ -167,21 +202,21 @@ public class TutorialPanel : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        if (collision.tag == "Tutorial06")
+        if (collision.name == "JumpDashCollider")
         {
             OpenJumpDash();
             Destroy(collision);
             Time.timeScale = 0;
         }
 
-        if (collision.tag == "Tutorial07")
+        if (collision.name == "MoveRockCollider")
         {
             OpenMoveRock();
             Destroy(collision);
             Time.timeScale = 0;
         }
 
-        if (collision.tag == "Tutorial08")
+        if (collision.name == "JumpFireSkillCollider")
         {
             OpenJumpFireSkill();
             Destroy(collision);
@@ -189,7 +224,26 @@ public class TutorialPanel : MonoBehaviour
         }
     }
 
-    
+    public void OpenChangeMode()
+    {
+
+    }
+
+    public void CloseDemonDescription()
+    {
+        TutorialPanelOpen = true;
+
+        DemonDescription.SetActive(false);
+        DemonDescriptionIsOpen = false;
+    }
+
+    public void OpenDemonDescription()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        DemonDescription.SetActive(true);
+        DemonDescriptionIsOpen = true;
+    }
 
     public void CloseJumpFireSkill()
     {
@@ -369,19 +423,19 @@ public class TutorialPanel : MonoBehaviour
 
     IEnumerator DelayFireSkillOpenKey()
     {
-        yield return new WaitForSecondsRealtime(1); ;
+        yield return new WaitForSecondsRealtime(1); 
         FireSkillIsOpen = true;
     }
 
     IEnumerator DelayGroundSkillOpenKey()
     {
-        yield return new WaitForSecondsRealtime(1); ;
+        yield return new WaitForSecondsRealtime(1); 
         GroundSkillIsOpen = true;
     }
 
     IEnumerator DelayDashOpenKey()
     {
-        yield return new WaitForSecondsRealtime(1); ;
+        yield return new WaitForSecondsRealtime(1);
         DashIsOpen = true;
     }
 }
