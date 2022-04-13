@@ -91,6 +91,42 @@ public class TutorialPanel : MonoBehaviour
                 Time.timeScale = 1;
                 CloseDash();
             }
+
+            if (TutorialPanelOpen == true && JumpIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseJump();
+            }
+
+            if (TutorialPanelOpen == true && ClimbRopeIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseClimbRope();
+            }
+
+            if (TutorialPanelOpen == true && ClimbWallIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseClimbWall();
+            }
+
+            if (TutorialPanelOpen == true && JumpDashIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseJumpDash();
+            }
+
+            if (TutorialPanelOpen == true && MoveRockIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseMoveRock();
+            }
+
+            if (TutorialPanelOpen == true && JumpFireSkillIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseJumpFireSkill();
+            }
         }
     }
 
@@ -109,6 +145,144 @@ public class TutorialPanel : MonoBehaviour
             Destroy(collision);
             Time.timeScale = 0;
         }
+
+        if (collision.tag == "Tutorial03")
+        {
+            OpenJump();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+
+        if (collision.tag == "Tutorial04")
+        {
+            OpenClimbRope();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+
+        if (collision.tag == "Tutorial05")
+        {
+            OpenClimbWall();
+            Destroy(GameObject.FindWithTag("Tutorial05"));
+            Time.timeScale = 0;
+        }
+
+        if (collision.tag == "Tutorial06")
+        {
+            OpenJumpDash();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+
+        if (collision.tag == "Tutorial07")
+        {
+            OpenMoveRock();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+
+        if (collision.tag == "Tutorial08")
+        {
+            OpenJumpFireSkill();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void CloseJumpFireSkill()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        JumpFireSkill.SetActive(false);
+        JumpFireSkillIsOpen = false;
+    }
+
+    public void OpenJumpFireSkill()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        JumpFireSkill.SetActive(true);
+        JumpFireSkillIsOpen = true;
+    }
+
+    public void CloseMoveRock()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        MoveRock.SetActive(false);
+        MoveRockIsOpen = false;
+    }
+
+    public void OpenMoveRock()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        MoveRock.SetActive(true);
+        MoveRockIsOpen = true;
+    }
+
+    public void CloseJumpDash()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        JumpDash.SetActive(false);
+        JumpDashIsOpen = false;
+    }
+
+    public void OpenJumpDash()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        JumpDash.SetActive(true);
+        JumpDashIsOpen = true;
+    }
+
+    public void CloseClimbWall()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        ClimbWall.SetActive(false);
+        ClimbWallIsOpen = false;
+    }
+
+    public void OpenClimbWall()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        ClimbWall.SetActive(true);
+        ClimbWallIsOpen = true;
+    }
+
+    public void CloseClimbRope()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        ClimbRope.SetActive(false);
+        ClimbRopeIsOpen = false;
+    }
+
+    public void OpenClimbRope()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        ClimbRope.SetActive(true);
+        ClimbRopeIsOpen = true;
+    }
+
+    public void CloseJump()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        Jump.SetActive(false);
+        JumpIsOpen = false;
+    }
+
+    public void OpenJump()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        Jump.SetActive(true);
+        JumpIsOpen = true;
     }
 
     public void CloseDash()
