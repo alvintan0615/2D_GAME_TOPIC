@@ -189,6 +189,8 @@ public class TutorialPanel : MonoBehaviour
         }
     }
 
+    
+
     public void CloseJumpFireSkill()
     {
         tutorialPanel.SetActive(false);

@@ -28,17 +28,6 @@ public class TimeLineManager : MonoBehaviour
 
     void Update()
     {
-        if (forestTutorial.NowInTutorial == true)
-        {
-            if (EventManager.Instance.HasFirstTalk == true && EventManager.Instance.firstNormalAtk == false)
-            {
-                if (Input.GetKeyDown(KeyCode.Z))
-                {
-                    ResumeTimeline();
-                }
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.A))
             {
                 ResumeTimeline();
