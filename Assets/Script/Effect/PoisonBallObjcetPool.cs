@@ -41,11 +41,13 @@ public class PoisonBallObjcetPool : MonoBehaviour
         poisonBallavailableObjects.Enqueue(gameObject);
     }
 
-    public GameObject PoisonBallGetFromPool()
+    public GameObject PoisonBallGetFromPool(Vector3 PoisonBallPos)
     {
         var outPoisonBall = poisonBallavailableObjects.Dequeue();
 
         outPoisonBall.SetActive(true);
+
+        outPoisonBall.transform.position = PoisonBallPos;
 
         return outPoisonBall;
     }

@@ -3066,6 +3066,9 @@ GameObject:
   - component: {fileID: 498535122}
   - component: {fileID: 498535121}
   - component: {fileID: 498535124}
+  - component: {fileID: 498535125}
+  - component: {fileID: 498535126}
+  - component: {fileID: 498535127}
   m_Layer: 0
   m_Name: FinalBossP2
   m_TagString: Untagged
@@ -3185,6 +3188,65 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 11.311882, y: 11.155539}
   m_EdgeRadius: 0
+--- !u!114 &498535125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498535120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac59eba153a1ec041a4579fe73fbd3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterStats: {fileID: 0}
+  attackTrigger: {fileID: 0}
+  playerFilter:
+    useTriggers: 0
+    useLayerMask: 0
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 0
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  playerCount: 0
+  playerColList: []
+--- !u!114 &498535126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498535120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc5fac21ca5dcac488667f552ffd5ac6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  templateData: {fileID: 11400000, guid: 851cfead2eb70914191592c37e14c257, type: 2}
+  characterData: {fileID: 0}
+  attackData: {fileID: 11400000, guid: a1e8e1a2028b8f9458c95865c1c95081, type: 2}
+  isCritical: 0
+--- !u!114 &498535127
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 498535120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffcf4db7c6b42ce4b9b994bb046aae83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  posionPos: {fileID: 0}
 --- !u!1 &499537660
 GameObject:
   m_ObjectHideFlags: 0
@@ -8815,7 +8877,7 @@ PrefabInstance:
     - target: {fileID: 2876350653714642747, guid: c562a0d4349a2684b9829e6d8904af9b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -70.14
+      value: -53.31
       objectReference: {fileID: 0}
     - target: {fileID: 2876350653714642747, guid: c562a0d4349a2684b9829e6d8904af9b,
         type: 3}
@@ -9863,7 +9925,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poisonContainerPrefab: {fileID: 4124938168214607618, guid: 7b14df27d2aef0147a689222f285ff5f,
     type: 3}
-  poisonContainerCount: 3
+  poisonContainerCount: 4
 --- !u!4 &1850442477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 141507926300692244, guid: cf1cdf9e3c63eae48b1d0f377607e264,
@@ -10792,7 +10854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poisonBallPrefab: {fileID: 2876350653714642746, guid: c562a0d4349a2684b9829e6d8904af9b,
     type: 3}
-  poisonBallCount: 3
+  poisonBallCount: 4
 --- !u!4 &2057457695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 443682, guid: 2a6cead025585fd468aef95352fcdc5d,
