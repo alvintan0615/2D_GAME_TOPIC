@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4124938167358444286}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -3.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47086716, y: 0.47086716, z: 0.47086716}
   m_Children: []
   m_Father: {fileID: 4124938168214607621}
   m_RootOrder: 3
@@ -46,7 +46,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4804,8 +4804,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1259174659
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_RenderMode: 4
   m_SortMode: 0
@@ -4857,7 +4857,7 @@ Transform:
   m_GameObject: {fileID: 4124938167790263175}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -1.67, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47086716, y: 0.47086716, z: 0.47086716}
   m_Children: []
   m_Father: {fileID: 4124938168214607621}
   m_RootOrder: 1
@@ -4876,7 +4876,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -9634,8 +9634,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1259174659
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -9671,13 +9671,14 @@ GameObject:
   - component: {fileID: 4124938168214607621}
   - component: {fileID: 4124938168214607620}
   - component: {fileID: 4124938168214607619}
+  - component: {fileID: 1686103626058263347}
   m_Layer: 0
   m_Name: PoisonContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4124938168214607621
 Transform:
   m_ObjectHideFlags: 0
@@ -14421,6 +14422,18 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
+--- !u!114 &1686103626058263347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4124938168214607618}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5940c5f3dbaaaf1408d04cc6c7784371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4124938168251186547
 GameObject:
   m_ObjectHideFlags: 0
@@ -14448,7 +14461,7 @@ Transform:
   m_GameObject: {fileID: 4124938168251186547}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47086716, y: 0.47086716, z: 0.47086716}
   m_Children: []
   m_Father: {fileID: 4124938168214607621}
   m_RootOrder: 0
@@ -14467,7 +14480,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -19207,8 +19220,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1259174659
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -19260,7 +19273,7 @@ Transform:
   m_GameObject: {fileID: 4124938168404894931}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -3.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47086716, y: 0.47086716, z: 0.47086716}
   m_Children: []
   m_Father: {fileID: 4124938168214607621}
   m_RootOrder: 2
@@ -19279,7 +19292,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -24037,8 +24050,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1259174659
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_RenderMode: 4
   m_SortMode: 0
@@ -24090,7 +24103,7 @@ Transform:
   m_GameObject: {fileID: 4124938168480320676}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47086716, y: 0.47086716, z: 0.47086716}
   m_Children: []
   m_Father: {fileID: 4124938168214607621}
   m_RootOrder: 4
@@ -24109,7 +24122,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -28849,8 +28862,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1259174659
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_RenderMode: 1
   m_SortMode: 0
@@ -28902,7 +28915,7 @@ Transform:
   m_GameObject: {fileID: 4124938168758550316}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 4.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47086716, y: 0.47086716, z: 0.47086716}
   m_Children: []
   m_Father: {fileID: 4124938168214607621}
   m_RootOrder: 6
@@ -28921,7 +28934,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -33661,8 +33674,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1259174659
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -33714,7 +33727,7 @@ Transform:
   m_GameObject: {fileID: 4124938168906792850}
   m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: -3.85, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.47086716, y: 0.47086716, z: 0.47086716}
   m_Children: []
   m_Father: {fileID: 4124938168214607621}
   m_RootOrder: 5
@@ -33733,7 +33746,7 @@ ParticleSystem:
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -38500,8 +38513,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1259174659
+  m_SortingLayer: 12
   m_SortingOrder: 0
   m_RenderMode: 4
   m_SortMode: 0
