@@ -80,7 +80,7 @@ public class Demon_Skill : MonoBehaviour
             }
 
         }
-        Debug.Log(isNormalAttack);
+        //Debug.Log(isNormalAttack);
     }
 
     void BeamSkill()
