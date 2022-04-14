@@ -58,7 +58,7 @@ public class Human_Skill : MonoBehaviour
         groundSkillFilledImage = GameObject.FindGameObjectWithTag("groundSkillFilledImage").GetComponent<Image>();
 
         audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
-        audioSetting.soundEffectAudio[18].Play();
+        //audioSetting.soundEffectAudio[18].Play();
         audioSetting.soundEffectAudio[18].mute = true;
     }
 
