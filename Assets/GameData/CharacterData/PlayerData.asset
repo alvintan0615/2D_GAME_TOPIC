@@ -17,4 +17,4 @@ MonoBehaviour:
   baseDefence: 2
   currentDefence: 2
   maxHealingTime: 3
-  currentHealingTime: 3
+  currentHealingTime: 0

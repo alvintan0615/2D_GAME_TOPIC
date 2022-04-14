@@ -5352,7 +5352,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &189570926
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5369,7 +5369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -125, y: -829.38}
+  m_AnchoredPosition: {x: 21, y: -829.38}
   m_SizeDelta: {x: 584.4, y: 362.65}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &189570927
@@ -5390,7 +5390,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ef641709a1bbc1d44aaa390d7fcf12ef, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6072b8cee63b3774eba48ea23c395690, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -23158,7 +23158,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563986418}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: 4b7d01f4e6c657745b1cb57edde5bcde, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -26336,7 +26336,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 637169819}
   m_Enabled: 1
-  m_VideoClip: {fileID: 0}
+  m_VideoClip: {fileID: 32900000, guid: 55b6f0b5f64875e4883eb319a17f7226, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -35425,7 +35425,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 71
+    m_FontSize: 58
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -35436,7 +35436,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u7CBE\u9748\u6703\u5354\u52A9\u73A9\u5BB6\u6230\u9B25\uFF0C\u53EF\u4EE5\u6309\u4E0B\t\t\t\t\t\t\u6062\u5FA9\u73A9\u5BB6\u8840\u91CF"
+  m_Text: "\u7CBE\u9748\u6703\u5354\u52A9\u73A9\u5BB6\u6230\u9B25\uFF0C\u53EF\u4EE5\u6309\u4E0B\t\t\t\t\t\t\u6062\u5FA9\u73A9\u5BB6\u8840\u91CF\u4E26\u6E1B\u5C11\u4E00\u683C\u80FD\u91CF"
 --- !u!222 &1087021647
 CanvasRenderer:
   m_ObjectHideFlags: 0

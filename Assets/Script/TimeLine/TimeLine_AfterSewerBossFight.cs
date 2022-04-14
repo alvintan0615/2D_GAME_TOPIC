@@ -9,6 +9,7 @@ public class TimeLine_AfterSewerBossFight : MonoBehaviour
 {
     public PlayableDirector mDirector;
     public float normalizedTime;
+    [SerializeField] AudioSetting audioSetting;
     void Start()
     {
         
@@ -45,6 +46,7 @@ public class TimeLine_AfterSewerBossFight : MonoBehaviour
         if (normalizedTime >= 0.99f)
         {
             PlayerStatus.isDialouging = false;
+            audioSetting.BossIsDie = true;
         }
     }
 }

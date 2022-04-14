@@ -18,6 +18,7 @@ public class AudioSetting : MonoBehaviour
     public Slider SoundEffectsSlider;
 
     public GameObject Boss;
+    public bool BossIsDie = false;
     void Awake()
     {
         instance = this;
@@ -38,6 +39,7 @@ public class AudioSetting : MonoBehaviour
     {
         backgroundAudio[0].mute = false;
         backgroundAudio[1].gameObject.SetActive(false);
+        BossIsDie = false;
     }
 
     public void Update()
@@ -50,7 +52,7 @@ public class AudioSetting : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.P))
+        if (BossIsDie == true)
         {
             backgroundAudio[0].mute = false;
             backgroundAudio[1].gameObject.SetActive(false);
