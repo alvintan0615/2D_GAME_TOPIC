@@ -23,6 +23,11 @@ public class TutorialPanel : MonoBehaviour
     public GameObject DemonBeamSkill;
     public GameObject DemonDoubleJump;
     public GameObject DemonDash;
+    public GameObject FairyTutorial;
+    public GameObject DemonFullSkill;
+    public GameObject PullMachine;
+    public GameObject DemonTutorial;
+    public GameObject GroundSkillOpenDoor;
 
     public bool TutorialPanelOpen = false;
 
@@ -46,6 +51,14 @@ public class TutorialPanel : MonoBehaviour
     public bool DemonBeamSkillIsOpen = false;
     public bool DemonDoubleJumpIsOpen = false;
     public bool DemonDashIsOpen = false;
+
+    public bool CanOpenFairyPanel = false;
+
+    public bool FairyTutorialIsOpen = false;
+    public bool DemonFullSkillIsOpen = false;
+    public bool PullMachineIsOpen = false;
+    public bool DemonTutorialIsOpen = false;
+    public bool GroundSkillOpenDoorIsOpen = false;
     
     // Start is called before the first frame update
     void Start()
@@ -71,10 +84,17 @@ public class TutorialPanel : MonoBehaviour
         DemonDoubleJump = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(15).gameObject;
         DemonDash = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(16).gameObject;
 
+        FairyTutorial = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(17).gameObject;
+        DemonFullSkill = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(18).gameObject;
+        PullMachine = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(19).gameObject;
+        DemonTutorial = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(20).gameObject;
+        GroundSkillOpenDoor = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(21).gameObject;
+
         TutorialPanelOpen = false;
         tutorialPanel.SetActive(false);
 
         CanOpenDemonPanel = false;
+        CanOpenFairyPanel = false;
     }
 
     // Update is called once per frame
@@ -85,7 +105,13 @@ public class TutorialPanel : MonoBehaviour
             OpenDemonDescription();
             CanOpenDemonPanel = false;
             Time.timeScale = 0;
-            
+        }
+
+        if(CanOpenFairyPanel == true)
+        {
+            OpenFairyTutorial();
+            CanOpenFairyPanel = false;
+            Time.timeScale = 0;
         }
 
         if(Time.timeScale == 0)
@@ -199,6 +225,37 @@ public class TutorialPanel : MonoBehaviour
                 Time.timeScale = 1;
                 CloseDemonDash();
             }
+
+            if (TutorialPanelOpen == true && FairyTutorialIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 0;
+                CloseFairyTutorial();
+                OpenDemonFullSkill();
+            }
+
+            if (TutorialPanelOpen == true && DemonFullSkillIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseDemonFullSkill();
+            }
+
+            if (TutorialPanelOpen == true && PullMachineIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                ClosePullMachine();
+            }
+
+            if (TutorialPanelOpen == true && DemonTutorialIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseDemonTutorial();
+            }
+
+            if (TutorialPanelOpen == true && GroundSkillOpenDoorIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseGroundSkillOpenDoor();
+            }
         }
     }
 
@@ -259,6 +316,107 @@ public class TutorialPanel : MonoBehaviour
             Destroy(collision);
             Time.timeScale = 0;
         }
+
+        if (collision.name == "PullMachineCollider")
+        {
+            OpenPullMachine();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+
+        if (collision.name == "DemonTutorialCollider")
+        {
+            OpenDemonTutorial();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+
+        if (collision.name == "GroundSkillOpenDoorCollider")
+        {
+            OpenGroundSkillOpenDoor();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void CloseGroundSkillOpenDoor()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        GroundSkillOpenDoor.SetActive(false);
+        GroundSkillOpenDoorIsOpen = false;
+    }
+
+    public void OpenGroundSkillOpenDoor()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        GroundSkillOpenDoor.SetActive(true);
+        GroundSkillOpenDoorIsOpen = true;
+    }
+
+    public void CloseDemonTutorial()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        DemonTutorial.SetActive(false);
+        DemonTutorialIsOpen = false;
+    }
+
+    public void OpenDemonTutorial()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        DemonTutorial.SetActive(true);
+        DemonTutorialIsOpen = true;
+    }
+
+    public void ClosePullMachine()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        PullMachine.SetActive(false);
+        PullMachineIsOpen = false;
+    }
+
+    public void OpenPullMachine()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        PullMachine.SetActive(true);
+        PullMachineIsOpen = true;
+    }
+
+    public void CloseDemonFullSkill()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        DemonFullSkill.SetActive(false);
+        DemonFullSkillIsOpen = false;
+    }
+
+    public void OpenDemonFullSkill()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        DemonFullSkill.SetActive(true);
+        StartCoroutine(DelayDemonFullSkillOpenKey());
+    }
+
+    public void CloseFairyTutorial()
+    {
+        TutorialPanelOpen = true;
+
+        FairyTutorial.SetActive(false);
+        FairyTutorialIsOpen = false;
+    }
+
+    public void OpenFairyTutorial()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        FairyTutorial.SetActive(true);
+        FairyTutorialIsOpen = true;
     }
 
     public void CloseDemonDash()
@@ -279,7 +437,7 @@ public class TutorialPanel : MonoBehaviour
 
     public void CloseDemonDoubleJump()
     {
-        TutorialPanelOpen = false;
+        TutorialPanelOpen = true;
 
         DemonDoubleJump.SetActive(false);
         DemonDoubleJumpIsOpen = false;
@@ -311,7 +469,7 @@ public class TutorialPanel : MonoBehaviour
 
     public void CloseDemonNormalAtk()
     {
-        TutorialPanelOpen = false;
+        TutorialPanelOpen = true;
 
         DemonNormalAtk.SetActive(false);
         DemonNormalAtkIsOpen = false;
@@ -327,7 +485,7 @@ public class TutorialPanel : MonoBehaviour
 
     public void CloseChangeMode()
     {
-        TutorialPanelOpen = false;
+        TutorialPanelOpen = true;
 
         ChangeMode.SetActive(false);
         ChangeModeIsOpen = false;
@@ -579,5 +737,11 @@ public class TutorialPanel : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1);
         DemonDashIsOpen = true;
+    }
+
+    IEnumerator DelayDemonFullSkillOpenKey()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        DemonFullSkillIsOpen = true;
     }
 }
