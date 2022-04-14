@@ -51,7 +51,8 @@ public class ChangeDemon : MonoBehaviour
             PlayerStatus.isDialouging = false;
             EventManager.Instance.fireVillege_TimelineChangeDemon = true;
             this.gameObject.SetActive(false);
-            StartCoroutine(DelayOpenDemonPanel());
+            tutorialPanel.CanOpenDemonPanel = true;
+            //StartCoroutine(DelayOpenDemonPanel());
         }
     }
 

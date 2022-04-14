@@ -83,7 +83,9 @@ public class TutorialPanel : MonoBehaviour
         if(CanOpenDemonPanel == true)
         {
             OpenDemonDescription();
+            CanOpenDemonPanel = false;
             Time.timeScale = 0;
+            
         }
 
         if(Time.timeScale == 0)
@@ -161,6 +163,41 @@ public class TutorialPanel : MonoBehaviour
             {
                 Time.timeScale = 0;
                 CloseDemonDescription();
+                OpenChangeMode();
+            }
+
+            if (TutorialPanelOpen == true && ChangeModeIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 0;
+                CloseChangeMode();
+                OpenDemonNormalAtk();
+            }
+
+            if (TutorialPanelOpen == true && DemonNormalAtkIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 0;
+                CloseDemonNormalAtk();
+                OpenDemonBeamSkill();
+            }
+
+            if (TutorialPanelOpen == true && DemonBeamSkillIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 0;
+                CloseDemonBeamSkill();
+                OpenDemonDoubleJump();
+            }
+
+            if (TutorialPanelOpen == true && DemonDoubleJumpIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 0;
+                CloseDemonDoubleJump();
+                OpenDemonDash();
+            }
+
+            if (TutorialPanelOpen == true && DemonDashIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseDemonDash();
             }
         }
     }
@@ -224,9 +261,84 @@ public class TutorialPanel : MonoBehaviour
         }
     }
 
+    public void CloseDemonDash()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        DemonDash.SetActive(false);
+        DemonDashIsOpen = false;
+    }
+
+    public void OpenDemonDash()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        DemonDash.SetActive(true);
+        StartCoroutine(DelayDemonDashOpenKey());
+    }
+
+    public void CloseDemonDoubleJump()
+    {
+        TutorialPanelOpen = false;
+
+        DemonDoubleJump.SetActive(false);
+        DemonDoubleJumpIsOpen = false;
+    }
+
+    public void OpenDemonDoubleJump()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        DemonDoubleJump.SetActive(true);
+        StartCoroutine(DelayDemonDoubleJumpOpenKey());
+    }
+
+    public void CloseDemonBeamSkill()
+    {
+        TutorialPanelOpen = true;
+
+        DemonBeamSkill.SetActive(false);
+        DemonBeamSkillIsOpen = false;
+    }
+
+    public void OpenDemonBeamSkill()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        DemonBeamSkill.SetActive(true);
+        StartCoroutine(DelayDemonBeamSkillOpenKey());
+    }
+
+    public void CloseDemonNormalAtk()
+    {
+        TutorialPanelOpen = false;
+
+        DemonNormalAtk.SetActive(false);
+        DemonNormalAtkIsOpen = false;
+    }
+
+    public void OpenDemonNormalAtk()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        DemonNormalAtk.SetActive(true);
+        StartCoroutine(DelayDemonNormalAtkOpenKey());
+    }
+
+    public void CloseChangeMode()
+    {
+        TutorialPanelOpen = false;
+
+        ChangeMode.SetActive(false);
+        ChangeModeIsOpen = false;
+    }
+
     public void OpenChangeMode()
     {
-
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        ChangeMode.SetActive(true);
+        StartCoroutine(DelayChangeModeOpenKey());
     }
 
     public void CloseDemonDescription()
@@ -437,5 +549,35 @@ public class TutorialPanel : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(1);
         DashIsOpen = true;
+    }
+
+    IEnumerator DelayChangeModeOpenKey()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        ChangeModeIsOpen = true;
+    }
+
+    IEnumerator DelayDemonNormalAtkOpenKey()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        DemonNormalAtkIsOpen = true;
+    }
+
+    IEnumerator DelayDemonBeamSkillOpenKey()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        DemonBeamSkillIsOpen = true;
+    }
+
+    IEnumerator DelayDemonDoubleJumpOpenKey()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        DemonDoubleJumpIsOpen = true;
+    }
+
+    IEnumerator DelayDemonDashOpenKey()
+    {
+        yield return new WaitForSecondsRealtime(1);
+        DemonDashIsOpen = true;
     }
 }

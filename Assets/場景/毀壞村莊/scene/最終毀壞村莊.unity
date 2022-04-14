@@ -4618,7 +4618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mDirector: {fileID: 116398673}
   normalizedTime: 0
-  tutorialPanel: {fileID: 0}
+  tutorialPanel: {fileID: 465800098}
 --- !u!1 &117475506
 GameObject:
   m_ObjectHideFlags: 0
@@ -15617,6 +15617,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 308202271}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &465800098 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2257889292217508579, guid: 268ced2ad455ffb4c91cc105251dec8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 308202271}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 465800096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8212066923850fd4b90faafe7f71b593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &469404217
 PrefabInstance:
   m_ObjectHideFlags: 0
