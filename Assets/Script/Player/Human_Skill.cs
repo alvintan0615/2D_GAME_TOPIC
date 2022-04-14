@@ -117,14 +117,10 @@ public class Human_Skill : MonoBehaviour
         else if (hit.collider != null && hit.collider.gameObject.tag == "Pushable" && Input.GetKeyUp(KeyCode.A))
         {
             PlayerStatus.isDragging = false;
+            audioSetting.soundEffectAudio[18].mute = true;
             box.GetComponent<FixedJoint2D>().enabled = false;
             box.GetComponent<BoxPull>().beingPushed = false;
         }
-
-        /*else
-        {
-            audioSetting.soundEffectAudio[18].mute = true;
-        }*/
     }
 
     void NormalAttack()
