@@ -42,14 +42,15 @@ public class AudioSetting : MonoBehaviour
 
     public void Update()
     {
-        if (Boss.activeInHierarchy == true)
+
+        if (Boss != null && Boss.activeInHierarchy == true)
         {
             backgroundAudio[0].mute = true;
             backgroundAudio[1].gameObject.SetActive(true);
         }
-        
 
-        if(Input.GetKeyDown(KeyCode.P))
+
+        if (Input.GetKeyDown(KeyCode.P))
         {
             backgroundAudio[0].mute = false;
             backgroundAudio[1].gameObject.SetActive(false);

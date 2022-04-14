@@ -21,7 +21,9 @@ public class SoundOnPlayer : MonoBehaviour
     #region SkillFunction
     public void HumanNormalAtk01()
     {
+        Debug.Log("111");
         audioSetting.soundEffectAudio[0].Play();
+        
     }
 
     public void HumanNormalAtk02()
