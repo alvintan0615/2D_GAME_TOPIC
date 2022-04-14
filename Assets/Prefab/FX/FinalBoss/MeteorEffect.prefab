@@ -9662,7 +9662,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8111827
+  m_Radius: 1.2271907
 --- !u!114 &1871428319363037948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9677,6 +9677,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   meteorHit: {fileID: 5080937321813368448, guid: 01fa0aa1b831f8140af0f98578edde25,
     type: 3}
+  target: {fileID: 0}
+  player: {fileID: 0}
 --- !u!1 &8288891994955455838
 GameObject:
   m_ObjectHideFlags: 0
