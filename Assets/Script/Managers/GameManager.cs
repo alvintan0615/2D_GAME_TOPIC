@@ -44,7 +44,7 @@ public class GameManager : Singleton<GameManager>
         {
             timer += Time.deltaTime;
             rb.velocity = new Vector2(0, 0);
-            rb.AddForce(new Vector3(knockbackPwrX * 1, 0, rb.transform.position.z));
+            rb.AddForce(new Vector3(knockbackPwrX * 1, knockbackY, rb.transform.position.z));
             //yield return new WaitForSeconds(0.01f);
             //rb.AddForce(new Vector3(knockbackDir.x * knockbackPwrX * -1, 0, rb.transform.position.z));
         }
