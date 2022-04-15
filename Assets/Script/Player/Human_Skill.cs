@@ -59,7 +59,7 @@ public class Human_Skill : MonoBehaviour
 
         audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
         //audioSetting.soundEffectAudio[18].Play();
-        audioSetting.soundEffectAudio[18].mute = true;
+        //audioSetting.soundEffectAudio[18].mute = true;
     }
 
     void Update()

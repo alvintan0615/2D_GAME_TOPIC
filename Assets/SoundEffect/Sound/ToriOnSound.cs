@@ -31,4 +31,9 @@ public class ToriOnSound : MonoBehaviour
     {
         audioSetting.soundEffectAudio[17].Play();
     }
+
+    public void ToriGroundSprayFireSound()
+    {
+        audioSetting.soundEffectAudio[18].Play();
+    }
 }
