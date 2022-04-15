@@ -1,0 +1,60 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class ElectricBall : MonoBehaviour
+{
+    private GameObject p2Boss;
+    private GameObject player;
+    private bool hasPlayerPosition;
+    private Vector3 playerPosition;
+    public float ballSpeed;
+    private bool isAttack = false;
+    void Start()
+    {
+        p2Boss = GameObject.FindGameObjectWithTag("FinalBossP2");
+        player = GameObject.FindGameObjectWithTag("Player");
+        StartCoroutine(ElectricBallFire());
+    }
+
+    void Update()
+    {
+        if(isAttack == true)
+        {
+            ElectricBallAttack();
+        }
+    }
+
+    void ElectricBallAttack()
+    {
+        if (!hasPlayerPosition)
+        {
+            playerPosition = player.transform.position - transform.position;
+            playerPosition.Normalize();
+            hasPlayerPosition = true;
+        }
+        if (hasPlayerPosition)
+        {
+            transform.position += playerPosition * ballSpeed;
+        }
+    }
+
+    IEnumerator ElectricBallFire()
+    {
+        yield return new WaitForSeconds(1.1f);
+        isAttack = true;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player" && isAttack == true)
+        {
+            Destroy(this.gameObject);
+        }
+
+        if(collision.gameObject.layer == 8 && isAttack == true)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+}

@@ -129,9 +129,9 @@ public class CharacterStats : MonoBehaviour
                 defener.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
                 //Rigidbody2D rb = defener.GetComponent<Rigidbody2D>();
                 if (attacker.transform.position.x > defener.transform.position.x)
-                    StartCoroutine(GameManager.Instance.KnockBack(0.1f, -1700, 10, defener.GetComponent<Rigidbody2D>()));
+                    StartCoroutine(GameManager.Instance.KnockBack(0.1f, -1700, 0, defener.GetComponent<Rigidbody2D>()));
                 else if (attacker.transform.position.x < defener.transform.position.x)
-                    StartCoroutine(GameManager.Instance.KnockBack(0.1f, 1700, 10, defener.GetComponent<Rigidbody2D>()));
+                    StartCoroutine(GameManager.Instance.KnockBack(0.1f, 1700, 0, defener.GetComponent<Rigidbody2D>()));
 
             }
         }
@@ -149,9 +149,9 @@ public class CharacterStats : MonoBehaviour
             CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
             //StartCoroutine(GameManager.Instance.KnockBack02(attacker, defener));
             if (attacker.transform.position.x > defener.transform.position.x)
-                StartCoroutine(GameManager.Instance.KnockBack(0.02f, -1000, 300, defener.GetComponent<Rigidbody2D>()));
+                StartCoroutine(GameManager.Instance.KnockBack(0.02f, -1000, 0, defener.GetComponent<Rigidbody2D>()));
             else if (attacker.transform.position.x < defener.transform.position.x)
-                StartCoroutine(GameManager.Instance.KnockBack(0.02f, 1000, 300, defener.GetComponent<Rigidbody2D>()));
+                StartCoroutine(GameManager.Instance.KnockBack(0.02f, 1000, 0, defener.GetComponent<Rigidbody2D>()));
         }
 
         if(defener.tag == "Tori")
