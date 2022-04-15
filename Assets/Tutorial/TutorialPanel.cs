@@ -43,7 +43,7 @@ public class TutorialPanel : MonoBehaviour
     public bool MoveRockIsOpen = false;
     public bool JumpFireSkillIsOpen = false;
 
-    public bool CanOpenDemonPanel = false;
+    static public bool CanOpenDemonPanel = false;
 
     public bool DemonDescriptionIsOpen = false;
     public bool ChangeModeIsOpen = false;
@@ -52,7 +52,7 @@ public class TutorialPanel : MonoBehaviour
     public bool DemonDoubleJumpIsOpen = false;
     public bool DemonDashIsOpen = false;
 
-    public bool CanOpenFairyPanel = false;
+    static public bool CanOpenFairyPanel = false;
 
     public bool FairyTutorialIsOpen = false;
     public bool DemonFullSkillIsOpen = false;
