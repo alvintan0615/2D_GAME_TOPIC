@@ -263,9 +263,10 @@ public class TutorialPanel : MonoBehaviour
     {
         if(collision.name == "WalkCollider")
         {
-            OpenWalk();
+            StartCoroutine(DelayWalkOpenKey());
+            //OpenWalk();
             Destroy(collision);
-            Time.timeScale = 0;
+            //Time.timeScale = 0;
         }
 
         if (collision.name == "NormalAtkCollider")
@@ -689,6 +690,13 @@ public class TutorialPanel : MonoBehaviour
         TutorialPanelOpen = true;
         walk.SetActive(true);
         walkIsOpen = true;
+    }
+
+    IEnumerator DelayWalkOpenKey()
+    {
+        yield return new WaitForSeconds(1.5f);
+        OpenWalk();
+        Time.timeScale = 0;
     }
 
     IEnumerator DelayFireSkillOpenKey()
