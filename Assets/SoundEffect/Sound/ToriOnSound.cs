@@ -36,4 +36,9 @@ public class ToriOnSound : MonoBehaviour
     {
         audioSetting.soundEffectAudio[18].Play();
     }
+
+    public void ToriDiveAtk()
+    {
+        audioSetting.soundEffectAudio[19].Play();
+    }
 }
