@@ -8,7 +8,7 @@ public class TimeLineDungeon : MonoBehaviour
 {
     public PlayableDirector mDirector;
     public float normalizedTime;
-    [SerializeField] TutorialPanel tutorialPanel;
+   // [SerializeField] TutorialPanel tutorialPanel;
     void Start()
     {
         
@@ -52,7 +52,8 @@ public class TimeLineDungeon : MonoBehaviour
             EventManager.Instance.canUsePotion = true;
             EventManager.Instance.Dungeon_Opening = true;
             PlayerStatus.isDialouging = false;
-            tutorialPanel.CanOpenFairyPanel = true;
+            //tutorialPanel.CanOpenFairyPanel = true;
+            TutorialPanel.CanOpenFairyPanel = true;
         }
     }
 }

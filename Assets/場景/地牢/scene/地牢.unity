@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -14916,7 +14916,7 @@ PrefabInstance:
     - target: {fileID: 6301142380842007514, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
@@ -32369,6 +32369,7 @@ MonoBehaviour:
   BGEffectsSlider: {fileID: 156449531}
   SoundEffectsSlider: {fileID: 156449530}
   Boss: {fileID: 0}
+  BossIsDie: 0
 --- !u!4 &887935248
 Transform:
   m_ObjectHideFlags: 0
@@ -46382,7 +46383,7 @@ Animator:
   m_GameObject: {fileID: 1517210087}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d1dbbc83c6075dc4e833cea4e6673120, type: 2}
+  m_Controller: {fileID: 9100000, guid: 583a27e1f562387469a52db4645fec51, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -47193,18 +47194,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1541788644 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2257889292217508579, guid: 268ced2ad455ffb4c91cc105251dec8c,
-    type: 3}
-  m_PrefabInstance: {fileID: 411987101}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8212066923850fd4b90faafe7f71b593, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1544069186
 GameObject:
   m_ObjectHideFlags: 0
@@ -64327,7 +64316,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mDirector: {fileID: 2102549537}
   normalizedTime: 0
-  tutorialPanel: {fileID: 1541788644}
 --- !u!1 &2109937609
 GameObject:
   m_ObjectHideFlags: 0
