@@ -5,42 +5,42 @@ using UnityEngine;
 public class TeleporterOnSound : MonoBehaviour
 {
     public AudioSource TeleporterSound;
-    public bool canPlaySound = false;
+    //public bool canPlaySound = false;
     // Start is called before the first frame update
     void Start()
     {
-        TeleporterSound.Play();
+       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (canPlaySound == true)
-        {
-
-            TeleporterSound.mute = false;
-        }
-        else
-        {
-            TeleporterSound.mute = true;
-        }
+        
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            
-            canPlaySound = true;
+            //canPlaySound = true;
             TeleporterSound.mute = false;
         }
     }
+
+    //private void OnTriggerStay2D(Collider2D collision)
+    //{
+    //    if (collision.tag == "Player")
+    //    {
+    //        canPlaySound = true;
+    //        TeleporterSound.mute = false;
+    //    }
+    //}
 
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag == "Player")
         {
-            canPlaySound = false;
+            //canPlaySound = false;
             TeleporterSound.mute = true;
         }
     }
