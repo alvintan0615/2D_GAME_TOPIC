@@ -30,9 +30,13 @@ public class FinalBoss_FirstPart : MonoBehaviour
     public static bool isFireBallrain = false;
     public GameObject fireBallBase;
 
+
+    public AudioSetting audioSetting;
+
     private void Awake()
     {
         instance = this;
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
     void Start()
     {
@@ -190,12 +194,15 @@ public class FinalBoss_FirstPart : MonoBehaviour
     public void FireBallMagicCircleOn()
     {
         //MagicCircle Create Audio
+        audioSetting.soundEffectAudio[17].Play();
+        audioSetting.soundEffectAudio[17].mute = false;
         fireBallMagicCircle.SetActive(true);
     }
 
     public void FireBallMagicCircleOff()
     {
-        //MagicCircle Destory Audio Mute
+        //MagicCircle Create Audio mute
+        audioSetting.soundEffectAudio[17].mute = true;
         fireBallMagicCircle.SetActive(false);
     }
 

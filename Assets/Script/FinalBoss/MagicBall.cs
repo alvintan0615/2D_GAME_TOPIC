@@ -21,9 +21,11 @@ public class MagicBall : MonoBehaviour
     float r;
     public int number;
 
+    public AudioSetting audioSetting;
     private void Awake()
     {
         recordTimer = timer;
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
     void OnEnable()
     {
@@ -31,8 +33,12 @@ public class MagicBall : MonoBehaviour
         target = GameObject.FindGameObjectWithTag("FinalBoss_FirstPart");
         player = GameObject.FindGameObjectWithTag("Player");
         //int randomPick = Random.Range(5, 10);
-        
+
         //Audio Create 20 play()
+
+       // audioSetting.soundEffectAudio[15].Play();
+        audioSetting.soundEffectAudio[15].mute = false;
+
         dir = transform.position - target.transform.position;
         targetPos = target.transform.position;
         isAttack = false;
@@ -63,6 +69,8 @@ public class MagicBall : MonoBehaviour
             {
                 //20 Mute
                 //Attack Audio 21 play()
+                audioSetting.soundEffectAudio[15].mute = true;
+                audioSetting.soundEffectAudio[16].Play();
                 MagicBallAttack();
             }
                 
@@ -78,6 +86,8 @@ public class MagicBall : MonoBehaviour
             {
                 //20 Mute
                 //Attack Audio 21 play()
+                audioSetting.soundEffectAudio[15].mute = true;
+                audioSetting.soundEffectAudio[16].Play();
                 MagicBallAttack();
             }
                 

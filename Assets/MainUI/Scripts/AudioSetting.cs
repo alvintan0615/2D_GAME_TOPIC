@@ -49,6 +49,7 @@ public class AudioSetting : MonoBehaviour
         {
             backgroundAudio[0].mute = true;
             backgroundAudio[1].gameObject.SetActive(true);
+            Debug.Log("111");
         }
 
 

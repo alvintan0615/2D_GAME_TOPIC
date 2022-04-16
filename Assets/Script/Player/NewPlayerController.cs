@@ -123,7 +123,7 @@ public class NewPlayerController : MonoBehaviour
 
     private void Start()
     {
-        //audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
     void Update()
     {
@@ -479,7 +479,7 @@ public class NewPlayerController : MonoBehaviour
             && characterStats.CurrentHealingTime > 0 && characterStats.CurrentHealth < characterStats.MaxHealth
             && EventManager.Instance.canUsePotion == true)
         {
-            //audioSetting.soundEffectAudio[14].Play();
+            audioSetting.soundEffectAudio[14].Play();
             StartCoroutine(Healing(healingTime));
         }
     }

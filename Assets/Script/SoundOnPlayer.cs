@@ -22,7 +22,6 @@ public class SoundOnPlayer : MonoBehaviour
     public void HumanNormalAtk01()
     {
         audioSetting.soundEffectAudio[0].Play();
-        
     }
 
     public void HumanNormalAtk02()
