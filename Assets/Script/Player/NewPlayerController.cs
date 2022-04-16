@@ -95,6 +95,8 @@ public class NewPlayerController : MonoBehaviour
     const string DEMON_DOUBLEJUMP = "Demon_DoubleJump";
     const string DEMON_DESH = "Demon_Dash";
     #endregion
+
+    public AudioSetting audioSetting;
     void Awake()
     {
         instance = this;
@@ -109,6 +111,8 @@ public class NewPlayerController : MonoBehaviour
         {
             animator[x] = this.transform.GetChild(x).GetComponent<Animator>();
         }
+
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
 
     }
 
@@ -542,6 +546,7 @@ public class NewPlayerController : MonoBehaviour
 
     IEnumerator Healing(float healingReCover)
     {
+        audioSetting.soundEffectAudio[14].Play();
         PlayerStatus.isHealing = true;
         characterStats.CurrentHealingTime -= 1;
         characterStats.CurrentHealth += Random.Range(15, 23);
