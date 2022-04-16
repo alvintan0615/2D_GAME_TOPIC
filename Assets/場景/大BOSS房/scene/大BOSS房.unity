@@ -2051,7 +2051,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 100.58398, y: 20.073856}
+  m_Size: {x: 134.93517, y: 20.073856}
   m_EdgeRadius: 0
 --- !u!1 &382595762
 GameObject:
@@ -3267,6 +3267,9 @@ MonoBehaviour:
     type: 3}
   knockBackLight: {fileID: 5252164469611878561, guid: 4c67c3129f1c4a34ca0a30de726522e1,
     type: 3}
+  isUnder60: 0
+  sightRadius: 14.5
+  attackTarget: {fileID: 0}
 --- !u!1 &499537660
 GameObject:
   m_ObjectHideFlags: 0
@@ -9546,6 +9549,11 @@ PrefabInstance:
       propertyPath: canUseAllSceenSkill
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8754443353690347609, guid: 5ceaf6c945a949b4a8c4ffdf5cda3c67,
+        type: 3}
+      propertyPath: isFirstPartBossDead
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8754443353690347614, guid: 5ceaf6c945a949b4a8c4ffdf5cda3c67,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9653,7 +9661,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poisonContainerPrefab: {fileID: 4124938168214607618, guid: 7b14df27d2aef0147a689222f285ff5f,
     type: 3}
-  poisonContainerCount: 4
+  poisonContainerCount: 5
 --- !u!4 &1850442477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 141507926300692244, guid: cf1cdf9e3c63eae48b1d0f377607e264,
@@ -10612,7 +10620,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poisonBallPrefab: {fileID: 2876350653714642746, guid: c562a0d4349a2684b9829e6d8904af9b,
     type: 3}
-  poisonBallCount: 4
+  poisonBallCount: 5
 --- !u!4 &2057457695 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 443682, guid: 2a6cead025585fd468aef95352fcdc5d,

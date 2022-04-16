@@ -5,11 +5,16 @@ using UnityEngine;
 public class PoisonBall : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public GameObject target;
+    public GameObject player;
     private void OnEnable()
     {
         rb = GetComponent<Rigidbody2D>();
         float randomForce = Random.Range(1f, 43f);
         rb.AddForce(Vector2.left* randomForce, ForceMode2D.Impulse);
+
+        target = GameObject.FindGameObjectWithTag("FinalBossP2");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     
@@ -19,6 +24,9 @@ public class PoisonBall : MonoBehaviour
         {
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
+            var bossStats = target.GetComponent<CharacterStats>();
+            var playerStats = player.GetComponent<CharacterStats>();
+            playerStats.TakeDamage(bossStats, playerStats, 0);
         }
 
         if (collision.gameObject.layer == 8)
