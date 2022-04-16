@@ -189,11 +189,13 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     public void FireBallMagicCircleOn()
     {
+        //MagicCircle Create Audio
         fireBallMagicCircle.SetActive(true);
     }
 
     public void FireBallMagicCircleOff()
     {
+        //MagicCircle Destory Audio Mute
         fireBallMagicCircle.SetActive(false);
     }
 

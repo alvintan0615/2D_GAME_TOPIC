@@ -112,8 +112,8 @@ public class NewPlayerController : MonoBehaviour
             animator[x] = this.transform.GetChild(x).GetComponent<Animator>();
         }
 
-        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
 
+        
     }
 
     private void OnEnable()
@@ -123,7 +123,7 @@ public class NewPlayerController : MonoBehaviour
 
     private void Start()
     {
-
+        //audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
     void Update()
     {
@@ -479,6 +479,7 @@ public class NewPlayerController : MonoBehaviour
             && characterStats.CurrentHealingTime > 0 && characterStats.CurrentHealth < characterStats.MaxHealth
             && EventManager.Instance.canUsePotion == true)
         {
+            //audioSetting.soundEffectAudio[14].Play();
             StartCoroutine(Healing(healingTime));
         }
     }
@@ -546,7 +547,6 @@ public class NewPlayerController : MonoBehaviour
 
     IEnumerator Healing(float healingReCover)
     {
-        audioSetting.soundEffectAudio[14].Play();
         PlayerStatus.isHealing = true;
         characterStats.CurrentHealingTime -= 1;
         characterStats.CurrentHealth += Random.Range(15, 23);

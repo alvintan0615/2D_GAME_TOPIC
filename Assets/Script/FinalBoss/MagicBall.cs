@@ -27,9 +27,12 @@ public class MagicBall : MonoBehaviour
     }
     void OnEnable()
     {
+
         target = GameObject.FindGameObjectWithTag("FinalBoss_FirstPart");
         player = GameObject.FindGameObjectWithTag("Player");
         //int randomPick = Random.Range(5, 10);
+        
+        //Audio Create 20 play()
         dir = transform.position - target.transform.position;
         targetPos = target.transform.position;
         isAttack = false;
@@ -48,6 +51,7 @@ public class MagicBall : MonoBehaviour
 
         if(FinalBoss_FirstPart.instance.isMagicBallAttack == false && FinalBoss_FirstPart.instance.isMagicBallMove == false && isStopAround == false)
         {
+
             MagicBallAround();
         }
         
@@ -56,7 +60,12 @@ public class MagicBall : MonoBehaviour
         {
             StartCoroutine(BoolMagicBallAttack(isAttackTime));
             if (timer == 0)
+            {
+                //20 Mute
+                //Attack Audio 21 play()
                 MagicBallAttack();
+            }
+                
             else
                 MagicBallLerpMove();
         }
@@ -66,7 +75,12 @@ public class MagicBall : MonoBehaviour
             
             StartCoroutine(BoolMagicBallLerpAround(isAroundTime));
             if(isAttack == true)
+            {
+                //20 Mute
+                //Attack Audio 21 play()
                 MagicBallAttack();
+            }
+                
             else
                 MagicBallLerpMove();
         }
@@ -127,6 +141,7 @@ public class MagicBall : MonoBehaviour
         isStopAround = true;
         yield return new WaitForSeconds(2f);
         isAttack = true;
+
         yield return new WaitForSeconds(isAroundTime);
         hasPlayerPosition = false;
         MagicBallObjectpool.instance.ReturnPool(this.gameObject);
