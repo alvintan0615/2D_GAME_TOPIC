@@ -9,7 +9,7 @@ public class ElectricBall : MonoBehaviour
     private bool hasPlayerPosition;
     private Vector3 playerPosition;
     public float ballSpeed;
-    private bool isAttack = false;
+    [SerializeField]private bool isAttack = false;
     void Start()
     {
         p2Boss = GameObject.FindGameObjectWithTag("FinalBossP2");
@@ -43,6 +43,8 @@ public class ElectricBall : MonoBehaviour
     {
         yield return new WaitForSeconds(1.1f);
         isAttack = true;
+        yield return new WaitForSeconds(3f);
+        Destroy(this.gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -50,6 +52,9 @@ public class ElectricBall : MonoBehaviour
         if(collision.gameObject.tag == "Player" && isAttack == true)
         {
             Destroy(this.gameObject);
+            var bossStats = p2Boss.GetComponent<CharacterStats>();
+            var playerStats = player.GetComponent<CharacterStats>();
+            playerStats.TakeDamage(bossStats, playerStats, 0);
         }
 
         if(collision.gameObject.layer == 8 && isAttack == true)

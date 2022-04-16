@@ -23,7 +23,7 @@ public class EventManager : Singleton<EventManager>
     public bool isFirstTimeToPass = false;
     public bool electricDoor = false;
     public bool finalBossStart = false;
-
+    public bool isFirstPartBossDead = false;
 
     public bool HasFirstTalk = false;
     public bool firstNormalAtk = false;
