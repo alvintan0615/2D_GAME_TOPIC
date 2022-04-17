@@ -7,6 +7,11 @@ public class PoisonBall : MonoBehaviour
     private Rigidbody2D rb;
     public GameObject target;
     public GameObject player;
+    public AudioSetting audioSetting;
+    private void Awake()
+    {
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
+    }
     private void OnEnable()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -24,6 +29,7 @@ public class PoisonBall : MonoBehaviour
         {
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
+            //Audio PoisonContainer play
             var bossStats = target.GetComponent<CharacterStats>();
             var playerStats = player.GetComponent<CharacterStats>();
             playerStats.TakeDamage(bossStats, playerStats, 0);
@@ -33,6 +39,7 @@ public class PoisonBall : MonoBehaviour
         {
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
+            //Audio PoisonContainer play
         }
     }
 }
