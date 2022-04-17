@@ -30,6 +30,7 @@ public class PoisonBall : MonoBehaviour
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
             //Audio PoisonContainer play
+            audioSetting.soundEffectAudio[20].Play();
             var bossStats = target.GetComponent<CharacterStats>();
             var playerStats = player.GetComponent<CharacterStats>();
             playerStats.TakeDamage(bossStats, playerStats, 0);
@@ -40,6 +41,7 @@ public class PoisonBall : MonoBehaviour
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
             //Audio PoisonContainer play
+            audioSetting.soundEffectAudio[20].Play();
         }
     }
 }
