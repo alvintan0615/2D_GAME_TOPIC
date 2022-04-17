@@ -36,7 +36,7 @@ public class MagicBall : MonoBehaviour
 
         //Audio Create 20 play()
 
-        //audioSetting.soundEffectAudio[15].Play();
+        audioSetting.soundEffectAudio[15].Play();
         audioSetting.soundEffectAudio[15].mute = false;
 
         dir = transform.position - target.transform.position;
