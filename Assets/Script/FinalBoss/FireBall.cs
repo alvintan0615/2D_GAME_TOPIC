@@ -7,7 +7,12 @@ public class FireBall : MonoBehaviour
     public GameObject meteorHit;
     public GameObject target;
     public GameObject player;
+    public AudioSetting audioSetting;
 
+    private void Awake()
+    {
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
+    }
     void OnEnable()
     {
         target = GameObject.FindGameObjectWithTag("FinalBoss_FirstPart");
@@ -18,6 +23,7 @@ public class FireBall : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             FireBallHitObjectpool.instance.FireBallHitGetFromPool(this.gameObject.transform.position);
+            audioSetting.soundEffectAudio[18].Play();
             FireBallObjectpool.instance.FireBallReturnPool(this.gameObject);
             var bossStats = target.GetComponent<CharacterStats>();
             var playerStats = player.GetComponent<CharacterStats>();
@@ -26,6 +32,7 @@ public class FireBall : MonoBehaviour
         if(collision.gameObject.layer == 8)
         {
             FireBallHitObjectpool.instance.FireBallHitGetFromPool(this.gameObject.transform.position);
+            audioSetting.soundEffectAudio[18].Play();
             FireBallObjectpool.instance.FireBallReturnPool(this.gameObject);
         }
     }

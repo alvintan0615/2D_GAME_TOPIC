@@ -53,9 +53,9 @@ public class FinalBoss_FirstPart : MonoBehaviour
     void RandomPick()
     {
         int randomState = Random.Range(0, 4);
-        if (randomState != 3)
+        if (randomState == 3)
             anim.SetTrigger("Moving");
-        else if (randomState == 3)
+        if (randomState != 3)
             anim.SetTrigger("MovingTop");
 
     }
@@ -65,7 +65,7 @@ public class FinalBoss_FirstPart : MonoBehaviour
         int randomState = Random.Range(0, 2);
         if (randomState == 0)
             anim.SetTrigger("MagicBallFire");
-        else if (randomState == 1)
+        if (randomState == 1)
             anim.SetTrigger("MagicBallLerpMove");
     }
 
