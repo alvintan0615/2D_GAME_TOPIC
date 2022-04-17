@@ -52,10 +52,10 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     void RandomPick()
     {
-        int randomState = Random.Range(0, 3);
-        if (randomState != 2)
+        int randomState = Random.Range(0, 4);
+        if (randomState != 3)
             anim.SetTrigger("Moving");
-        else if (randomState == 2)
+        else if (randomState == 3)
             anim.SetTrigger("MovingTop");
 
     }
@@ -72,6 +72,8 @@ public class FinalBoss_FirstPart : MonoBehaviour
     public void MagicBall()
     {
         MagicBallObjectpool.instance.GetFromPool();
+        audioSetting.soundEffectAudio[15].mute = false;
+        audioSetting.soundEffectAudio[15].Play();
     }
 
 
@@ -232,5 +234,10 @@ public class FinalBoss_FirstPart : MonoBehaviour
         Vector3 Scale = transform.localScale;
         Scale.x *= -1;
         transform.localScale = Scale;
+    }
+
+    void AudioMute15()
+    {
+        audioSetting.soundEffectAudio[15].mute = true;
     }
 }

@@ -34,11 +34,6 @@ public class MagicBall : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         //int randomPick = Random.Range(5, 10);
 
-        //Audio Create 20 play()
-
-        audioSetting.soundEffectAudio[15].Play();
-        audioSetting.soundEffectAudio[15].mute = false;
-
         dir = transform.position - target.transform.position;
         targetPos = target.transform.position;
         isAttack = false;
@@ -67,10 +62,6 @@ public class MagicBall : MonoBehaviour
             StartCoroutine(BoolMagicBallAttack(isAttackTime));
             if (timer == 0)
             {
-                //20 Mute
-                //Attack Audio 21 play()
-                audioSetting.soundEffectAudio[15].mute = true;
-                audioSetting.soundEffectAudio[16].Play();
                 MagicBallAttack();
             }
                 
@@ -84,10 +75,6 @@ public class MagicBall : MonoBehaviour
             StartCoroutine(BoolMagicBallLerpAround(isAroundTime));
             if(isAttack == true)
             {
-                //20 Mute
-                //Attack Audio 21 play()
-                audioSetting.soundEffectAudio[15].mute = true;
-                audioSetting.soundEffectAudio[16].Play();
                 MagicBallAttack();
             }
                 
