@@ -10,6 +10,7 @@ public class CatController : MonoBehaviour, IEndGameObserver
     public Rigidbody2D rb;
     private Animator anim;
     bool playerDead;
+    public bool isFaceRight = true;
     [Header("Basic Settings")]
     public float sightRadius;
     public float speed;
@@ -125,30 +126,34 @@ public class CatController : MonoBehaviour, IEndGameObserver
                 isIdle = true;
                 break;
             case CatEnemyStates.PATROL:
-                if (myTransform.position.x >= wayPoint.x)
+                if(isAttack == false)
                 {
-                    myTransform.localRotation = Quaternion.Euler(0, 180, 0);
-                }
-                else
-                {
-                    myTransform.localRotation = Quaternion.Euler(0, 0, 0);
-                }
-
-                if (Vector3.Distance(wayPoint, transform.position) <= stoppingDistance)
-                {
-                    isChasing = false;
-                    isIdle = true;
-                    if (remainLookAtTime > 0)
-                        remainLookAtTime -= Time.deltaTime;
+                    if (myTransform.position.x >= wayPoint.x)
+                    {
+                        myTransform.localRotation = Quaternion.Euler(0, 180, 0);
+                    }
                     else
-                        GetNewWayPoint();
+                    {
+                        myTransform.localRotation = Quaternion.Euler(0, 0, 0);
+                    }
+
+                    if (Vector3.Distance(wayPoint, transform.position) <= stoppingDistance)
+                    {
+                        isChasing = false;
+                        isIdle = true;
+                        if (remainLookAtTime > 0)
+                            remainLookAtTime -= Time.deltaTime;
+                        else
+                            GetNewWayPoint();
+                    }
+                    else
+                    {
+                        isChasing = true;
+                        isIdle = false;
+                        transform.position = Vector3.MoveTowards(transform.position, wayPoint, patrolSpeed * Time.deltaTime);
+                    }
                 }
-                else
-                {
-                    isChasing = true;
-                    isIdle = false;
-                    transform.position = Vector3.MoveTowards(transform.position, wayPoint, patrolSpeed * Time.deltaTime);
-                }
+                
                 break;
             case CatEnemyStates.CHASE:
                 isChasing = true;
@@ -214,10 +219,11 @@ public class CatController : MonoBehaviour, IEndGameObserver
                         //執行攻擊
                         Attack();
                     }
-                    else
+                    if(lastAttackTime > 0 && isAttack == true)
                     {
-                        catEnemyStates = CatEnemyStates.PATROL;
-                        anim.SetBool("Idle", true);
+                        //catEnemyStates = CatEnemyStates.PATROL;
+                        isIdle = true;
+                        isChasing = false;
                     }
                         
                 }
@@ -238,7 +244,6 @@ public class CatController : MonoBehaviour, IEndGameObserver
 
         float randomX = Random.Range(-patrolRange, patrolRange);
         Vector3 randomPoint = new Vector3(idlePos.x + randomX, transform.position.y, transform.position.z);
-        Debug.Log(idlePos.x + randomX);
         wayPoint = randomPoint;
     }
 
@@ -258,10 +263,12 @@ public class CatController : MonoBehaviour, IEndGameObserver
     {
         if (myTransform.position.x >= playerTransform.position.x)
         {
+            isFaceRight = false;
             myTransform.localRotation = Quaternion.Euler(0, 180, 0);
         }
         else
         {
+            isFaceRight = true;
             myTransform.localRotation = Quaternion.Euler(0, 0, 0);
         }
     }
