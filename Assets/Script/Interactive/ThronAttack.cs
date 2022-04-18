@@ -27,11 +27,12 @@ public class ThronAttack : MonoBehaviour
             if (coll.gameObject.tag == "Player")
             {
                 time = 0f;
-                Debug.Log(123);
+                //Debug.Log(123);
                 Human_Skill.instance.Hurt();
                 coll.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
                 var playerStats = coll.gameObject.GetComponent<CharacterStats>();
-                playerStats.ThronDamage(5, playerStats);
+                int randomDamage = Random.Range(5, 9);
+                playerStats.ThronDamage(randomDamage, playerStats);
                 
             }
         }

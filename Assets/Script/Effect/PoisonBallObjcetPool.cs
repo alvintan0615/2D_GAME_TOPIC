@@ -51,4 +51,19 @@ public class PoisonBallObjcetPool : MonoBehaviour
 
         return outPoisonBall;
     }
+
+    public GameObject PoisonBallGetFromPool2(Vector3 PoisonBallPos , float FireDir)
+    {
+        var outPoisonBall = poisonBallavailableObjects.Dequeue();
+
+        outPoisonBall.gameObject.GetComponent<Cat_PoisonBall>().fireDir = FireDir;
+
+        outPoisonBall.SetActive(true);
+
+        outPoisonBall.transform.position = PoisonBallPos;
+
+        
+
+        return outPoisonBall;
+    }
 }
