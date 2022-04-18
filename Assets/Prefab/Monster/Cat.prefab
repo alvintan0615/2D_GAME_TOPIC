@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 7848691465836086498}
   m_Layer: 9
   m_Name: Cat
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -190,8 +190,8 @@ MonoBehaviour:
     m_Bits: 256
   isIdle: 0
   isChasing: 0
-  stoppingDistance: 15.78
-  patrolRange: 9.61
+  stoppingDistance: 1
+  patrolRange: 11.39
   wayPoint: {x: 0, y: 0, z: 0}
   idlePos: {x: 0, y: 0, z: 0}
 --- !u!61 &7848691465836086497

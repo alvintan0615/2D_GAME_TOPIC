@@ -50,17 +50,18 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     void Update()
     {
-
+        if (characterStats.CurrentHealth <= 0)
+            EventManager.Instance.isFirstPartBossDead = true;
     }
 
     void RandomPick()
     {
         if(EventManager.Instance.finalBossStart == true && characterStats.CurrentHealth > 0)
         {
-            int randomState = Random.Range(0, 4);
-            if (randomState == 3)
+            int randomState = Random.Range(0, 3);
+            if (randomState != 2)
                 anim.SetTrigger("Moving");
-            if (randomState != 3)
+            if (randomState == 2)
                 anim.SetTrigger("MovingTop");
         }
 

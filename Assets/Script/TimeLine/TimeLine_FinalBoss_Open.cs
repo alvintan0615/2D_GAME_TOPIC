@@ -10,10 +10,6 @@ public class TimeLine_FinalBoss_Open : MonoBehaviour
     public PlayableDirector mDirector;
     public float normalizedTime;
     public GameObject excuse;
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()

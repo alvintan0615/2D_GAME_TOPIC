@@ -23,6 +23,8 @@ public class CatController : MonoBehaviour, IEndGameObserver
     public bool isIDLE;
     public bool isHurt = false;
     public bool isAttack = false;
+    private Color color;
+    private SpriteRenderer spriteRenderer;
 
     [Header("environmental Check")]
     public float footOffset = 1.8f;
@@ -43,7 +45,7 @@ public class CatController : MonoBehaviour, IEndGameObserver
     [SerializeField] private Vector3 wayPoint;
     [SerializeField] private Vector3 idlePos;
 
-    private bool isDead;
+    [SerializeField]private bool isDead;
     private GameObject attackTarget;
     void Start()
     {
@@ -54,7 +56,7 @@ public class CatController : MonoBehaviour, IEndGameObserver
 
         myTransform = this.transform;
         idlePos = this.gameObject.transform.position;
-
+        spriteRenderer = GetComponent<SpriteRenderer>();
         if (isIDLE)
         {
             catEnemyStates = CatEnemyStates.IDLE;
@@ -84,15 +86,15 @@ public class CatController : MonoBehaviour, IEndGameObserver
         if (characterStats.CurrentHealth <= 0)
             isDead = true;
 
-        if (isDead)
+        if (isDead == true)
             catEnemyStates = CatEnemyStates.DEAD;
 
-        if (foundPlayer() && leftFootCheck == true && rightFootCheck == true)
+        if (foundPlayer() && leftFootCheck == true && rightFootCheck == true && isDead == false)
         {
             catEnemyStates = CatEnemyStates.CHASE;
         }
 
-        if ((!foundPlayer() || leftFootCheck == false || rightFootCheck == false))
+        if ((!foundPlayer() || leftFootCheck == false || rightFootCheck == false) && isDead == false)
         {
             catEnemyStates = CatEnemyStates.PATROL;
             //GetNewWayPoint();
@@ -126,7 +128,7 @@ public class CatController : MonoBehaviour, IEndGameObserver
                 isIdle = true;
                 break;
             case CatEnemyStates.PATROL:
-                if(isAttack == false)
+                if(isAttack == false && isDead == false)
                 {
                     if (myTransform.position.x >= wayPoint.x)
                     {
@@ -207,7 +209,7 @@ public class CatController : MonoBehaviour, IEndGameObserver
                         }
                     }
                 }
-                if (TargetInAttackRange())
+                if (TargetInAttackRange() && isDead == false)
                 {
                     isChasing = false;
 
@@ -302,6 +304,18 @@ public class CatController : MonoBehaviour, IEndGameObserver
         return false;
     }
 
+    public void InjuryHurt()
+    {
+        StartCoroutine(ChangeColor(new Color(1f, 0.39f, 0.37f), 0.1f));
+    }
+
+    IEnumerator ChangeColor(Color color, float colorChangeTime)
+    {
+        spriteRenderer.color = color;
+        yield return new WaitForSeconds(colorChangeTime);
+        spriteRenderer.color = new Color(1, 1, 1);
+    }
+
 
     void PhysicsCheck()
     {
@@ -332,4 +346,6 @@ public class CatController : MonoBehaviour, IEndGameObserver
     {
         attackTarget = null;
     }
+
+
 }

@@ -15,6 +15,9 @@ public class FinalBoss_SecondPart : MonoBehaviour
     public float sightRadius;
     public GameObject attackTarget;
     private bool isKnockBackHit = false;
+
+    [SerializeField] private Color color;
+    [SerializeField] private SpriteRenderer spriteRenderer;
     private void OnEnable()
     {
         electricBallPos = transform.GetChild(2).gameObject;
@@ -22,6 +25,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         characterStats = GetComponent<CharacterStats>();
         anim = GetComponent<Animator>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
     void Start()
     {
@@ -40,7 +44,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
 
     public void RandomPickstate()
     {
-        if(isUnder60 == false && EventManager.Instance.isFirstPartBossDead == true)
+        if(isUnder60 == false && EventManager.Instance.finalBossMiddle == true)
         {
             float randomPick = Random.Range(0, 3);
             if (randomPick == 0)
@@ -60,7 +64,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
             }
         }
 
-        if (isUnder60 == true && EventManager.Instance.isFirstPartBossDead == true)
+        if (isUnder60 == true && EventManager.Instance.finalBossMiddle == true)
         {
             float randomPick = Random.Range(0, 5);
             if (randomPick == 0)
@@ -136,6 +140,11 @@ public class FinalBoss_SecondPart : MonoBehaviour
         return false;
     }
 
+    public void InjuryHurt()
+    {
+        StartCoroutine(ChangeColor(new Color(1f, 0.39f, 0.37f), 0.1f));
+    }
+
 
     public void CreateElectricBall()
     {
@@ -147,6 +156,12 @@ public class FinalBoss_SecondPart : MonoBehaviour
         Instantiate(knockBackLight, knockBackLightPos.transform.position, Quaternion.identity);
     }
 
+    IEnumerator ChangeColor(Color color, float colorChangeTime)
+    {
+        spriteRenderer.color = color;
+        yield return new WaitForSeconds(colorChangeTime);
+        spriteRenderer.color = new Color(1, 1, 1);
+    }
 
     private void OnDrawGizmosSelected()
     {

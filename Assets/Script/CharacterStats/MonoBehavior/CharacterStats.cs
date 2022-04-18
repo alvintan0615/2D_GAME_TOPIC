@@ -120,12 +120,11 @@ public class CharacterStats : MonoBehaviour
     {
         if(defener.tag == "Player" && GameManager.Instance.Ken_Human == true && defener.characterData.currentHealth > 0)
         {
-            int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
-            CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
             Human_Skill.instance.Hurt();
             if(PlayerStatus.canBeHurt == true)
             {
-
+                int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
+                CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
                 defener.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
                 //Rigidbody2D rb = defener.GetComponent<Rigidbody2D>();
                 if (attacker.transform.position.x > defener.transform.position.x)
@@ -138,8 +137,12 @@ public class CharacterStats : MonoBehaviour
 
         if(defener.tag == "Player" && GameManager.Instance.Ken_Human == false && defener.characterData.currentHealth > 0)
         {
-            int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
-            CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
+            if(PlayerStatus.isHurting == false)
+            {
+                int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
+                CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
+            }
+            
         }
 
         if(defener.tag == "Enemy" && defener.characterData.currentHealth > 0)
@@ -161,9 +164,18 @@ public class CharacterStats : MonoBehaviour
             CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         }
 
-        if(defener.tag == "FinalBoss_Firstpart")
+        if(defener.tag == "FinalBoss_FirstPart")
         {
+            Debug.Log("123");
             defener.GetComponent<FinalBoss_FirstPart>().InjuryHurt();
+            Debug.Log("456");
+            int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
+            CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
+        }
+
+        if (defener.tag == "FinalBossP2")
+        {
+            defener.GetComponent<FinalBoss_SecondPart>().InjuryHurt();
             int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
             CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         }

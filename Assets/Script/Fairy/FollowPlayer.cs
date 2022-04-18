@@ -8,9 +8,14 @@ public class FollowPlayer : MonoBehaviour
     public static bool isFollowPlayer = false;
     [SerializeField] Transform target;
     [SerializeField] SpriteRenderer spriteRenderer;
-    void Start()
+
+    private void Awake()
     {
         target = GameObject.FindGameObjectWithTag("FairyPosition").GetComponent<Transform>();
+    }
+    void Start()
+    {
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 

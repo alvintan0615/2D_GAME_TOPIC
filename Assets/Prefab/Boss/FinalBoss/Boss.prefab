@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4845422706604776593}
   - component: {fileID: 4845422706604776595}
   - component: {fileID: 4371346987993013615}
-  m_Layer: 21
+  m_Layer: 9
   m_Name: Boss
   m_TagString: FinalBoss_FirstPart
   m_Icon: {fileID: 0}
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4845422706604776556}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -44.05, y: -1.64, z: 0}
-  m_LocalScale: {x: 0.2511564, y: 0.24060181, z: 0.21540001}
+  m_LocalScale: {x: 0.2511564, y: 0.2406018, z: 0.2154}
   m_Children:
   - {fileID: 4845422707970665840}
   - {fileID: 4845422708221794127}
@@ -164,6 +164,7 @@ MonoBehaviour:
   fireDust: {fileID: 0}
   fireBallBase: {fileID: 1445508261629563371, guid: 6db1cc5f7ac63454fb1919a3a30e11f0,
     type: 3}
+  audioSetting: {fileID: 0}
 --- !u!114 &4371346987993013615
 MonoBehaviour:
   m_ObjectHideFlags: 0
