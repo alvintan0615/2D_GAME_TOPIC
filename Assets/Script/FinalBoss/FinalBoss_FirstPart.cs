@@ -52,11 +52,15 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     void RandomPick()
     {
-        int randomState = Random.Range(0, 4);
-        if (randomState == 3)
-            anim.SetTrigger("Moving");
-        if (randomState != 3)
-            anim.SetTrigger("MovingTop");
+        if(EventManager.Instance.finalBossStart == true)
+        {
+            int randomState = Random.Range(0, 4);
+            if (randomState == 3)
+                anim.SetTrigger("Moving");
+            if (randomState != 3)
+                anim.SetTrigger("MovingTop");
+        }
+
 
     }
 

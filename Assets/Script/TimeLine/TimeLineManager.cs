@@ -15,7 +15,6 @@ public class TimeLineManager : MonoBehaviour
     public Image _Pannel;
 
     [SerializeField] PlayableDirector activeDirector;
-    [SerializeField] TimeLineForestTutorial forestTutorial;
     private void Awake()
     {
         if (ins != null)

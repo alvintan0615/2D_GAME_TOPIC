@@ -2018,10 +2018,10 @@ BoxCollider2D:
   m_Offset: {x: 0.07258058, y: -1.069701}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 33.335, y: 33.335}
+    newSize: {x: 33.335, y: 33.335}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
@@ -2110,6 +2110,7 @@ MonoBehaviour:
     type: 3}
   healingTime: 1
   isDead: 0
+  audioSetting: {fileID: 0}
 --- !u!114 &6301142380842007509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2235,7 +2236,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 33.34, y: 33.34}
+  m_Size: {x: 33.335, y: 33.335}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -2332,14 +2333,12 @@ MonoBehaviour:
   JumpDashIsOpen: 0
   MoveRockIsOpen: 0
   JumpFireSkillIsOpen: 0
-  CanOpenDemonPanel: 0
   DemonDescriptionIsOpen: 0
   ChangeModeIsOpen: 0
   DemonNormalAtkIsOpen: 0
   DemonBeamSkillIsOpen: 0
   DemonDoubleJumpIsOpen: 0
   DemonDashIsOpen: 0
-  CanOpenFairyPanel: 0
   FairyTutorialIsOpen: 0
   DemonFullSkillIsOpen: 0
   PullMachineIsOpen: 0

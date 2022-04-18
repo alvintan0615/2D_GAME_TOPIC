@@ -10,12 +10,12 @@ public class TimeLine_AfterSewerBossFight : MonoBehaviour
     public PlayableDirector mDirector;
     public float normalizedTime;
     [SerializeField] AudioSetting audioSetting;
+    public CharacterStats tori_Sewer;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         var timelineAsset = mDirector.playableAsset as TimelineAsset;
@@ -38,6 +38,13 @@ public class TimeLine_AfterSewerBossFight : MonoBehaviour
             mDirector.SetGenericBinding(track6, GameManager.Instance.playerStats.transform.GetChild(1).gameObject);
         }
 
+        if(tori_Sewer.CurrentHealth <= 0 && EventManager.Instance.isTori_SewerDead == false)
+        {
+            
+            mDirector.Play();
+        }
+
+
         if(normalizedTime >=0.01f && normalizedTime < 0.99f)
         {
             PlayerStatus.isDialouging = true;
@@ -47,6 +54,7 @@ public class TimeLine_AfterSewerBossFight : MonoBehaviour
         {
             PlayerStatus.isDialouging = false;
             audioSetting.BossIsDie = true;
+            EventManager.Instance.isTori_SewerDead = true;
         }
     }
 }
