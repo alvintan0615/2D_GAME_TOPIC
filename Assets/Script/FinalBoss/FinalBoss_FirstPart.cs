@@ -12,6 +12,8 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     private Transform player;
 
+    private CharacterStats characterStats;
+
     public bool facingLeft = true;
     [Header("LerpMove")]
     public float lerpSpeed;
@@ -37,6 +39,7 @@ public class FinalBoss_FirstPart : MonoBehaviour
     {
         instance = this;
         audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
+        characterStats = GetComponent<CharacterStats>();
     }
     void Start()
     {
@@ -52,7 +55,7 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     void RandomPick()
     {
-        if(EventManager.Instance.finalBossStart == true)
+        if(EventManager.Instance.finalBossStart == true && characterStats.CurrentHealth > 0)
         {
             int randomState = Random.Range(0, 4);
             if (randomState == 3)

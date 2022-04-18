@@ -20,7 +20,6 @@ public class MagicBall : MonoBehaviour
     [SerializeField]private float recordTimer;
     float r;
     public int number;
-
     public AudioSetting audioSetting;
     private void Awake()
     {
@@ -44,6 +43,12 @@ public class MagicBall : MonoBehaviour
     
     void Update()
     {
+        var targetCharacterStats = target.GetComponent<CharacterStats>();
+        if(targetCharacterStats.CurrentHealth <= 0)
+        {
+            MagicBallObjectpool.instance.ReturnPool(this.gameObject);
+        }
+
         timer -= Time.deltaTime;
         if(timer <= 0)
         {
