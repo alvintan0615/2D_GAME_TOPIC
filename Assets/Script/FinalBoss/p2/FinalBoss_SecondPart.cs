@@ -15,6 +15,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
     public float sightRadius;
     public GameObject attackTarget;
     private bool isKnockBackHit = false;
+    public AudioSetting audioSetting;
 
     [SerializeField] private Color color;
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -29,7 +30,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
     }
     void Start()
     {
-        
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
 
     
@@ -142,6 +143,8 @@ public class FinalBoss_SecondPart : MonoBehaviour
 
     public void InjuryHurt()
     {
+        //audio hurt play
+        audioSetting.soundEffectAudio[26].Play();
         StartCoroutine(ChangeColor(new Color(1f, 0.39f, 0.37f), 0.1f));
     }
 

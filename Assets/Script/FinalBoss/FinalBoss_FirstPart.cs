@@ -196,6 +196,8 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
     public void InjuryHurt()
     {
+        //audio hurt play
+        audioSetting.soundEffectAudio[25].Play();
         StartCoroutine(ChangeColor(new Color(1f, 0.39f, 0.37f), 0.1f));
     }
 
