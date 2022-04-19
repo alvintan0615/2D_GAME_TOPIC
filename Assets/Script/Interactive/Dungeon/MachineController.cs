@@ -14,10 +14,12 @@ public class MachineController : MonoBehaviour
     static public bool IsFloor = false;
     static public bool BySelf = false;
 
-    public AudioSource Machine;
+    //public AudioSource Machine;
+    public AudioSetting audioSetting;
     public void Start()
     {
         DoAction = true;
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
 
     public void OnTriggerStay2D(Collider2D collision)
@@ -28,7 +30,8 @@ public class MachineController : MonoBehaviour
             {
                 IsDefault = false;
                 animator.SetTrigger("DefaultToDown");
-                MahcineSound();
+                //MahcineSound();
+                audioSetting.soundEffectAudio[28].Play();
                 StartCoroutine(DelayDefaultToDown());
                 DoAction = false;
                 IsFloor = true;
@@ -37,7 +40,8 @@ public class MachineController : MonoBehaviour
             if (IsDefault == false && (UpToDown == false || IsFloor == true ) && DoAction == true && OneRound == false)
             {
                 animator.SetTrigger("DownToUp");
-                MahcineSound();
+                //MahcineSound();
+                audioSetting.soundEffectAudio[28].Play();
                 StartCoroutine(DelayOneRound());
                 DoAction = false;
                 IsFloor = false;
@@ -47,7 +51,8 @@ public class MachineController : MonoBehaviour
             if (IsDefault == false && OneRound == true && (UpToDown == true || IsFloor == false) && DoAction == true )
             {
                 animator.SetTrigger("UpToDown");
-                MahcineSound();
+                //MahcineSound();
+                audioSetting.soundEffectAudio[28].Play();
                 StartCoroutine(DelayDownToUp());
                 DoAction = false;
                 IsFloor = false;
@@ -87,6 +92,6 @@ public class MachineController : MonoBehaviour
 
     public void MahcineSound()
     {
-        Machine.Play();
+       // Machine.Play();
     }
 }

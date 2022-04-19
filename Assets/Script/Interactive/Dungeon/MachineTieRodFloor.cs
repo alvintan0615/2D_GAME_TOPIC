@@ -11,12 +11,13 @@ public class MachineTieRodFloor : MonoBehaviour
     public bool OneRoundTR = false;
 
     //public AudioSource TieRod;
-    public AudioSource Machine;
-    
+    //public AudioSource Machine;
+    public AudioSetting audioSetting;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
 
     // Update is called once per frame
@@ -50,7 +51,8 @@ public class MachineTieRodFloor : MonoBehaviour
                 animator.SetTrigger("DefaultToDown");
                 animatorTR.SetTrigger("IsDefault");
                 //FloorTieRodSound();
-                MachineSoundDefault();
+                //MachineSoundDefault();
+                audioSetting.soundEffectAudio[28].Play();
                 StartCoroutine(DelayOneRound());
                 DoAction = false;
                 MachineController.IsFloor = true;
@@ -100,6 +102,6 @@ public class MachineTieRodFloor : MonoBehaviour
 
     public void MachineSoundDefault()
     {
-        Machine.Play();
+       // Machine.Play();
     }
 }

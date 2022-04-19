@@ -7566,7 +7566,7 @@ MonoBehaviour:
   DoAction: 1
   OneRound: 0
   OneRoundTR: 0
-  Machine: {fileID: 29119285}
+  audioSetting: {fileID: 0}
 --- !u!95 &269319789
 Animator:
   serializedVersion: 3
@@ -24325,7 +24325,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 829a34b472863544c93c110c19a1ae83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ironChain: {fileID: 178427365}
+  audioSetting: {fileID: 0}
 --- !u!1 &582407257
 GameObject:
   m_ObjectHideFlags: 0
@@ -32366,6 +32366,16 @@ MonoBehaviour:
   - {fileID: 29119285}
   - {fileID: 549645386}
   - {fileID: 521317817}
+  - {fileID: 178427365}
+  - {fileID: 178427365}
+  - {fileID: 178427365}
+  - {fileID: 178427365}
+  - {fileID: 178427365}
+  - {fileID: 178427365}
+  - {fileID: 178427365}
+  - {fileID: 29119285}
+  - {fileID: 178427365}
+  - {fileID: 178427365}
   - {fileID: 178427365}
   BGEffectsSlider: {fileID: 156449531}
   SoundEffectsSlider: {fileID: 156449530}
@@ -48023,7 +48033,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1378741277}
-  Machine: {fileID: 29119285}
+  audioSetting: {fileID: 0}
 --- !u!58 &1578806408
 CircleCollider2D:
   m_ObjectHideFlags: 0

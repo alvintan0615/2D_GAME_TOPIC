@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class IronChainSound : MonoBehaviour
 {
-    public AudioSource ironChain;
-   // public bool canPlaySound = false;
+    //public AudioSource ironChain;
+
+    public AudioSetting audioSetting;
+    // public bool canPlaySound = false;
     // Start is called before the first frame update
     void Start()
     {
         //canPlaySound = false;
         //ironChain.mute = true;
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
 
     // Update is called once per frame
@@ -46,7 +49,8 @@ public class IronChainSound : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            ironChain.Play();
+            //ironChain.Play();
+            audioSetting.soundEffectAudio[31].Play();
         }
     }
 }
