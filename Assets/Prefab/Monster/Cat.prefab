@@ -194,6 +194,7 @@ MonoBehaviour:
   patrolRange: 11.39
   wayPoint: {x: 0, y: 0, z: 0}
   idlePos: {x: 0, y: 0, z: 0}
+  isDead: 0
 --- !u!61 &7848691465836086497
 BoxCollider2D:
   m_ObjectHideFlags: 0

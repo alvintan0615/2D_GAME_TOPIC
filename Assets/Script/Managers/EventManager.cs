@@ -24,6 +24,7 @@ public class EventManager : Singleton<EventManager>
     public bool electricDoor = false;
     public bool isTori_SewerDead = false;
     public bool isGetFinalBossdoorKey = false;
+    public bool isFinalBossDoorOpen = false;
     public bool finalBossOpen = false;
     public bool finalbossExcuseVideo = false;
     public bool finalBossStart = false;

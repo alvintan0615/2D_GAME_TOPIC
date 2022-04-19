@@ -11,11 +11,11 @@ public class FollowPlayer : MonoBehaviour
 
     private void Awake()
     {
-        target = GameObject.FindGameObjectWithTag("FairyPosition").GetComponent<Transform>();
+        
     }
     void Start()
     {
-        
+        target = GameObject.FindGameObjectWithTag("FairyPosition").GetComponent<Transform>();
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 

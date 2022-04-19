@@ -5,17 +5,6 @@ using UnityEngine.Playables;
 public class TriggerTimeLine : MonoBehaviour
 {
     public PlayableDirector mDirector;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player" && EventManager.Instance.Sewer_TimeLineBossTori == false)

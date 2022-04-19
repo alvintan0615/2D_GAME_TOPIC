@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bbf44f83f80379c49bcfcd6199b21cc8, type: 3}
   m_Name: Boss_SewerToriData
   m_EditorClassIdentifier: 
-  maxHealth: 300
-  currentHealth: 300
+  maxHealth: 200
+  currentHealth: 10
   baseDefence: 5
   currentDefence: 5
   maxHealingTime: 0

@@ -49,6 +49,7 @@ public class Boss_Tori : MonoBehaviour
 
     [Header("Dizzy")]
     [SerializeField] int changeColorTime;
+    public bool isDead = false;
 
     [Header("Other")]
     public Animator anim;
@@ -96,6 +97,13 @@ public class Boss_Tori : MonoBehaviour
         }
 
         anim.SetBool("isTimeLineOK", isTimeLineOK);
+
+        if(isSewer == true && characterStats.CurrentHealth <= 0)
+        {
+            isDead = true;
+            rb.velocity = Vector2.zero;
+            anim.SetBool("isDead", true);
+        }
     }
 
     void RandomStatePicker()
@@ -143,6 +151,7 @@ public class Boss_Tori : MonoBehaviour
 
     public void Fly()
     {
+        rb.velocity = flyMoveSpeed * flyMoveDirection;
         if (isTouchingWall)// || randomFlip >= 45
         {
             if (facingLeft)
@@ -152,7 +161,7 @@ public class Boss_Tori : MonoBehaviour
             
         }
         //randomFlip = 0;
-        rb.velocity = flyMoveSpeed * flyMoveDirection;
+        
     }
 
     public void GroundToFlyIdle()

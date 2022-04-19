@@ -52,6 +52,11 @@ public class FinalBoss_FirstPart : MonoBehaviour
     {
         if (characterStats.CurrentHealth <= 0)
             EventManager.Instance.isFirstPartBossDead = true;
+
+        if(EventManager.Instance.isFirstPartBossDead == true && EventManager.Instance.finalBossMiddle == false)
+        {
+            audioSetting.soundEffectAudio[15].mute = true;
+        }
     }
 
     void RandomPick()
