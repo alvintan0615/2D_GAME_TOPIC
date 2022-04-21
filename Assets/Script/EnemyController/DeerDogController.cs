@@ -355,5 +355,10 @@ public class DeerDogController : MonoBehaviour, IEndGameObserver
         isIdle = false;
         attackTarget = null;
     }
+
+    public void AgainNotify()
+    {
+        playerDead = false;
+    }
     #endregion
 }

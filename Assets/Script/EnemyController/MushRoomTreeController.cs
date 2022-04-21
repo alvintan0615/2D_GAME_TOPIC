@@ -385,6 +385,10 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
         isChasing = false;
         isAttack = false;
         isIdle = false;
-        attackTarget = null;
+    }
+
+    public void AgainNotify()
+    {
+        playerDead = false;
     }
 }

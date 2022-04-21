@@ -16,6 +16,7 @@ public class NewPlayerController : MonoBehaviour
     [SerializeField]private Demon_Skill demonSkill;
 
     public static CharacterStats characterStats;
+    public SceneFader sceneFaderPrefab;
     [Header("移動設定")]
     private float xInput;
     public float moveSpeed = 8f;
@@ -88,7 +89,7 @@ public class NewPlayerController : MonoBehaviour
     const string HUMAN_STICKWALL = "Human_StickWall";
     const string HUMAN_CLIMB = "Human_Climb";
     const string HUMAN_STOPCLIMB = "Human_StopClimb";
-
+    const string HUMAN_DEAD = "Human_Dead";
     #endregion
 
     #region Demon_Animation State
@@ -96,6 +97,7 @@ public class NewPlayerController : MonoBehaviour
     const string DEMON_JUMP = "Demon_Jump";
     const string DEMON_DOUBLEJUMP = "Demon_DoubleJump";
     const string DEMON_DESH = "Demon_Dash";
+    const string DEMON_DEAD = "Demon_Dead";
     #endregion
 
     public AudioSetting audioSetting;
@@ -132,17 +134,31 @@ public class NewPlayerController : MonoBehaviour
 
         if(characterStats.CurrentHealth <=0 && EventManager.Instance.fireVillege_BossStoryLine == false)
             isDead = true;
+            
 
         if (characterStats.CurrentHealth > 0)
             isDead = false;
-
-        if(isDead == true && isdeaded == false)
+           
+        if(isDead == true)
         {
-            isdeaded = true;
+            PlayerStatus.isDead = true;
+            GameManager.Instance.NotifyObservers();
             rb.velocity = new Vector2(0, 0);
-            SceneController.Instance.DeadScene("UITestScene");
-        }
+            if (GameManager.Instance.Ken_Human == true)
+            //TODO Dead
+                HumanState(HUMAN_DEAD);
+            else
+                DemonState(DEMON_DEAD);
 
+            if (deadPos != null)
+                StartCoroutine(PlayAgain());
+            //SceneController.Instance.DeadScene("UITestScene");
+        }
+        else
+        {
+            PlayerStatus.isDead = false;
+            GameManager.Instance.AgainNotifyObservers();
+        }
 
         if (!isDead)
         {
@@ -571,6 +587,15 @@ public class NewPlayerController : MonoBehaviour
         PlayerStatus.isHealing = false;
     }
     
+    public IEnumerator PlayAgain()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneFader fade = Instantiate(sceneFaderPrefab);
+        yield return StartCoroutine(fade.FadeOut(1f));
+        this.gameObject.transform.position = deadPos.transform.position;
+        characterStats.CurrentHealth = characterStats.MaxHealth;
+        yield return StartCoroutine(fade.FadeIn(1f));
+    }
 
     IEnumerator Dashing(float direction,float demonSpeed)
     {
@@ -587,19 +612,5 @@ public class NewPlayerController : MonoBehaviour
         Gizmos.DrawWireCube(footPoint.position, footBoxSize * 2f);
         Gizmos.DrawWireCube(frontPoint.position, boxSize * 2f);
         //Gizmos.DrawWireSphere(frontPoint.position, frontCheckRadius);
-    }
-
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "TrapTransPort")
-        {
-            trapPos = collision.gameObject;
-        }
-
-        if(collision.gameObject.tag == "DeadtransPort")
-        {
-            deadPos = collision.gameObject;
-        }
     }
 }

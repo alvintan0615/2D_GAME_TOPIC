@@ -64,6 +64,7 @@ public class Human_Skill : MonoBehaviour
 
     void Update()
     {
+        animator.SetBool("isDead", NewPlayerController.instance.isDead);
         PullPush();
         NormalAttack();
         CircleSkill();
@@ -71,6 +72,7 @@ public class Human_Skill : MonoBehaviour
         HumanSkillIsOn();
         if (PlayerStatus.isChanging == false)
             effect.sprite = null;
+        
         //Debug.Log("isSkilling" + PlayerStatus.isSkilling);
     }
 

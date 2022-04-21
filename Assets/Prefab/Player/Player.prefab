@@ -2070,11 +2070,15 @@ MonoBehaviour:
   - {fileID: 0}
   currentHumanState: 
   demonSkill: {fileID: 0}
+  sceneFaderPrefab: {fileID: 7210560946828521489, guid: 0fb6c317fe1c78c4eafe3dcbed80351a,
+    type: 3}
   moveSpeed: 10
   demonMoveSpeed: 1.5
   facingRight: 1
   groundCheckRadius: 0.48
   frontCheckRadius: 0.92
+  deadPos: {fileID: 0}
+  trapPos: {fileID: 0}
   jumpForce: 18
   doubleJumpForce: 20
   jumpCount: 1
@@ -2108,7 +2112,7 @@ MonoBehaviour:
   hasFairy: 0
   healingEffect: {fileID: 1925356344689355796, guid: fa064dda053ab1d42ad11dd7bccb773f,
     type: 3}
-  healingTime: 1
+  healingTime: 2
   isDead: 0
   audioSetting: {fileID: 0}
 --- !u!114 &6301142380842007509
@@ -2176,8 +2180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5fac21ca5dcac488667f552ffd5ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  templateData: {fileID: 11400000, guid: 53653bdf62d6cce41b5762b1ee9ca33d, type: 2}
-  characterData: {fileID: 0}
+  templateData: {fileID: 0}
+  characterData: {fileID: 11400000, guid: 53653bdf62d6cce41b5762b1ee9ca33d, type: 2}
   attackData: {fileID: 11400000, guid: 062c02655666a0845932b781f90be28c, type: 2}
   isCritical: 0
 --- !u!114 &6301142380842007504

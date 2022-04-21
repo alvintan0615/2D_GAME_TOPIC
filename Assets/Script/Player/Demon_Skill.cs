@@ -41,10 +41,6 @@ public class Demon_Skill : MonoBehaviour
 
         
     }
-    void Start()
-    {
-        
-    }
     private void OnEnable()
     {
         beamSkillFilledImage = GameObject.FindGameObjectWithTag("beamSkillFilledImage").GetComponent<Image>();
@@ -55,6 +51,7 @@ public class Demon_Skill : MonoBehaviour
     void Update()
     {
         anim.SetBool("isChanging", PlayerStatus.isChanging);
+        anim.SetBool("isDead", NewPlayerController.instance.isDead);
         NormalAttack();
         BeamSkill();
         AllScreenSkill();
@@ -64,6 +61,7 @@ public class Demon_Skill : MonoBehaviour
             effect.sprite = null;
             effectCanvas.SetActive(false);
         }
+        
     }
 
     void NormalAttack()

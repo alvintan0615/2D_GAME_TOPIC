@@ -88,6 +88,14 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    public void AgainNotifyObservers()
+    {
+        foreach (var observer in endGameObservers)
+        {
+            observer.AgainNotify();
+        }
+    }
+
     public Transform GetEntrance()
     {
         foreach(var item in FindObjectsOfType<TransitionDestination>())

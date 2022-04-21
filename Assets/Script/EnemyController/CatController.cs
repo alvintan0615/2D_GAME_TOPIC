@@ -344,8 +344,15 @@ public class CatController : MonoBehaviour, IEndGameObserver
 
     public void EndNotify()
     {
-        attackTarget = null;
+        playerDead = true;
+        isChasing = false;
+        isAttack = false;
+        isIdle = false;
     }
 
+    public void AgainNotify()
+    {
+        playerDead = false;
+    }
 
 }

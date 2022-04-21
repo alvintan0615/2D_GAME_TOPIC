@@ -19,6 +19,7 @@ public class PlayerStatus : MonoBehaviour
     public static bool isDragging = false;
     public static bool isDialouging = false;
     public static bool isHealing = false;
+    public static bool isDead = false;
     //=====CanDoWhat=====
     public static bool canMove = true;
     public static bool canRunAnimation = true;
@@ -48,6 +49,22 @@ public class PlayerStatus : MonoBehaviour
         if (!isCanMoveInput)
         {
             canMove = false;
+        }
+
+        if (isDead)
+        {
+            canRunAnimation = false;
+            canMove = false;
+            canJump = false;
+            canFlip = false;
+            canSkill = false;
+            canChange = false;
+            canBeHurt = false;
+            canAttack = false;
+            canDash = false;
+            canDrag = false;
+            canStickWall = false;
+            canHealing = false;
         }
 
         if (isJumping)
