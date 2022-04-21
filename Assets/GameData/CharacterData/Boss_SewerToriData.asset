@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Boss_SewerToriData
   m_EditorClassIdentifier: 
   maxHealth: 200
-  currentHealth: 10
+  currentHealth: 200
   baseDefence: 5
   currentDefence: 5
   maxHealingTime: 0

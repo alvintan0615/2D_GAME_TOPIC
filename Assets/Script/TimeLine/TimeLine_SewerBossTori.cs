@@ -9,6 +9,7 @@ public class TimeLine_SewerBossTori : MonoBehaviour
 {
     public PlayableDirector mDirector;
     public float normalizedTime;
+    public CharacterStats toriStats;
     void Start()
     {
         
@@ -27,12 +28,10 @@ public class TimeLine_SewerBossTori : MonoBehaviour
 
             normalizedTime = (float)(mDirector.time / mDirector.duration);
 
-        if (EventManager.Instance.Sewer_TimeLineBossTori == true)
-            mDirector.Stop();
-
         if (Application.isPlaying && normalizedTime >= 0.01f && normalizedTime < 0.99f)
         {
             PlayerStatus.isDialouging = true;
+            toriStats.CurrentHealth = toriStats.MaxHealth;
         }
 
         if (normalizedTime >= 0.99f)

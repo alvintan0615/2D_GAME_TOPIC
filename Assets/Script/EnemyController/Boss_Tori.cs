@@ -61,6 +61,13 @@ public class Boss_Tori : MonoBehaviour
     {
         instance = this;
     }
+
+    private void OnEnable()
+    {
+        if (isSewer == true)
+            flyMoveDirection.x = 1;
+    }
+
     void Start()
     {
         characterStats = GetComponent<CharacterStats>();

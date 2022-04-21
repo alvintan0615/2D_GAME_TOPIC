@@ -51,6 +51,11 @@ public class AudioSetting : MonoBehaviour
             backgroundAudio[1].gameObject.SetActive(true);
         }
 
+        if (Boss != null && Boss.activeInHierarchy == false)
+        {
+            backgroundAudio[0].mute = false;
+            backgroundAudio[1].gameObject.SetActive(false);
+        }
 
         if (BossIsDie == true)
         {
