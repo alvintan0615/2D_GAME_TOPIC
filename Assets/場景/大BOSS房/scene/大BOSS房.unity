@@ -11793,7 +11793,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 14.5
+  orthographic size: 11.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -13899,6 +13899,12 @@ PlayableDirector:
     value: {fileID: 782603847}
   - key: {fileID: 7804210165456655482, guid: d6a627592186374429bb8c0e8b380b06, type: 2}
     value: {fileID: 1605642870}
+  - key: {fileID: 5656675338543403101, guid: d6a627592186374429bb8c0e8b380b06, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: 4931723405230191182, guid: d6a627592186374429bb8c0e8b380b06, type: 2}
+    value: {fileID: 631847061}
+  - key: {fileID: 2094369099954004205, guid: d6a627592186374429bb8c0e8b380b06, type: 2}
+    value: {fileID: 106825746}
   m_ExposedReferences:
     m_References:
     - c7dc3bbcec2a49c4ea2293933306a496: {fileID: 998407423}
