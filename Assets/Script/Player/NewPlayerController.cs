@@ -12,7 +12,7 @@ public class NewPlayerController : MonoBehaviour
     public Animator[] animator = { null, null };
     public string currentHumanState;
     private string currentDemonState;
-
+    public static bool isTimeLineChangeAnim = false;
     [SerializeField]private Demon_Skill demonSkill;
 
     public static CharacterStats characterStats;
@@ -179,6 +179,11 @@ public class NewPlayerController : MonoBehaviour
 
             if (characterStats.CurrentHealingTime >= characterStats.MaxHealingTime)
                 characterStats.CurrentHealingTime = characterStats.MaxHealingTime;
+
+            if(isTimeLineChangeAnim == true)
+            {
+                PlayerState("Change_Human");
+            }
         
         }
     }
@@ -527,6 +532,12 @@ public class NewPlayerController : MonoBehaviour
     {
         Instantiate(fireSkillEffect, skillEffectPoint.position, Quaternion.identity);
     }
+
+    public void PlayerState(string newState)
+    {
+        anim.Play(newState);
+    }
+
     public void HumanState(string newState)
     {
         if (currentHumanState == newState || GameManager.Instance.Ken_Human == false) return;

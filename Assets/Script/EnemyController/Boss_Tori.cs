@@ -101,7 +101,7 @@ public class Boss_Tori : MonoBehaviour
         if(isSewer == true && characterStats.CurrentHealth <= 0)
         {
             isDead = true;
-            rb.velocity = Vector2.zero;
+            rb.gravityScale = 0f;
             anim.SetBool("isDead", true);
         }
     }

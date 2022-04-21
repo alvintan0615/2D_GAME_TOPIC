@@ -48,6 +48,9 @@ public class TimeLine_AfterSewerBossFight : MonoBehaviour
         if(normalizedTime >=0.01f && normalizedTime < 0.99f)
         {
             PlayerStatus.isDialouging = true;
+            GameManager.Instance.Ken_Human = true;
+            PlayerStatus.isHurting = false;
+            NewPlayerController.isTimeLineChangeAnim = true;
         }
 
         if (normalizedTime >= 0.99f)
@@ -55,6 +58,7 @@ public class TimeLine_AfterSewerBossFight : MonoBehaviour
             PlayerStatus.isDialouging = false;
             audioSetting.BossIsDie = true;
             EventManager.Instance.isTori_SewerDead = true;
+            NewPlayerController.isTimeLineChangeAnim = false;
         }
     }
 }
