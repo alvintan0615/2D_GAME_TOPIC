@@ -24,6 +24,8 @@ public class NewPlayerController : MonoBehaviour
     public bool facingRight = true;
     [SerializeField] float groundCheckRadius;
     [SerializeField] float frontCheckRadius;
+    public GameObject deadPos;
+    public GameObject trapPos;
 
     [Header("跳躍設定")]
     public float jumpForce = 6f;
@@ -130,6 +132,9 @@ public class NewPlayerController : MonoBehaviour
 
         if(characterStats.CurrentHealth <=0 && EventManager.Instance.fireVillege_BossStoryLine == false)
             isDead = true;
+
+        if (characterStats.CurrentHealth > 0)
+            isDead = false;
 
         if(isDead == true && isdeaded == false)
         {
@@ -582,5 +587,19 @@ public class NewPlayerController : MonoBehaviour
         Gizmos.DrawWireCube(footPoint.position, footBoxSize * 2f);
         Gizmos.DrawWireCube(frontPoint.position, boxSize * 2f);
         //Gizmos.DrawWireSphere(frontPoint.position, frontCheckRadius);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "TrapTransPort")
+        {
+            trapPos = collision.gameObject;
+        }
+
+        if(collision.gameObject.tag == "DeadtransPort")
+        {
+            deadPos = collision.gameObject;
+        }
     }
 }

@@ -28,6 +28,8 @@ TagManager:
   - FireBall
   - Tutorial05
   - FinalBossP2
+  - TrapTransPort
+  - DeadtransPort
   layers:
   - Default
   - TransparentFX

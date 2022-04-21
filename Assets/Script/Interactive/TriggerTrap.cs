@@ -22,9 +22,12 @@ public class TriggerTrap : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             player = collision.gameObject;
-            player.transform.position = trans.transform.position;
-
-            StartCoroutine(TrapHurt(collision));
+            var playerController = player.GetComponent<NewPlayerController>();
+            if (playerController.isDead == false)
+            {
+                player.transform.position = playerController.trapPos.transform.position;
+                StartCoroutine(TrapHurt(collision));
+            }
         }
     }
     IEnumerator TrapHurt(Collider2D collision)
