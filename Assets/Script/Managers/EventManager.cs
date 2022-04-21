@@ -29,6 +29,7 @@ public class EventManager : Singleton<EventManager>
     public bool finalbossExcuseVideo = false;
     public bool finalBossStart = false;
     public bool isFirstPartBossDead = false;
+    public bool isFinalBossLetPlayerDead = false;
     public bool finalBossMiddle = false;
 
     public bool HasFirstTalk = false;
