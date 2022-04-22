@@ -24,7 +24,7 @@ public class MachineController : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.A))
+        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.A) && GameManager.Instance.Ken_Human == true)
         {
             if (IsDefault == true && (UpToDown == true || IsFloor == false) && OneRound == false && DoAction == true)
             {
