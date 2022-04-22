@@ -5,6 +5,7 @@ using UnityEngine;
 public class ToriDamage : MonoBehaviour
 {
     [SerializeField] CharacterStats characterStats;
+    [SerializeField] Boss_Tori boss_Tori;
     [Header("攻擊判斷")]
     [SerializeField] private BoxCollider2D attackTrigger;
     [SerializeField] private ContactFilter2D playerFilter;
@@ -16,6 +17,7 @@ public class ToriDamage : MonoBehaviour
         playerFilter.SetLayerMask(LayerMask.GetMask("Player"));
 
         characterStats = GetComponent<CharacterStats>();
+        boss_Tori = GetComponent<Boss_Tori>();
     }
 
     // Update is called once per frame
@@ -28,15 +30,30 @@ public class ToriDamage : MonoBehaviour
     {
         playerColList = new Collider2D[1];
         playerCount = attackTrigger.OverlapCollider(playerFilter, playerColList);
-
-        if (playerCount > 0 && PlayerStatus.canBeHurt == true)
+        if(boss_Tori.isSewer == false)
         {
-            for (int i = 0; i < playerCount; i++)
+            if (playerCount > 0 && PlayerStatus.canBeHurt == true)
             {
-                var playerStats = playerColList[i].GetComponent<CharacterStats>();
-                playerStats.TakeDamage(characterStats, playerStats, 5);
+                for (int i = 0; i < playerCount; i++)
+                {
+                    var playerStats = playerColList[i].GetComponent<CharacterStats>();
+                    playerStats.TakeDamage(characterStats, playerStats, 20);
+                }
             }
         }
+
+        if(boss_Tori.isSewer == true)
+        {
+            if (playerCount > 0 && PlayerStatus.canBeHurt == true)
+            {
+                for (int i = 0; i < playerCount; i++)
+                {
+                    var playerStats = playerColList[i].GetComponent<CharacterStats>();
+                    playerStats.TakeDamage(characterStats, playerStats, 10);
+                }
+            }
+        }
+        
     }
 
     public void ToriSprayFireDamage()
@@ -44,12 +61,27 @@ public class ToriDamage : MonoBehaviour
         playerColList = new Collider2D[1];
         playerCount = attackTrigger.OverlapCollider(playerFilter, playerColList);
 
-        if (playerCount > 0 && PlayerStatus.canBeHurt == true)
+        if (boss_Tori.isSewer == false)
         {
-            for (int i = 0; i < playerCount; i++)
+            if (playerCount > 0 && PlayerStatus.canBeHurt == true)
             {
-                var playerStats = playerColList[i].GetComponent<CharacterStats>();
-                playerStats.TakeDamage(characterStats, playerStats, 3);
+                for (int i = 0; i < playerCount; i++)
+                {
+                    var playerStats = playerColList[i].GetComponent<CharacterStats>();
+                    playerStats.TakeDamage(characterStats, playerStats, 10);
+                }
+            }
+        }
+
+        if (boss_Tori.isSewer == true)
+        {
+            if (playerCount > 0 && PlayerStatus.canBeHurt == true)
+            {
+                for (int i = 0; i < playerCount; i++)
+                {
+                    var playerStats = playerColList[i].GetComponent<CharacterStats>();
+                    playerStats.TakeDamage(characterStats, playerStats, 6);
+                }
             }
         }
     }
