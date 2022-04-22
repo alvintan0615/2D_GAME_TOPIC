@@ -34,14 +34,6 @@ public class EventManager : Singleton<EventManager>
     public bool isPlayerPosOK = false;
     public bool finalBossMiddle = false;
 
-    public bool HasFirstTalk = false;
-    public bool firstNormalAtk = false;
-    public bool SecondNormalAtk = false;
-    public bool FireSkill = false;
-    public bool GroundSkill = false;
-    public bool Jump = false;
-    public bool Dash = false;
-
     protected override void Awake()
     {
         base.Awake();
@@ -58,19 +50,36 @@ public class EventManager : Singleton<EventManager>
 
     public void AllEventToFalse()
     {
-    canChange = false;
-    canUseAllSceenSkill = false;
-    takeFood = false;
-    fireAlarm = false;
-    fireVillege_Timeline = false;
-    fireVillege_Dialog = false;
-    fireVillege_Dad = false;
-    fireVillege_BossStoryLine = false;
-    fireVillege_TimelineBeforeToriBoss = false;
-    fireVillege_DialogBeforeToriBoss = false;
-    fireVillege_TimelineChangeDemon = false;
-    fireVillege_TimelineFinish = false;
-    timeLineBossStop = false;
-}
+        canChange = false;
+        canUsePotion = false;
+        canUseAllSceenSkill = false;
+        PassTutorial = false;
+        takeFood = false;
+        fireAlarm = false;
+        fireVillege_Timeline = false;
+        fireVillege_Dialog = false;
+        fireVillege_Dad = false;
+        fireVillege_BossStoryLine = false;
+        fireVillege_TimelineBeforeToriBoss = false;
+        fireVillege_DialogBeforeToriBoss = false;
+        fireVillege_TimelineChangeDemon = false;
+        fireVillege_TimelineFinish = false;
+        Dungeon_Opening = false;
+        Sewer_TimeLineBossTori = false;
+        timeLineBossStop = false;
+        isFirstTimeToPass = false;
+        electricDoor = false;
+        isTori_SewerDead = false;
+        isGetFinalBossdoorKey = false;
+        isFinalBossDoorOpen = false;
+        finalBossOpen = false;
+        finalbossExcuseVideo = false;
+        finalBossStart = false;
+        isFirstPartBossDead = false;
+        isFinalBossLetPlayerDead = false;
+        isFinalBossAgain_TimeLine = false;
+        isPlayerPosOK = false;
+        finalBossMiddle = false;
+    }
 
 }
