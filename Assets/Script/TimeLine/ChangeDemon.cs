@@ -38,7 +38,7 @@ public class ChangeDemon : MonoBehaviour
             mDirector.SetGenericBinding(track6, GameManager.Instance.playerStats.transform.GetChild(1).gameObject);
         }
 
-        if (boss_Tori.hurtToTimeLine >= 5
+        if (boss_Tori.hurtToTimeLine >= 3
             && EventManager.Instance.fireVillege_TimelineChangeDemon == false 
             && EventManager.Instance.fireVillege_BossStoryLine == true)
         {

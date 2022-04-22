@@ -19,16 +19,7 @@ public class EnemyDamage : MonoBehaviour
 
         characterStats = GetComponent<CharacterStats>();
     }
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
-    {
-        
-    }
 
     public void NormalMonsterAttackDamage()
     {
