@@ -32,7 +32,7 @@ public class ThronAttack : MonoBehaviour
                 coll.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
                 var playerStats = coll.gameObject.GetComponent<CharacterStats>();
                 int randomDamage = Random.Range(5, 9);
-                playerStats.ThronDamage(randomDamage, playerStats);
+                playerStats.ThronDamage(randomDamage, playerStats,4);
                 
             }
         }

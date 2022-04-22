@@ -31,7 +31,7 @@ public class Cat_PoisonBall : MonoBehaviour
             collision.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
             var playerStats = collision.gameObject.GetComponent<CharacterStats>();
             int randomDamage = Random.Range(5, 9);
-            playerStats.ThronDamage(randomDamage, playerStats);
+            playerStats.ThronDamage(randomDamage, playerStats, 5);
         }
 
         if (collision.gameObject.layer == 8)

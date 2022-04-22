@@ -34,6 +34,7 @@ public class CollsionTrap : MonoBehaviour
         Human_Skill.instance.Hurt();
         collision.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
         collision.gameObject.GetComponent<CharacterStats>().TrapDamage(5, 10);
+        PlayerStatus.isClimbing = false;
         yield return null;
     }
 }

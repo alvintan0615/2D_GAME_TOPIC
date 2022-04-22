@@ -181,10 +181,10 @@ public class CharacterStats : MonoBehaviour
         }
     }
 
-    public void ThronDamage(int Damage, CharacterStats defender)
+    public void ThronDamage(int Damage, CharacterStats defender , int addDamage)
     {
         int damage = Mathf.Max(Damage - defender.CurrentDefence, 0);
-        CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
+        CurrentHealth = Mathf.Max(CurrentHealth - (damage + addDamage), 0);
     }
 
     public void TrapDamage(int minDamage, int maxDamage)
