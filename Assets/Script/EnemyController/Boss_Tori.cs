@@ -122,9 +122,9 @@ public class Boss_Tori : MonoBehaviour
         {
             if (randomState == 0)
                 anim.SetTrigger("DiveAttack");
-            else if (randomState == 1)
+            if (randomState == 1)
                 anim.SetTrigger("FlyWindAttack");
-            else if (randomState == 2)
+            if (randomState == 2)
                 anim.SetTrigger("SprayFire");
         }
         
@@ -137,7 +137,7 @@ public class Boss_Tori : MonoBehaviour
         {
             if (randomState == 0)
                 anim.SetTrigger("GroundSprayFire");
-            else if (randomState >= 1)
+            if (randomState >= 1)
                 anim.SetTrigger("GroundToFly");
         }
     }
