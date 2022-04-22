@@ -8,7 +8,7 @@ public class ChangeDemon : MonoBehaviour
 {
     public PlayableDirector mDirector;
     public float normalizedTime;
-
+    public Boss_Tori boss_Tori;
     //[SerializeField] TutorialPanel tutorialPanel;
     void Start()
     {
@@ -38,7 +38,7 @@ public class ChangeDemon : MonoBehaviour
             mDirector.SetGenericBinding(track6, GameManager.Instance.playerStats.transform.GetChild(1).gameObject);
         }
 
-        if (GameManager.Instance.playerStats.characterData.currentHealth <= 50 
+        if (boss_Tori.hurtToTimeLine >= 5
             && EventManager.Instance.fireVillege_TimelineChangeDemon == false 
             && EventManager.Instance.fireVillege_BossStoryLine == true)
         {

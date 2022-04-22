@@ -36,6 +36,7 @@ public class ToriDamage : MonoBehaviour
             {
                 for (int i = 0; i < playerCount; i++)
                 {
+                    boss_Tori.hurtToTimeLine += 1;
                     var playerStats = playerColList[i].GetComponent<CharacterStats>();
                     playerStats.TakeDamage(characterStats, playerStats, 20);
                 }
@@ -67,6 +68,7 @@ public class ToriDamage : MonoBehaviour
             {
                 for (int i = 0; i < playerCount; i++)
                 {
+                    boss_Tori.hurtToTimeLine += 1;
                     var playerStats = playerColList[i].GetComponent<CharacterStats>();
                     playerStats.TakeDamage(characterStats, playerStats, 10);
                 }

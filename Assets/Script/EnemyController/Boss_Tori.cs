@@ -10,6 +10,7 @@ public class Boss_Tori : MonoBehaviour
     [SerializeField] CharacterStats characterStats;
     public bool isSewer;
     public bool isTimeLineOK;
+    public int hurtToTimeLine;
     [Header("Idle")]
     [SerializeField] float groundToFlyingMoveSpeed;
     [SerializeField] Vector2 groundToFlyingMoveDirection;
