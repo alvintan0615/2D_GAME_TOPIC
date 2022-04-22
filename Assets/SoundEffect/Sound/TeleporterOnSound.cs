@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class TeleporterOnSound : MonoBehaviour
 {
-    public AudioSource TeleporterSound;
+    public AudioSetting audioSetting;
+    //public AudioSource TeleporterSound;
     //public bool canPlaySound = false;
     // Start is called before the first frame update
     void Start()
     {
-       
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
 
     // Update is called once per frame
@@ -23,7 +24,8 @@ public class TeleporterOnSound : MonoBehaviour
         if (collision.tag == "Player")
         {
             //canPlaySound = true;
-            TeleporterSound.mute = false;
+            //TeleporterSound.mute = false;
+            audioSetting.soundEffectAudio[33].mute = false;
         }
     }
 
@@ -41,7 +43,8 @@ public class TeleporterOnSound : MonoBehaviour
         if (collision.tag == "Player")
         {
             //canPlaySound = false;
-            TeleporterSound.mute = true;
+            //TeleporterSound.mute = true;
+            audioSetting.soundEffectAudio[33].mute = true;
         }
     }
 }

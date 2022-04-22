@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class StoneHitOnSound : MonoBehaviour
 {
-    public AudioSource StoneHit;
+    //public AudioSource StoneHit;
+    public AudioSetting audioSetting;
     public bool canPlaySound = false;
     // Start is called before the first frame update
     void Start()
     {
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
         canPlaySound = false;
-        StoneHit.mute = true;
+        //StoneHit.mute = true;
+        audioSetting.soundEffectAudio[32].mute = true;
     }
 
     // Update is called once per frame
@@ -18,11 +21,13 @@ public class StoneHitOnSound : MonoBehaviour
     {
         if(canPlaySound == true)
         {
-            StoneHit.mute = false;
+            //StoneHit.mute = false;
+            audioSetting.soundEffectAudio[32].mute = false;
         }
         else
         {
-            StoneHit.mute = true;
+            //StoneHit.mute = true;
+            audioSetting.soundEffectAudio[32].mute = true;
         }
     }
 
@@ -31,7 +36,8 @@ public class StoneHitOnSound : MonoBehaviour
         if(collision.tag == "Player")
         {
             canPlaySound = true;
-            StoneHit.mute = false;
+            //StoneHit.mute = false;
+            audioSetting.soundEffectAudio[32].mute = false;
         }
     }
 
@@ -40,12 +46,13 @@ public class StoneHitOnSound : MonoBehaviour
         if(collision.tag == "Player")
         {
             canPlaySound = false;
-            StoneHit.mute = true;
+            //StoneHit.mute = true;
+            audioSetting.soundEffectAudio[32].mute = true;
         }
     }
 
     public void StoneHitSound()
     {
-        StoneHit.Play();
+        audioSetting.soundEffectAudio[32].Play();
     }
 }

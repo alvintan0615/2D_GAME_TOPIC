@@ -10,7 +10,6 @@ public class MachineTieRodController : MonoBehaviour
     public bool DoAction = false;
     public bool OneRound = false;
 
-    public AudioSource TieRod;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +25,11 @@ public class MachineTieRodController : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.A))
+        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.A) && GameManager.Instance.Ken_Human == true)
         {
             if(IsDefault == true && DoAction == true)
             {
                 animator.SetTrigger("IsDefault");
-                //TieRodSound();
                 StartCoroutine(DelayDoAction());
                 DoAction = false;
                 IsDefault = false;
@@ -40,7 +38,6 @@ public class MachineTieRodController : MonoBehaviour
             if(IsDefault == false && PullUp == true && DoAction == true && OneRound == false)
             {
                 animator.SetTrigger("PullDown");
-                //TieRodSound();
                 StartCoroutine(DelayPullDown());
                 DoAction = false;
             }
@@ -48,7 +45,6 @@ public class MachineTieRodController : MonoBehaviour
             if(PullUp == false && OneRound == true && DoAction == true)
             {
                 animator.SetTrigger("PullUp");
-                //TieRodSound();
                 StartCoroutine(DelayPullUp());
                 DoAction = false;
             }
@@ -82,10 +78,5 @@ public class MachineTieRodController : MonoBehaviour
         DoAction = true;
         PullUp = true;
         OneRound = false;
-    }
-
-    public void TieRodSound()
-    {
-        TieRod.Play();
     }
 }

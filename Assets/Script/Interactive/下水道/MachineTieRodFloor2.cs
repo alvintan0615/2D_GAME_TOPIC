@@ -10,11 +10,12 @@ public class MachineTieRodFloor2 : MonoBehaviour
     public bool OneRound = false;
     public bool OneRoundTR = false;
 
-    public AudioSource Machine;
+    //public AudioSource Machine;
+    public AudioSetting audioSetting;
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
 
     // Update is called once per frame
@@ -25,7 +26,7 @@ public class MachineTieRodFloor2 : MonoBehaviour
 
     public void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.A))
+        if (collision.gameObject.tag == "Player" && Input.GetKeyDown(KeyCode.A) && GameManager.Instance.Ken_Human == true)
         {
             if (MachineController2.BySelf == true)
             {
@@ -47,7 +48,8 @@ public class MachineTieRodFloor2 : MonoBehaviour
                 Debug.Log("aaa");
                 animator.SetTrigger("DefaultToDown2");
                 animatorTR.SetTrigger("IsDefault2");
-                MachineSoundDefault();
+                audioSetting.soundEffectAudio[28].Play();
+                //MachineSoundDefault();
                 StartCoroutine(DelayOneRound());
                 DoAction = false;
                 MachineController2.IsFloor = true;
@@ -89,6 +91,7 @@ public class MachineTieRodFloor2 : MonoBehaviour
 
     public void MachineSoundDefault()
     {
-        Machine.Play();
+       // Machine.Play();
+
     }
 }
