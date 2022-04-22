@@ -9,10 +9,12 @@ public class ChangeDemon : MonoBehaviour
     public PlayableDirector mDirector;
     public float normalizedTime;
     public Boss_Tori boss_Tori;
+
+    public AudioSetting audioSetting;
     //[SerializeField] TutorialPanel tutorialPanel;
     void Start()
     {
-        
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
     }
 
     // Update is called once per frame
@@ -46,12 +48,18 @@ public class ChangeDemon : MonoBehaviour
             mDirector.Play();
         }
 
+        if(normalizedTime >= 0.01f && normalizedTime < 0.99f)
+        {
+            audioSetting.soundEffectAudio[19].mute = true;
+        }
+
         if (normalizedTime >= 0.99f && EventManager.Instance.fireVillege_TimelineChangeDemon == false)
         {
             PlayerStatus.isDialouging = false;
             EventManager.Instance.fireVillege_TimelineChangeDemon = true;
             this.gameObject.SetActive(false);
             TutorialPanel.CanOpenDemonPanel = true;
+            audioSetting.soundEffectAudio[19].mute = false;
             //tutorialPanel.CanOpenDemonPanel = true;
         }
     }

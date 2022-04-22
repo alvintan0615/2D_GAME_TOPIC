@@ -59,6 +59,8 @@ public class TutorialPanel : MonoBehaviour
     public bool PullMachineIsOpen = false;
     public bool DemonTutorialIsOpen = false;
     public bool GroundSkillOpenDoorIsOpen = false;
+
+    
     
     // Start is called before the first frame update
     void Start()
@@ -318,21 +320,21 @@ public class TutorialPanel : MonoBehaviour
             Time.timeScale = 0;
         }
 
-        if (collision.name == "PullMachineCollider")
+        if (collision.name == "PullMachineCollider" && PlayerStatus.isSkilling == false)
         {
             OpenPullMachine();
             Destroy(collision);
             Time.timeScale = 0;
         }
 
-        if (collision.name == "DemonTutorialCollider")
+        if (collision.name == "DemonTutorialCollider" && PlayerStatus.isSkilling == false)
         {
             OpenDemonTutorial();
             Destroy(collision);
             Time.timeScale = 0;
         }
 
-        if (collision.name == "GroundSkillOpenDoorCollider")
+        if (collision.name == "GroundSkillOpenDoorCollider" && PlayerStatus.isSkilling == false)
         {
             OpenGroundSkillOpenDoor();
             Destroy(collision);

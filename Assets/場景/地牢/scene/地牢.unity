@@ -14833,6 +14833,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2257889292217508579, guid: 268ced2ad455ffb4c91cc105251dec8c,
+        type: 3}
+      propertyPath: demonSkill
+      value: 
+      objectReference: {fileID: 1350416964}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -17599,6 +17604,7 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
+  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -17610,7 +17616,6 @@ MonoBehaviour:
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
-  m_ClearDepth: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -17724,7 +17729,6 @@ MonoBehaviour:
   OpenOptionPanel: {fileID: 156449535}
   ComfirmToMainUICanvas: {fileID: 156449533}
   menuButtonController: {fileID: 0}
-  PausePanelisOpen: 0
 --- !u!1 &520639664
 GameObject:
   m_ObjectHideFlags: 0
@@ -40592,6 +40596,18 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 411987101}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1350416964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2130713725, guid: 268ced2ad455ffb4c91cc105251dec8c,
+    type: 3}
+  m_PrefabInstance: {fileID: 411987101}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1350416960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec97829d83bf5854fa84423470d366d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1354697575
 GameObject:
   m_ObjectHideFlags: 0
