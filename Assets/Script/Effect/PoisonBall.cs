@@ -22,7 +22,12 @@ public class PoisonBall : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
     }
 
-    
+    private void Update()
+    {
+        if(EventManager.Instance.isFinalBossLetPlayerDead == true)
+            PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.tag == "Player")

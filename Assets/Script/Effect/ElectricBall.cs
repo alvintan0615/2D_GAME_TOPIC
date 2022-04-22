@@ -19,7 +19,10 @@ public class ElectricBall : MonoBehaviour
 
     void Update()
     {
-        if(isAttack == true)
+        if(EventManager.Instance.isFinalBossLetPlayerDead == true)
+            Destroy(this.gameObject);
+
+        if (isAttack == true)
         {
             ElectricBallAttack();
         }

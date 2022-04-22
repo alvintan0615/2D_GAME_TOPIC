@@ -48,6 +48,12 @@ public class FinalBoss_FirstPart : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    private void OnEnable()
+    {
+        facingLeft = true;
+        characterStats.CurrentHealth = characterStats.MaxHealth;
+    }
+
     void Update()
     {
         if (characterStats.CurrentHealth <= 0)
@@ -57,11 +63,19 @@ public class FinalBoss_FirstPart : MonoBehaviour
         {
             audioSetting.soundEffectAudio[15].mute = true;
         }
+
+        if(EventManager.Instance.isFinalBossLetPlayerDead == true || EventManager.Instance.isFirstPartBossDead == true)
+        {
+            anim.Play("Idle");
+            FireBallMagicCircleOff();
+            FireDustOff();
+
+        }
     }
 
     void RandomPick()
     {
-        if(EventManager.Instance.finalBossStart == true && characterStats.CurrentHealth > 0)
+        if(EventManager.Instance.finalBossStart == true && EventManager.Instance.isFinalBossLetPlayerDead == false && characterStats.CurrentHealth > 0)
         {
             int randomState = Random.Range(0, 3);
             if (randomState != 2)

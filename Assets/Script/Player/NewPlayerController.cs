@@ -141,9 +141,10 @@ public class NewPlayerController : MonoBehaviour
            
         if(isDead == true)
         {
+            EventManager.Instance.isPlayerPosOK = false;
             PlayerStatus.isDead = true;
             GameManager.Instance.NotifyObservers();
-            rb.velocity = new Vector2(0, 0);
+            rb.velocity = new Vector2(0,rb.velocity.y);
             if (GameManager.Instance.Ken_Human == true)
             //TODO Dead
                 HumanState(HUMAN_DEAD);
@@ -589,12 +590,16 @@ public class NewPlayerController : MonoBehaviour
     
     public IEnumerator PlayAgain()
     {
+        PlayerStatus.isDialouging = true;
         yield return new WaitForSeconds(1f);
         SceneFader fade = Instantiate(sceneFaderPrefab);
         yield return StartCoroutine(fade.FadeOut(1f));
         this.gameObject.transform.position = deadPos.transform.position;
         characterStats.CurrentHealth = characterStats.MaxHealth;
+        
         yield return StartCoroutine(fade.FadeIn(1f));
+        PlayerStatus.isDialouging = false;
+        EventManager.Instance.isPlayerPosOK = true;
     }
 
     IEnumerator Dashing(float direction,float demonSpeed)

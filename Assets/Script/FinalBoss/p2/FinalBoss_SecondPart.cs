@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class FinalBoss_SecondPart : MonoBehaviour
 {
     public GameObject electricBall;
@@ -40,12 +40,18 @@ public class FinalBoss_SecondPart : MonoBehaviour
 
         if(characterStats.CurrentHealth < characterStats.MaxHealth* 0.6f)
             isUnder60 = true;
+        if(EventManager.Instance.isFinalBossLetPlayerDead == true)
+        {
+            anim.Play("Idle");
+        }
 
+        if (characterStats.CurrentHealth <= 0)
+            SceneManager.LoadScene("UITestScene");
     }
 
     public void RandomPickstate()
     {
-        if(isUnder60 == false && EventManager.Instance.finalBossMiddle == true)
+        if(isUnder60 == false && EventManager.Instance.finalBossMiddle == true && EventManager.Instance.isFinalBossLetPlayerDead == false)
         {
             float randomPick = Random.Range(0, 3);
             if (randomPick == 0)
@@ -65,7 +71,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
             }
         }
 
-        if (isUnder60 == true && EventManager.Instance.finalBossMiddle == true)
+        if (isUnder60 == true && EventManager.Instance.finalBossMiddle == true && EventManager.Instance.isFinalBossLetPlayerDead == false)
         {
             float randomPick = Random.Range(0, 5);
             if (randomPick == 0)

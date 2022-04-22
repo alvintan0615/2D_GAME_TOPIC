@@ -30,6 +30,8 @@ public class EventManager : Singleton<EventManager>
     public bool finalBossStart = false;
     public bool isFirstPartBossDead = false;
     public bool isFinalBossLetPlayerDead = false;
+    public bool isFinalBossAgain_TimeLine = false;
+    public bool isPlayerPosOK = false;
     public bool finalBossMiddle = false;
 
     public bool HasFirstTalk = false;

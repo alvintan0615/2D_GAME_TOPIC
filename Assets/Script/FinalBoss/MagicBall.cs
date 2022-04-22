@@ -40,9 +40,16 @@ public class MagicBall : MonoBehaviour
         timer = recordTimer;
     }
 
-    
+
     void Update()
     {
+        if (EventManager.Instance.isFinalBossLetPlayerDead == true || EventManager.Instance.isFirstPartBossDead == true)
+        {
+            audioSetting.soundEffectAudio[15].mute = true;
+            MagicBallObjectpool.instance.ReturnPool(this.gameObject);
+        }
+            
+
         var targetCharacterStats = target.GetComponent<CharacterStats>();
         if(targetCharacterStats.CurrentHealth <= 0)
         {

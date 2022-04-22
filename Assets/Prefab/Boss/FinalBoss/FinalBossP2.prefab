@@ -206,7 +206,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5512072458233779079
 Transform:
   m_ObjectHideFlags: 0
@@ -400,6 +400,9 @@ MonoBehaviour:
   isUnder60: 0
   sightRadius: 14.5
   attackTarget: {fileID: 0}
+  audioSetting: {fileID: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}
+  spriteRenderer: {fileID: 0}
 --- !u!114 &5512072458233779085
 MonoBehaviour:
   m_ObjectHideFlags: 0

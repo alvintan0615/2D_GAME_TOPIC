@@ -64,6 +64,7 @@ public class Boss_Tori : MonoBehaviour
 
     private void OnEnable()
     {
+        characterStats.CurrentHealth = characterStats.MaxHealth;
         if (isSewer == true)
             flyMoveDirection.x = 1;
     }

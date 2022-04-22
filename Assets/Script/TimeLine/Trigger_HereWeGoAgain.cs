@@ -14,13 +14,15 @@ public class Trigger_HereWeGoAgain : MonoBehaviour
         if (EventManager.Instance.finalBossStart == true && NewPlayerController.instance.isDead == true)
         {
             EventManager.Instance.isFinalBossLetPlayerDead = true;
+            EventManager.Instance.isFirstPartBossDead = false;
+            EventManager.Instance.finalBossMiddle = false;
             StartCoroutine(SetReturn());
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Player" && EventManager.Instance.isFinalBossLetPlayerDead == true)
+        if (collision.gameObject.tag == "Player" && EventManager.Instance.isFinalBossLetPlayerDead == true && EventManager.Instance.isPlayerPosOK == true)
         {
             mDirector.Play();
         }

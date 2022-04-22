@@ -8,7 +8,9 @@ using System.Linq;
 public class TimeLine_FinalBoss_Middle : MonoBehaviour
 {
     public PlayableDirector mDirector;
-    public float normalizedTime;    
+    public float normalizedTime;
+    public GameObject boss1;
+    public GameObject bossp2;
     void Start()
     {
         
@@ -35,6 +37,10 @@ public class TimeLine_FinalBoss_Middle : MonoBehaviour
         if (normalizedTime >= 0.01f && normalizedTime < 0.99f)
         {
             PlayerStatus.isDialouging = true;
+            
+            bossp2.SetActive(true);
+            boss1.GetComponent<CharacterStats>().CurrentHealth = boss1.GetComponent<CharacterStats>().MaxHealth;
+
         }
 
         if (normalizedTime >= 0.99f)

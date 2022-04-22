@@ -8,6 +8,7 @@ public class TimeLine_HereWeGoAgain : MonoBehaviour
 {
     public PlayableDirector mDirector;
     public float normalizedTime;
+    public GameObject bossp1;
 
     void Update()
     {
@@ -17,13 +18,21 @@ public class TimeLine_HereWeGoAgain : MonoBehaviour
         if (normalizedTime >= 0.01f && normalizedTime < 0.99f)
         {
             PlayerStatus.isDialouging = true;
+            if(GameManager.Instance.Ken_Human == true)
+                NewPlayerController.instance.animator[0].Play("Human_IdleRun");
+            else
+                NewPlayerController.instance.animator[1].Play("Demon_IdleRun");
+
+            bossp1.SetActive(true);
+            EventManager.Instance.isFirstPartBossDead = false;
+            EventManager.Instance.finalBossMiddle = false;
         }
 
         if (normalizedTime >= 0.99f)
         {
             PlayerStatus.isDialouging = false;
-            EventManager.Instance.isFinalBossLetPlayerDead = true;
-
+            EventManager.Instance.isFinalBossLetPlayerDead = false;
+            EventManager.Instance.isPlayerPosOK = false;
         }
     }
 }

@@ -1115,7 +1115,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 27, y: 10.801265}
+  m_Size: {x: 19.205559, y: 10.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
@@ -2180,8 +2180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc5fac21ca5dcac488667f552ffd5ac6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  templateData: {fileID: 0}
-  characterData: {fileID: 11400000, guid: 53653bdf62d6cce41b5762b1ee9ca33d, type: 2}
+  templateData: {fileID: 11400000, guid: 53653bdf62d6cce41b5762b1ee9ca33d, type: 2}
+  characterData: {fileID: 0}
   attackData: {fileID: 11400000, guid: 062c02655666a0845932b781f90be28c, type: 2}
   isCritical: 0
 --- !u!114 &6301142380842007504
