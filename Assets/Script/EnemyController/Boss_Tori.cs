@@ -111,6 +111,7 @@ public class Boss_Tori : MonoBehaviour
         {
             isDead = true;
             rb.gravityScale = 0f;
+            rb.velocity = new Vector2(0, 0);
             anim.SetBool("isDead", true);
         }
     }
