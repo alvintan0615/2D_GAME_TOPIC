@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -4618,7 +4618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mDirector: {fileID: 116398673}
   normalizedTime: 0
-  boss_Tori: {fileID: 0}
+  boss_Tori: {fileID: 1918582640}
 --- !u!1 &117475506
 GameObject:
   m_ObjectHideFlags: 0
@@ -16949,7 +16949,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 9.5
+  orthographic size: 7.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -56359,6 +56359,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff024fdbc70bdd429aed1807b40b421, type: 3}
+--- !u!114 &1918582640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 15113665286649227, guid: 6ff024fdbc70bdd429aed1807b40b421,
+    type: 3}
+  m_PrefabInstance: {fileID: 1918582639}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 887023481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 027479ca957aec04790752f90402fdee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1919516225
 GameObject:
   m_ObjectHideFlags: 0

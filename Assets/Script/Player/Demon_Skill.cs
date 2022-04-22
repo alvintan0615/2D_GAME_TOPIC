@@ -43,13 +43,14 @@ public class Demon_Skill : MonoBehaviour
     }
     private void OnEnable()
     {
-        beamSkillFilledImage = GameObject.FindGameObjectWithTag("beamSkillFilledImage").GetComponent<Image>();
-        allScreenSkillFilledImage = GameObject.FindGameObjectWithTag("allScreenSkillFilledImage").GetComponent<Image>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        beamSkillFilledImage = GameObject.FindGameObjectWithTag("beamSkillFilledImage").GetComponent<Image>();
+        allScreenSkillFilledImage = GameObject.FindGameObjectWithTag("allScreenSkillFilledImage").GetComponent<Image>();
         anim.SetBool("isChanging", PlayerStatus.isChanging);
         anim.SetBool("isDead", NewPlayerController.instance.isDead);
         NormalAttack();
