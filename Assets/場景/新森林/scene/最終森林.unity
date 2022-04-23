@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -20059,7 +20059,6 @@ MonoBehaviour:
   OpenOptionPanel: {fileID: 1686870882}
   ComfirmToMainUICanvas: {fileID: 742976914}
   menuButtonController: {fileID: 0}
-  PausePanelisOpen: 0
 --- !u!1 &521540279
 GameObject:
   m_ObjectHideFlags: 0
@@ -43497,7 +43496,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 744b7c9eb6b748b48ade118371d914a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WaterSound: {fileID: 1265811411}
+  audioSetting: {fileID: 0}
   canPlaySound: 0
 --- !u!61 &1165460238
 BoxCollider2D:
@@ -53895,6 +53894,8 @@ MonoBehaviour:
   SoundEffectsSlider: {fileID: 877263203}
   Boss: {fileID: 0}
   BossIsDie: 0
+  ClickSound: {fileID: 529960619}
+  SelectSound: {fileID: 1541310019}
 --- !u!4 &1440721316
 Transform:
   m_ObjectHideFlags: 0
@@ -63545,9 +63546,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb312218813a9d043b5226cb67eb90e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mDirector: {fileID: 1683159435}
-  normalizedTime: 0
-  NowInTutorial: 0
 --- !u!320 &1683159435
 PlayableDirector:
   m_ObjectHideFlags: 0

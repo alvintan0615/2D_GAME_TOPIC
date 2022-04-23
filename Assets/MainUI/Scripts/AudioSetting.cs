@@ -19,6 +19,10 @@ public class AudioSetting : MonoBehaviour
 
     public GameObject Boss;
     public bool BossIsDie = false;
+
+    public AudioSource ClickSound;
+    public AudioSource SelectSound;
+
     void Awake()
     {
         instance = this;
@@ -40,10 +44,29 @@ public class AudioSetting : MonoBehaviour
         backgroundAudio[0].mute = false;
         backgroundAudio[1].gameObject.SetActive(false);
         BossIsDie = false;
+
     }
 
     public void Update()
     {
+        if (Time.timeScale == 0 )
+        {
+            AudioListener.pause = true;
+            for (int i = 0; i < backgroundAudio.Length; i++)
+            {
+                backgroundAudio[i].ignoreListenerPause = true;
+                backgroundAudio[i].ignoreListenerVolume = true;
+            }
+            ClickSound.ignoreListenerPause = true;
+            ClickSound.ignoreListenerVolume = true;
+            SelectSound.ignoreListenerPause = true;
+            SelectSound.ignoreListenerVolume = true;
+        }
+
+        if (Time.timeScale == 1)
+        {
+            AudioListener.pause = false;
+        }
 
         if (Boss != null && Boss.activeInHierarchy == true)
         {

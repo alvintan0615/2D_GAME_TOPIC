@@ -65,7 +65,6 @@ public class TutorialPanel : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
         tutorialPanel = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).gameObject;
         walk = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(0).gameObject;
         NormalAtk = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(1).gameObject;
