@@ -97,6 +97,9 @@ TagManager:
   - name: player
     uniqueID: 390198055
     locked: 0
+  - name: tori
+    uniqueID: 2847406747
+    locked: 0
   - name: trap
     uniqueID: 3312651987
     locked: 0

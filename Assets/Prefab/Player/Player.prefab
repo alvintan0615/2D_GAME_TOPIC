@@ -101,7 +101,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6301142380452233584}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &474052950
 MonoBehaviour:
@@ -458,7 +458,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6301142380452233584}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1208570126
 MonoBehaviour:
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 1412761105}
   - component: {fileID: 1412761106}
   m_Layer: 0
-  m_Name: Point Light 2D1
+  m_Name: globalight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -522,11 +522,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412761104}
   m_LocalRotation: {x: -0, y: -0, z: 0.9461125, w: 0.3238381}
-  m_LocalPosition: {x: 14.93, y: 15.61, z: -2.803611}
-  m_LocalScale: {x: 6.209206, y: 6.209206, z: 6.2092056}
+  m_LocalPosition: {x: 14.930005, y: 15.610002, z: -2.803611}
+  m_LocalScale: {x: 6.2092066, y: 6.2092066, z: 6.2092056}
   m_Children: []
-  m_Father: {fileID: 6301142380452233584}
-  m_RootOrder: 3
+  m_Father: {fileID: 6301142380842007511}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1412761106
 MonoBehaviour:
@@ -949,7 +949,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6301142380842007511}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2129092440966633302
 GameObject:
@@ -1300,7 +1300,7 @@ Transform:
   m_Children:
   - {fileID: 2112898071}
   m_Father: {fileID: 6301142380842007511}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1379581308895150638
 SpriteRenderer:
@@ -1450,7 +1450,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6301142380452233584}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &3983201372163400698
 MonoBehaviour:
@@ -1762,7 +1762,6 @@ Transform:
   - {fileID: 7527468660378190716}
   - {fileID: 2338220577357746246}
   - {fileID: 3295295697282274751}
-  - {fileID: 1412761105}
   - {fileID: 6680720272595526913}
   - {fileID: 474052949}
   - {fileID: 1208570125}
@@ -1997,6 +1996,7 @@ Transform:
   - {fileID: 6301142379716692537}
   - {fileID: 6301142380211782158}
   - {fileID: 766880407946956892}
+  - {fileID: 1412761105}
   - {fileID: 1394045039967707669}
   - {fileID: 5163495727888270487}
   m_Father: {fileID: 0}
