@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: b0222f07367ad4c4dbd1abc4fb9bd3e1, type: 3}
   str_Asset: 
   pannel:
     exposedName: 67fff8232e2e1f640bf33e1bb1455351

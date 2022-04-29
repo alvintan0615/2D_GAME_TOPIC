@@ -536,7 +536,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: b0222f07367ad4c4dbd1abc4fb9bd3e1, type: 3}
   str_Asset: "\u54FC!\u7ADF\u7136\u8B93\u4F60\u8DD1\u4E86\uFF0C\u9019\u6B21\u4F60\u5C31\u4E56\u4E56\u7576\u6211\u7684\u6750\u6599\u5427!"
   pannel:
     exposedName: c7dc3bbcec2a49c4ea2293933306a496

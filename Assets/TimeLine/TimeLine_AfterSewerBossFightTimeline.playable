@@ -770,7 +770,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: 793b4d860d3cb7940a28e40a3d4e63c3, type: 3}
   str_Asset: "\u662F\u963F  \u7260\u4E5F\u592A\u96E3\u7E8F\u4E86\u5427"
   pannel:
     exposedName: 125f4885a0a0def44808bb57ce841204
@@ -1210,7 +1210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: 793b4d860d3cb7940a28e40a3d4e63c3, type: 3}
   str_Asset: "\u9583\u9583\u767C\u5149\u7684  \u597D\u6F02\u4EAE\u554A"
   pannel:
     exposedName: 48482016ff28eb142836f9ab6652ac44
@@ -1541,7 +1541,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: -10.419998, y: -13.812, z: 0}
+        value: {x: -11.75, y: -12.456001, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -1645,7 +1645,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -10.419998
+        value: -11.75
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1664,7 +1664,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: -13.812
+        value: -12.456001
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -1945,7 +1945,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: 793b4d860d3cb7940a28e40a3d4e63c3, type: 3}
   str_Asset: "\u90A3\u8D95\u7DCA\u53BB\u62FF\u5427!"
   pannel:
     exposedName: 265530df8ce2c7d4d96c24e084b34350
@@ -1963,7 +1963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 21300000, guid: fc2f29824ffe46c4ca6f29ad7d3aad6f, type: 3}
+  picture_Asset: {fileID: 21300000, guid: 51de50a6ce788ba4ba2f12b82a08c47b, type: 3}
   str_Asset: "\u547C..\u547C....\u7D42\u65BC\u6253\u8D0F\u4E86"
   pannel:
     exposedName: d91e5047cfa4344458ab33fdee3d4466
@@ -2012,7 +2012,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 21300000, guid: fc2f29824ffe46c4ca6f29ad7d3aad6f, type: 3}
+  picture_Asset: {fileID: 21300000, guid: 51de50a6ce788ba4ba2f12b82a08c47b, type: 3}
   str_Asset: "\u662F\u963F\uFF0C\u800C\u4E14\u88AB\u4F7F\u9B54\u4FDD\u8B77\u8457\u61C9\u8A72\u662F\u500B\u5F88\u91CD\u8981\u7684\u6771\u897F\\n\u53EF\u80FD\u662F\u9470\u5319\u4E5F\u8AAA\u4E0D\u4E00\u5B9A\u5462\u3002"
   pannel:
     exposedName: 2f98ddd7e2851ed4aa9d364b764768f2
@@ -2541,7 +2541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: 793b4d860d3cb7940a28e40a3d4e63c3, type: 3}
   str_Asset: "\u55EF...?\u90A3\u662F\u4EC0\u9EBC?"
   pannel:
     exposedName: 07a49b5ca05beb3469a523937e547755
@@ -2759,25 +2759,7 @@ MonoBehaviour:
     m_BlendOutDuration: -1
     m_MixInCurve:
       serializedVersion: 2
-      m_Curve:
-      - serializedVersion: 3
-        time: 0
-        value: 0
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
-      - serializedVersion: 3
-        time: 1
-        value: 1
-        inSlope: 0
-        outSlope: 0
-        tangentMode: 0
-        weightedMode: 0
-        inWeight: 0
-        outWeight: 0
+      m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
@@ -2927,7 +2909,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.8333333
-        value: {x: -8.729996, y: -1.199997, z: 0}
+        value: {x: -8.729996, y: -0.34000015, z: 0}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -3151,7 +3133,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.8333333
-        value: -1.199997
+        value: -0.34000015
         inSlope: 0
         outSlope: 0
         tangentMode: 136

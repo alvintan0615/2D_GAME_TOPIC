@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: 054289a6f468a124c96bdab83f1b8f95, type: 3}
   str_Asset: "\u70BA\u4E86\u90A3\u80FD\u91CF....\u6211\u4E5F\u8981\u62FF\u51FA\u771F\u672C\u4E8B\u4E86!"
   pannel:
     exposedName: 24beb6c6de01bfe47b7f1cb8354371ea
@@ -1794,7 +1794,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: b0222f07367ad4c4dbd1abc4fb9bd3e1, type: 3}
   str_Asset: "\u55EF...\u60E1\u9B54\u7684\u80FD\u91CF\u5F88\u5F37\u5927\u5462\uFF0C\u96D6\u7136\u6709\u9EDE\u68D8\u624B...."
   pannel:
     exposedName: 561fb14c5a4af9e41a0fe305ccbbdbed

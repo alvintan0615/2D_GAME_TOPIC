@@ -122,7 +122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: 793b4d860d3cb7940a28e40a3d4e63c3, type: 3}
   str_Asset: "\u597D\uFF0C\u90A3\u6211\u4E5F\u6703\u628A\u80FD\u91CF\u56DE\u5FA9\u5B8C\u5168\u7684\uFF0C\u52A0\u6CB9\u5427!"
   pannel:
     exposedName: 6b0df136b5e141a48bff118e77a305a5
@@ -1879,7 +1879,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: 793b4d860d3cb7940a28e40a3d4e63c3, type: 3}
   str_Asset: "\u5147\u624B\u61C9\u8A72\u5C31\u5728\u524D\u9762\uFF0C...\u4F60\u6E96\u5099\u597D\u4E86\u55CE?"
   pannel:
     exposedName: 270dc7d9cac62e14c903ce23ec730dc8
@@ -1913,7 +1913,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 21300000, guid: fc2f29824ffe46c4ca6f29ad7d3aad6f, type: 3}
+  picture_Asset: {fileID: 21300000, guid: 51de50a6ce788ba4ba2f12b82a08c47b, type: 3}
   str_Asset: "\u6211\u6E96\u5099\u597D\u4E86!"
   pannel:
     exposedName: 9ab826c6cc94cf143affb32ee2d6c5f1

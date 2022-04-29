@@ -53,7 +53,7 @@ public class ButtonTransition : MonoBehaviour
     {
         OnMainUI = false;
         EventManager.Instance.AllEventToFalse();
-        SceneController.Instance.TransitionToFirstLevel();
+        SceneController.Instance.TransitionToOpeningAnim();
     }
 
     public void QuitGame()

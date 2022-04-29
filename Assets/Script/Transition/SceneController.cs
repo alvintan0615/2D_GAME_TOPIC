@@ -91,6 +91,11 @@ public class SceneController : Singleton<SceneController>
         StartCoroutine(LoadLevel("最終村莊"));
     }
 
+    public void TransitionToOpeningAnim()
+    {
+        StartCoroutine(LoadOpeningAnim("OpeningAnimation"));
+    }
+
     IEnumerator LoadLevel(string scene)
     {
         SceneFader fade = Instantiate(sceneFaderPrefab);
@@ -104,6 +109,19 @@ public class SceneController : Singleton<SceneController>
             //保存遊戲
             SaveManager.Instance.SavePlayerData();
             //AudioSetting.instance.GetSoundVolume();
+            yield return StartCoroutine(fade.FadeIn(2f));
+            yield break;
+        }
+    }
+
+    IEnumerator LoadOpeningAnim(string scene)
+    {
+        SceneFader fade = Instantiate(sceneFaderPrefab);
+
+        if (scene != "")
+        {
+            yield return StartCoroutine(fade.FadeOut(2f));
+            yield return SceneManager.LoadSceneAsync(scene);
             yield return StartCoroutine(fade.FadeIn(2f));
             yield break;
         }

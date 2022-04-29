@@ -8,6 +8,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MainUI/UITestScene.unity
     guid: 94a11f29d312edf4f960503df83aed24
+  - enabled: 1
+    path: "Assets/\u5834\u666F/\u958B\u982D\u52D5\u756B/OpeningAnimation.unity"
+    guid: e6c5670b1dd7f8b46a382e58e5bad753
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000

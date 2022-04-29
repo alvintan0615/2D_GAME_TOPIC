@@ -1179,7 +1179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: b0222f07367ad4c4dbd1abc4fb9bd3e1, type: 3}
   str_Asset: "\u5594~\u662F\u90A3\u4F4D\u53EF\u6190\u5148\u751F\u963F\uFF0C\u9084\u8DDF\u8457\u4E00\u96BB\u5C0F\u7CBE\u9748\\n\u662F\u5F9E\u5730\u7262\u812B\u96E2\u4E86\u55CE\uFF0C\u4E0B\u6B21\u61C9\u8A72\u628A\u5730\u7262\u505A\u7684\u66F4\u7262\u56FA\u4E00\u9EDE..."
   pannel:
     exposedName: 7418d26c2e9d2c34e81eed5fa7a40638
@@ -1411,7 +1411,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 21300000, guid: fc2f29824ffe46c4ca6f29ad7d3aad6f, type: 3}
+  picture_Asset: {fileID: 21300000, guid: 51de50a6ce788ba4ba2f12b82a08c47b, type: 3}
   str_Asset: "\u4F60\u5C31\u662F\u6467\u6BC0\u6751\u838A\u7684\u5147\u624B\u55CE\\n\u70BA\u4EC0\u9EBC\u7121\u7DE3\u7121\u6545\u628A\u6751\u838A\u6467\u6BC0!"
   pannel:
     exposedName: 9bb9f926648118b46a6bf52912a3efca
@@ -1657,7 +1657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip(Clone)(Clone)(Clone)(Clone)
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: b0222f07367ad4c4dbd1abc4fb9bd3e1, type: 3}
   str_Asset: "\u53EF\u4E0D\u662F\u7121\u7DE3\u7121\u6545\u5594?\u6211\u672C\u4F86\u5728\u90A3\u9644\u8FD1\u627E\u6771\u897F\u7684"
   pannel:
     exposedName: e212d45e9722ef9489da59ccf621b0f4
@@ -1716,7 +1716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 333e09d8e7169e64abb75b3b19a157c5, type: 3}
   m_Name: DialogueClip
   m_EditorClassIdentifier: 
-  picture_Asset: {fileID: 0}
+  picture_Asset: {fileID: 21300000, guid: b0222f07367ad4c4dbd1abc4fb9bd3e1, type: 3}
   str_Asset: "\u55EF?\u662F\u8AB0?"
   pannel:
     exposedName: 3054165440e012d4a9174b09f1c27d16

@@ -14952,6 +14952,11 @@ PrefabInstance:
       propertyPath: m_Intensity
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1379581308895150638, guid: 268ced2ad455ffb4c91cc105251dec8c,
+        type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2257889292217508579, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: demonSkill
@@ -15030,7 +15035,7 @@ PrefabInstance:
     - target: {fileID: 6301142380842007514, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
@@ -80794,21 +80799,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5678600269189434510, guid: 93498a236074e754eaaf7b9a9f905a83,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678600269350680364, guid: 93498a236074e754eaaf7b9a9f905a83,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5678600270070878081, guid: 93498a236074e754eaaf7b9a9f905a83,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5678600270168961511, guid: 93498a236074e754eaaf7b9a9f905a83,
         type: 3}
       propertyPath: m_Name

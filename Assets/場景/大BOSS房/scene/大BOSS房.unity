@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -466,7 +466,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -219457279
-  m_SortingLayer: 13
+  m_SortingLayer: 14
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 98a67fe3544a9764880a4a28de33bc83, type: 3}
   m_Color: {r: 0.054901965, g: 0.0627451, b: 0.07450981, a: 1}
@@ -3170,7 +3170,7 @@ Transform:
   - {fileID: 1842446036}
   - {fileID: 2046433649}
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &436793841
 GameObject:
@@ -6635,6 +6635,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5678600269189434510, guid: 93498a236074e754eaaf7b9a9f905a83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678600269350680364, guid: 93498a236074e754eaaf7b9a9f905a83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5678600270070878081, guid: 93498a236074e754eaaf7b9a9f905a83,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5678600270168961511, guid: 93498a236074e754eaaf7b9a9f905a83,
         type: 3}
       propertyPath: m_Name
@@ -6678,7 +6693,7 @@ PrefabInstance:
     - target: {fileID: 5678600270168961515, guid: 93498a236074e754eaaf7b9a9f905a83,
         type: 3}
       propertyPath: m_RootOrder
-      value: 36
+      value: 37
       objectReference: {fileID: 0}
     - target: {fileID: 5678600270168961515, guid: 93498a236074e754eaaf7b9a9f905a83,
         type: 3}
@@ -7939,7 +7954,7 @@ Transform:
   - {fileID: 718935435}
   - {fileID: 54972955}
   m_Father: {fileID: 0}
-  m_RootOrder: 33
+  m_RootOrder: 34
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1113956350
 GameObject:
@@ -8180,7 +8195,7 @@ PrefabInstance:
     - target: {fileID: 7996718506652298622, guid: 32a4b0c8c2c4b75458a8c40ad16bdde8,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 7996718506652298622, guid: 32a4b0c8c2c4b75458a8c40ad16bdde8,
         type: 3}
@@ -11374,7 +11389,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1516285310
 GameObject:
@@ -12328,7 +12343,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 11.5
+  orthographic size: 14.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -12429,7 +12444,7 @@ Transform:
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1605642874
 MonoBehaviour:
@@ -12645,7 +12660,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1373295627
-  m_SortingLayer: 16
+  m_SortingLayer: 17
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: b814753a81aa0ad4e8009a1d5c3759e3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -15447,7 +15462,7 @@ RectTransform:
   m_Children:
   - {fileID: 464848117371760653}
   m_Father: {fileID: 0}
-  m_RootOrder: 35
+  m_RootOrder: 36
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -15770,7 +15785,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &4845422706613161489
 PrefabInstance:
@@ -15827,7 +15842,7 @@ PrefabInstance:
     - target: {fileID: 4845422706604776558, guid: 5a0245fd913e37e42b95420509a3c4a6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4845422706604776558, guid: 5a0245fd913e37e42b95420509a3c4a6,
         type: 3}

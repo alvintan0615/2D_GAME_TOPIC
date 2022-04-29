@@ -35,6 +35,11 @@ public class DialogSystem : MonoBehaviour
         StartCoroutine(SetTextUI());
     }
 
+    private void OnDisable()
+    {
+        PlayerStatus.isDialouging = false;
+    }
+
     // Update is called once per frame
     void Update()
     {
