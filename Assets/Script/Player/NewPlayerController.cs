@@ -171,6 +171,7 @@ public class NewPlayerController : MonoBehaviour
             Changing();
             NormalHealInjury();
             FairyHealing();
+            ReturnTrapPos();
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 if (Time.time >= lastDash + dashCoolDown)
@@ -550,6 +551,13 @@ public class NewPlayerController : MonoBehaviour
 
     }
 
+    void ReturnTrapPos()
+    {
+        if (Input.GetKeyDown(KeyCode.PageUp) && trapPos != null)
+        {
+            this.gameObject.transform.position = trapPos.transform.position;
+        }
+    }
     public void fireSkillEffectPoint()
     {
         Instantiate(fireSkillEffect, skillEffectPoint.position, Quaternion.identity);

@@ -56,7 +56,7 @@ public class BigWind : MonoBehaviour
             for (int i = 0; i < playerCount; i++)
             {
                 var playerStats = playerColList[i].GetComponent<CharacterStats>();
-                playerStats.TakeDamage(toriCharacterStats, playerStats, 0);
+                playerStats.TakeDamage(toriCharacterStats, playerStats, 7);
             }
         }
     }
