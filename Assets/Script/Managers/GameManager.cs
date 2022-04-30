@@ -9,6 +9,8 @@ public class GameManager : Singleton<GameManager>
 
     public bool Ken_Human = true;
 
+    public bool StopPanel = false;
+
     [SerializeField]private CinemachineVirtualCamera followCamera;
     List<IEndGameObserver> endGameObservers = new List<IEndGameObserver>();
 

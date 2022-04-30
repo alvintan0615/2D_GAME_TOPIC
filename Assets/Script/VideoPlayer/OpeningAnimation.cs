@@ -22,6 +22,15 @@ public class OpeningAnimation : MonoBehaviour
     {
         backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
         openingAnimation.SetDirectAudioVolume(0, backgroundFloat);
+
+        if(GameManager.Instance.StopPanel == true)
+        {
+            openingAnimation.Pause();
+        }
+        else
+        {
+            openingAnimation.Play();
+        }
     }
 
     void TransToFirstLevel(UnityEngine.Video.VideoPlayer vp)
