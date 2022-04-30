@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -8692,6 +8692,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   beingPushed: 0
+  isCollPosionWater: 0
 --- !u!255 &220030643
 FixedJoint2D:
   m_ObjectHideFlags: 0
@@ -12082,12 +12083,12 @@ PrefabInstance:
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.64
+      value: 0.11
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.4
+      value: 3.49
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
@@ -21473,7 +21474,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.64, y: 5.9000006, z: -10}
+  m_LocalPosition: {x: 0.11000001, y: 5.9900002, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children:
   - {fileID: 1403914674}
@@ -29055,7 +29056,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.31701577, y: 0.58161545}
+  m_Offset: {x: -0.30633304, y: 0.6022712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -29066,7 +29067,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.25793314, y: 0.51585895}
+  m_Size: {x: 0.2792986, y: 0.5571706}
   m_EdgeRadius: 0
 --- !u!1 &716594021
 GameObject:
@@ -37398,8 +37399,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u73A9\u5BB6\u53EF\u4EE5\u900F\u904E\u706B\u7130\u6280\u80FD\t    \t\t\t\t\t\t\t              
-    \t\u8207\u5834\u666F\u7269\u4EF6\u4E92\u52D5"
+  m_Text: "\u73A9\u5BB6\u53EF\u4EE5\u900F\u904E\u706B\u7130\u6280\u80FD\t    \t\t\t\t\t\t      
+    \u8207\u5834\u666F\u7269\u4EF6\u4E92\u52D5"
 --- !u!222 &908479375
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37609,7 +37610,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914151525}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 70.05109, y: -23.197208, z: 1042.0094}
+  m_LocalPosition: {x: 81.80109, y: -23.107208, z: 1042.0094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 862835423}
@@ -53885,6 +53886,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 0}
   Ken_Human: 1
+  StopPanel: 0
   followCamera: {fileID: 0}
 --- !u!4 &1391317658
 Transform:
