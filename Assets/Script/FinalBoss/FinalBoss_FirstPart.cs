@@ -77,10 +77,10 @@ public class FinalBoss_FirstPart : MonoBehaviour
     {
         if(EventManager.Instance.finalBossStart == true && EventManager.Instance.isFinalBossLetPlayerDead == false && characterStats.CurrentHealth > 0)
         {
-            int randomState = Random.Range(0, 4);
+            int randomState = Random.Range(0, 5);
             if (randomState < 3)
                 anim.SetTrigger("Moving");
-            if (randomState == 3)
+            if (randomState == 4)
                 anim.SetTrigger("MovingTop");
         }
 

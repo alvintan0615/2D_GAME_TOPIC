@@ -163,7 +163,7 @@ public class MagicBall : MonoBehaviour
         {
             var bossStats = target.GetComponent<CharacterStats>();
             var playerStats = player.GetComponent<CharacterStats>();
-            playerStats.TakeDamage(bossStats, playerStats, 6);
+            playerStats.TakeDamage(bossStats, playerStats, 5);
         }
     }
 }
