@@ -8,21 +8,21 @@ public class OpeningAnimation : MonoBehaviour
     [SerializeField] private VideoPlayer openingAnimation;
     public double currentTime;
     public double totalTime;
+    public float volume;
+    private static readonly string BackgroundPref = "BackgroundPref";
+    private float backgroundFloat;
     void Awake()
     {
         openingAnimation = GetComponent<VideoPlayer>();
         openingAnimation.loopPointReached += TransToFirstLevel;
+        backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
     }
     
-    /*void Update()
+    void Update()
     {
-        currentTime += Time.deltaTime;
-
-        if (currentTime >= totalTime)
-        {
-            
-        }
-    }*/
+        backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
+        openingAnimation.SetDirectAudioVolume(0, backgroundFloat);
+    }
 
     void TransToFirstLevel(UnityEngine.Video.VideoPlayer vp)
     {
