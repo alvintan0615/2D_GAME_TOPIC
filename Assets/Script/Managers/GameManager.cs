@@ -11,6 +11,8 @@ public class GameManager : Singleton<GameManager>
 
     public bool StopPanel = false;
 
+    public bool notDead = false;
+
     [SerializeField]private CinemachineVirtualCamera followCamera;
     List<IEndGameObserver> endGameObservers = new List<IEndGameObserver>();
 

@@ -47,6 +47,11 @@ public class TimeLineFinishFireVillege : MonoBehaviour
             mDirector.Play();
         }
 
+        if(normalizedTime >= 0.01f && normalizedTime < 0.99f)
+        {
+            GameManager.Instance.notDead = false;
+        }
+
         if (normalizedTime >= 0.99f && EventManager.Instance.fireVillege_TimelineFinish == false)
         {
             PlayerStatus.isDialouging = false;

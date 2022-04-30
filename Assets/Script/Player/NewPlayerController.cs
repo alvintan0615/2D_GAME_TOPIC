@@ -131,10 +131,13 @@ public class NewPlayerController : MonoBehaviour
     }
     void Update()
     {
+        if(GameManager.Instance.notDead == true && characterStats.CurrentHealth <= 0)
+            characterStats.CurrentHealth = 1;
 
-        if(characterStats.CurrentHealth <=0 && EventManager.Instance.fireVillege_BossStoryLine == false)
+
+        if (characterStats.CurrentHealth <= 0)// && EventManager.Instance.fireVillege_BossStoryLine == false
             isDead = true;
-            
+
 
         if (characterStats.CurrentHealth > 0)
             isDead = false;

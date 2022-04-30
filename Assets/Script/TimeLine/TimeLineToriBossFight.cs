@@ -32,6 +32,10 @@ public class TimeLineToriBossFight : MonoBehaviour
             mDirector.Play();
         }
 
+        if(normalizedTime >=0.01f && normalizedTime < 0.99f)
+        {
+            GameManager.Instance.notDead = true;
+        }
 
         if (normalizedTime >= 0.99f && EventManager.Instance.fireVillege_TimelineBeforeToriBoss == false)
         {
@@ -39,7 +43,6 @@ public class TimeLineToriBossFight : MonoBehaviour
             EventManager.Instance.fireVillege_TimelineBeforeToriBoss = true;
             EventManager.Instance.fireVillege_BossStoryLine = true;
             this.gameObject.SetActive(false);
-
         }
 
 
