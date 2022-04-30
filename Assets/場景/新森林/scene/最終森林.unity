@@ -21407,6 +21407,7 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
+  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -21418,7 +21419,6 @@ MonoBehaviour:
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
-  m_ClearDepth: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -55889,6 +55889,24 @@ MonoBehaviour:
   - {fileID: 1265811411}
   - {fileID: 529960619}
   - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 1541310019}
+  - {fileID: 887899886}
   BGEffectsSlider: {fileID: 877263204}
   SoundEffectsSlider: {fileID: 877263203}
   Boss: {fileID: 0}

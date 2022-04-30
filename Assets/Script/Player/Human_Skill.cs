@@ -89,24 +89,24 @@ public class Human_Skill : MonoBehaviour
             if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Pull");
-                audioSetting.soundEffectAudio[18].mute = false;
+                audioSetting.soundEffectAudio[39].mute = false;
             } 
             else if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Push");
-                audioSetting.soundEffectAudio[18].mute = false;
+                audioSetting.soundEffectAudio[39].mute = false;
             }
                 
 
             if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Push");
-                audioSetting.soundEffectAudio[18].mute = false;
+                audioSetting.soundEffectAudio[39].mute = false;
             }
             else if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Pull");
-                audioSetting.soundEffectAudio[18].mute = false;
+                audioSetting.soundEffectAudio[39].mute = false;
             }
                 
 
@@ -119,7 +119,7 @@ public class Human_Skill : MonoBehaviour
         else if (hit.collider != null && hit.collider.gameObject.tag == "Pushable" && Input.GetKeyUp(KeyCode.A))
         {
             PlayerStatus.isDragging = false;
-            audioSetting.soundEffectAudio[18].mute = true;
+            audioSetting.soundEffectAudio[39].mute = true;
             box.GetComponent<FixedJoint2D>().enabled = false;
             box.GetComponent<BoxPull>().beingPushed = false;
         }
