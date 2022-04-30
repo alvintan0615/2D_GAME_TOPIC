@@ -27,6 +27,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
         characterStats = GetComponent<CharacterStats>();
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        characterStats.CurrentHealth = characterStats.MaxHealth;
     }
     void Start()
     {
