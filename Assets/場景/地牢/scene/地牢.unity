@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -14874,19 +14874,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 555133168, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.05
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 555133168, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.12
+      value: 16.8
       objectReference: {fileID: 0}
     - target: {fileID: 555133168, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.46829727
+      value: -0.46455553
       objectReference: {fileID: 0}
     - target: {fileID: 555133168, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.88357097
+      value: 0.885544
       objectReference: {fileID: 0}
     - target: {fileID: 555133169, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
       propertyPath: m_Intensity
@@ -14902,7 +14902,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 555133169, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
       propertyPath: m_PointLightOuterRadius
-      value: 8.900241
+      value: 11.453637
       objectReference: {fileID: 0}
     - target: {fileID: 555133169, guid: 268ced2ad455ffb4c91cc105251dec8c, type: 3}
       propertyPath: m_UseNormalMap
@@ -17804,7 +17804,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -348.21936, y: -35.255222, z: -10}
+  m_LocalPosition: {x: -348.24457, y: -35.256382, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children:
   - {fileID: 1403914674}
@@ -33124,7 +33124,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.7754011, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -41422,6 +41422,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerStats: {fileID: 0}
   Ken_Human: 1
+  StopPanel: 0
   followCamera: {fileID: 0}
 --- !u!4 &1391317658
 Transform:
