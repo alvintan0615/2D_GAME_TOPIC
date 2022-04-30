@@ -234,8 +234,27 @@ public class PlayerStatus : MonoBehaviour
             canHealing = false;
         }
 
+        if (Input.GetKeyDown(KeyCode.Home))
+            ResetBool();
         //Debug.Log("isClimbing" + isClimbing);
         //Debug.Log("isHurting" + isHurting);
         /*Debug.Log("isChanging" + isChanging);*/
+    }
+
+
+    private void ResetBool()
+    {
+        isCanMoveInput = true;
+        isAttacking = false;
+        isAttackingTransition = false;
+        isSkilling = false;
+        isJumping = false;
+        isChanging = false;
+        isClimbing = false;
+        isHurting = false;
+        isDashing = false;
+        isDragging = false;
+        isDialouging = false;
+        isHealing = false;
     }
 }
