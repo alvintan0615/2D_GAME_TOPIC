@@ -35,6 +35,7 @@ public class CollsionTrap : MonoBehaviour
         collision.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
         collision.gameObject.GetComponent<CharacterStats>().TrapDamage(5, 10);
         PlayerStatus.isClimbing = false;
+        PlayerStatus.isHurting = false;
         yield return null;
     }
 }

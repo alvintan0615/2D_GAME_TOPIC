@@ -57,7 +57,7 @@ public class ElectricBall : MonoBehaviour
             Destroy(this.gameObject);
             var bossStats = p2Boss.GetComponent<CharacterStats>();
             var playerStats = player.GetComponent<CharacterStats>();
-            playerStats.TakeDamage(bossStats, playerStats, 0);
+            playerStats.TakeDamage(bossStats, playerStats, 8);
         }
 
         if(collision.gameObject.layer == 8 && isAttack == true)

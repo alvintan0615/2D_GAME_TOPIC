@@ -11,6 +11,9 @@ public class OpeningAnimation : MonoBehaviour
     public float volume;
     private static readonly string BackgroundPref = "BackgroundPref";
     private float backgroundFloat;
+    [SerializeField]private float timer;
+    private bool isTrans = false;
+    private bool isSkipOK = false;
     void Awake()
     {
         openingAnimation = GetComponent<VideoPlayer>();
@@ -22,8 +25,8 @@ public class OpeningAnimation : MonoBehaviour
     {
         backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
         openingAnimation.SetDirectAudioVolume(0, backgroundFloat);
-
-        if(GameManager.Instance.StopPanel == true)
+        
+        if (GameManager.Instance.StopPanel == true)
         {
             openingAnimation.Pause();
         }
@@ -31,10 +34,35 @@ public class OpeningAnimation : MonoBehaviour
         {
             openingAnimation.Play();
         }
+        skipAnimation();
+
+        if(isTrans == true)
+        {
+            isTrans = false;
+            SceneController.Instance.TransitionToFirstLevel();
+        }
     }
 
     void TransToFirstLevel(UnityEngine.Video.VideoPlayer vp)
     {
         SceneController.Instance.TransitionToFirstLevel();
+    }
+
+    void skipAnimation()
+    {
+        if (Input.GetKey(KeyCode.Space) && isSkipOK == false)
+        {
+            timer += Time.deltaTime;
+            if(timer >= 3f)
+            {
+                isTrans = true;
+                isSkipOK = true;
+            }
+        }
+
+        if (Input.GetKeyUp(KeyCode.Space) && timer < 3f)
+        {
+            timer = 0f;
+        }
     }
 }
