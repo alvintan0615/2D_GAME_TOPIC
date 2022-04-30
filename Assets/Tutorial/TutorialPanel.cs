@@ -28,6 +28,7 @@ public class TutorialPanel : MonoBehaviour
     public GameObject PullMachine;
     public GameObject DemonTutorial;
     public GameObject GroundSkillOpenDoor;
+    public GameObject CrystalTutorial;
 
     public bool TutorialPanelOpen = false;
 
@@ -59,9 +60,9 @@ public class TutorialPanel : MonoBehaviour
     public bool PullMachineIsOpen = false;
     public bool DemonTutorialIsOpen = false;
     public bool GroundSkillOpenDoorIsOpen = false;
+    public bool CrystalTutorialIsOpen = false;
 
-    
-    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -90,6 +91,7 @@ public class TutorialPanel : MonoBehaviour
         PullMachine = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(19).gameObject;
         DemonTutorial = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(20).gameObject;
         GroundSkillOpenDoor = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(21).gameObject;
+        CrystalTutorial = GameObject.Find("TutorialCanvas").gameObject.transform.GetChild(0).GetChild(22).gameObject;
 
         TutorialPanelOpen = false;
         tutorialPanel.SetActive(false);
@@ -257,6 +259,12 @@ public class TutorialPanel : MonoBehaviour
                 Time.timeScale = 1;
                 CloseGroundSkillOpenDoor();
             }
+
+            if (TutorialPanelOpen == true && CrystalTutorialIsOpen == true && Input.GetKeyDown(KeyCode.A))
+            {
+                Time.timeScale = 1;
+                CloseCrystalTutorial();
+            }
         }
     }
 
@@ -339,6 +347,29 @@ public class TutorialPanel : MonoBehaviour
             Destroy(collision);
             Time.timeScale = 0;
         }
+
+        if (collision.name == "CrystalTutorialCollider" && PlayerStatus.isSkilling == false)
+        {
+            OpenCrystalTutorial();
+            Destroy(collision);
+            Time.timeScale = 0;
+        }
+    }
+
+    public void CloseCrystalTutorial()
+    {
+        tutorialPanel.SetActive(false);
+        TutorialPanelOpen = false;
+        CrystalTutorial.SetActive(false);
+        CrystalTutorialIsOpen = false;
+    }
+
+    public void OpenCrystalTutorial()
+    {
+        tutorialPanel.SetActive(true);
+        TutorialPanelOpen = true;
+        CrystalTutorial.SetActive(true);
+        CrystalTutorialIsOpen = true;
     }
 
     public void CloseGroundSkillOpenDoor()
