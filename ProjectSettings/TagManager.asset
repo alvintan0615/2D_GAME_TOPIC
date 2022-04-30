@@ -30,6 +30,7 @@ TagManager:
   - FinalBossP2
   - TrapTransPort
   - DeadtransPort
+  - PoisonWater
   layers:
   - Default
   - TransparentFX

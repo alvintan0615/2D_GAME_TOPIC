@@ -234,7 +234,7 @@ public class PlayerStatus : MonoBehaviour
             canHealing = false;
         }
 
-        //Debug.Log("canBeHurt" + canBeHurt);
+        Debug.Log("isClimbing" + isClimbing);
         //Debug.Log("isHurting" + isHurting);
         /*Debug.Log("isChanging" + isChanging);*/
     }

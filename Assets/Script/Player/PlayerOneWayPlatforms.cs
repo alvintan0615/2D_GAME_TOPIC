@@ -22,16 +22,18 @@ public class PlayerOneWayPlatforms : MonoBehaviour
     {
         YInput = Input.GetAxisRaw("Vertical");
         if (currentOneWayPlatform != null)
+        {
+            if (YInput < 0f && Input.GetButtonDown("Jump") && PlayerStatus.isClimbing == false)
             {
-                if (YInput < 0f && Input.GetButtonDown("Jump") && isOnLadder == false)
-                {
-                    PlayerStatus.isJumping = false;
-                    StartCoroutine(DisableCollision());
-                }
-                
+                PlayerStatus.isJumping = false;
+                StartCoroutine(DisableCollision());
             }
-        
-        
+
+            if (YInput < 0f && PlayerStatus.isClimbing == true)
+            {
+                StartCoroutine(DisableCollision());
+            }
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -49,32 +51,6 @@ public class PlayerOneWayPlatforms : MonoBehaviour
             currentOneWayPlatform = null;
         }
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Ladder")
-        {
-            isOnLadder = true;
-            if (currentOneWayPlatform != null && YInput < 0f)
-            {
-                PlayerStatus.isClimbing = true;
-                StartCoroutine(DisableCollision());
-            }
-            if(currentOneWayPlatform != null && YInput > 0f)
-            {
-                PlayerStatus.isClimbing = false;
-            }
-
-        }
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Ladder")
-        {
-            isOnLadder = false;
-        }
-    }
-
 
     private IEnumerator DisableCollision()
     {

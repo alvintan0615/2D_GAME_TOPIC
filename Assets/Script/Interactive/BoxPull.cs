@@ -6,6 +6,7 @@ using UnityEngine;
 public class BoxPull : MonoBehaviour
 {
     public bool beingPushed;
+    public bool isCollPosionWater;
     float xPos;
     void Start()
     {
@@ -16,13 +17,12 @@ public class BoxPull : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(beingPushed == false)
-        {
+        
+        if(beingPushed == false && isCollPosionWater == false)
             transform.position = new Vector3(xPos, transform.position.y);
-        }
-        else
-        {
+        else if (beingPushed == true && isCollPosionWater == false)
             xPos = transform.position.x;
-        }
+        else if(beingPushed == false && isCollPosionWater == true)
+            transform.position = new Vector3(transform.position.x, transform.position.y);
     }
 }
