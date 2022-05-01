@@ -40,13 +40,16 @@ public class ChangeDemon : MonoBehaviour
             mDirector.SetGenericBinding(track6, GameManager.Instance.playerStats.transform.GetChild(1).gameObject);
         }
 
-        if (boss_Tori.hurtToTimeLine >= 3
-            && EventManager.Instance.fireVillege_TimelineChangeDemon == false 
-            && EventManager.Instance.fireVillege_BossStoryLine == true)
+        if (boss_Tori.hurtToTimeLine >= 3 || GameManager.Instance.playerStats.characterData.currentHealth <= 1)
         {
-            PlayerStatus.isDialouging = true;
-            mDirector.Play();
+            if (EventManager.Instance.fireVillege_TimelineChangeDemon == false && EventManager.Instance.fireVillege_BossStoryLine == true)
+            {
+                PlayerStatus.isDialouging = true;
+                mDirector.Play();
+            }
         }
+            
+
 
         if(normalizedTime >= 0.01f && normalizedTime < 0.99f)
         {

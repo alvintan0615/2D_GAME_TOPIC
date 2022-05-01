@@ -15,7 +15,7 @@ MonoBehaviour:
   coolDown: 0
   coolDown01: 0
   minDamage: 10
-  maxDamage: 13
+  maxDamage: 12
   attackRange: 0
   skillRange: 0
   criticalMultiplier: 0

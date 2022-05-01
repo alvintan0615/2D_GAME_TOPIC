@@ -39,7 +39,7 @@ public class TimeLineFinishFireVillege : MonoBehaviour
         }
 
         if ((GameManager.Instance.playerStats.characterData.currentHealth <= 1 || tori.CurrentHealth <= 0) 
-            && EventManager.Instance.fireVillege_BossStoryLine == true)
+            && EventManager.Instance.fireVillege_TimelineChangeDemon == true)
         {
             PlayerStatus.isDialouging = true;
             GameManager.Instance.playerStats.characterData.currentHealth = 1;

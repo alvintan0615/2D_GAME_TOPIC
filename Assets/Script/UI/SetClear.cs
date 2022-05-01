@@ -8,6 +8,7 @@ public class SetClear : MonoBehaviour
     {
         GameManager.Instance.playerStats.attackData.minDamage = 4;
         GameManager.Instance.playerStats.attackData.maxDamage = 6;
+        GameManager.Instance.playerStats.characterData.currentDefence = 2;
     }
 
     void Update()

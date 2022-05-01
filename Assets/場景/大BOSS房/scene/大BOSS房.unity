@@ -11423,6 +11423,7 @@ MonoBehaviour:
   playerStats: {fileID: 0}
   Ken_Human: 1
   StopPanel: 0
+  notDead: 0
   followCamera: {fileID: 0}
 --- !u!4 &1516285312
 Transform:

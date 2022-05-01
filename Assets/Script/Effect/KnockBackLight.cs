@@ -18,7 +18,7 @@ public class KnockBackLight : MonoBehaviour
         {
             var playerCS = collision.GetComponent<CharacterStats>();
             var p2BossCS = p2Boss.GetComponent<CharacterStats>();
-            playerCS.TakeDamage(p2BossCS, playerCS, 5);
+            playerCS.TakeDamage(p2BossCS, playerCS, 3);
 
         }
 

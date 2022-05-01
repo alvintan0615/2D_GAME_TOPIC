@@ -38,7 +38,7 @@ public class PoisonBall : MonoBehaviour
             audioSetting.soundEffectAudio[20].Play();
             var bossStats = target.GetComponent<CharacterStats>();
             var playerStats = player.GetComponent<CharacterStats>();
-            playerStats.TakeDamage(bossStats, playerStats, 7);
+            playerStats.TakeDamage(bossStats, playerStats, 5);
         }
 
         if (collision.gameObject.layer == 8)
