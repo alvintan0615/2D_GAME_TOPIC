@@ -7567,7 +7567,7 @@ PrefabInstance:
     - target: {fileID: 1801640607640623698, guid: dd8e45f5ab6bd274fbdc12d07a50d4b1,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1801640607640623698, guid: dd8e45f5ab6bd274fbdc12d07a50d4b1,
         type: 3}
@@ -11300,7 +11300,7 @@ PrefabInstance:
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6301142380842007511, guid: 268ced2ad455ffb4c91cc105251dec8c,
         type: 3}
@@ -19130,7 +19130,7 @@ PrefabInstance:
     - target: {fileID: 7323756943865046641, guid: 60d5242cce863934dbfffbdadaf801a2,
         type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7323756943865046641, guid: 60d5242cce863934dbfffbdadaf801a2,
         type: 3}
@@ -23770,7 +23770,7 @@ Transform:
   - {fileID: 2069630144}
   - {fileID: 64138563}
   m_Father: {fileID: 0}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &731950215
 PrefabInstance:
@@ -27141,7 +27141,7 @@ PrefabInstance:
     - target: {fileID: 4984355924692733688, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 4984355924692733688, guid: d5fccac8ba5d52249919a5fa41f3d67d,
         type: 3}
@@ -40080,7 +40080,7 @@ RectTransform:
   - {fileID: 822147507}
   - {fileID: 676367233}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -41682,7 +41682,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1391317659
 Animator:
@@ -47527,7 +47527,7 @@ Transform:
   - {fileID: 270424620}
   - {fileID: 867886981}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1578043216
 MonoBehaviour:
@@ -57314,7 +57314,7 @@ PrefabInstance:
     - target: {fileID: 15113665286649222, guid: 6ff024fdbc70bdd429aed1807b40b421,
         type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 15113665286649222, guid: 6ff024fdbc70bdd429aed1807b40b421,
         type: 3}
@@ -60315,7 +60315,7 @@ Transform:
   m_LocalScale: {x: 1.0583, y: 1.2223365, z: 1.0583}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2059886354
 PrefabInstance:
