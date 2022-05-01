@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Color: {r: 0.42532933, g: 0.509434, b: 0.49624732, a: 1}
   m_Intensity: 1.9920113
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0000000071c93259012166b5d9ca786ff57577ae5d4a14de21a16dbf8b4a60dfa9a8ad339bfab7a9d30e73c5fd84f2b40159ebf22130fcc12da14c4b0bd4da51
+  m_ApplyToSortingLayers: 0000000071c93259012166b5d9ca786ff57577ae5d4a14de21a16dbf8b4a60dfa9a8ad33659423dc27f341179bfab7a9d30e73c5fd84f2b40159ebf22130fcc12da14c4b0bd4da513f44bccea9cf968e
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_Color: {r: 0.42532933, g: 0.509434, b: 0.49624732, a: 1}
   m_Intensity: 1.9920113
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0000000071c93259012166b5d9ca786ff57577ae5d4a14de21a16dbf8b4a60dfa9a8ad339bfab7a9d30e73c5fd84f2b40159ebf22130fcc12da14c4b0bd4da51
+  m_ApplyToSortingLayers: 0000000071c93259012166b5d9ca786ff57577ae5d4a14de21a16dbf8b4a60dfa9a8ad33659423dc27f341179bfab7a9d30e73c5fd84f2b40159ebf22130fcc12da14c4b0bd4da513f44bccea9cf968e
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Color: {r: 0.42532933, g: 0.509434, b: 0.49624732, a: 1}
   m_Intensity: 1.9920113
   m_LightVolumeOpacity: 0
-  m_ApplyToSortingLayers: 0000000071c93259012166b5d9ca786ff57577ae5d4a14de21a16dbf8b4a60dfa9a8ad339bfab7a9d30e73c5fd84f2b40159ebf22130fcc12da14c4b0bd4da51
+  m_ApplyToSortingLayers: 0000000071c93259012166b5d9ca786ff57577ae5d4a14de21a16dbf8b4a60dfa9a8ad33659423dc27f341179bfab7a9d30e73c5fd84f2b40159ebf22130fcc12da14c4b0bd4da513f44bccea9cf968e
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
@@ -402,9 +402,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b0a6cdbff0eb13a4a9f9cc71fd8eec8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  crystalBreakSome: {fileID: 0}
-  crystalBreakAll: {fileID: 0}
-  audioSetting: {fileID: 0}
+  crystalBreak: {fileID: 5909902051829916280, guid: cf911c757a09d8946af633308a0c7d52,
+    type: 3}
 --- !u!1001 &269425153005862426
 PrefabInstance:
   m_ObjectHideFlags: 0
