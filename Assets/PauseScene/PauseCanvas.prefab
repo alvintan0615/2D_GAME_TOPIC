@@ -833,7 +833,6 @@ MonoBehaviour:
   OpenOptionPanel: {fileID: 1252451432878586492}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
-  PausePanelisOpen: 0
 --- !u!114 &163469566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3112,10 +3111,9 @@ MonoBehaviour:
   PausePanel: {fileID: 4984355925813323331}
   QuitPanel: {fileID: 5037043135584647046}
   PauseCanvas: {fileID: 4984355924692733692}
-  OpenOptionPanel: {fileID: 0}
+  OpenOptionPanel: {fileID: 1252451432878586492}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
-  PausePanelisOpen: 0
 --- !u!114 &4569737196629976752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3674,7 +3672,6 @@ MonoBehaviour:
   OpenOptionPanel: {fileID: 0}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
-  PausePanelisOpen: 0
 --- !u!1 &4984355924905603613
 GameObject:
   m_ObjectHideFlags: 0
@@ -4045,7 +4042,6 @@ MonoBehaviour:
   OpenOptionPanel: {fileID: 1252451432878586492}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355924577930140}
-  PausePanelisOpen: 0
 --- !u!114 &8399059194056309955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4433,7 +4429,6 @@ MonoBehaviour:
   OpenOptionPanel: {fileID: 1252451432878586492}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
-  PausePanelisOpen: 0
 --- !u!114 &1273395154
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4581,7 +4576,6 @@ MonoBehaviour:
   OpenOptionPanel: {fileID: 1252451432878586492}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355925813323357}
-  PausePanelisOpen: 0
 --- !u!1 &4984355925818713954
 GameObject:
   m_ObjectHideFlags: 0
@@ -4875,7 +4869,6 @@ MonoBehaviour:
   OpenOptionPanel: {fileID: 1252451432878586492}
   ComfirmToMainUICanvas: {fileID: 4984355924577930114}
   menuButtonController: {fileID: 4984355924577930140}
-  PausePanelisOpen: 0
 --- !u!114 &2369306054522379974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5415,7 +5408,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988bd938f1d0db3458e0f64a814fe62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  backgroundAudio: {fileID: 0}
+  backgroundAudio:
+  - {fileID: 0}
   soundEffectAudio:
   - {fileID: 0}
   - {fileID: 0}
@@ -5430,6 +5424,10 @@ MonoBehaviour:
   - {fileID: 0}
   BGEffectsSlider: {fileID: 9137009708470967385}
   SoundEffectsSlider: {fileID: 6746012069564311172}
+  Boss: {fileID: 0}
+  BossIsDie: 0
+  ClickSound: {fileID: 0}
+  SelectSound: {fileID: 0}
 --- !u!1 &5762934019106788538
 GameObject:
   m_ObjectHideFlags: 0
