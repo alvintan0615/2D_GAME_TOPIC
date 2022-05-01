@@ -49,24 +49,24 @@ public class AudioSetting : MonoBehaviour
 
     public void Update()
     {
-        //if (Time.timeScale == 0 )
-        //{
-        //    AudioListener.pause = true;
-        //    for (int i = 0; i < backgroundAudio.Length; i++)
-        //    {
-        //        backgroundAudio[i].ignoreListenerPause = true;
-        //        backgroundAudio[i].ignoreListenerVolume = true;
-        //    }
-        //    ClickSound.ignoreListenerPause = true;
-        //    ClickSound.ignoreListenerVolume = true;
-        //    SelectSound.ignoreListenerPause = true;
-        //    SelectSound.ignoreListenerVolume = true;
-        //}
+        if (Time.timeScale == 0 )
+        {
+            AudioListener.pause = true;
+            for (int i = 0; i < backgroundAudio.Length; i++)
+            {
+                backgroundAudio[i].ignoreListenerPause = true;
+                backgroundAudio[i].ignoreListenerVolume = true;
+            }
+            ClickSound.ignoreListenerPause = true;
+            ClickSound.ignoreListenerVolume = true;
+            SelectSound.ignoreListenerPause = true;
+            SelectSound.ignoreListenerVolume = true;
+        }
 
-        //if (Time.timeScale == 1)
-        //{
-        //    AudioListener.pause = false;
-        //}
+        if (Time.timeScale == 1)
+        {
+            AudioListener.pause = false;
+        }
 
         if (Boss != null && Boss.activeInHierarchy == true)
         {
