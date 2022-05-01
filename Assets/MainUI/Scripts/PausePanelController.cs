@@ -14,6 +14,8 @@ public class PausePanelController : MonoBehaviour
 
     [SerializeField] MenuButtonController menuButtonController;
 
+    private static readonly string BackgroundPref = "BackgroundPref";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -130,6 +132,7 @@ public class PausePanelController : MonoBehaviour
         ComfirmToMainUICanvas.gameObject.SetActive(false);
         OpenOptionPanel.gameObject.SetActive(false);
         SceneManager.LoadScene("UITestScene");
+        Debug.Log("BackgroundPref" + PlayerPrefs.GetFloat(BackgroundPref));
     }
 
     

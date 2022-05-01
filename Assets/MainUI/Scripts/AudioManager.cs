@@ -18,6 +18,8 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        AudioListener.pause = false;
+
         firstPlayInt = PlayerPrefs.GetInt(FirstPlay);
 
         if(firstPlayInt == 0) //default soundSetting
