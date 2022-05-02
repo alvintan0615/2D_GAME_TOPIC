@@ -25,6 +25,7 @@ public class TimeLine_FinalBossDoorOpen : MonoBehaviour
             if (GameManager.Instance.playerStats != null)
             {
                 GameManager.Instance.playerStats.CurrentHealingTime = 3;
+                GameManager.Instance.playerStats.CurrentHealth = GameManager.Instance.playerStats.MaxHealth;
             }
         }
 

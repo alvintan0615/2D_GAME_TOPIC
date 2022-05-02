@@ -129,7 +129,7 @@ public class MagicBall : MonoBehaviour
         }
         if (hasPlayerPosition)
         {
-            transform.position += playerPosition * ballSpeed;
+            transform.position += playerPosition * ballSpeed ;
         }
 
         /*}*/

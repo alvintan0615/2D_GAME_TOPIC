@@ -25,7 +25,8 @@ public class Cat_PoisonBall : MonoBehaviour
         {
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
-            Human_Skill.instance.Hurt();
+            if(PlayerStatus.isClimbing ==false)
+                Human_Skill.instance.Hurt();
             //TODO audio
             audioSetting.soundEffectAudio[22].Play();
             collision.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);

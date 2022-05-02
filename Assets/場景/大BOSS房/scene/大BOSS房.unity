@@ -16773,6 +16773,26 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0724
       objectReference: {fileID: 0}
+    - target: {fileID: 5512072458679428883, guid: efc09d90034779d40becf21e571451cc,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512072458679428883, guid: efc09d90034779d40becf21e571451cc,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512072458679428883, guid: efc09d90034779d40becf21e571451cc,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.0001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5512072458679428883, guid: efc09d90034779d40becf21e571451cc,
+        type: 3}
+      propertyPath: m_Offset.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: efc09d90034779d40becf21e571451cc, type: 3}
 --- !u!1 &5905539118271623657 stripped
@@ -16794,6 +16814,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2335830770398548690, guid: 146227b4109038544a1b7547fee8127a,
+        type: 3}
+      propertyPath: ballSpeed
+      value: 0.3
+      objectReference: {fileID: 0}
     - target: {fileID: 7189382932946948576, guid: 146227b4109038544a1b7547fee8127a,
         type: 3}
       propertyPath: m_Name
