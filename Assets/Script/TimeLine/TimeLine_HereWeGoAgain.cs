@@ -26,7 +26,11 @@ public class TimeLine_HereWeGoAgain : MonoBehaviour
             bossp1.SetActive(true);
             EventManager.Instance.isFirstPartBossDead = false;
             EventManager.Instance.finalBossMiddle = false;
+            
         }
+
+        if(normalizedTime >=0.8f && normalizedTime <0.99f)
+            GameManager.Instance.playerStats.characterData.currentHealingTime = 3;
 
         if (normalizedTime >= 0.99f)
         {

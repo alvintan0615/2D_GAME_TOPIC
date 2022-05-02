@@ -4186,7 +4186,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7777778, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -10305,7 +10305,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7758621, y: 1}
+    m_SensorSize: {x: 1.3333334, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -12475,7 +12475,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 11.5
+  orthographic size: 14.5
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -12541,6 +12541,7 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
+  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -12552,7 +12553,6 @@ MonoBehaviour:
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
-  m_ClearDepth: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
@@ -12572,7 +12572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1605642868}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -66.37571, y: -3.1464126, z: -10}
+  m_LocalPosition: {x: -71.46455, y: -3.1713126, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children: []
   m_Father: {fileID: 0}
@@ -14591,6 +14591,7 @@ PlayableDirector:
     m_References:
     - c7dc3bbcec2a49c4ea2293933306a496: {fileID: 998407423}
     - 349ee5cb36f63424482d6bc9b9330cd0: {fileID: 1391101914}
+    - 48964a913d9247e4ab3ab8659f12f256: {fileID: 998407423}
     - ff5299c7b917ae241ac64964a7b53b43: {fileID: 631847063}
 --- !u!114 &1954247555
 MonoBehaviour:
