@@ -40,7 +40,7 @@ public class TimeLine_AfterSewerBossFight : MonoBehaviour
 
         if(tori_Sewer.isDead == true && EventManager.Instance.isTori_SewerDead == false)
         {
-            
+            EventManager.Instance.Tori_SewerHPBarClose = true;
             mDirector.Play();
         }
 

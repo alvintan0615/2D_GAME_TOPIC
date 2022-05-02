@@ -19,10 +19,12 @@ public class EventManager : Singleton<EventManager>
     public bool fireVillege_TimelineFinish = false;
     public bool Dungeon_Opening = false;
     public bool Sewer_TimeLineBossTori = false;
+    public bool isTori_SewerDead = false;
+    public bool Tori_SewerHPBarClose = false;
     public bool timeLineBossStop = false;
     public bool isFirstTimeToPass = false;
     public bool electricDoor = false;
-    public bool isTori_SewerDead = false;
+    
     public bool isGetFinalBossdoorKey = false;
     public bool isFinalBossDoorOpen = false;
     public bool finalBossOpen = false;
@@ -50,6 +52,7 @@ public class EventManager : Singleton<EventManager>
 
     public void AllEventToFalse()
     {
+        GameManager.Instance.Ken_Human = true;
         canChange = false;
         canUsePotion = false;
         canUseAllSceenSkill = false;

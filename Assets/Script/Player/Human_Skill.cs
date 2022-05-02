@@ -85,8 +85,15 @@ public class Human_Skill : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(myTrans.position, Vector2.right * myTrans.localScale.x, distance, boxMask);
         if (hit.collider != null && hit.collider.gameObject.tag == "Pushable" && Input.GetKey(KeyCode.A) && NewPlayerController.instance.touchGround == true)
         {
+
             PlayerStatus.isDragging = true;
-            if(hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
+            box = hit.collider.gameObject;
+
+            box.GetComponent<FixedJoint2D>().enabled = true;
+            box.GetComponent<BoxPull>().beingPushed = true;
+            box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponentInParent<Rigidbody2D>();
+            //物品在左 玩家在右
+            if (hit.collider.gameObject.transform.position.x < this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Pull");
                 audioSetting.soundEffectAudio[39].mute = false;
@@ -96,8 +103,9 @@ public class Human_Skill : MonoBehaviour
                 NewPlayerController.instance.HumanState("Human_Push");
                 audioSetting.soundEffectAudio[39].mute = false;
             }
-                
 
+
+            //物品在右 玩家在左
             if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.RightArrow))
             {
                 NewPlayerController.instance.HumanState("Human_Push");
@@ -105,18 +113,23 @@ public class Human_Skill : MonoBehaviour
             }
             else if (hit.collider.gameObject.transform.position.x > this.GetComponentInParent<Transform>().position.x && Input.GetKey(KeyCode.LeftArrow))
             {
+                Debug.Log("123");
                 NewPlayerController.instance.HumanState("Human_Pull");
                 audioSetting.soundEffectAudio[39].mute = false;
             }
-                
+            Debug.Log(hit.collider);
+            
 
-            box = hit.collider.gameObject;
-
-            box.GetComponent<FixedJoint2D>().enabled = true;
-            box.GetComponent<BoxPull>().beingPushed = true;
-            box.GetComponent<FixedJoint2D>().connectedBody = this.GetComponentInParent<Rigidbody2D>();
         }
         else if (hit.collider != null && hit.collider.gameObject.tag == "Pushable" && Input.GetKeyUp(KeyCode.A))
+        {
+            PlayerStatus.isDragging = false;
+            audioSetting.soundEffectAudio[39].mute = true;
+            box.GetComponent<FixedJoint2D>().enabled = false;
+            box.GetComponent<BoxPull>().beingPushed = false;
+        }
+
+        if(PlayerStatus.isDragging == true && Input.GetKeyUp(KeyCode.A))
         {
             PlayerStatus.isDragging = false;
             audioSetting.soundEffectAudio[39].mute = true;
