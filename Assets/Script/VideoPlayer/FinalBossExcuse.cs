@@ -5,6 +5,7 @@ using UnityEngine.Video;
 public class FinalBossExcuse : MonoBehaviour
 {
     [SerializeField]private VideoPlayer excuse;
+    public GameObject fixVideoPanel;
     public double currentTime;
     public double totalTime;
     private void Awake()
@@ -12,7 +13,17 @@ public class FinalBossExcuse : MonoBehaviour
         excuse = GetComponent<VideoPlayer>();
         totalTime = excuse.clip.length;
     }
-    
+
+    private void OnEnable()
+    {
+        fixVideoPanel.SetActive(true);
+    }
+
+    private void OnDisable()
+    {
+        fixVideoPanel.SetActive(false);
+    }
+
     void Update()
     {
         currentTime += Time.deltaTime;

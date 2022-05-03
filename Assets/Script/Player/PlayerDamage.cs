@@ -40,7 +40,7 @@ public class PlayerDamage : MonoBehaviour
             for (int i = 0; i < enemyCount; i++)
             {
                 var enemyStats = enemyColList[i].GetComponent<CharacterStats>();
-                enemyStats.TakeDamage(characterStats, enemyStats, 0);
+                enemyStats.TakeDamage(characterStats, enemyStats, 2);
 
             }
         }

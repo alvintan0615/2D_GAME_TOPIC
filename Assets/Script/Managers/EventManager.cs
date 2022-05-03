@@ -69,6 +69,7 @@ public class EventManager : Singleton<EventManager>
         fireVillege_TimelineFinish = false;
         Dungeon_Opening = false;
         Sewer_TimeLineBossTori = false;
+        Tori_SewerHPBarClose = false;
         timeLineBossStop = false;
         isFirstTimeToPass = false;
         electricDoor = false;

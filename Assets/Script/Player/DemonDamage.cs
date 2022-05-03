@@ -34,7 +34,7 @@ public class DemonDamage : MonoBehaviour
             for (int i = 0; i < enemyCount; i++)
             {
                 var enemyStats = enemyColList[i].GetComponent<CharacterStats>();
-                enemyStats.TakeDamage(characterStats, enemyStats, 3);
+                enemyStats.TakeDamage(characterStats, enemyStats, 4);
 
             }
         }
@@ -50,7 +50,7 @@ public class DemonDamage : MonoBehaviour
             for (int i = 0; i < enemyCount; i++)
             {
                 var enemyStats = enemyColList[i].GetComponent<CharacterStats>();
-                enemyStats.TakeDamage(characterStats, enemyStats, 5);
+                enemyStats.TakeDamage(characterStats, enemyStats, 6);
 
             }
         }
@@ -66,7 +66,7 @@ public class DemonDamage : MonoBehaviour
             for (int i = 0; i < enemyCount; i++)
             {
                 var enemyStats = enemyColList[i].GetComponent<CharacterStats>();
-                enemyStats.TakeDamage(characterStats, enemyStats, 8);
+                enemyStats.TakeDamage(characterStats, enemyStats, 9);
 
             }
         }
