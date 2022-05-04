@@ -14,6 +14,7 @@ public class NewPlayerController : MonoBehaviour
     private string currentDemonState;
     public static bool isTimeLineChangeAnim = false;
     [SerializeField]private Demon_Skill demonSkill;
+    [SerializeField]private Cinemachine.CinemachineImpulseSource myInpulse;
 
     public static CharacterStats characterStats;
     public SceneFader sceneFaderPrefab;
@@ -116,7 +117,7 @@ public class NewPlayerController : MonoBehaviour
             animator[x] = this.transform.GetChild(x).GetComponent<Animator>();
         }
 
-
+        myInpulse = GetComponent<Cinemachine.CinemachineImpulseSource>();
         
     }
 
@@ -587,6 +588,11 @@ public class NewPlayerController : MonoBehaviour
         animator[1].Play(newState);
 
         currentDemonState = newState;
+    }
+
+    public void CameraShake()
+    {
+        myInpulse.GenerateImpulse();
     }
 
     IEnumerator Healing(float healingReCover)

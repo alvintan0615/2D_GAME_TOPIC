@@ -35,8 +35,8 @@ Transform:
   m_LocalPosition: {x: -74.97, y: 8.8, z: 0}
   m_LocalScale: {x: 0.26714, y: 0.26714, z: 0.26714}
   m_Children:
-  - {fileID: 7301603289260418820}
   - {fileID: 5274147564660260096}
+  - {fileID: 7301603289260418820}
   - {fileID: 5243787944824514289}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -203,6 +203,7 @@ MonoBehaviour:
   isIDLE: 0
   attackTarget: {fileID: 0}
   lookAtTime: 3
+  lastAttackTime: 0
   knockbackForce: 0
   isHurt: 0
   thorn: {fileID: 8229860168191361411, guid: d3449eb3c96957a44ae781d0e792f96c, type: 3}
@@ -285,7 +286,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7973547603172396081}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &5274147564660260098
 BoxCollider2D:
@@ -342,7 +343,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7973547603172396081}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5680247900103207800
 MonoBehaviour:

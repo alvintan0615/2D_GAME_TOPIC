@@ -25,21 +25,25 @@ public class Cat_PoisonBall : MonoBehaviour
         {
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
-            if(PlayerStatus.isClimbing ==false)
-                Human_Skill.instance.Hurt();
-            //TODO audio
             audioSetting.soundEffectAudio[22].Play();
-            collision.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
-            var playerStats = collision.gameObject.GetComponent<CharacterStats>();
-            int randomDamage = Random.Range(5, 9);
-            playerStats.ThronDamage(randomDamage, playerStats, 5);
+            if (PlayerStatus.isClimbing ==false)
+                Human_Skill.instance.Hurt();
+            
+            if(PlayerStatus.canBeHurt == true)
+            {
+                collision.gameObject.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
+                var playerStats = collision.gameObject.GetComponent<CharacterStats>();
+                int randomDamage = Random.Range(5, 9);
+                playerStats.ThronDamage(randomDamage, playerStats, 5);
+            }
+
         }
 
         if (collision.gameObject.layer == 8)
         {
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
-            //TODO audio
+            
             audioSetting.soundEffectAudio[22].Play();
         }
     }

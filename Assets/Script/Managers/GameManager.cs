@@ -14,17 +14,21 @@ public class GameManager : Singleton<GameManager>
     public bool notDead = false;
 
     [SerializeField]private CinemachineVirtualCamera followCamera;
+
+    //[SerializeField] private CinemachineImpulseSource myInpulse;
+
     List<IEndGameObserver> endGameObservers = new List<IEndGameObserver>();
 
     protected override void Awake()
     {
         base.Awake();
         DontDestroyOnLoad(this);
+        //myInpulse = GetComponent<CinemachineImpulseSource>();
     }
 
     private void Update()
     {
-        
+
     }
     public void RigisterPlayer(CharacterStats player)
     {
@@ -109,4 +113,9 @@ public class GameManager : Singleton<GameManager>
         }
         return null;
     }
+
+    /*public void CameraShake()
+    {
+        myInpulse.GenerateImpulse();
+    }*/
 }

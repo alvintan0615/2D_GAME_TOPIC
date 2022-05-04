@@ -31,7 +31,7 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
     public GameObject attackTarget;
     public float lookAtTime;
     private float remainLookAtTime;
-    private float lastAttackTime;
+    [SerializeField]private float lastAttackTime;
     public float knockbackForce;
     public bool isHurt;
 
@@ -238,7 +238,7 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                     rb.velocity = new Vector2(0, rb.velocity.y);
                     if (lastAttackTime < 0)
                     {
-                        anim.SetBool("Idle", false);
+                        isIdle = false;
                         lastAttackTime = characterStats.attackData.coolDown;
 
                         //爆擊判斷
@@ -247,7 +247,10 @@ public class MushRoomTreeController : MonoBehaviour, IEndGameObserver
                         Attack();
                     }
                     else
-                        anim.SetBool("Idle", true);
+                    {
+                        isIdle = true;
+                    }
+                        
                 }
                 break;
 

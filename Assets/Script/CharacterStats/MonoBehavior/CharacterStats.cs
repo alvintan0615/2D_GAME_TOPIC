@@ -125,6 +125,7 @@ public class CharacterStats : MonoBehaviour
             {
                 int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
                 CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
+                NewPlayerController.instance.CameraShake();
                 defener.GetComponent<TimeStop>().StopTime(0.05f, 10, 0.1f);
                 //Rigidbody2D rb = defener.GetComponent<Rigidbody2D>();
                 if (attacker.transform.position.x > defener.transform.position.x)
@@ -139,6 +140,7 @@ public class CharacterStats : MonoBehaviour
         {
             if(PlayerStatus.isHurting == false)
             {
+                NewPlayerController.instance.CameraShake();
                 int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
                 CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
             }
@@ -148,6 +150,7 @@ public class CharacterStats : MonoBehaviour
         if(defener.tag == "Enemy" && defener.characterData.currentHealth > 0)
         {
             defener.GetComponent<Animator>().SetTrigger("Hurt");
+            NewPlayerController.instance.CameraShake();
             int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
             CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
             //StartCoroutine(GameManager.Instance.KnockBack02(attacker, defener));
@@ -159,6 +162,7 @@ public class CharacterStats : MonoBehaviour
 
         if(defener.tag == "Tori")
         {
+            NewPlayerController.instance.CameraShake();
             defener.GetComponent<Boss_Tori>().Injury();
             int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
             CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
@@ -166,15 +170,15 @@ public class CharacterStats : MonoBehaviour
 
         if(defener.tag == "FinalBoss_FirstPart")
         {
-            Debug.Log("123");
+            NewPlayerController.instance.CameraShake();
             defener.GetComponent<FinalBoss_FirstPart>().InjuryHurt();
-            Debug.Log("456");
             int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
             CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
         }
 
         if (defener.tag == "FinalBossP2")
         {
+            NewPlayerController.instance.CameraShake();
             defener.GetComponent<FinalBoss_SecondPart>().InjuryHurt();
             int damage = Mathf.Max((attacker.CurrentDamage() + attackSkillValue) - defener.CurrentDefence, 0);
             CurrentHealth = Mathf.Max(CurrentHealth - damage, 0);
@@ -185,6 +189,7 @@ public class CharacterStats : MonoBehaviour
     {
         if(PlayerStatus.canBeHurt == true)
         {
+            NewPlayerController.instance.CameraShake();
             int damage = Mathf.Max(Damage - defender.CurrentDefence, 0);
             CurrentHealth = Mathf.Max(CurrentHealth - (damage + addDamage), 0);
         }
@@ -193,7 +198,7 @@ public class CharacterStats : MonoBehaviour
 
     public void TrapDamage(int minDamage, int maxDamage)
     {
-        
+        NewPlayerController.instance.CameraShake();
         int trapDamage = UnityEngine.Random.Range(minDamage, maxDamage);
         CurrentHealth = Mathf.Max(CurrentHealth - trapDamage, 0);
     }

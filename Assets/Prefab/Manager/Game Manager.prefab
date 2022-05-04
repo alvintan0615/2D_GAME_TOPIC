@@ -44,3 +44,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 0}
+  Ken_Human: 1
+  StopPanel: 0
+  notDead: 0
+  followCamera: {fileID: 0}

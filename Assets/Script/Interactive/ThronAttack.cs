@@ -24,7 +24,7 @@ public class ThronAttack : MonoBehaviour
 
         if(time > 1.5f)
         {
-            if (coll.gameObject.tag == "Player")
+            if (coll.gameObject.tag == "Player" && PlayerStatus.canBeHurt == true)
             {
                 time = 0f;
                 //Debug.Log(123);
