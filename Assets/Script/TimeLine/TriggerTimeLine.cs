@@ -19,6 +19,11 @@ public class TriggerTimeLine : MonoBehaviour
             var toriScript = tori.GetComponent<Boss_Tori>();
             StartCoroutine(SetReturn());
         }
+
+        if(EventManager.Instance.Sewer_TimeLineBossTori == true && EventManager.Instance.isTori_SewerDead == true)
+        {
+            this.gameObject.SetActive(false);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
