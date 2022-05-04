@@ -42,6 +42,7 @@ public class FireBall : MonoBehaviour
         }
         if (collision.gameObject.layer == 8)
         {
+            NewPlayerController.instance.CameraShake();
             FireBallHitObjectpool.instance.FireBallHitGetFromPool(this.gameObject.transform.position);
             audioSetting.soundEffectAudio[18].Play();
             FireBallObjectpool.instance.FireBallReturnPool(this.gameObject);

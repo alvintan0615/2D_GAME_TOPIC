@@ -37602,7 +37602,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.772152, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -37644,9 +37644,8 @@ MonoBehaviour:
 --- !u!114 &914151530
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 8462365779982995809, guid: 8a852c7bd40b9a04abb7e2f3b1e74d35,
-    type: 3}
-  m_PrefabInstance: {fileID: 8462365779746228491}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914151525}
   m_Enabled: 1
@@ -86951,7 +86950,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: CM vcam1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 8a852c7bd40b9a04abb7e2f3b1e74d35, type: 3}
 --- !u!1001 &8767286932395531514
 PrefabInstance:

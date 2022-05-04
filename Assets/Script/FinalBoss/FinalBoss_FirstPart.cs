@@ -203,7 +203,7 @@ public class FinalBoss_FirstPart : MonoBehaviour
 
         for (int i = 0; i < fireBallNum; i++)
         {
-            float x = Random.Range(-83f, -36f);
+            float x = Random.Range(-85f, -34.5f);
             FireBallBaseObjectpool.instance.FireBallBaseGetFromPool(new Vector3(x, -10f));
         }
     }

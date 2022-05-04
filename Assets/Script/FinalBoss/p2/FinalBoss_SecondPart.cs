@@ -19,6 +19,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
 
     [SerializeField] private Color color;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    [SerializeField] private Cinemachine.CinemachineImpulseSource myInpulse;
     private void OnEnable()
     {
         electricBallPos = transform.GetChild(2).gameObject;
@@ -28,10 +29,12 @@ public class FinalBoss_SecondPart : MonoBehaviour
         anim = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         characterStats.CurrentHealth = characterStats.MaxHealth;
+        
     }
     void Start()
     {
         audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
+        myInpulse = GetComponent<Cinemachine.CinemachineImpulseSource>();
     }
 
     
@@ -171,6 +174,11 @@ public class FinalBoss_SecondPart : MonoBehaviour
         spriteRenderer.color = color;
         yield return new WaitForSeconds(colorChangeTime);
         spriteRenderer.color = new Color(1, 1, 1);
+    }
+
+    void KnockBackCameraShake()
+    {
+        myInpulse.GenerateImpulse();
     }
 
     private void OnDrawGizmosSelected()

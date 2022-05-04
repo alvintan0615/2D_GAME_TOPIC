@@ -43,6 +43,7 @@ public class PoisonBall : MonoBehaviour
 
         if (collision.gameObject.layer == 8)
         {
+            NewPlayerController.instance.CameraShake();
             PoisonBallObjcetPool.instance.PoisonBallReturnPool(this.gameObject);
             PoisonContainerObjectPool.instance.PoisonContainerGetFromPool(this.gameObject.transform.position);
             //Audio PoisonContainer play

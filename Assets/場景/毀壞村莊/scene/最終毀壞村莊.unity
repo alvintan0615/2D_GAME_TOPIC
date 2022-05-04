@@ -1222,6 +1222,7 @@ GameObject:
   - component: {fileID: 29216218}
   - component: {fileID: 29216220}
   - component: {fileID: 29216219}
+  - component: {fileID: 29216221}
   m_Layer: 0
   m_Name: CM vcam4
   m_TagString: Untagged
@@ -1297,6 +1298,22 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 869015965}
+--- !u!114 &29216221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29216217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 1
 --- !u!1 &31743961
 GameObject:
   m_ObjectHideFlags: 0
@@ -17335,7 +17352,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -258.94385, y: -25.601711, z: -10}
+  m_LocalPosition: {x: -258.962, y: -25.601711, z: -10}
   m_LocalScale: {x: 1.4361, y: 1.4361, z: 1.4361}
   m_Children:
   - {fileID: 1403914674}
@@ -17412,6 +17429,7 @@ GameObject:
   - component: {fileID: 521681116}
   - component: {fileID: 521681119}
   - component: {fileID: 521681118}
+  - component: {fileID: 521681120}
   m_Layer: 0
   m_Name: CM vcam5
   m_TagString: Untagged
@@ -17506,6 +17524,22 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 2057222838}
   m_Damping: 0.5
   m_MaxWindowSize: 0
+--- !u!114 &521681120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 521681115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 1
 --- !u!1001 &522743456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28899,6 +28933,7 @@ GameObject:
   - component: {fileID: 914151527}
   - component: {fileID: 914151526}
   - component: {fileID: 914151529}
+  - component: {fileID: 914151530}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: PlayerCamera
@@ -28950,7 +28985,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 1.7758621, y: 1}
+    m_SensorSize: {x: 1.7777778, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
@@ -28993,6 +29028,22 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &914151530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 914151525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 1
 --- !u!1 &915124760 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8610667185239829711, guid: d0e8e17914a4a404fb3d5960e195b236,
@@ -37266,6 +37317,7 @@ GameObject:
   - component: {fileID: 1207209192}
   - component: {fileID: 1207209193}
   - component: {fileID: 1207209194}
+  - component: {fileID: 1207209195}
   m_Layer: 0
   m_Name: CM vcam3
   m_TagString: Untagged
@@ -37341,6 +37393,22 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 2057222838}
   m_Damping: 0.5
   m_MaxWindowSize: 0
+--- !u!114 &1207209195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1207209191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 1
 --- !u!1 &1212725334
 GameObject:
   m_ObjectHideFlags: 0
@@ -61767,6 +61835,7 @@ GameObject:
   - component: {fileID: 2089108887}
   - component: {fileID: 2089108886}
   - component: {fileID: 2089108888}
+  - component: {fileID: 2089108889}
   m_Layer: 0
   m_Name: CM vcam2
   m_TagString: Untagged
@@ -61842,6 +61911,22 @@ MonoBehaviour:
   m_BoundingShape2D: {fileID: 2057222838}
   m_Damping: 0.5
   m_MaxWindowSize: 0
+--- !u!114 &2089108889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089108885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ApplyAfter: 2
+  m_ChannelMask: -1
+  m_Gain: 1
+  m_Use2DDistance: 1
 --- !u!1 &2094127542
 GameObject:
   m_ObjectHideFlags: 0
