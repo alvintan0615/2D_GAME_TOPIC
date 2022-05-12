@@ -355,6 +355,49 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73767e07adddc394d82b994801f89bbb, type: 3}
+--- !u!1 &23583169
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23583170}
+  - component: {fileID: 23583171}
+  m_Layer: 0
+  m_Name: ToFinalAnimation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &23583170
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23583169}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 966651007}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23583171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23583169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8aa7f5fc5497c4bb2465d9f27eb386, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &26082259
 GameObject:
   m_ObjectHideFlags: 0
@@ -6790,6 +6833,7 @@ Transform:
   - {fileID: 1198649488}
   - {fileID: 1954247553}
   - {fileID: 1262890343}
+  - {fileID: 23583170}
   m_Father: {fileID: 0}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -17451,6 +17495,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0724
       objectReference: {fileID: 0}
+    - target: {fileID: 5512072458233779084, guid: efc09d90034779d40becf21e571451cc,
+        type: 3}
+      propertyPath: toFinalAnimation
+      value: 
+      objectReference: {fileID: 23583169}
     - target: {fileID: 5512072458679428883, guid: efc09d90034779d40becf21e571451cc,
         type: 3}
       propertyPath: m_Offset.y

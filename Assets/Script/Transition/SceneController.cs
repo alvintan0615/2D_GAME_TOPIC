@@ -155,5 +155,22 @@ public class SceneController : Singleton<SceneController>
         }
     }
 
-    
+    public void LoadFinalAnimation()
+    {
+        StartCoroutine(LoadingFinalAnimation("EndingScene"));
+    }
+
+    IEnumerator LoadingFinalAnimation(string scene)
+    {
+        SceneFader fade = Instantiate(sceneFaderPrefab);
+
+        if (scene != "")
+        {
+            yield return StartCoroutine(fade.FadeOut(1f));
+            yield return SceneManager.LoadSceneAsync(scene);
+            yield return StartCoroutine(fade.FadeIn(2f));
+            yield break;
+        }
+    }
+
 }

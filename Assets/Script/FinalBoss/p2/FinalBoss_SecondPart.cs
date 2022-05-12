@@ -16,6 +16,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
     public GameObject attackTarget;
     private bool isKnockBackHit = false;
     public AudioSetting audioSetting;
+    public GameObject toFinalAnimation;
 
     [SerializeField] private Color color;
     [SerializeField] private SpriteRenderer spriteRenderer;
@@ -35,6 +36,7 @@ public class FinalBoss_SecondPart : MonoBehaviour
     {
         audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
         myInpulse = GetComponent<Cinemachine.CinemachineImpulseSource>();
+        toFinalAnimation.SetActive(false);
     }
 
     
@@ -44,18 +46,19 @@ public class FinalBoss_SecondPart : MonoBehaviour
 
         if(characterStats.CurrentHealth <= 0)
         {
-
+            EventManager.Instance.finalBossP2isDead = true;
+            toFinalAnimation.SetActive(true);
         }
 
         if(characterStats.CurrentHealth < characterStats.MaxHealth* 0.6f)
             isUnder60 = true;
-        if(EventManager.Instance.isFinalBossLetPlayerDead == true)
+        if(EventManager.Instance.isFinalBossLetPlayerDead == true || EventManager.Instance.finalBossP2isDead == true)
         {
             anim.Play("Idle");
         }
 
-        if (characterStats.CurrentHealth <= 0)
-            SceneManager.LoadScene("UITestScene");
+        /*if (characterStats.CurrentHealth <= 0)
+            SceneManager.LoadScene("UITestScene");*/
     }
 
     public void RandomPickstate()

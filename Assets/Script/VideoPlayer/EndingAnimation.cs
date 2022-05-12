@@ -3,50 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
 using UnityEngine.SceneManagement;
-public class OpeningAnimation : MonoBehaviour
+public class EndingAnimation : MonoBehaviour
 {
-    [SerializeField] private VideoPlayer openingAnimation;
+    [SerializeField] private VideoPlayer endingAnimation;
     public double currentTime;
     public double totalTime;
     public float volume;
     private static readonly string BackgroundPref = "BackgroundPref";
     private float backgroundFloat;
-    [SerializeField]private float timer;
+    [SerializeField] private float timer;
     private bool isTrans = false;
-    private bool isSkipOK = false;
-    public GameObject toFirstLevel;
+    public GameObject toMainScene;
     void Awake()
     {
-        openingAnimation = GetComponent<VideoPlayer>();
-        totalTime = openingAnimation.clip.length;
-        toFirstLevel.SetActive(false);
+        endingAnimation = GetComponent<VideoPlayer>();
+        totalTime = endingAnimation.clip.length;
+        toMainScene.SetActive(false);
         backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
+        PlayerStatus.isDialouging = false;
     }
-    
+
     void Update()
     {
         backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
-        openingAnimation.SetDirectAudioVolume(0, backgroundFloat);
-        currentTime = openingAnimation.time;
+        endingAnimation.SetDirectAudioVolume(0, backgroundFloat);
+        currentTime = endingAnimation.time;
         if (GameManager.Instance.StopPanel == true)
         {
-            openingAnimation.Pause();
+            endingAnimation.Pause();
         }
         else
         {
-            openingAnimation.Play();
+            endingAnimation.Play();
         }
 
         if (currentTime >= totalTime)
         {
-            openingAnimation.Pause();
-            toFirstLevel.SetActive(true);
+            endingAnimation.Pause();
+            toMainScene.SetActive(true);
         }
+        
 
         if (isTrans == true)
         {
-            openingAnimation.Pause();
-            toFirstLevel.SetActive(true);
+            endingAnimation.Pause();
+            toMainScene.SetActive(true);
         }
         skipAnimation();
     }
@@ -56,7 +57,7 @@ public class OpeningAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.Space))
         {
             timer += Time.deltaTime;
-            if(timer >= 1f)
+            if (timer >= 1f)
             {
                 isTrans = true;
             }

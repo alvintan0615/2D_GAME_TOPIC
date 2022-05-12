@@ -35,7 +35,7 @@ public class EventManager : Singleton<EventManager>
     public bool isFinalBossAgain_TimeLine = false;
     public bool isPlayerPosOK = false;
     public bool finalBossMiddle = false;
-
+    public bool finalBossP2isDead = false;
     protected override void Awake()
     {
         base.Awake();
@@ -84,6 +84,7 @@ public class EventManager : Singleton<EventManager>
         isFinalBossAgain_TimeLine = false;
         isPlayerPosOK = false;
         finalBossMiddle = false;
+        finalBossP2isDead = false;
     }
 
 }

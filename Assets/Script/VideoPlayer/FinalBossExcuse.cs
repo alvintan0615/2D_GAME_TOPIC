@@ -17,19 +17,24 @@ public class FinalBossExcuse : MonoBehaviour
         totalTime = excuse.clip.length;
     }
 
+    private void OnEnable()
+    {
+        //Mute BackGroundMusic
+    }
+
     private void OnDisable()
     {
         //Play BackGroundMusic
-
     }
 
     void Update()
     {
-        currentTime += Time.deltaTime;
+        currentTime = excuse.time;
 
-        if(currentTime >= totalTime)
+        if (currentTime >= totalTime)
         {
             EventManager.Instance.finalbossExcuseVideo = true;
+            excuse.Pause();
             this.gameObject.SetActive(false);
         }
         skipAnimation();
@@ -41,15 +46,16 @@ public class FinalBossExcuse : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && isSkipOK == false)
         {
             timer += Time.deltaTime;
-            if (timer >= 2f)
+            if (timer >= 1f)
             {
                 isSkipOK = true;
                 EventManager.Instance.finalbossExcuseVideo = true;
+                excuse.Pause();
                 this.gameObject.SetActive(false);
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && timer < 2f)
+        if (Input.GetKeyUp(KeyCode.Space) && timer < 1f)
         {
             timer = 0f;
         }
