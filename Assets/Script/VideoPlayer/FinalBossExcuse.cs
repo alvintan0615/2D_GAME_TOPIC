@@ -11,24 +11,44 @@ public class FinalBossExcuse : MonoBehaviour
     [SerializeField] private float timer;
     private bool isSkipOK = false;
     public SceneFader sceneFaderPrefab;
+
+    public AudioSetting audioSetting;
+    private static readonly string BackgroundPref = "BackgroundPref";
+    private float backgroundFloat;
     private void Awake()
     {
         excuse = GetComponent<VideoPlayer>();
         totalTime = excuse.clip.length;
+        audioSetting = GameObject.Find("SFX").GetComponent<AudioSetting>();
+        backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
     }
 
     private void OnEnable()
     {
         //Mute BackGroundMusic
+        audioSetting.backgroundAudio[0].Pause();
     }
 
     private void OnDisable()
     {
         //Play BackGroundMusic
+        audioSetting.backgroundAudio[0].UnPause();
     }
 
     void Update()
     {
+        backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
+        excuse.SetDirectAudioVolume(0, backgroundFloat);
+
+        if (GameManager.Instance.StopPanel == true)
+        {
+            excuse.Pause();
+        }
+        else
+        {
+            excuse.Play();
+        }
+
         currentTime = excuse.time;
 
         if (currentTime >= totalTime)

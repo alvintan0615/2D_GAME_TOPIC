@@ -4678,6 +4678,18 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1435850112}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &661686028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661686021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a80806552df85014991a5eba64cbc234, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &718935433
 GameObject:
   m_ObjectHideFlags: 0
@@ -8704,7 +8716,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135873599}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: 01639288bc121f94888eddad390e9a37, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: c79fb575891f7ca49935dfe170bc5f63, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 0}
@@ -8781,6 +8793,7 @@ MonoBehaviour:
   timer: 0
   sceneFaderPrefab: {fileID: 7210560946828521489, guid: 0fb6c317fe1c78c4eafe3dcbed80351a,
     type: 3}
+  audioSetting: {fileID: 0}
 --- !u!1 &1135942151
 GameObject:
   m_ObjectHideFlags: 0
@@ -12856,6 +12869,7 @@ MonoBehaviour:
   m_RequiresDepthTextureOption: 2
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 0
+  m_CameraOutput: 0
   m_Cameras: []
   m_RendererIndex: -1
   m_VolumeLayerMask:
@@ -12867,7 +12881,6 @@ MonoBehaviour:
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
-  m_ClearDepth: 1
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
