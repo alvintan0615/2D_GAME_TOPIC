@@ -53,14 +53,14 @@ public class OpeningAnimation : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && isSkipOK == false)
         {
             timer += Time.deltaTime;
-            if(timer >= 3f)
+            if(timer >= 2f)
             {
                 isTrans = true;
                 isSkipOK = true;
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Space) && timer < 3f)
+        if (Input.GetKeyUp(KeyCode.Space) && timer < 2f)
         {
             timer = 0f;
         }

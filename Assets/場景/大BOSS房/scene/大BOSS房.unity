@@ -8313,6 +8313,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7717741, guid: 32a4b0c8c2c4b75458a8c40ad16bdde8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 73.22656
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407169998, guid: 32a4b0c8c2c4b75458a8c40ad16bdde8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 213.89844
+      objectReference: {fileID: 0}
+    - target: {fileID: 1407169998, guid: 32a4b0c8c2c4b75458a8c40ad16bdde8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -915.5996
+      objectReference: {fileID: 0}
     - target: {fileID: 7996718506652298617, guid: 32a4b0c8c2c4b75458a8c40ad16bdde8,
         type: 3}
       propertyPath: m_Camera
@@ -8615,7 +8627,7 @@ GameObject:
   - component: {fileID: 1135873601}
   - component: {fileID: 1135873604}
   m_Layer: 5
-  m_Name: Open
+  m_Name: "\u89E3\u91CB"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8720,9 +8732,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   excuse: {fileID: 0}
-  fixVideoPanel: {fileID: 1800226110}
   currentTime: 0
   totalTime: 0
+  timer: 0
+  sceneFaderPrefab: {fileID: 7210560946828521489, guid: 0fb6c317fe1c78c4eafe3dcbed80351a,
+    type: 3}
 --- !u!1 &1135942151
 GameObject:
   m_ObjectHideFlags: 0
@@ -10352,7 +10366,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -381.1}
+  m_AnchoredPosition: {x: 0, y: -381.0996}
   m_SizeDelta: {x: -498.1, y: -762.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1383066221

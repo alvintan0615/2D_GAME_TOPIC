@@ -52,4 +52,10 @@ public class SceneFader : MonoBehaviour
         }
         Destroy(gameObject);
     }
+
+    public IEnumerator FadeOutIn2(float fadeDuration)
+    {
+        yield return FadeOut(fadeDuration);
+        yield return FadeIn(fadeDuration);
+    }
 }

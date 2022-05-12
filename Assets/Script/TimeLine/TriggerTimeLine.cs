@@ -16,7 +16,7 @@ public class TriggerTimeLine : MonoBehaviour
         if(EventManager.Instance.Sewer_TimeLineBossTori == true && NewPlayerController.instance.isDead == true)
         {
             EventManager.Instance.Sewer_TimeLineBossTori = false;
-            var toriScript = tori.GetComponent<Boss_Tori>();
+            //var toriScript = tori.GetComponent<Boss_Tori>();
             StartCoroutine(SetReturn());
         }
 
@@ -27,7 +27,7 @@ public class TriggerTimeLine : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player" && EventManager.Instance.Sewer_TimeLineBossTori == false)
+        if(collision.gameObject.tag == "Player" && EventManager.Instance.Sewer_TimeLineBossTori == false && NewPlayerController.instance.isDead == false)
         {
             mDirector.Play(); 
         }

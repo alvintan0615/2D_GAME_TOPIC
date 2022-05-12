@@ -42,6 +42,11 @@ public class FinalBoss_SecondPart : MonoBehaviour
     {
         foundPlayer();
 
+        if(characterStats.CurrentHealth <= 0)
+        {
+
+        }
+
         if(characterStats.CurrentHealth < characterStats.MaxHealth* 0.6f)
             isUnder60 = true;
         if(EventManager.Instance.isFinalBossLetPlayerDead == true)
