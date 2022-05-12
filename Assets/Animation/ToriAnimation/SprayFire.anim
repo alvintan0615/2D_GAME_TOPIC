@@ -176,6 +176,25 @@ AnimationClip:
     path: NewAttackTrigger
     classID: 61
     script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: SprayFirePrefab
+    classID: 1
+    script: {fileID: 0}
   m_PPtrCurves:
   - curve:
     - time: 0
@@ -268,8 +287,7 @@ AnimationClip:
     script: {fileID: 0}
   - curve:
     - time: 0
-      value: {fileID: -6609094809498849180, guid: de05ee1813a00cc49b3c16e9e2e2c070,
-        type: 3}
+      value: {fileID: 0}
     - time: 0.016666668
       value: {fileID: 2257076188359318314, guid: de05ee1813a00cc49b3c16e9e2e2c070,
         type: 3}
@@ -1375,6 +1393,13 @@ AnimationClip:
       customType: 0
       isPPtrCurve: 0
     - serializedVersion: 2
+      path: 177430505
+      attribute: 2086281974
+      script: {fileID: 0}
+      typeID: 1
+      customType: 0
+      isPPtrCurve: 0
+    - serializedVersion: 2
       path: 0
       attribute: 0
       script: {fileID: 0}
@@ -1480,7 +1505,7 @@ AnimationClip:
     - {fileID: 8500732121721539845, guid: da27b2b1b99a9794fae34785e7fdf4b3, type: 3}
     - {fileID: -129316448996998194, guid: da27b2b1b99a9794fae34785e7fdf4b3, type: 3}
     - {fileID: -129316448996998194, guid: da27b2b1b99a9794fae34785e7fdf4b3, type: 3}
-    - {fileID: -6609094809498849180, guid: de05ee1813a00cc49b3c16e9e2e2c070, type: 3}
+    - {fileID: 0}
     - {fileID: 2257076188359318314, guid: de05ee1813a00cc49b3c16e9e2e2c070, type: 3}
     - {fileID: 2067621267230822249, guid: de05ee1813a00cc49b3c16e9e2e2c070, type: 3}
     - {fileID: -7467751800262098739, guid: de05ee1813a00cc49b3c16e9e2e2c070, type: 3}
@@ -2185,6 +2210,25 @@ AnimationClip:
     attribute: m_LocalPosition.z
     path: NewAttackTrigger
     classID: 4
+    script: {fileID: 0}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - serializedVersion: 3
+        time: 0
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 103
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    attribute: m_IsActive
+    path: SprayFirePrefab
+    classID: 1
     script: {fileID: 0}
   m_EulerEditorCurves:
   - curve:
